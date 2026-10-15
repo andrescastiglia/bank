@@ -6,6 +6,7 @@ Investigación en español basada en el análisis aportado por el usuario, ampli
 |---|---|
 | [market_analysis.md](market_analysis.md) | Demanda, segmentos, proveedores, evidencia de casos locales, escenarios de mercado y TCO, alternativas de construcción/compra y estrategia de entrada. |
 | [compliant.md](compliant.md) | Leyes, BCRA, UIF, AAIP, fiscalidad, ISO y estándares de industria, con aplicabilidad, vigencias, controles y evidencias. |
+| [achitecture.md](achitecture.md) | Arquitectura modular, configuración versionada, consistencia financiera, asincronía, HA, baja latencia y carga inicial masiva con trazabilidad a requisitos. |
 | [Skill: core-bancario-argentina](../.agents/skills/core-bancario-argentina/SKILL.md) | Procedimiento reutilizable para verificar fuentes y convertir requisitos en controles, pruebas y backlog. |
 | [Registro de fuentes BCRA](research/bcra_sources.json) | Metadatos y huellas SHA-256 de los documentos descargados; las URLs de textos ordenados pueden actualizar su contenido. |
 
