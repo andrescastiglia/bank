@@ -1,0 +1,6 @@
+interface:
+  display_name: "Core bancario Argentina"
+  short_description: "Regulación y controles para cores argentinos"
+  default_prompt: "Revisá este core bancario para Argentina: determiná su perímetro regulatorio, verificá fuentes oficiales vigentes y convertí los requisitos aplicables en controles, evidencia y un plan de brechas."
+policy:
+  allow_implicit_invocation: true
