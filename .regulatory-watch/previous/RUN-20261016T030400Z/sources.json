@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "inventory_version": "2026-10-16.2",
+  "reporting_timezone": "America/Buenos_Aires",
+  "initial_backfill_from": "2026-10-15T00:00:00-03:00",
+  "overlap_days": 7,
+  "scope": "Vigilancia del catálogo documentado de core argentino; detección por materia y aplicabilidad diferenciada por sujeto/producto. No certifica exhaustividad universal ni cobertura de toda jurisdicción.",
+  "sources": [
+    {
+      "source_id": "WATCH-BO",
+      "authority": "Boletín Oficial de la República Argentina",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.boletinoficial.gov.ar/seccion/primera",
+        "https://www.boletinoficial.gob.ar/seccion/primera"
+      ],
+      "coverage_scope": "Primera sección: normas pertinentes a servicios financieros, datos, contratos, impuestos y operación; registrar filtros, ediciones, suplementos, rectificatorias y anexos."
+    },
+    {
+      "source_id": "WATCH-BCRA-COM",
+      "authority": "BCRA — comunicaciones",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.bcra.gob.ar/buscador-de-comunicaciones/"
+      ],
+      "coverage_scope": "Comunicaciones A, B, C y P y sus anexos cuando sean pertinentes; no limitar a A ni tratar índice como texto verificado."
+    },
+    {
+      "source_id": "WATCH-BCRA-TO",
+      "authority": "BCRA — textos ordenados",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+        "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es"
+      ],
+      "coverage_scope": "Comparar versiones y huellas de textos ordenados con comunicaciones modificatorias; el consolidado no sustituye el evento de publicación."
+    },
+    {
+      "source_id": "WATCH-BCRA-RI",
+      "authority": "BCRA — regímenes informativos",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+        "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+        "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-optico.pdf"
+      ],
+      "coverage_scope": "Faceta regimenes_informativos del índice JSON oficial y sus PDF/instrucciones. Inventariar títulos/archivos y validar novedades fuera de ese corpus; no se confirmó una página independiente completa de novedades RI."
+    },
+    {
+      "source_id": "WATCH-UIF",
+      "authority": "Unidad de Información Financiera",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-cada-sujeto-obligado",
+        "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-todos-los-sujetos-obligados"
+      ],
+      "coverage_scope": "Normativa sectorial y transversal LA/FT/FP por sujeto; incluir modificaciones, anexos, reportes y calendarios."
+    },
+    {
+      "source_id": "WATCH-AAIP",
+      "authority": "Agencia de Acceso a la Información Pública",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.argentina.gob.ar/aaip/buscador-normativa"
+      ],
+      "coverage_scope": "Datos personales, seguridad, derechos, transferencias y tratamiento; no importar un plazo extranjero como ley local."
+    },
+    {
+      "source_id": "WATCH-ARCA",
+      "authority": "Agencia de Recaudación y Control Aduanero",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://biblioteca.arca.gob.ar/search/query/index.aspx",
+        "https://www.arca.gob.ar/"
+      ],
+      "coverage_scope": "Regímenes financieros/plataformas, información, recaudación e impuestos; separar obligaciones del usuario del core y del eventual proveedor."
+    },
+    {
+      "source_id": "WATCH-COMARB",
+      "authority": "Comisión Arbitral — COMARB",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.ca.gov.ar/"
+      ],
+      "coverage_scope": "Resoluciones y novedades de SIRCREB/SIRCUPA y regímenes pertinentes; fallos del sitio conservan gap aunque se contraste una publicación en BO."
+    },
+    {
+      "source_id": "WATCH-CNV",
+      "authority": "Comisión Nacional de Valores",
+      "category": "regulation",
+      "required_for_detection": true,
+      "entrypoints": [
+        "https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio"
+      ],
+      "coverage_scope": "Valores, agentes, FCI, custodia y funciones de mercado del catálogo; detección requerida, aplicación condicional al rol/producto."
+    },
+    {
+      "source_id": "WATCH-JURIS",
+      "authority": "Jurisdicciones subnacionales aplicables",
+      "category": "conditional",
+      "required_for_detection": false,
+      "entrypoints": [
+        "https://www.ca.gov.ar/"
+      ],
+      "coverage_scope": "Activar autoridades/boletines provinciales y municipales al determinar jurisdicciones. Inventario nacional no acredita cobertura local universal."
+    },
+    {
+      "source_id": "WATCH-STANDARDS",
+      "authority": "Organismos de estándares y redes",
+      "category": "standard",
+      "required_for_detection": false,
+      "entrypoints": [
+        "https://www.iso.org/standards.html",
+        "https://www.pcisecuritystandards.org/",
+        "https://www.nist.gov/",
+        "https://owasp.org/",
+        "https://www.swift.com/"
+      ],
+      "coverage_scope": "Ediciones/transiciones de estándares adoptados o contratos de red efectivos. No todos son leyes ni aplican a todo core; no eludir licencias de documentos."
+    }
+  ]
+}

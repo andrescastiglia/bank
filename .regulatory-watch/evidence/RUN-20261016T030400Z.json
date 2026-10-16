@@ -1,0 +1,3637 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-20261016T030400Z",
+  "reporting_timezone": "America/Buenos_Aires",
+  "note": "Operational evidence only in automation/regulatory-state. Raw HTTP bytes hashes, not legal completeness or authentication. No bodies, personal data from edicts or restricted standards copied. Fetched_at UTC; request filters are public retrieval parameters.",
+  "summary": {
+    "attempts": 174,
+    "http200": 171,
+    "http500": 3
+  },
+  "fetches": [
+    {
+      "id": "WATCH-BO-0",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera",
+      "fetched_at": "2026-10-16T03:05:03.838574+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/seccion/primera",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6cfd0abd7ffb56ea7c421bd4ede7b8ec43249540b2957edcd49d8396eb34e562",
+      "bytes": 142241
+    },
+    {
+      "id": "WATCH-BO-1",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera",
+      "fetched_at": "2026-10-16T03:05:03.839521+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/seccion/primera",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c197b29f2226866696d37b840ed66dd5467a317afb2a4961f49b8a56decdb770",
+      "bytes": 143800
+    },
+    {
+      "id": "WATCH-BCRA-COM-0",
+      "requested_url": "https://www.bcra.gob.ar/buscador-de-comunicaciones/",
+      "fetched_at": "2026-10-16T03:05:03.840109+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/buscador-de-comunicaciones/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "422bb8c26f480ad0fb3ce188029bc713352a8c91de9cd927dd0dc4c4c20625a6",
+      "bytes": 77062
+    },
+    {
+      "id": "WATCH-BCRA-TO-0",
+      "requested_url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "fetched_at": "2026-10-16T03:05:03.840763+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "b489671d312ebd795e546abfdb9570ea4081f101564ea19d8514e095d183cb7a",
+      "bytes": 70475
+    },
+    {
+      "id": "WATCH-BCRA-TO-1",
+      "requested_url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "fetched_at": "2026-10-16T03:05:03.841870+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "bytes": 39143
+    },
+    {
+      "id": "WATCH-BCRA-RI-0",
+      "requested_url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "fetched_at": "2026-10-16T03:05:04.283570+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "b489671d312ebd795e546abfdb9570ea4081f101564ea19d8514e095d183cb7a",
+      "bytes": 70475
+    },
+    {
+      "id": "WATCH-BCRA-RI-1",
+      "requested_url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "fetched_at": "2026-10-16T03:05:04.479486+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "bytes": 39143
+    },
+    {
+      "id": "WATCH-BCRA-RI-2",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-optico.pdf",
+      "fetched_at": "2026-10-16T03:05:04.609046+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-optico.pdf",
+      "content_type": "application/pdf",
+      "sha256": "21dbb58e668f76d8c375e58de192eccdbcea9ab252d94f1e541bf67505d98c15",
+      "bytes": 2236628,
+      "pdf_pages": 45
+    },
+    {
+      "id": "WATCH-UIF-0",
+      "requested_url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-cada-sujeto-obligado",
+      "fetched_at": "2026-10-16T03:05:04.817886+00:00",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-cada-sujeto-obligado",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "fbddd02196cfaefd1133728deae65bf992b0ad0b48b59b3775ce12a273808747",
+      "bytes": 40222
+    },
+    {
+      "id": "WATCH-UIF-1",
+      "requested_url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-todos-los-sujetos-obligados",
+      "fetched_at": "2026-10-16T03:05:04.841706+00:00",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-todos-los-sujetos-obligados",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "d5f52cc881612e5c39b97e65cf1d615bf58a05797883f5090a750f506072bfe0",
+      "bytes": 32519
+    },
+    {
+      "id": "WATCH-AAIP-0",
+      "requested_url": "https://www.argentina.gob.ar/aaip/buscador-normativa",
+      "fetched_at": "2026-10-16T03:05:05.014958+00:00",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/aaip/buscador-normativa",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "a0ee2aaea767c5ced7341be5035eb02b7ba38e89675d3b8a47e6fe69c79fade3",
+      "bytes": 45016
+    },
+    {
+      "id": "WATCH-ARCA-0",
+      "requested_url": "https://biblioteca.arca.gob.ar/search/query/index.aspx",
+      "fetched_at": "2026-10-16T03:05:05.334575+00:00",
+      "status": 200,
+      "url": "https://biblioteca.arca.gob.ar/search/query/index.aspx",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4a7111e04f8bec4a717b722f3e8d687ac68af7981e5aea28dc26cfc8e3d4ed36",
+      "bytes": 57839
+    },
+    {
+      "id": "WATCH-ARCA-1",
+      "requested_url": "https://www.arca.gob.ar/",
+      "fetched_at": "2026-10-16T03:05:05.339117+00:00",
+      "status": 200,
+      "url": "https://www.arca.gob.ar/",
+      "content_type": "text/html",
+      "sha256": "150d3bdba5ffa3028f9c303c1493af247b9f153bfa7fbc5de7e62510b3dd5373",
+      "bytes": 274
+    },
+    {
+      "id": "WATCH-COMARB-0",
+      "requested_url": "https://www.ca.gov.ar/",
+      "fetched_at": "2026-10-16T03:05:07.109894+00:00",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "WATCH-CNV-0",
+      "requested_url": "https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio",
+      "fetched_at": "2026-10-16T03:05:07.291074+00:00",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f99980f7f6b2793984c9e09c7f0b10f7f2f4709a2293578b3a84f7e4e11263a3",
+      "bytes": 32647
+    },
+    {
+      "id": "BO15",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261015",
+      "fetched_at": "2026-10-16T03:05:07.555245+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/seccion/primera/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e0cdbdbaa4b6df58222e5e8e631c92c75dd3670ade298e046984b75736a77132",
+      "bytes": 146878
+    },
+    {
+      "id": "BO16",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261016",
+      "fetched_at": "2026-10-16T03:05:08.220951+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/seccion/primera/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ecad56b383833f082318d591070270ed86031ff5949b6e7fd02c233838f09bc0",
+      "bytes": 143800
+    },
+    {
+      "id": "BO-UVA",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+      "fetched_at": "2026-10-16T03:05:08.571528+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "70cf2b5ad1005291b5ca5e76b27f80321fe32c337d0c29bbaab6ccd729afe147",
+      "bytes": 55000
+    },
+    {
+      "id": "BO-CNV1172",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348986/20261015",
+      "fetched_at": "2026-10-16T03:05:09.039863+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348986/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "71bf88f5b3bd10d5a606bf7e32c96347f29010ff5af04f8ca027da457d7d2e96",
+      "bytes": 155682
+    },
+    {
+      "id": "CNV-PANEL",
+      "requested_url": "https://www.cnv.gov.ar/sitioWeb/MarcoRegulatorio?panel=2",
+      "fetched_at": "2026-10-16T03:05:10.884266+00:00",
+      "status": 200,
+      "url": "https://www.cnv.gov.ar/sitioWeb/MarcoRegulatorio?panel=2",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "69ff9ae68d364e2a24638cc149b6a516289041ccd42498fe31c93fc54d840af3",
+      "bytes": 1385311
+    },
+    {
+      "id": "ARCA-FIN",
+      "requested_url": "https://www.arca.gob.ar/operacionesFinancieras/",
+      "fetched_at": "2026-10-16T03:05:10.954101+00:00",
+      "status": 200,
+      "url": "https://www.arca.gob.ar/operacionesFinancieras/",
+      "content_type": "text/html",
+      "sha256": "cf5283270144b6d7e1131b90608205868d90d716a34bb7d1763072f74d546f23",
+      "bytes": 25010
+    },
+    {
+      "id": "ARCA-DIGITAL",
+      "requested_url": "https://www.arca.gob.ar/economia-digital/ayuda/normativa.asp",
+      "fetched_at": "2026-10-16T03:05:11.021535+00:00",
+      "status": 200,
+      "url": "https://www.arca.gob.ar/economia-digital/ayuda/normativa.asp",
+      "content_type": "text/html",
+      "sha256": "0de1e15ba0aecab01bf351b1e26ad927b615dee0f08212379b425310fe76da38",
+      "bytes": 26991
+    },
+    {
+      "id": "COMARB-SIRCUPA",
+      "requested_url": "https://www.ca.gob.ar/sistemas/sircupa",
+      "fetched_at": "2026-10-16T03:05:11.777839+00:00",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "COMARB-SIRCREB",
+      "requested_url": "https://www.ca.gob.ar/sircreb",
+      "fetched_at": "2026-10-16T03:05:12.454658+00:00",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "RUSTSEC",
+      "requested_url": "https://rustsec.org/advisories/",
+      "fetched_at": "2026-10-16T03:05:13.161893+00:00",
+      "status": 200,
+      "url": "https://rustsec.org/advisories/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4ec586a97d7799b22b2b576d629bec92a3347eb7bbc0501aea53442d5a372909",
+      "bytes": 472577
+    },
+    {
+      "id": "RUST-SECURITY",
+      "requested_url": "https://www.rust-lang.org/policies/security",
+      "fetched_at": "2026-10-16T03:05:13.582998+00:00",
+      "status": 200,
+      "url": "https://rust-lang.org/policies/security/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7d01c0a32fb3ec823abcf287b6ec11db0bec8a5eba876f9e200c95340c1bd998",
+      "bytes": 18296
+    },
+    {
+      "id": "RUST-STABLE",
+      "requested_url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+      "fetched_at": "2026-10-16T03:05:13.592261+00:00",
+      "status": 200,
+      "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+      "content_type": "binary/octet-stream",
+      "sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+      "bytes": 943486
+    },
+    {
+      "id": "SCRATCH",
+      "requested_url": "https://docs.docker.com/build/building/base-images/",
+      "fetched_at": "2026-10-16T03:05:13.948287+00:00",
+      "status": 200,
+      "url": "https://docs.docker.com/build/building/base-images/",
+      "content_type": "text/html",
+      "sha256": "dc0cbf58a483e5ded1bc3b1dd764f808ce90afe427ccc03677b1b827bdfba58a",
+      "bytes": 535472
+    },
+    {
+      "id": "K8S-SEC",
+      "requested_url": "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+      "fetched_at": "2026-10-16T03:05:14.130979+00:00",
+      "status": 200,
+      "url": "https://kubernetes.io/docs/tasks/configure-pod-container/security-context/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "fcb7a0e8e255372e3e77fad3d6e294237066fcf1f2c0c34dea083c4483f99a23",
+      "bytes": 578441
+    },
+    {
+      "id": "CARGO-LOCK",
+      "requested_url": "https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html",
+      "fetched_at": "2026-10-16T03:05:14.159983+00:00",
+      "status": 200,
+      "url": "https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html",
+      "content_type": "text/html",
+      "sha256": "9a57da3090c315e325275d315958b9af1eed3f480ac48f4c0a91e1b74f040fe9",
+      "bytes": 27793
+    },
+    {
+      "id": "PG-RLS",
+      "requested_url": "https://www.postgresql.org/support/security/CVE-2026-14666/",
+      "fetched_at": "2026-10-16T03:05:14.344991+00:00",
+      "status": 200,
+      "url": "https://www.postgresql.org/support/security/CVE-2026-14666/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "7d881bae442426da6d55b36656da387d64ce057710f494ce714682818b6f1186",
+      "bytes": 8944
+    },
+    {
+      "id": "PG-DUMP",
+      "requested_url": "https://www.postgresql.org/support/security/CVE-2026-19385/",
+      "fetched_at": "2026-10-16T03:05:14.505991+00:00",
+      "status": 200,
+      "url": "https://www.postgresql.org/support/security/CVE-2026-19385/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4d1345484fef903e245b70c095885a740f41c14b425b298c617dc3ecddb33ce6",
+      "bytes": 8555
+    },
+    {
+      "id": "FAPI",
+      "requested_url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "fetched_at": "2026-10-16T03:05:14.679953+00:00",
+      "status": 200,
+      "url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "content_type": "text/html",
+      "sha256": "26a49ad19b1f2b19ecc1cd9b825b4d5012f5e03a5dc8cb0dbd26462d39da465c",
+      "bytes": 150598
+    },
+    {
+      "id": "ASVS",
+      "requested_url": "https://owasp.org/projects/asvs",
+      "fetched_at": "2026-10-16T03:05:14.804869+00:00",
+      "status": 200,
+      "url": "https://owasp.org/projects/asvs",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c9a47fdd03cccbd0ed7083d42dd2de7c1cdd9f241a917f5c7cc993ef7bd9b892",
+      "bytes": 130397
+    },
+    {
+      "id": "KEV",
+      "requested_url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "fetched_at": "2026-10-16T03:05:14.956326+00:00",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "content_type": "text/plain; charset=utf-8",
+      "sha256": "0a4807c44c302e6c3f8ba5adbcd45f8163514f52059f636ad9048728cf0c57b8",
+      "bytes": 1789360
+    },
+    {
+      "id": "MAMBU",
+      "requested_url": "https://mambu.com/en",
+      "fetched_at": "2026-10-16T03:05:15.063981+00:00",
+      "status": 200,
+      "url": "https://mambu.com/en",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "d45e874a6faf80ba47dcf10aa04e6af33191f0389a3e74da972cfb55c3080ecf",
+      "bytes": 188614
+    },
+    {
+      "id": "PISMO",
+      "requested_url": "https://developers.pismo.io/pismo-docs/docs/welcome",
+      "fetched_at": "2026-10-16T03:05:15.392059+00:00",
+      "status": 200,
+      "url": "https://developers.pismo.io/pismo-docs/docs/welcome",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "0c0cf64ee44538aec752531dfc89dcec059439a73ef95bc45a0cf365936c941a",
+      "bytes": 1169305
+    },
+    {
+      "id": "BANTOTAL",
+      "requested_url": "https://www.bantotal.com/",
+      "fetched_at": "2026-10-16T03:05:15.399842+00:00",
+      "status": 200,
+      "url": "https://www.bantotal.com/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c5ad28ae720dd7786dec14ea780694f9cbc97f51d52c1b241346b2c59eb1e35b",
+      "bytes": 46448
+    },
+    {
+      "id": "TOPAZ",
+      "requested_url": "https://www.topazevolution.com/",
+      "fetched_at": "2026-10-16T03:05:15.617334+00:00",
+      "status": 200,
+      "url": "https://www.topazevolution.com/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "408c875c5297616b28c3d32ed551c25f6175a0dc58956ef5e5b9f31c03d98243",
+      "bytes": 256013
+    },
+    {
+      "id": "TEMENOS",
+      "requested_url": "https://www.temenos.com/products/core-banking/",
+      "fetched_at": "2026-10-16T03:05:15.925431+00:00",
+      "status": 200,
+      "url": "https://www.temenos.com/products/core-banking/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1f528e699886756ddf7f8ef67ec99054d9f0a021cbb476bfc11072900ce2b5e8",
+      "bytes": 240471
+    },
+    {
+      "id": "VAULT",
+      "requested_url": "https://www.thoughtmachine.net/vault-core",
+      "fetched_at": "2026-10-16T03:05:15.963601+00:00",
+      "status": 200,
+      "url": "https://www.thoughtmachine.net/vault-core",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c555387d40f8d287650ea2ab48f00fcc37ae22196903b6fa246bba7f7491b189",
+      "bytes": 149090
+    },
+    {
+      "id": "FINERACT",
+      "requested_url": "https://fineract.apache.org/",
+      "fetched_at": "2026-10-16T03:05:16.089791+00:00",
+      "status": 200,
+      "url": "https://fineract.apache.org/",
+      "content_type": "text/html",
+      "sha256": "b72aff1d5fc0be32e018b3868026c98810c236ca5d4d1800692686ebad246ec3",
+      "bytes": 26245
+    },
+    {
+      "id": "RUST-NEWS",
+      "requested_url": "https://blog.rust-lang.org/feed.xml",
+      "fetched_at": "2026-10-16T03:06:31.834529+00:00",
+      "status": 200,
+      "url": "https://blog.rust-lang.org/feed.xml",
+      "content_type": "application/xml",
+      "sha256": "b7ffe547bd45163bcf7a05223b1e0b09b70635ed428f148e4ff601dbf98d2d07",
+      "bytes": 108722
+    },
+    {
+      "id": "RUST-1991",
+      "requested_url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+      "fetched_at": "2026-10-16T03:06:31.835527+00:00",
+      "status": 200,
+      "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1b4bcf8f6c0cc680ca6bafda173750d059db641f1d69d23f556b858a14461db1",
+      "bytes": 10920
+    },
+    {
+      "id": "RUSTSEC-0352",
+      "requested_url": "https://rustsec.org/advisories/RUSTSEC-2026-0352.html",
+      "fetched_at": "2026-10-16T03:06:31.836116+00:00",
+      "status": 200,
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0352.html",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "eace743ec07da569fa5054e5e40c64b330abacf6055fe2200fbf01463b1a71c6",
+      "bytes": 10308
+    },
+    {
+      "id": "RUSTSEC-0363",
+      "requested_url": "https://rustsec.org/advisories/RUSTSEC-2026-0363.html",
+      "fetched_at": "2026-10-16T03:06:31.836812+00:00",
+      "status": 200,
+      "url": "https://rustsec.org/advisories/RUSTSEC-2026-0363.html",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4db8e79c3deaf7c4ed78831e0172b9f060534e3e1a542c7fdba8922543a52427",
+      "bytes": 9652
+    },
+    {
+      "id": "B13247",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13247.pdf",
+      "fetched_at": "2026-10-16T03:06:31.837826+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13247.pdf",
+      "content_type": "application/pdf",
+      "sha256": "78bef969ea3f905c721385cd77c1fab0e4aaa396577a33d2d13c4a611ec307d9",
+      "bytes": 209716,
+      "pdf_pages": 2
+    },
+    {
+      "id": "B13246",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13246.pdf",
+      "fetched_at": "2026-10-16T03:06:32.119257+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13246.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5ef9de3ecaea789f9ed64a66c6cd8d95fa960fb9f351b407050861a770c49115",
+      "bytes": 195839,
+      "pdf_pages": 2
+    },
+    {
+      "id": "A8492",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+      "fetched_at": "2026-10-16T03:06:32.129022+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+      "content_type": "application/pdf",
+      "sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+      "bytes": 216192,
+      "pdf_pages": 6
+    },
+    {
+      "id": "B13248",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+      "fetched_at": "2026-10-16T03:06:32.146917+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+      "content_type": "application/pdf",
+      "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+      "bytes": 149492,
+      "pdf_pages": 1
+    },
+    {
+      "id": "SISCEN",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/siscen.pdf",
+      "fetched_at": "2026-10-16T03:06:32.301549+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/siscen.pdf",
+      "content_type": "application/pdf",
+      "sha256": "cb8775c2a50182bf083aea2e1a846b66b0283d4d782adbd732f0c7c0d120f12d",
+      "bytes": 2267917,
+      "pdf_pages": 151
+    },
+    {
+      "id": "BO-CNV1173",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348987/20261015",
+      "fetched_at": "2026-10-16T03:06:32.639198+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348987/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "04e2589519f30feb7fadb5d9c73fde51591f420bde5ba054996b848d2c3016f2",
+      "bytes": 112511
+    },
+    {
+      "id": "NOTICE-348972",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348972/20261015",
+      "fetched_at": "2026-10-16T03:06:32.664581+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348972/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "42a76a9ef634ed30bc181009948e5961268dfb7056011e19a46361cf66d3dfcd",
+      "bytes": 62074
+    },
+    {
+      "id": "NOTICE-348974",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348974/20261015",
+      "fetched_at": "2026-10-16T03:06:32.964718+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348974/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "b1551c5b0cec777529854c1b3f4ef0d33c39286b5d8889ca648937347f8650b7",
+      "bytes": 78065
+    },
+    {
+      "id": "NOTICE-348976",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+      "fetched_at": "2026-10-16T03:06:34.026277+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c4a8022946bdf9c6f35b390615200affdeef07aab4dc06ef1b11f27f3788334c",
+      "bytes": 60061
+    },
+    {
+      "id": "NOTICE-348977",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348977/20261015",
+      "fetched_at": "2026-10-16T03:06:35.600010+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348977/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ec13f58c608a9fc851473c36872c275f027119a54e31deee9e54bbe50eca6cd1",
+      "bytes": 76350
+    },
+    {
+      "id": "NOTICE-348978",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348978/20261015",
+      "fetched_at": "2026-10-16T03:06:35.725670+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348978/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e0647aea7318a2b10d74e41b441344033d361f30d19d422353603c0682f2704e",
+      "bytes": 59107
+    },
+    {
+      "id": "NOTICE-348979",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+      "fetched_at": "2026-10-16T03:06:35.758793+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5ecb18832d5530490e0d65ae3c1b0665ca11aea405356aa12cbc7d087526f616",
+      "bytes": 73503
+    },
+    {
+      "id": "NOTICE-348980",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348980/20261015",
+      "fetched_at": "2026-10-16T03:06:36.003869+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348980/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ccda155b0311a76dbdbc11397a1a30ecc732f206aa38c73b0793d4f5cfcd7e8a",
+      "bytes": 64848
+    },
+    {
+      "id": "NOTICE-348981",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348981/20261015",
+      "fetched_at": "2026-10-16T03:06:36.994013+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348981/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "b0791b8dce94cf9bf1247dd0a91f608607d23d066114a48b6654482986cfc637",
+      "bytes": 69547
+    },
+    {
+      "id": "NOTICE-348982",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348982/20261015",
+      "fetched_at": "2026-10-16T03:06:37.016311+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348982/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "bf89a19c6d34fc7eb52d17d77703aab77f6a84986c729a0a30dd43a7fa232f39",
+      "bytes": 59168
+    },
+    {
+      "id": "NOTICE-348983",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348983/20261015",
+      "fetched_at": "2026-10-16T03:06:37.948536+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348983/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "aa14c6660882daa72940e8177921fc4ed3583700fa34f7586af415ec38b54587",
+      "bytes": 59900
+    },
+    {
+      "id": "NOTICE-348984",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348984/20261015",
+      "fetched_at": "2026-10-16T03:06:38.519893+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348984/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "7ecb1c8837f26b61cc83cacfd2a3ebe2b0a4bbe7be37b11c704374a4b232d1ce",
+      "bytes": 62625
+    },
+    {
+      "id": "NOTICE-348985",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348985/20261015",
+      "fetched_at": "2026-10-16T03:06:38.539435+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348985/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "110a60f26dac0ba4aa1cbee4d05585feac6df56161ee2c6cabd401fb9b330878",
+      "bytes": 61737
+    },
+    {
+      "id": "NOTICE-348988",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348988/20261015",
+      "fetched_at": "2026-10-16T03:06:38.552465+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348988/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "7530e1626e37a92e246a1aed9cfa03a66b5d875a1297cd851179323b5049dfe7",
+      "bytes": 60273
+    },
+    {
+      "id": "NOTICE-348989",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348989/20261015",
+      "fetched_at": "2026-10-16T03:06:38.769509+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348989/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "9fc3fe084d6dbd7817d5b9e6b6b1a6647f17c39af086d0eb37c9478ecf7125ba",
+      "bytes": 55115
+    },
+    {
+      "id": "NOTICE-348990",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348990/20261015",
+      "fetched_at": "2026-10-16T03:06:38.806091+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348990/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "bbc3d104d2645002632bbc4018c3af2234007dca7e029aefc5bc16effe1e9e0b",
+      "bytes": 55106
+    },
+    {
+      "id": "NOTICE-348991",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348991/20261015",
+      "fetched_at": "2026-10-16T03:06:39.370794+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348991/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "dd303c9e8018580815aafa8109f17eb7bfe9e68cc71439b1705c957edb2b29c9",
+      "bytes": 59995
+    },
+    {
+      "id": "NOTICE-348992",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348992/20261015",
+      "fetched_at": "2026-10-16T03:06:39.731982+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348992/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "0fb704c93bf453525a9370d4c0561b9d94b07187ca66f1106c794ea45a00c237",
+      "bytes": 54769
+    },
+    {
+      "id": "NOTICE-348993",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015",
+      "fetched_at": "2026-10-16T03:06:39.916834+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2e9634e87c7a342cc42eb156816c345f3b640fae9aabe13474069e7789a75644",
+      "bytes": 55053
+    },
+    {
+      "id": "NOTICE-348994",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348994/20261015",
+      "fetched_at": "2026-10-16T03:06:40.093540+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348994/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "0684d5b9389a9b68ab2dc2c63ae6a23b0f6348ea45dc74fc9103f2b2a270bd42",
+      "bytes": 60104
+    },
+    {
+      "id": "NOTICE-348995",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348995/20261015",
+      "fetched_at": "2026-10-16T03:06:40.309522+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348995/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "34d5a0b6598898ee39dc9634c9e9393eb238cad6951469c954a30e967f04047c",
+      "bytes": 58579
+    },
+    {
+      "id": "NOTICE-348996",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348996/20261015",
+      "fetched_at": "2026-10-16T03:06:40.439018+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348996/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "0dc0ad043fbf05b89cbe1ba06706b1e275c0e16d1037eb1430af5092d6e3887b",
+      "bytes": 60047
+    },
+    {
+      "id": "NOTICE-348997",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348997/20261015",
+      "fetched_at": "2026-10-16T03:06:40.525521+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348997/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c3c60109995b00c82a388cd7853d9c3854e31f0fe6e5e233c881817a6c841a51",
+      "bytes": 55489
+    },
+    {
+      "id": "NOTICE-348999",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348999/20261015",
+      "fetched_at": "2026-10-16T03:06:40.595029+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348999/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e089ba53168b1070096b7fcd769c07366063f1e15d472a4c56ccc663c19fa3ad",
+      "bytes": 52085
+    },
+    {
+      "id": "NOTICE-349000",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349000/20261015",
+      "fetched_at": "2026-10-16T03:06:40.807300+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349000/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "429441a7ffd81c8afb2597f4424d792223815cb0dcc7929fcaddeadafc8a8d34",
+      "bytes": 52065
+    },
+    {
+      "id": "NOTICE-349001",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349001/20261015",
+      "fetched_at": "2026-10-16T03:06:40.934247+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349001/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2e90e4ad2c279fac999a758d9496dacb6847f3568d0998199cb29bc936ae3aed",
+      "bytes": 55668
+    },
+    {
+      "id": "NOTICE-349002",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+      "fetched_at": "2026-10-16T03:06:40.988650+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "a1477789900761b210943db5793322c1b3de2d4e501bd7df7ab5267daa810aa4",
+      "bytes": 55103
+    },
+    {
+      "id": "NOTICE-349004",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349004/20261015",
+      "fetched_at": "2026-10-16T03:06:41.170902+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349004/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "71964508e24b4cf2550b23d226fe73f263663932df7919b6a109a32625b0c713",
+      "bytes": 52266
+    },
+    {
+      "id": "NOTICE-349005",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349005/20261015",
+      "fetched_at": "2026-10-16T03:06:41.375205+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349005/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2dc5b52ce20f4d92202b96d7fd0dc6abcffd8f9cd098ea2ba5ccba9b939268ce",
+      "bytes": 54675
+    },
+    {
+      "id": "NOTICE-349006",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349006/20261015",
+      "fetched_at": "2026-10-16T03:06:41.410297+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349006/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "958d0df9a3c3876f0c57c61b57511006432b284b15c771d149ea403086a8a905",
+      "bytes": 53714
+    },
+    {
+      "id": "NOTICE-349007",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349007/20261015",
+      "fetched_at": "2026-10-16T03:06:41.631071+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349007/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ad567419dded03034df53cb40259d0309e7b43b4e156833d08b24c9f8da31a46",
+      "bytes": 53949
+    },
+    {
+      "id": "NOTICE-349008",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349008/20261015",
+      "fetched_at": "2026-10-16T03:06:41.677712+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349008/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "62b7020a969f5fa1cdd586c4c8554603db1420cd47f0baff081b3245e156fd12",
+      "bytes": 56664
+    },
+    {
+      "id": "NOTICE-349009",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349009/20261015",
+      "fetched_at": "2026-10-16T03:06:41.743330+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349009/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "03011729ce6d73fd13c88031222679123066a53916ff4fc216c668d7c9ec0e43",
+      "bytes": 52926
+    },
+    {
+      "id": "NOTICE-349010",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349010/20261015",
+      "fetched_at": "2026-10-16T03:06:42.047994+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349010/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e013e1e5215df358ac9f749fa349c0657e31a395868e3736eac9fe4999161e17",
+      "bytes": 52929
+    },
+    {
+      "id": "NOTICE-349011",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349011/20261015",
+      "fetched_at": "2026-10-16T03:06:42.076095+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349011/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "8e399f83fb2a3bba366bb6455696b7b0c6c84fff525cbc1773766ae5084b706a",
+      "bytes": 51206
+    },
+    {
+      "id": "NOTICE-349013",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349013/20261015",
+      "fetched_at": "2026-10-16T03:06:42.183047+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349013/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5765270f6e632cfab1a5918c7adbc6be43fd63599a811419030e467607c6d885",
+      "bytes": 53031
+    },
+    {
+      "id": "NOTICE-349014",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349014/20261015",
+      "fetched_at": "2026-10-16T03:06:42.425966+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349014/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c872b8c74bf81074873a5501cb59e0c52fd32eae0b269fd8c55a4f01550e47fe",
+      "bytes": 56300
+    },
+    {
+      "id": "NOTICE-349015",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349015/20261015",
+      "fetched_at": "2026-10-16T03:06:42.516763+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349015/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "76ee4b8fea7a687380741a723f9b835ceb74675fe502fe754249aad3d16f5ac3",
+      "bytes": 54545
+    },
+    {
+      "id": "NOTICE-349016",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349016/20261015",
+      "fetched_at": "2026-10-16T03:06:42.745708+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349016/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6404d97d7ebcdd7c9340acf49a30c9cb75fb8d2ef54346725517953ab70b449b",
+      "bytes": 52350
+    },
+    {
+      "id": "NOTICE-349017",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349017/20261015",
+      "fetched_at": "2026-10-16T03:06:42.866961+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349017/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2eae7c14a0d6d9e455c639be672a89a24ad51ebd2224e935a1f05444b884c083",
+      "bytes": 52230
+    },
+    {
+      "id": "NOTICE-349018",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349018/20261015",
+      "fetched_at": "2026-10-16T03:06:42.959484+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349018/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "d1a3ff110d4daccd3cb1a30bb96874b088955d3c385ba191d5a753c93f058984",
+      "bytes": 58358
+    },
+    {
+      "id": "NOTICE-349019",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349019/20261015",
+      "fetched_at": "2026-10-16T03:06:43.086979+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349019/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "171af278dbf7c2b7bfebe350dadabef95d8b57bc235606c5aa4c942cf45524f7",
+      "bytes": 58956
+    },
+    {
+      "id": "NOTICE-349020",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349020/20261015",
+      "fetched_at": "2026-10-16T03:06:43.148986+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349020/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1de0226f79cfef6ba36214d7e0c356c2f8f4a9de9d14c5bfaa132406baf8feb5",
+      "bytes": 52662
+    },
+    {
+      "id": "NOTICE-349021",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349021/20261015",
+      "fetched_at": "2026-10-16T03:06:43.242422+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349021/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "d60760fe523282dd0e7220f3e697d13fedadf00e78d88e750a5cac1c6b510615",
+      "bytes": 52261
+    },
+    {
+      "id": "NOTICE-349022",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349022/20261015",
+      "fetched_at": "2026-10-16T03:06:43.344695+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349022/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "30e6559259ec8aa17bfb81f9a672b09b38cb61b11c2463211963c77aff9e148d",
+      "bytes": 52235
+    },
+    {
+      "id": "NOTICE-349023",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349023/20261015",
+      "fetched_at": "2026-10-16T03:06:43.364641+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349023/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5b8d1e8f09d3763a1dfbd65f66eb9460f905c3100a0a81db398708c264d3c908",
+      "bytes": 52238
+    },
+    {
+      "id": "NOTICE-349024",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349024/20261015",
+      "fetched_at": "2026-10-16T03:06:43.483562+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349024/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "bcc65a8bdf7a28431ace9d7515381889c6bc06d0f3080dc57896c2ed479d09c4",
+      "bytes": 53222
+    },
+    {
+      "id": "NOTICE-349025",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349025/20261015",
+      "fetched_at": "2026-10-16T03:06:43.493284+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349025/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "8d672b18ca11a8893fe6554fc6505c4b6875db32ac1a6a6e62e42a8812c10a94",
+      "bytes": 53039
+    },
+    {
+      "id": "NOTICE-349026",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349026/20261015",
+      "fetched_at": "2026-10-16T03:06:43.577506+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349026/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6782cf89bee876be10475778c949c65528cef165d4fe88f65392e0ea47c849b7",
+      "bytes": 52686
+    },
+    {
+      "id": "BO16-349041",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349041/20261016",
+      "fetched_at": "2026-10-16T03:09:44.169750+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349041/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "fd09f05965b7833c437135c9a465bc7dfce85b20e83c8974ecbdbfc2a933d7c3",
+      "bytes": 58273
+    },
+    {
+      "id": "BO16-349042",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349042/20261016",
+      "fetched_at": "2026-10-16T03:09:44.171589+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349042/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "eef274c918564349c1bc555f53bf189b3de873293300eee4d9eb64597a844c09",
+      "bytes": 59373
+    },
+    {
+      "id": "BO16-349046",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349046/20261016",
+      "fetched_at": "2026-10-16T03:09:44.173880+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349046/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ec001257160197a2f23c778f99dcd0b6406fcf3dc79f23816b09a51eadb2d945",
+      "bytes": 57960
+    },
+    {
+      "id": "BO16-349055",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+      "fetched_at": "2026-10-16T03:09:44.174698+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "da3681702991686f24e68af2eb009b1ff0c1e5c20fc8ece8f7d540581105f37b",
+      "bytes": 64832
+    },
+    {
+      "id": "BO16-349057",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349057/20261016",
+      "fetched_at": "2026-10-16T03:09:44.176263+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349057/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6c1bd5014c6f1e705193c4255fc9635340d4c58ff1bee7ab09422ddab2732a9b",
+      "bytes": 55668
+    },
+    {
+      "id": "BO16-349075",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349075/20261016",
+      "fetched_at": "2026-10-16T03:09:45.461581+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349075/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "2a1835fa651d0d00d20818c170c7bc7eb61d0801ef89168975231427b249f7ea",
+      "bytes": 52266
+    },
+    {
+      "id": "BO16-349076",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349076/20261016",
+      "fetched_at": "2026-10-16T03:09:45.570684+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349076/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "f390f1e3501e2d07cc28393228cff8271163edf0460f9de50061f891cfdbac70",
+      "bytes": 52259
+    },
+    {
+      "id": "BO16-349077",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349077/20261016",
+      "fetched_at": "2026-10-16T03:09:45.585190+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349077/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "dcff22531d3a608d5f6dbd057547c104a75d7c62f2e007328a972bb64d5876b9",
+      "bytes": 52233
+    },
+    {
+      "id": "BO16-349078",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349078/20261016",
+      "fetched_at": "2026-10-16T03:09:45.619053+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349078/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ba790defa5051f0f346e8449274628edcab3ef0da95395863340a381815b3e2e",
+      "bytes": 52236
+    },
+    {
+      "id": "C102432",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102432.pdf",
+      "fetched_at": "2026-10-16T03:09:45.795473+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102432.pdf",
+      "content_type": "application/pdf",
+      "sha256": "ba67c4b69016b4d8aaf820787b95296d88a800deb02cee6303680d2d4d126dae",
+      "bytes": 169372,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102433",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102433.pdf",
+      "fetched_at": "2026-10-16T03:09:46.004010+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102433.pdf",
+      "content_type": "application/pdf",
+      "sha256": "98f028a719c58be365df7e05a3e916ce5e050a0359548a0337d8f33106bd483e",
+      "bytes": 182039,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102434",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102434.pdf",
+      "fetched_at": "2026-10-16T03:09:46.150590+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102434.pdf",
+      "content_type": "application/pdf",
+      "sha256": "939e755c23537f5410e19a4692a713313dcdce87d67c79d602cda29e2003eca9",
+      "bytes": 124229,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102435",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102435.pdf",
+      "fetched_at": "2026-10-16T03:09:46.156506+00:00",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102435.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5ea565197b199e2a151bbe1052b9401f525d08c01563e877b9bf6af9735eea66",
+      "bytes": 228710,
+      "pdf_pages": 4
+    },
+    {
+      "id": "WASI-UPSTREAM",
+      "requested_url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38",
+      "fetched_at": "2026-10-16T03:09:46.262268+00:00",
+      "status": 200,
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "72167188d3829a1e29071304db4faa09e8995f784837d7348090aae84f53f044",
+      "bytes": 202281
+    },
+    {
+      "id": "WASM-UPSTREAM",
+      "requested_url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p",
+      "fetched_at": "2026-10-16T03:09:46.458305+00:00",
+      "status": 200,
+      "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f2c3910a8e41a4895fc046216de5a99f25579026f94e4884d12d5c5bea746d37",
+      "bytes": 196166
+    },
+    {
+      "id": "BCRA-COM-API",
+      "requested_url": "https://www.bcra.gob.ar/api/endpoints/buscador-comunicaciones.php",
+      "fetched_at": "2026-10-16T03:10:17.915063+00:00",
+      "method": "POST",
+      "filters": {
+        "mode": "fecha",
+        "fecha_desde": "2026-10-15",
+        "fecha_hasta": "2026-10-16",
+        "paginaabsoluta": 1,
+        "tamanopagina": 100,
+        "lang": "es"
+      },
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/api/endpoints/buscador-comunicaciones.php",
+      "sha256": "0893a7b32515c628518004d2936c603843ce9aa24ab3b137936e9c383dc29f0d",
+      "bytes": 1884,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "id": "BO-JS-DOWNLOAD",
+      "requested_url": "https://www.boletinoficial.gov.ar/js/downloadPdf.js",
+      "fetched_at": "2026-10-16T03:10:48.360031+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/js/downloadPdf.js",
+      "content_type": "application/javascript",
+      "sha256": "17068e5f131abc3ebabdff01f7c0b169e0b4b32b3dad6e839b2e3c429469655c",
+      "bytes": 6658
+    },
+    {
+      "id": "BO15-348973",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348973/20261015",
+      "fetched_at": "2026-10-16T03:10:48.361042+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348973/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "854ce1d735e114ee1405c8a5fceebb97ece54e2c045e10cd27a4bce1dd83117e",
+      "bytes": 61995
+    },
+    {
+      "id": "BO15-348975",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348975/20261015",
+      "fetched_at": "2026-10-16T03:10:48.361690+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348975/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "84414ba1dd8fa9ac03713536f3c5bb56780bc84620bd0bf9c77f6b4265d08e03",
+      "bytes": 62757
+    },
+    {
+      "id": "BO15-348998",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348998/20261015",
+      "fetched_at": "2026-10-16T03:10:48.363832+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348998/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "3b25b0161dc59fe990f0cf58c34bd873c7ab429cb7e08abe05b5cfe104f3a42d",
+      "bytes": 70445
+    },
+    {
+      "id": "BO15-349012",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349012/20261015",
+      "fetched_at": "2026-10-16T03:10:48.365746+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349012/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "3db12a6c845d5b775c9f58bad2ce72d1bb7e8405d52442a241df853b3dadfe9c",
+      "bytes": 52901
+    },
+    {
+      "id": "BO16-349027",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349027/20261016",
+      "fetched_at": "2026-10-16T03:10:50.338294+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349027/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "625192bde867b116320608fecd4f3de7397ae11305b5756354b64b54ea9b786e",
+      "bytes": 59280
+    },
+    {
+      "id": "BO16-349028",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349028/20261016",
+      "fetched_at": "2026-10-16T03:10:50.658967+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349028/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "0f4ee8859f98f8dd197e23bdd82a8a96240c1a1429c085212cd8222590046581",
+      "bytes": 62541
+    },
+    {
+      "id": "BO16-349029",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349029/20261016",
+      "fetched_at": "2026-10-16T03:10:50.975344+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349029/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "d19c6c50af85fc945805173b1655050d841bea598faba09993b44e6a96671823",
+      "bytes": 57029
+    },
+    {
+      "id": "BO16-349030",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349030/20261016",
+      "fetched_at": "2026-10-16T03:10:51.020321+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349030/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e2fa3d28d0bdc97546aa94c23a38cbdf23340db536750c99930370283b33f698",
+      "bytes": 56294
+    },
+    {
+      "id": "BO16-349031",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349031/20261016",
+      "fetched_at": "2026-10-16T03:10:51.148212+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349031/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "93481187aedb6e548215361bf447a68b3a210099d4bfcd6c1a6e6e88f58019e0",
+      "bytes": 60068
+    },
+    {
+      "id": "BO16-349032",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349032/20261016",
+      "fetched_at": "2026-10-16T03:10:52.367758+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349032/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "64569816816754ca676f644bebae51ec24b354779159dd1f47d55ec16315b1dd",
+      "bytes": 59413
+    },
+    {
+      "id": "BO16-349033",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349033/20261016",
+      "fetched_at": "2026-10-16T03:10:52.718600+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349033/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "82a1089669a6c4ad7785bedfa20809ad420dc102f067dea03a14db081e429b9f",
+      "bytes": 59922
+    },
+    {
+      "id": "BO16-349034",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349034/20261016",
+      "fetched_at": "2026-10-16T03:10:53.042750+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349034/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "708ddc85c3b2627411ca71ee35e6e3483bdae42fc5abc9c163f0ef74090d14f3",
+      "bytes": 60178
+    },
+    {
+      "id": "BO16-349035",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349035/20261016",
+      "fetched_at": "2026-10-16T03:10:53.049007+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349035/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "fcfbe18bc70737b66ee32ef4056b25435815382a823b36df6733983bac97d93f",
+      "bytes": 63912
+    },
+    {
+      "id": "BO16-349036",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349036/20261016",
+      "fetched_at": "2026-10-16T03:10:53.113028+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349036/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5c656ee9239cd3501456b1fc22623ae8157a6fee899a393823fd54099596f9dd",
+      "bytes": 57658
+    },
+    {
+      "id": "BO16-349037",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349037/20261016",
+      "fetched_at": "2026-10-16T03:10:53.569229+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349037/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "d8d12e08574a0dbc9753e4001108ab90a0d66cc982792acc139429c3e9ce4b36",
+      "bytes": 54029
+    },
+    {
+      "id": "BO16-349038",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+      "fetched_at": "2026-10-16T03:10:53.775246+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e4b84c62b16ef3bf7583a5faeae54da03e9b3a60620ac1a7ccf29982fc6abe19",
+      "bytes": 75049
+    },
+    {
+      "id": "BO16-349039",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+      "fetched_at": "2026-10-16T03:10:54.227899+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "38a74ab3499be161286e4ad94e14ee09a106bd541baaa7529d1fbac24bdec7f4",
+      "bytes": 73896
+    },
+    {
+      "id": "BO16-349040",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349040/20261016",
+      "fetched_at": "2026-10-16T03:10:54.432969+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349040/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "535ddac3180d756338329b1203b4b0e492eb6f4b6e54ccb08d9cde7eb54784cd",
+      "bytes": 68839
+    },
+    {
+      "id": "BO16-349043",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349043/20261016",
+      "fetched_at": "2026-10-16T03:10:54.495984+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349043/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1a62b92ff4450680e489eade569a6140a9afde6bba1a1bef7d35f8a25e7697bb",
+      "bytes": 58493
+    },
+    {
+      "id": "BO16-349044",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349044/20261016",
+      "fetched_at": "2026-10-16T03:10:54.881878+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349044/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "24344e4de21393e5b6a491e013fcececcf0cb64a300ba19f80593ca31729beba",
+      "bytes": 59170
+    },
+    {
+      "id": "BO16-349045",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349045/20261016",
+      "fetched_at": "2026-10-16T03:10:54.947676+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349045/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "51b37dc816c2f43b73ef4de166d76ab1318be84c68c326773770f8cce966879b",
+      "bytes": 68759
+    },
+    {
+      "id": "BO16-349047",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349047/20261016",
+      "fetched_at": "2026-10-16T03:10:55.060493+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349047/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e58535347c95430857dd08d099d4ba196e315f156373934b7c4c7934a6c4fb31",
+      "bytes": 60248
+    },
+    {
+      "id": "BO16-349048",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349048/20261016",
+      "fetched_at": "2026-10-16T03:10:55.097900+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349048/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "09ddb5d9490d22b7ad17d45045e0a7fb227ee42f3c6824ea034ccdd0149e3cfd",
+      "bytes": 57584
+    },
+    {
+      "id": "BO16-349049",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349049/20261016",
+      "fetched_at": "2026-10-16T03:10:55.143882+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349049/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "de2f4ec06daa6e11a9090b1b8901d230bfe328cf6e3ede1fa57bc20831cd10fd",
+      "bytes": 57537
+    },
+    {
+      "id": "BO16-349050",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349050/20261016",
+      "fetched_at": "2026-10-16T03:10:55.347306+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349050/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "8b254f64f9bba8aee5a74d74df5e0bf729637dff86faff395080bc844e86568d",
+      "bytes": 57987
+    },
+    {
+      "id": "BO16-349051",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349051/20261016",
+      "fetched_at": "2026-10-16T03:10:55.448006+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349051/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "4c6ffdc9e333a7cd86ed10a2ccf848a668f810a95ae6bbeb03d7fc1c5b8336c2",
+      "bytes": 59287
+    },
+    {
+      "id": "BO16-349052",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349052/20261016",
+      "fetched_at": "2026-10-16T03:10:55.533747+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349052/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "47e8909477707091f4b23c61afb257dea6e5d1470b2beaa668f63a69e180cf20",
+      "bytes": 58437
+    },
+    {
+      "id": "BO16-349053",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349053/20261016",
+      "fetched_at": "2026-10-16T03:10:55.541961+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349053/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1e3bd197166f15d3b37b9b1489a572c2abbc5ce0bbd2e446f21502ff68ae0bc5",
+      "bytes": 57673
+    },
+    {
+      "id": "BO16-349054",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349054/20261016",
+      "fetched_at": "2026-10-16T03:10:55.788754+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349054/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "28af33be4d0195e36dfce2533d6f6096f9709cea502966c2dba0a9ca5437d905",
+      "bytes": 58618
+    },
+    {
+      "id": "BO16-349056",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349056/20261016",
+      "fetched_at": "2026-10-16T03:10:55.864584+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349056/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "625d650d90a228514441e375130d2a99b1e207df782cd765e67ece7849f015ea",
+      "bytes": 52912
+    },
+    {
+      "id": "BO16-349058",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349058/20261016",
+      "fetched_at": "2026-10-16T03:10:55.946546+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349058/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6a475a391bf5480ddfcb27841be6b622cb1c06f0c4d9cfc5fe14771ef7d21fd8",
+      "bytes": 55541
+    },
+    {
+      "id": "BO16-349059",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349059/20261016",
+      "fetched_at": "2026-10-16T03:10:56.251114+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349059/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5113b44bf991165c8cd106d84423b357753b2d7c66165a01ff70c0d423bd8c0c",
+      "bytes": 52577
+    },
+    {
+      "id": "BO16-349060",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349060/20261016",
+      "fetched_at": "2026-10-16T03:10:56.339631+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349060/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "d95f2f2bad605b4d74955a54884033060168ed89c05779e3f023c3f0a7c690cd",
+      "bytes": 56704
+    },
+    {
+      "id": "BO16-349061",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349061/20261016",
+      "fetched_at": "2026-10-16T03:10:56.687247+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349061/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "12464ebc5f947b73f48b495984dff3a0176fa8a831a13f8d7df5987cc24db79c",
+      "bytes": 56597
+    },
+    {
+      "id": "BO16-349062",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349062/20261016",
+      "fetched_at": "2026-10-16T03:10:56.764581+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349062/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "9465cae36e586bea8a2c249d64bce44147d4ec2184d5b1a2d8bb6490f55c0d34",
+      "bytes": 91325
+    },
+    {
+      "id": "BO16-349063",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349063/20261016",
+      "fetched_at": "2026-10-16T03:10:57.086216+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349063/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "810e06ed481ed40e95f63d628b516370afe4061e042186fbefba9433907361ee",
+      "bytes": 52819
+    },
+    {
+      "id": "BO16-349064",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349064/20261016",
+      "fetched_at": "2026-10-16T03:10:57.108992+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349064/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e725fc4d3a337af2c764d3ffe6df8fbcd71cd52b45cde9cb29c56c9b710f4413",
+      "bytes": 54410
+    },
+    {
+      "id": "BO16-349065",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349065/20261016",
+      "fetched_at": "2026-10-16T03:10:57.251610+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349065/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "53ac0ba7630a7ff3ebed514837ef370d0a81bb3d3a878ff83d2c11cd7a6dc933",
+      "bytes": 52739
+    },
+    {
+      "id": "BO16-349066",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349066/20261016",
+      "fetched_at": "2026-10-16T03:10:57.287127+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349066/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "cd5f474057be8f38057743975d4a52817052c1a2857ff678ee7fa705da59044b",
+      "bytes": 52302
+    },
+    {
+      "id": "BO16-349067",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349067/20261016",
+      "fetched_at": "2026-10-16T03:10:57.454700+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349067/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "27daa5504fb0302cb4a02dbb9344971d5bd02275b1025f23fa7b340853806c99",
+      "bytes": 72328
+    },
+    {
+      "id": "BO16-349068",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "fetched_at": "2026-10-16T03:10:57.617055+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "01e72a725ea0faabd3d1195a1023edb19835feaa167cd1afbbaca3299c87b5ae",
+      "bytes": 57228
+    },
+    {
+      "id": "BO16-349069",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349069/20261016",
+      "fetched_at": "2026-10-16T03:10:57.681728+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349069/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1ad334f120d0b5477e8d9cc7b73ec41bd76b14e01c3837daea2460a20491f2e2",
+      "bytes": 51990
+    },
+    {
+      "id": "BO16-349070",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349070/20261016",
+      "fetched_at": "2026-10-16T03:10:57.757641+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349070/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1ba7071d4d545881181c8d897a93c2e914edef920e4566291d0a52f7bcba178d",
+      "bytes": 52110
+    },
+    {
+      "id": "BO16-349071",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349071/20261016",
+      "fetched_at": "2026-10-16T03:10:57.972372+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349071/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "cee5eda3ec83e1fd9b9aacfeb7a44ed262f1f5ab3688db26f1f6cd93b3532aaa",
+      "bytes": 58138
+    },
+    {
+      "id": "BO16-349072",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349072/20261016",
+      "fetched_at": "2026-10-16T03:10:58.142331+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349072/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "7a781c3727b3ea0b34aca50c990816120c7465ddc11268f27c18e8aa55d34ce4",
+      "bytes": 58883
+    },
+    {
+      "id": "BO16-349073",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349073/20261016",
+      "fetched_at": "2026-10-16T03:10:58.183190+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349073/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c3e585f52e4a6c7a44583440042a064f2ac3f7ac50eb066935c300a828886d7d",
+      "bytes": 60484
+    },
+    {
+      "id": "BO16-349074",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349074/20261016",
+      "fetched_at": "2026-10-16T03:10:58.234601+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349074/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "7338d92932eb7fc7add507763b25eee1cdb46f33370f79f21ba1ce1384c32387",
+      "bytes": 59280
+    },
+    {
+      "id": "BO16-349079",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349079/20261016",
+      "fetched_at": "2026-10-16T03:10:58.408773+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349079/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "b90a6cb645199652a625be981d13e33ccef84694a84191233ff3ef36752c78b6",
+      "bytes": 53220
+    },
+    {
+      "id": "BO16-349080",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349080/20261016",
+      "fetched_at": "2026-10-16T03:10:58.578588+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349080/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "9c393e3edf8cfb9e0e8ab5dc87056c4e919ae38debf4910e2c6f41bc0fe7a5b3",
+      "bytes": 53037
+    },
+    {
+      "id": "BO16-349081",
+      "requested_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349081/20261016",
+      "fetched_at": "2026-10-16T03:10:58.638470+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349081/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "36e936d01763aec5dd5a5366d9b460b5a7672aaed680e01b44bdcfe98bcaa665",
+      "bytes": 52348
+    },
+    {
+      "id": "TOKIO-BLOCKING",
+      "requested_url": "https://tokio.rs/tokio/topics/bridging",
+      "fetched_at": "2026-10-16T03:11:20.167835+00:00",
+      "status": 200,
+      "url": "https://tokio.rs/tokio/topics/bridging",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "4cecb93f9ba78e41387ea631b5c36d0f709b34caf1b9ab0918d00906d95c8f61",
+      "bytes": 80693
+    },
+    {
+      "id": "TOKIO-TASKS",
+      "requested_url": "https://tokio.rs/tokio/tutorial/spawning",
+      "fetched_at": "2026-10-16T03:11:20.169237+00:00",
+      "status": 200,
+      "url": "https://tokio.rs/tokio/tutorial/spawning",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "7fa6d8c03acbd5b112b9ca92ff71b2244074e30a1ffb3c6f0c134247e088d9f6",
+      "bytes": 69633
+    },
+    {
+      "id": "AXUM",
+      "requested_url": "https://docs.rs/axum/latest/axum/",
+      "fetched_at": "2026-10-16T03:11:20.170243+00:00",
+      "status": 200,
+      "url": "https://docs.rs/axum/latest/axum/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1b00878a51a409aecb708926913d2b9e09a155a8fe123b254e07abc82779e2f3",
+      "bytes": 118684
+    },
+    {
+      "id": "GNU-LICENSES",
+      "requested_url": "https://www.gnu.org/licenses/license-list.html#apache2",
+      "fetched_at": "2026-10-16T03:11:20.171042+00:00",
+      "status": 200,
+      "url": "https://www.gnu.org/licenses/license-list.html#apache2",
+      "content_type": "text/html",
+      "sha256": "707acf1e856210bf75ee50f3df75e199ae957f007dd27b406188f4a1430b0c3f",
+      "bytes": 145962
+    },
+    {
+      "id": "ANNEX-7811407-1",
+      "requested_url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811407",
+        "fechaPublicacion": "20261016"
+      },
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+      "fetched_at": "2026-10-16T03:12:03.747908+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+      "content_type": "application/json",
+      "bytes": 225797,
+      "sha256": "06863d3f676f0d3fbaea31802040b6c8ce0c1f780c2211f917be97ec3bf94325",
+      "pdf_sha256": "2cae61d6ce6d05de0094c4d29d222d9a2b596f38c2644911ef94d9df31c70a53",
+      "pdf_pages": 4,
+      "pdf_bytes": 168073
+    },
+    {
+      "id": "ANNEX-7809642-1",
+      "requested_url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809642",
+        "fechaPublicacion": "20261015"
+      },
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+      "fetched_at": "2026-10-16T03:12:03.749027+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+      "content_type": "application/json",
+      "bytes": 162728,
+      "sha256": "7c1a4ec891f00ee5ade116a0337045a4cdcd3511d81c2ccc0671ba682a5be8cf",
+      "pdf_sha256": "46ddfdea174b54eeb3c695ad8b9d8db071f3af5adc1cf78e970ed1a6c6e49ae2",
+      "pdf_pages": 2,
+      "pdf_bytes": 121302,
+      "visual_review": "Rendered pages1–2; table as image; period and endpoints compared with BCRA PDF; no automated full-row equivalence asserted."
+    },
+    {
+      "id": "ANNEX-7809670-1",
+      "requested_url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809670",
+        "fechaPublicacion": "20261015"
+      },
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+      "fetched_at": "2026-10-16T03:12:03.749735+00:00",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+      "content_type": "application/json",
+      "bytes": 160722,
+      "sha256": "c529c44abda8816654c2f2fa10fabc3fb270d2c059c29d5640d567ed887ca8f1",
+      "pdf_sha256": "cf3c3bc3290e38e57e4f7cbbe06d349d0ce17f85b3eff2375e23b04a7622a25c",
+      "pdf_pages": 2,
+      "pdf_bytes": 119847,
+      "visual_review": "Rendered pages1–2; table as image; period and endpoints compared with BCRA PDF; no automated full-row equivalence asserted."
+    }
+  ],
+  "repository_inventory": {
+    "commit": "979dd2c8f48e13d17343965d2e7194ec79ca0ed2",
+    "files": [
+      {
+        "path": ".agents/skills/adr-01-nucleo-modular/SKILL.md",
+        "sha256": "c4c5e913e36515e078f77578bb8f0b4fb836637a6de8b25d6fe370c8a13ad07f",
+        "bytes": 5055
+      },
+      {
+        "path": ".agents/skills/adr-01-nucleo-modular/agents/openai.yaml",
+        "sha256": "e83b8027d545b0c7484e1efa7b2485bb4599f6d40443edbeaccbad67fc4e71ec",
+        "bytes": 364
+      },
+      {
+        "path": ".agents/skills/adr-02-autoridad-sql/SKILL.md",
+        "sha256": "b50bc5d1b545366ccc3c0b722c841b1a3be69c2e16e3f90c240eb3129ac60288",
+        "bytes": 7035
+      },
+      {
+        "path": ".agents/skills/adr-02-autoridad-sql/agents/openai.yaml",
+        "sha256": "cbe552565d9eb0c6c91ba38aa8ba260d512d9595d71b73d7717a3ef808a6fdd2",
+        "bytes": 362
+      },
+      {
+        "path": ".agents/skills/adr-03-outbox-inbox/SKILL.md",
+        "sha256": "9a217e189efd49e84c3aeea195c73566a27ffb37383deae383a17437495df2ac",
+        "bytes": 6910
+      },
+      {
+        "path": ".agents/skills/adr-03-outbox-inbox/agents/openai.yaml",
+        "sha256": "26a14f1fff6d36fb989909817ca315715e7610b0856431222c624bc560b004bc",
+        "bytes": 392
+      },
+      {
+        "path": ".agents/skills/adr-04-alta-disponibilidad/SKILL.md",
+        "sha256": "699881b05ba3f7070ab23160ef9472204d4c7b012361dd311f5552af027aebff",
+        "bytes": 6369
+      },
+      {
+        "path": ".agents/skills/adr-04-alta-disponibilidad/agents/openai.yaml",
+        "sha256": "191b78a27cad2d5ef15b74c559848359e8f7bd92660d00cac9e5ec976d9a9098",
+        "bytes": 458
+      },
+      {
+        "path": ".agents/skills/adr-05-configuracion-versionada/SKILL.md",
+        "sha256": "1f095511fc4b27ae11570fb5665236ebc4bce01ddc970d9a69bace2973135402",
+        "bytes": 4993
+      },
+      {
+        "path": ".agents/skills/adr-05-configuracion-versionada/agents/openai.yaml",
+        "sha256": "4ed38b6119855ed7fcc00246d08143ba75e9802c36d890d0b551bde881cf2c08",
+        "bytes": 369
+      },
+      {
+        "path": ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md",
+        "sha256": "d6612ca8183db360910d4db665e074f34fe9ebf095d77f1d6211d97f813ef034",
+        "bytes": 6486
+      },
+      {
+        "path": ".agents/skills/adr-06-aislamiento-por-celda/agents/openai.yaml",
+        "sha256": "db08bc20446e2c077d737297af44bcba7b23696aae6a452ea85758bbc46a4f7a",
+        "bytes": 384
+      },
+      {
+        "path": ".agents/skills/adr-07-stack-gestionado/SKILL.md",
+        "sha256": "0a8cfa80b9e46aae4143d7188f336fb6eba8bb3ad76b0acafa6e58a5ff602f94",
+        "bytes": 7503
+      },
+      {
+        "path": ".agents/skills/adr-07-stack-gestionado/agents/openai.yaml",
+        "sha256": "6a9ba93993de72a7d50970bb74ac47130dfa5c784f9fe0ddff57e67cb186a72a",
+        "bytes": 515
+      },
+      {
+        "path": ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+        "sha256": "ba38c139cc762ae13a509fe86703bb32cfd6e214e0c75808213f31c480f1785d",
+        "bytes": 6879
+      },
+      {
+        "path": ".agents/skills/adr-08-carga-inicial-masiva/agents/openai.yaml",
+        "sha256": "0f13a3bb26a1b677f346d9acfdfc918a2e544dc0e3d2e4450b161527e023e8ab",
+        "bytes": 380
+      },
+      {
+        "path": ".agents/skills/core-adr-arquitectura/SKILL.md",
+        "sha256": "62d69dc29aabb0f8176ad742813700c732ccfe3514c8361f7a84500f6d59f9cd",
+        "bytes": 6883
+      },
+      {
+        "path": ".agents/skills/core-adr-arquitectura/agents/openai.yaml",
+        "sha256": "90d9efc2fd9ebf2de3b33112892a557bf009433f08774d31e80fd4894873b2be",
+        "bytes": 406
+      },
+      {
+        "path": ".agents/skills/core-adr-arquitectura/references/plantilla-adr.md",
+        "sha256": "59ebebd9f61dbbe42239f648a6eac4e54d8579d4268d50b2f21fa7d82126e35a",
+        "bytes": 1697
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/SKILL.md",
+        "sha256": "d965a71d1fb78548456449290d79f15e4b5b0ef53aeb3296ad8796a7da7f47c4",
+        "bytes": 10187
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/agents/openai.yaml",
+        "sha256": "e3f8c87882d27fdc77cb481ce133ae71f0ef111e9e7ab9f3f3b1af2a0dd95db4",
+        "bytes": 386
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/references/controles.md",
+        "sha256": "79974617594f713e81f66a858946bbc74ea417502cd465e669ef36ad55024084",
+        "bytes": 9618
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/references/estandares-industria.md",
+        "sha256": "e20a4a7a8f6f774bfa5df45b7a5b7ca0415cc1d090accfd5fb3cdffbdaccc3c8",
+        "bytes": 7973
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/references/iso.md",
+        "sha256": "f1f2b80a4176f17885fa6b2b1541d76ee2221311b3ddcce7668c85933c36a393",
+        "bytes": 7149
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/references/leyes.md",
+        "sha256": "b459f05b35a14c4f4efb34334f296fadf6aaa1cdccb4bfaa56bab88e14359ecf",
+        "bytes": 11594
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/references/metodologia.md",
+        "sha256": "cc705ea67755da8ab662899469d43c2ba5b85625e4585b4d7526987ef6f0225c",
+        "bytes": 3560
+      },
+      {
+        "path": ".agents/skills/core-bancario-argentina/references/regulaciones-bcra.md",
+        "sha256": "c9a8743061d4a8d623fef50dcf53c6d06be3a43030a4e5e66a27cbb97ccb517f",
+        "bytes": 18676
+      },
+      {
+        "path": ".agents/skills/core-fr-requisitos/SKILL.md",
+        "sha256": "4b20f6778d0e14b0c8cb213ae4517c401323e89d7479b72149978b96d38afb4a",
+        "bytes": 3874
+      },
+      {
+        "path": ".agents/skills/core-fr-requisitos/agents/openai.yaml",
+        "sha256": "03533efde808785d39aedc81aff450c6971e96151bc3b7a1fb8c5c5582d5392f",
+        "bytes": 450
+      },
+      {
+        "path": ".agents/skills/core-fr-requisitos/references/fr-template.md",
+        "sha256": "92415b933f506c8a461db8a2e542298c58bfa24f64a443e6d1e32c7330b2b66e",
+        "bytes": 1631
+      },
+      {
+        "path": ".agents/skills/core-nfr-calidad/SKILL.md",
+        "sha256": "b566ca1bd2168613dc0f430eca8beea78639dfdfbc18ad1fb7f1b013e22167e1",
+        "bytes": 6879
+      },
+      {
+        "path": ".agents/skills/core-nfr-calidad/agents/openai.yaml",
+        "sha256": "20a0bde0c2700c7c92496d20e3b087a950911219187ba16b3b6d3d3d12664f6d",
+        "bytes": 401
+      },
+      {
+        "path": ".agents/skills/core-nfr-calidad/references/plantilla-nfr.md",
+        "sha256": "676f054bdbbd04afc74d8acbc7409c19d5a69353cb0297090b064e7a662fdaa7",
+        "bytes": 1703
+      },
+      {
+        "path": ".agents/skills/core-pilot-kickoff/SKILL.md",
+        "sha256": "2df1c6fc5bbbe005f892350d633c314e8da80d371778ebee9528aa94fd66245e",
+        "bytes": 4462
+      },
+      {
+        "path": ".agents/skills/core-pilot-kickoff/agents/openai.yaml",
+        "sha256": "5c986d45ae67354f0e3c78a74a1f79f481e0e7da70e71818a33cf90c5d07cd36",
+        "bytes": 426
+      },
+      {
+        "path": ".agents/skills/core-pilot-kickoff/references/kickoff-checklist.md",
+        "sha256": "80f460299cb900ef6f714072bcdcfb0848450ec2591b227c0dd23d9d6c0f4e08",
+        "bytes": 2888
+      },
+      {
+        "path": ".agents/skills/core-project-review/SKILL.md",
+        "sha256": "7020dc5d1c70ce7b00d663c7bb55a9761ca2e435e99b1f145e5e134e4dede7df",
+        "bytes": 5131
+      },
+      {
+        "path": ".agents/skills/core-project-review/agents/openai.yaml",
+        "sha256": "5d6669e4fa0bc3c2a2ee219738ee9e6000ea4bf33a442486c76ffb0bb9195eb7",
+        "bytes": 443
+      },
+      {
+        "path": ".agents/skills/core-project-review/references/review-template.md",
+        "sha256": "07bd5e1a290045e15cdcda16509fb6b54f41f3d9435e0743d1d514a161a2a8b4",
+        "bytes": 3005
+      },
+      {
+        "path": ".agents/skills/core-regulatory-watch/SKILL.md",
+        "sha256": "2dfbccdf4239ac03f5e8ccb1a1d30f116f959710819fdc353a6dca0dc29994de",
+        "bytes": 4996
+      },
+      {
+        "path": ".agents/skills/core-regulatory-watch/agents/openai.yaml",
+        "sha256": "1448222e89ef019265aa82a83c70bb0095623a65fbb0c01e6385ec4e912cecfd",
+        "bytes": 434
+      },
+      {
+        "path": ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+        "sha256": "36276b35d86fe5d904a36cb88b1a7f5516ea66b4b73b100de929bd62dc8af1f6",
+        "bytes": 4584
+      },
+      {
+        "path": ".agents/skills/nfr-01-integridad-financiera/agents/openai.yaml",
+        "sha256": "98214692c8e7edd28414ac7b4ebf6e37a56d57f40756f40eb411e53ea156bc24",
+        "bytes": 376
+      },
+      {
+        "path": ".agents/skills/nfr-02-disponibilidad-recuperacion/SKILL.md",
+        "sha256": "9f4c65f20b2e80a1d2edb5149d654127ecff7004d8c787991c4cd45d1336ff9d",
+        "bytes": 4067
+      },
+      {
+        "path": ".agents/skills/nfr-02-disponibilidad-recuperacion/agents/openai.yaml",
+        "sha256": "e632dd5caf2796f8857b09b390b570a65332622a94771874fc87778519edd6a8",
+        "bytes": 401
+      },
+      {
+        "path": ".agents/skills/nfr-03-latencia-capacidad/SKILL.md",
+        "sha256": "d7163af6be9d2f6848cf440743439911aa917e85c36238e72ce5582cbdd0370f",
+        "bytes": 3988
+      },
+      {
+        "path": ".agents/skills/nfr-03-latencia-capacidad/agents/openai.yaml",
+        "sha256": "753936915e3fa1be00604f2109fb7afb2404effc2b95e0c39c214edcb75f27bf",
+        "bytes": 378
+      },
+      {
+        "path": ".agents/skills/nfr-04-asincronia-durable/SKILL.md",
+        "sha256": "7ef4795a0efdc8188b82e1d927a06b9e2d5765ba5c789f6e1a40b09918c09add",
+        "bytes": 4179
+      },
+      {
+        "path": ".agents/skills/nfr-04-asincronia-durable/agents/openai.yaml",
+        "sha256": "d86d94f26fcfbb5ce148f0b7a8d9c530dfb6492c46f7d2e0c3f71f3db7eebc2d",
+        "bytes": 369
+      },
+      {
+        "path": ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+        "sha256": "7b23d115c6fd80f9ca142ae6d9bb6b7c9ea737b6a63b5940b9eb7701a83bdeeb",
+        "bytes": 4755
+      },
+      {
+        "path": ".agents/skills/nfr-05-seguridad-accesos/agents/openai.yaml",
+        "sha256": "55ef37ec6e776f68dae94853c4e520c0b4891783a1c618ff51230845dc46b891",
+        "bytes": 387
+      },
+      {
+        "path": ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+        "sha256": "a48420040086b29d15f69e9114abbf18b0a067148208b74576fb307ffc2a364b",
+        "bytes": 4364
+      },
+      {
+        "path": ".agents/skills/nfr-06-privacidad-residencia-retencion/agents/openai.yaml",
+        "sha256": "b0e2c46812aace6fde2a3d60f111b20eb6696a00c1f23fca0b3d34531c464e38",
+        "bytes": 393
+      },
+      {
+        "path": ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md",
+        "sha256": "42b3f410c5f68d53bb193a3844e52a56957e3c7bf2901501a4c0ece78fdc621b",
+        "bytes": 4374
+      },
+      {
+        "path": ".agents/skills/nfr-07-auditoria-observabilidad/agents/openai.yaml",
+        "sha256": "d750a3541258404d029dab1d4fbb228e85827ea6d7607c20572a50153f813c27",
+        "bytes": 405
+      },
+      {
+        "path": ".agents/skills/nfr-08-interoperabilidad-portabilidad/SKILL.md",
+        "sha256": "a1cacfe7655d93697084763b828852e3393b1dc7760e14c5e561d2d8525d2d04",
+        "bytes": 4376
+      },
+      {
+        "path": ".agents/skills/nfr-08-interoperabilidad-portabilidad/agents/openai.yaml",
+        "sha256": "495a2eebeb4d950655aa42b175b1edbc013e234d8a7088b812ff368a0fe4d5e7",
+        "bytes": 445
+      },
+      {
+        "path": ".agents/skills/nfr-09-mantenibilidad-configuracion/SKILL.md",
+        "sha256": "39d29b7768216be45a2de7b8c123170f09eebb2773b5f04288a60c7c57d885f0",
+        "bytes": 4657
+      },
+      {
+        "path": ".agents/skills/nfr-09-mantenibilidad-configuracion/agents/openai.yaml",
+        "sha256": "b3636b48cd46724cb5ecb737020de018bee04f38f4d31ad0a188db01da9d47d5",
+        "bytes": 432
+      },
+      {
+        "path": ".agents/skills/nfr-10-migracion-carga-masiva/SKILL.md",
+        "sha256": "0da3be0810d38a524bd5e9e78f4a8a843a2176bb47c3f66e4c98c8a29fb24493",
+        "bytes": 4819
+      },
+      {
+        "path": ".agents/skills/nfr-10-migracion-carga-masiva/agents/openai.yaml",
+        "sha256": "8668e5ced4f038fd661cdbad60c4c35f37a65f5856783ffa8e6c25826061a76d",
+        "bytes": 450
+      },
+      {
+        "path": ".agents/skills/nfr-11-calidad-datos-reportes/SKILL.md",
+        "sha256": "9017bb7d65a2eab4f632a1d52c35bc11353ff1dac6b1687760efb576ac2658cb",
+        "bytes": 4327
+      },
+      {
+        "path": ".agents/skills/nfr-11-calidad-datos-reportes/agents/openai.yaml",
+        "sha256": "e57c94e2d11eb4392ac56a5291347e26e4e364c5d0e2b56d5ace7893af52ed55",
+        "bytes": 382
+      },
+      {
+        "path": ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+        "sha256": "99cca1ffe717158a93a399e428e9283359f936f73fb90ed265a8e838c5bf2e04",
+        "bytes": 3888
+      },
+      {
+        "path": ".agents/skills/nfr-12-operabilidad-costos/agents/openai.yaml",
+        "sha256": "5f4ef121d220e681ff7aa7de85a602f4097a4320e017579666d9a2b7ea08af03",
+        "bytes": 371
+      },
+      {
+        "path": ".agents/skills/nfr-13-accesibilidad-experiencia/SKILL.md",
+        "sha256": "71fcad0bd4a1a108eca753f52abcd74d1cad6dd753af625a54ff72786c555730",
+        "bytes": 3746
+      },
+      {
+        "path": ".agents/skills/nfr-13-accesibilidad-experiencia/agents/openai.yaml",
+        "sha256": "3c6a78fedb0be6b380f629a68f4c6800861dba76a9566e2f99a52d0a835b70a5",
+        "bytes": 370
+      },
+      {
+        "path": ".github/CODEOWNERS",
+        "sha256": "f3bea1a7ccbcc7982f33bfecfd553299d38e4e166155077aa80fa807d627ff21",
+        "bytes": 101
+      },
+      {
+        "path": ".github/PULL_REQUEST_TEMPLATE.md",
+        "sha256": "2271cad67e6c620be6a8ea105c6aba68846cc773fac0824d06690323717469cd",
+        "bytes": 946
+      },
+      {
+        "path": ".github/main-protection.ruleset.json",
+        "sha256": "d85532d6a7913f86f579a89587ec3d0da828baf1384e6ee7ed9ecb4b1d2ff543",
+        "bytes": 642
+      },
+      {
+        "path": ".github/main-ruleset.example.json",
+        "sha256": "a77cc05ae61b92b16f628c97b6ba7dd497992311304f5e0327b6476fb3a3898b",
+        "bytes": 799
+      },
+      {
+        "path": ".github/workflows/docs.yml",
+        "sha256": "108d7ca02c5bd236fab212db9820f971ddc7553faf8ea54339886871049fc2c1",
+        "bytes": 1183
+      },
+      {
+        "path": ".regulatory-watch/README.md",
+        "sha256": "d88d9dfb2cfe42d4463d02a6fd03b22d88bd0fafe1ffe39e113e5b6a2792dea0",
+        "bytes": 3800
+      },
+      {
+        "path": ".regulatory-watch/evidence/RUN-20261016T014713Z.json",
+        "sha256": "9adb609af742cb6aa11c0688265377a8c6a4d06fd4617e06b1963d9cbfef68f1",
+        "bytes": 39167
+      },
+      {
+        "path": ".regulatory-watch/evidence/RUN-20261016T023356Z.json",
+        "sha256": "76819790b55e225208b66d5981edc1ab3bdf5c857b37032bec4d7bf1f9164ec7",
+        "bytes": 26622
+      },
+      {
+        "path": ".regulatory-watch/migrations/2026-10-16.1-to-2026-10-16.2.json",
+        "sha256": "393d0a7f22aa191c3b32c82d671275e515915468f5d16cc3ffffb6e40e3ec0e2",
+        "bytes": 890
+      },
+      {
+        "path": ".regulatory-watch/previous/RUN-20261016T014713Z.json",
+        "sha256": "fb0f1a8af2563bc42b49b42bb475e8aed5b41a75a33a57e13fb57c6a2634d0ed",
+        "bytes": 2148
+      },
+      {
+        "path": ".regulatory-watch/previous/RUN-20261016T023356Z/sources.json",
+        "sha256": "d18e1c8fb61555b6f6b694ad3f72057a787f297b3644c454bff685fe44ee9a3a",
+        "bytes": 5774
+      },
+      {
+        "path": ".regulatory-watch/previous/RUN-20261016T023356Z/state.json",
+        "sha256": "fae4a7164e802456ce67ec935011957ccafd7f21f70b5fca85ef3cce7df8936b",
+        "bytes": 23001
+      },
+      {
+        "path": ".regulatory-watch/runs/RUN-20261016T014713Z.json",
+        "sha256": "7a4ea743e623379e2e8372dabef78838819c88a26d3b58a8a3ff211f498b1bc6",
+        "bytes": 34449
+      },
+      {
+        "path": ".regulatory-watch/runs/RUN-20261016T023356Z.json",
+        "sha256": "c81d159ff085a184fc854b1ef411deb4123b5dd735604e801482429e8671f56f",
+        "bytes": 31063
+      },
+      {
+        "path": ".regulatory-watch/snapshots/RUN-20261016T023356Z/state.json",
+        "sha256": "5cae3f2977feef6d85ee45f2ecf09e82b8c8dbfd29a79fe1cd734d2a874082ca",
+        "bytes": 29495
+      },
+      {
+        "path": ".regulatory-watch/sources.json",
+        "sha256": "80a2cf288e0ebfb0f81223bb980c4e507b591814b5c7836205eb0383c2523e09",
+        "bytes": 5835
+      },
+      {
+        "path": ".regulatory-watch/state.json",
+        "sha256": "5cae3f2977feef6d85ee45f2ecf09e82b8c8dbfd29a79fe1cd734d2a874082ca",
+        "bytes": 29495
+      },
+      {
+        "path": ".regulatory-watch/tools/validate_bora_replay.py",
+        "sha256": "343b3137457cea27955fc09061fc3fc4e3126bb2e961fb2e2731b0f15e4dcf21",
+        "bytes": 3291
+      },
+      {
+        "path": "AGENTS.md",
+        "sha256": "29771980424355f9d20461da2e11be28ee2c7f4e9bf52ebed78cd1a51d5f7686",
+        "bytes": 2639
+      },
+      {
+        "path": "CONTRIBUTING.md",
+        "sha256": "2245b73de3daa73b819d6e5bc4544f328108260ff7cb67298629a03d51afe4e4",
+        "bytes": 2498
+      },
+      {
+        "path": "GOVERNANCE.md",
+        "sha256": "98744865694fe2b5ea9ec596f22d0395f7e0349448f8369c1bf083c5d4c4bfe4",
+        "bytes": 7250
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+        "bytes": 18092
+      },
+      {
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md",
+        "sha256": "08777f6e379163f5be430fb66b94897fb5fe4cc1bc67e33feb0cd9d215d4408d",
+        "bytes": 62565
+      },
+      {
+        "path": "README.md",
+        "sha256": "682afd06c21b7a889fc2fcdb6005f4676da9de68af08280d7e06a95a369d8678",
+        "bytes": 2324
+      },
+      {
+        "path": "docs/README.md",
+        "sha256": "7f4d25db13e91d2f1ebf58b6a05a18104e9d2f8d1196ce95f220848b49f7dc4e",
+        "bytes": 4975
+      },
+      {
+        "path": "docs/achitecture.md",
+        "sha256": "1a6ae1e16ad42cd273a4dfa431b8002c9d4d3c45cf0dd8ddca0a079653540f4b",
+        "bytes": 113164
+      },
+      {
+        "path": "docs/adr/ADR-01-nucleo-modular.md",
+        "sha256": "783aeabe379f622bdcfb784a60ee5077ea997fd13b0f45ca8f0876ed0cebf421",
+        "bytes": 4650
+      },
+      {
+        "path": "docs/adr/ADR-02-autoridad-sql.md",
+        "sha256": "00ab611fd5063042fabd440a60ce388b0de54731b806f5c5bad6aa92e44b8cad",
+        "bytes": 5408
+      },
+      {
+        "path": "docs/adr/ADR-03-outbox-inbox.md",
+        "sha256": "8fd0b9431eb287dfc8124bf404b2aeddef0d9729ce2df93ea62efc5e504bd536",
+        "bytes": 5449
+      },
+      {
+        "path": "docs/adr/ADR-04-alta-disponibilidad.md",
+        "sha256": "09f1ef2f9556225195bc4a582cf4b792c6221755c21fa86415f10de27ed219bd",
+        "bytes": 5192
+      },
+      {
+        "path": "docs/adr/ADR-05-configuracion-versionada.md",
+        "sha256": "8857fc4a540c7b333eb8ec2cc9ea1a0efc95e02dd6e64c7dce7ce701c5fb7103",
+        "bytes": 4781
+      },
+      {
+        "path": "docs/adr/ADR-06-aislamiento-por-celda.md",
+        "sha256": "3916280f2b10b20fd6c173cbe7591134c54413d0c88c36ee8bc1ea324db3bf4d",
+        "bytes": 5670
+      },
+      {
+        "path": "docs/adr/ADR-07-stack-gestionado.md",
+        "sha256": "e375571dc5a24ac5ec212f9aca51ba3be96ff80c98c6234e78cb39341375d5ab",
+        "bytes": 7704
+      },
+      {
+        "path": "docs/adr/ADR-08-carga-inicial-masiva.md",
+        "sha256": "2b3b114f635d241722098df3a7cd0ed7605f29e0a6cb2a160b94dec04c98d6c4",
+        "bytes": 6120
+      },
+      {
+        "path": "docs/adr/README.md",
+        "sha256": "54342b26180f6efe494e521dbaeea24f895487e6776abf4049a13b4d73e50810",
+        "bytes": 4469
+      },
+      {
+        "path": "docs/compliant.md",
+        "sha256": "cb330b1cc353687cb5fb556f5d0dc20204f86894c119b8ffe26e073bfac30900",
+        "bytes": 157613
+      },
+      {
+        "path": "docs/deployment/rust-scratch.md",
+        "sha256": "3364ee1ef77e6d4b3dc0fd3ccf8be33d342eb106fc9d73d14f3e15999a10048b",
+        "bytes": 12438
+      },
+      {
+        "path": "docs/functional/01-entidades-perimetro.md",
+        "sha256": "d6cb00a9b6a12ab62f770a889c3c4de8caf8744b1519c67879c6ceed70db935a",
+        "bytes": 12718
+      },
+      {
+        "path": "docs/functional/02-identidad-accesos.md",
+        "sha256": "069d2cc88135a80df9d4c022ec568eee507b0d79472a0edec5c4f8913e12f304",
+        "bytes": 14661
+      },
+      {
+        "path": "docs/functional/03-personas-clientes-kyc.md",
+        "sha256": "f120564ac70185f511ddc21f4700b17690fca77a2a430b46a0e3f0780a320b96",
+        "bytes": 14470
+      },
+      {
+        "path": "docs/functional/04-productos-configuracion.md",
+        "sha256": "72b0fd4d2b780902b6ea85e2855501db3ee5069ff11b8cbbd733b585d76331d6",
+        "bytes": 11298
+      },
+      {
+        "path": "docs/functional/05-contratos-documentos.md",
+        "sha256": "ace27a784d9086d0fc7804455f86a7934e0bf588b2ceab01e1a8b46bc09f25fb",
+        "bytes": 14476
+      },
+      {
+        "path": "docs/functional/06-cuentas-depositos.md",
+        "sha256": "9b31c43471b3924885fee70cb5a8d4f7afef790ea585bd7931f0589de7bc85de",
+        "bytes": 16610
+      },
+      {
+        "path": "docs/functional/07-saldos-reservas-restricciones.md",
+        "sha256": "914d0c5dbe5bae9fd2518094ae666e3d12832d536804796de84bafa89975aa6f",
+        "bytes": 15864
+      },
+      {
+        "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+        "sha256": "bf6370a4de4d684bfedab550c288bb5c344fe126b6e506e70cb89c95b09243fb",
+        "bytes": 16354
+      },
+      {
+        "path": "docs/functional/09-originacion-administracion-credito.md",
+        "sha256": "29a3c899cd5adf8c6c0c4ff25168e4ed71222e850a22668f36880d6031adc40e",
+        "bytes": 17216
+      },
+      {
+        "path": "docs/functional/10-intereses-comisiones.md",
+        "sha256": "245587be614208fe08a0cafa6cf6e0894e50f99ccfaca304ac58ac285f6a6397",
+        "bytes": 16981
+      },
+      {
+        "path": "docs/functional/11-garantias-avales.md",
+        "sha256": "ef4ccdfcc3e83964b318d7e556c7491eec2bd625f0396bf134157b0a535ede34",
+        "bytes": 14770
+      },
+      {
+        "path": "docs/functional/12-cobranzas-mora-recupero.md",
+        "sha256": "990e72e5889508b9a76c6dc6937eb38b2996991f05b28355be8150072e370560",
+        "bytes": 15366
+      },
+      {
+        "path": "docs/functional/13-pagos-transferencias.md",
+        "sha256": "c89b4005ccb4fcb4f94dd6e346c367f57d74c87355523eaf15ac7bd9c06be12b",
+        "bytes": 17977
+      },
+      {
+        "path": "docs/functional/14-cheques-echeq-cedip.md",
+        "sha256": "e8f3bd93f3d7618798649af7065f6ed8dbb3ef80ece8470d1de62a420942e2b2",
+        "bytes": 17218
+      },
+      {
+        "path": "docs/functional/15-tarjetas-adquirencia.md",
+        "sha256": "6561b01e1f07fd478a5f13bf7abe4fbf980a7156407b121f5498aab94889bd1d",
+        "bytes": 19761
+      },
+      {
+        "path": "docs/functional/16-caja-sucursales-efectivo.md",
+        "sha256": "6060a363c3a687ced5fcd48366734bf15635356acefb43c40cfccf4210b56d44",
+        "bytes": 17961
+      },
+      {
+        "path": "docs/functional/17-tesoreria-liquidez.md",
+        "sha256": "556d13e07b57f7c819414906f8af7038f9d29c58d36785c4df8e63079513a535",
+        "bytes": 15008
+      },
+      {
+        "path": "docs/functional/18-exterior-cambios-comercio.md",
+        "sha256": "7441e2af055cc96e462d8483de1a47f3b2f0c4ce26cc6013a2c96498060d947c",
+        "bytes": 18733
+      },
+      {
+        "path": "docs/functional/19-inversiones-custodia-fondos.md",
+        "sha256": "5f0a816ffc69b3692b2ef4d57b91e15607740de0d680dead7e1ed86d0af5b49f",
+        "bytes": 17331
+      },
+      {
+        "path": "docs/functional/20-prevencion-la-ft-fp.md",
+        "sha256": "19c190609d7de80f1c4e5964c07b789a8318db86c78be983491766842a21a370",
+        "bytes": 13801
+      },
+      {
+        "path": "docs/functional/21-prevencion-fraude.md",
+        "sha256": "bffd8b119433e3c45d0421a3324b4c410c01fbf1bb186d8151548fdd606708e4",
+        "bytes": 13527
+      },
+      {
+        "path": "docs/functional/22-conciliacion-excepciones.md",
+        "sha256": "7aa862d638e91e877c2bd8f28c15567ee2c04bb3c38695581840c6d08ef65d9c",
+        "bytes": 17538
+      },
+      {
+        "path": "docs/functional/23-riesgos-prudencia-exposiciones.md",
+        "sha256": "a6ad14764dcbcaf1abe32e6d21844253f5b824e9d0fd8ac2789e70a14019ec57",
+        "bytes": 15958
+      },
+      {
+        "path": "docs/functional/24-tributos-recaudaciones.md",
+        "sha256": "58a50c31f5e3cebe13905a0f4f323ae3db0fd54846c3a815696bd94aa46a3761",
+        "bytes": 14881
+      },
+      {
+        "path": "docs/functional/25-reportes-localizacion.md",
+        "sha256": "fa414378b6d7511ebfc601798f67a90e5ffee53226dc97cb343490b56c61cb75",
+        "bytes": 15103
+      },
+      {
+        "path": "docs/functional/26-canales-atencion-usuarios.md",
+        "sha256": "89b1e880936f7519c90c8b308ab6da3d581257ff6c1c55c29693bc1254f917b5",
+        "bytes": 17196
+      },
+      {
+        "path": "docs/functional/27-auditoria-privacidad-archivo.md",
+        "sha256": "eb9409e80c3ce1a1c91973b023fd65e3df51a6571a2c5e87ebb2ab9399809f9f",
+        "bytes": 15073
+      },
+      {
+        "path": "docs/functional/28-integraciones-eventos-trabajos.md",
+        "sha256": "abcc241dadb560db8373d1c4ddcb4c430bb64a2dceb6ddfee814dd82cb80b1f7",
+        "bytes": 14991
+      },
+      {
+        "path": "docs/functional/29-carga-inicial-migracion-salida.md",
+        "sha256": "b8a3b2ec8358b8e89023780a0d7346c96be61162f1d854b5b80c3c896de1adc1",
+        "bytes": 15946
+      },
+      {
+        "path": "docs/functional/30-operacion-continuidad-terceros.md",
+        "sha256": "6e50698dd108bc5090cf77448f0b31a4a564a42872117e5939b016d6dcbd4032",
+        "bytes": 22185
+      },
+      {
+        "path": "docs/functional/31-gobierno-modelos-ia.md",
+        "sha256": "c8c0635a761ba8dccd140c6cd05404c6bf4ef6644f42183f18311d703b92506e",
+        "bytes": 17317
+      },
+      {
+        "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+        "sha256": "ae1f68d9e88ea100be0f55b9ab27dbc6aaf7270a1b7e414aecd1035219d18da3",
+        "bytes": 20048
+      },
+      {
+        "path": "docs/functional/README.md",
+        "sha256": "c0d7ac9212d4d7837df16d3c4027e62bde74d9af4566175cd70071b5b2798559",
+        "bytes": 6453
+      },
+      {
+        "path": "docs/functional/catalog.json",
+        "sha256": "fe04b2b9a4516ce2c54d7ed8263ba1859564474dbe1a4564c615e5b8143108a2",
+        "bytes": 1144358
+      },
+      {
+        "path": "docs/functional/coverage.md",
+        "sha256": "10e9c7b9fee6c24c8f4c2cbfe268b5fe1f13eaf04f09ccbb540a644f38f226f8",
+        "bytes": 135532
+      },
+      {
+        "path": "docs/functional/coverage_map.json",
+        "sha256": "87fbfbdfcfc129f9893710bbb99837b5cc1f8332acf41d7b5ba54097cdec0c93",
+        "bytes": 10094
+      },
+      {
+        "path": "docs/functional/flows.md",
+        "sha256": "d45066515ab2b0be9734525144361815c8479e564740a7ad299cb46972348310",
+        "bytes": 25900
+      },
+      {
+        "path": "docs/functional/scope.md",
+        "sha256": "86f206a4fde272ad0ae6bbdf6fc4f9a9cbd922cb7648d842a4aba830187a5465",
+        "bytes": 14710
+      },
+      {
+        "path": "docs/functional/tools/build_catalog.py",
+        "sha256": "db2ce66b62ebe8f4f6f0f93520e0b983e400e60940a82dfba0b8a13a5d6aed13",
+        "bytes": 18541
+      },
+      {
+        "path": "docs/market_analysis.md",
+        "sha256": "b3ad4e4f88c2bfc149d6bfb0bd77362f752e03d7ede6c9a82a6d0979de42e34e",
+        "bytes": 70358
+      },
+      {
+        "path": "docs/nfr/NFR-01-integridad-financiera.md",
+        "sha256": "c0e2cebcf42348efa8e7c35750908d1ea70b743920db2a30aba6a635e51e95e6",
+        "bytes": 3282
+      },
+      {
+        "path": "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+        "sha256": "1064b5a3ced05b84b5b6ebb6d14b28dc08e53474f66e9ea2ff39858d94ad7599",
+        "bytes": 3197
+      },
+      {
+        "path": "docs/nfr/NFR-03-latencia-capacidad.md",
+        "sha256": "e8172d6a9d95efc9eb1ca89edf99cb98c914e0b5a0d5ff005eb6d66b87467567",
+        "bytes": 3224
+      },
+      {
+        "path": "docs/nfr/NFR-04-asincronia-durable.md",
+        "sha256": "14711bf24102f464671a276a6bc3bcc304cc6438b6bf09027d93bf84d7e1eb15",
+        "bytes": 3191
+      },
+      {
+        "path": "docs/nfr/NFR-05-seguridad-accesos.md",
+        "sha256": "8bce30285836c53190d0e4af5afe9722f1d7097cb2564a701993b743ddfa930c",
+        "bytes": 3942
+      },
+      {
+        "path": "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+        "sha256": "65f3bd01010bdc0057b277c56ce765b66966e3f45367f3d9c18808008ac05d84",
+        "bytes": 3705
+      },
+      {
+        "path": "docs/nfr/NFR-07-auditoria-observabilidad.md",
+        "sha256": "61381cae129e7f97a856aaf4c9b6ed845dbe7c6535a0abebbb9c4850b92e9e6a",
+        "bytes": 3931
+      },
+      {
+        "path": "docs/nfr/NFR-08-interoperabilidad-portabilidad.md",
+        "sha256": "62438c8b00a87b26267876b49767de18a94e34b559fa3aa79e155a402d427514",
+        "bytes": 3739
+      },
+      {
+        "path": "docs/nfr/NFR-09-mantenibilidad-configuracion.md",
+        "sha256": "fa74347b110269ac74826b3a05fb82bd261f966eb89a7b3a1b4dc0d8e49f99ba",
+        "bytes": 4322
+      },
+      {
+        "path": "docs/nfr/NFR-10-migracion-carga-masiva.md",
+        "sha256": "f61b29efcda9333c06d4c344454ee7529baf9e5a53ad53ac9b68348c077bb947",
+        "bytes": 4074
+      },
+      {
+        "path": "docs/nfr/NFR-11-calidad-datos-reportes.md",
+        "sha256": "ac4a33ac60c29c56627f5fbc0c2aa7d69992ab7f2441cf4cf18b903301c97715",
+        "bytes": 3729
+      },
+      {
+        "path": "docs/nfr/NFR-12-operabilidad-costos.md",
+        "sha256": "d5f88067fa98642b16b24aa6ea82959d54bb8bd36b5197e31cc3d02eb4aa50b9",
+        "bytes": 2960
+      },
+      {
+        "path": "docs/nfr/NFR-13-accesibilidad-experiencia.md",
+        "sha256": "2453eb85e9ca38fc7317f238f002527dd5bf5af8acf9a04cad750f814f445477",
+        "bytes": 2960
+      },
+      {
+        "path": "docs/nfr/README.md",
+        "sha256": "87ac6c4c56d6b6c1f1d1b4727d5ac2c08299dfc678a6e9ceb369975361b12be4",
+        "bytes": 7635
+      },
+      {
+        "path": "docs/regulatory-watch/README.md",
+        "sha256": "eb68c8bc66438c5a5bb04705582e1acea9330164f9668d1d258e9151635ee181",
+        "bytes": 12910
+      },
+      {
+        "path": "docs/regulatory-watch/automation.md",
+        "sha256": "f822e01f2c84d38aac0ccc2911dcc538bed3972d50d0b52ae3c0425b464cae3d",
+        "bytes": 3010
+      },
+      {
+        "path": "docs/regulatory-watch/sources.json",
+        "sha256": "80a2cf288e0ebfb0f81223bb980c4e507b591814b5c7836205eb0383c2523e09",
+        "bytes": 5835
+      },
+      {
+        "path": "docs/regulatory-watch/state.initial.json",
+        "sha256": "4d8ab7f19f6547001f5dbc01fbf5926b02656a4e9a2f300a29b63e3a05bfe6f3",
+        "bytes": 2148
+      },
+      {
+        "path": "docs/regulatory-watch/tools/check_watch.py",
+        "sha256": "279b9ab586e95a107aff0057e4531d96ccc24ff83440c13fa6981529bae8fff9",
+        "bytes": 28345
+      },
+      {
+        "path": "docs/regulatory-watch/tools/test_check_watch.py",
+        "sha256": "5aaff38dc78be60bd0c4fc566a4d34211f71fb36485b2d3445816214ca0a9bde",
+        "bytes": 16181
+      },
+      {
+        "path": "docs/research/2026-10-15-integral/repository_inventory.json",
+        "sha256": "51293e6d89ebbcc7254684ee1e8057a1c1dde15d1ae0e3de24fd186c401dee4d",
+        "bytes": 31774
+      },
+      {
+        "path": "docs/research/bcra_sources.json",
+        "sha256": "3658b1d38030eb766b989c7cb57ad634620152d6a95e7b187265c78db2b5e839",
+        "bytes": 43375
+      },
+      {
+        "path": "docs/review/01-commercial-ceo.md",
+        "sha256": "255934b45453cc120b00d6aad2d6d976cc09968e9dbe34c069d2975e15d9da3c",
+        "bytes": 45004
+      },
+      {
+        "path": "docs/review/02-accounting-tax.md",
+        "sha256": "e56bd0ef312d90fad5cf62ac50112a20365b6f9db4015ed08fe5f45da08acf93",
+        "bytes": 32727
+      },
+      {
+        "path": "docs/review/03-legal-compliance.md",
+        "sha256": "430cffc2450ec7d705336a54935d309e54e3553057b4152d17662101dfa610b5",
+        "bytes": 42001
+      },
+      {
+        "path": "docs/review/04-architecture-data.md",
+        "sha256": "6630fee8987e1e45cdfd6821d472f4af3c2faa64041a921a601e81a33fd4e4c8",
+        "bytes": 41095
+      },
+      {
+        "path": "docs/review/05-quality-skills.md",
+        "sha256": "25c0048e78b5f0710ee89a5feffb895601fdc8ff57e24445e53a4274e68eaf7c",
+        "bytes": 17217
+      },
+      {
+        "path": "docs/review/06-security-operations.md",
+        "sha256": "816d1de70d0624bc5ed230b04236a26ed39e71fd95152e854f34148e162a9665",
+        "bytes": 39819
+      },
+      {
+        "path": "docs/review/README.md",
+        "sha256": "5d8fa786e8db68103d2dd92fa363f54aa957ac2432907166eb07c559ae927ed4",
+        "bytes": 7582
+      },
+      {
+        "path": "docs/review/backlog.json",
+        "sha256": "ffcf17c9bbb88f9605c9e26d305fa2a116028da06d00a37f47e73440def007b3",
+        "bytes": 54154
+      },
+      {
+        "path": "docs/review/findings/accounting.json",
+        "sha256": "7eaa14aaac98e0b90a98b909346fd15cae855b733c3d812d4bf0d8841068e743",
+        "bytes": 35541
+      },
+      {
+        "path": "docs/review/findings/architecture.json",
+        "sha256": "1b7bc0f6c48e871650fe58963e79e2f8b6c3c0ff416cdbcdf73235f9f23b5f6c",
+        "bytes": 40881
+      },
+      {
+        "path": "docs/review/findings/commercial.json",
+        "sha256": "4e720a1fa60e6913814a1dfbc9663c916708db649f32ef6a11f046a7c13cd17c",
+        "bytes": 42265
+      },
+      {
+        "path": "docs/review/findings/legal.json",
+        "sha256": "480c9bc9320aaf9c0ffc5616a560a40becace71fe80fd418799b74020bcdaf46",
+        "bytes": 39102
+      },
+      {
+        "path": "docs/review/findings/quality.json",
+        "sha256": "845106608de6bc0715520ce5c07b9d986c7a6f971ae0fa654b9d9a275b0d4478",
+        "bytes": 34337
+      },
+      {
+        "path": "docs/review/findings/security_operations.json",
+        "sha256": "8ea2cff0a56a496b39963256e36f9bd18b5a012c926120869dd610c13a38c832",
+        "bytes": 44861
+      },
+      {
+        "path": "docs/review/improvement_plan.md",
+        "sha256": "2a830244a374b6259aeacbc35f3224b671a884c1337755bf0046f96298b42067",
+        "bytes": 21484
+      },
+      {
+        "path": "docs/review/review_inventory.json",
+        "sha256": "2a71b9ce916f42902c266fab71be0406c6a7215d363b89912d64bea2ff1ef138",
+        "bytes": 55188
+      },
+      {
+        "path": "docs/review/templates/business_case.md",
+        "sha256": "98b03742da23efc38aac4cf2bf35158bcfc77ed9a4274380edd4a69f0adcb733",
+        "bytes": 3767
+      },
+      {
+        "path": "docs/review/templates/evidence_register.md",
+        "sha256": "d93f3ebeade708d054dd06d3dde3e62606f61304cc1edaed29d04e27bae14ea6",
+        "bytes": 2089
+      },
+      {
+        "path": "docs/review/templates/project_charter.md",
+        "sha256": "e32286b898077efdf7d7f8a2c938f23131624f4dc1fd37104fdf52f7d04f245c",
+        "bytes": 2581
+      },
+      {
+        "path": "docs/review/tools/check_review.py",
+        "sha256": "8ea9a5524ab7ce598218fc33d35d75cae591d80c4d1e87d0a5f16d62cb9ab50b",
+        "bytes": 15110
+      },
+      {
+        "path": "docs/review/tools/requirements.txt",
+        "sha256": "0969da99a0bc2a1b71ed50584560f4588a37567ac63af3ddbaf3c4617ca5621a",
+        "bytes": 14
+      },
+      {
+        "path": "docs/review/validation.md",
+        "sha256": "d421eaa299e439645fe4fdefbdcfb3785bd18e47e2ba9f4f79b357648d8ca67b",
+        "bytes": 3610
+      },
+      {
+        "path": "docs/skills.md",
+        "sha256": "760f60af63e42fd4ff11f4026a31dfa4a3c3810f588f2bee6e0c40d31668c170",
+        "bytes": 5703
+      }
+    ]
+  },
+  "bo_annexes_identified": [
+    {
+      "id": "ANNEX-7809895-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349071/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809895",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809909-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349074/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809909",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809896-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349072/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809896",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809900-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349073/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809900",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811201-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811201",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811201-2",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7811201",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811201-3",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "3",
+        "idAnexo": "7811201",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811201-4",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "4",
+        "idAnexo": "7811201",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811201-5",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "5",
+        "idAnexo": "7811201",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809897-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349047/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809897",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811405-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349048/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811405",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811403-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349049/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811403",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811483-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811483",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811483-2",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7811483",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811482-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811482",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811482-2",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7811482",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809937-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349036/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809937",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811331-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349027/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811331",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7811407-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7811407",
+        "fechaPublicacion": "20261016"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809638-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349019/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809638",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809635-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349018/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809635",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7807987-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349005/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7807987",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809642-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809642",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809841-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348984/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809841",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7807985-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7807985",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7807952-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348985/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7807952",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7807967-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348988/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7807967",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809904-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348982/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809904",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809903-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348981/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809903",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809838-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348983/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809838",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809850-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348980/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809850",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809600-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809600",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809600-2",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7809600",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809600-3",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "3",
+        "idAnexo": "7809600",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809600-4",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "4",
+        "idAnexo": "7809600",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7807960-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348974/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7807960",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809677-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809677",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809677-2",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7809677",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809677-3",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "3",
+        "idAnexo": "7809677",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    },
+    {
+      "id": "ANNEX-7809670-1",
+      "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+      "params": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7809670",
+        "fechaPublicacion": "20261015"
+      },
+      "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+    }
+  ],
+  "bo_notice_indices": {
+    "BO15": [
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348972/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ADMINISTRACIÓN NACIONAL DE LA SEGURIDAD SOCIAL - Resolución 297/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348973/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA NACIONAL DE PUERTOS Y NAVEGACIÓN - Resolución 60/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348974/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD - Resolución 767/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348975/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD - Resolución 776/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE CINE Y ARTES AUDIOVISUALES - Resolución 424/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348977/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE LA YERBA MATE - Resolución 109/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348978/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - Resolución 383/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA - Resolución 1807/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348980/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE SALUD - Resolución 1445/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348981/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE SALUD - Resolución 1447/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348982/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE SALUD SUBSECRETARÍA DE REGULACIÓN, CERTIFICACIÓN Y PROYECTOS - Resolución 1/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348983/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SINDICATURA GENERAL DE LA NACIÓN - Resolución 311/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348984/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SINDICATURA GENERAL DE LA NACIÓN - Resolución 312/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348985/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SUPERINTENDENCIA DE RIESGOS DEL TRABAJO - Resolución 53/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348986/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - COMISIÓN NACIONAL DE VALORES - Resolución General 1172/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348987/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - COMISIÓN NACIONAL DE VALORES - Resolución General 1173/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348988/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SINDICATURA GENERAL DE LA NACIÓN Y UNIDAD EJECUTORA ESPECIAL TEMPORARIA “AGENCIA DE TRANSFORMACIÓN DE EMPRESAS PÚBLICAS” - Resolución Conjunta 1/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348989/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD - Resolución Sintetizada 769/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348990/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD - Resolución Sintetizada 770/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348991/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SUPERINTENDENCIA DE SEGUROS DE LA NACIÓN - Resolución Sintetizada 443/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348992/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - Disposición 140/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO DIRECCIÓN REGIONAL NEUQUÉN - Disposición 66/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348994/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE JUSTICIA SUBSECRETARÍA DE GESTIÓN ADMINISTRATIVA - Disposición 452/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348995/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE JUSTICIA SUBSECRETARÍA DE GESTIÓN ADMINISTRATIVA - Disposición 453/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348996/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE JUSTICIA SUBSECRETARÍA DE GESTIÓN ADMINISTRATIVA - Disposición 456/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348997/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE SALUD DIRECCIÓN DE EPIDEMIOLOGÍA - Disposición 2/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348998/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SERVICIO NACIONAL DE SANIDAD Y CALIDAD AGROALIMENTARIA DIRECCIÓN NACIONAL DE SANIDAD ANIMAL - Disposición 27/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348999/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349000/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE RELACIONES EXTERIORES, COMERCIO INTERNACIONAL Y CULTO"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349001/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO DE LA NACIÓN ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA - Comunicación “B” 13246/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA - Comunicación “B” 13247/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349004/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349005/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA LA QUIACA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349006/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA NEUQUÉN"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349007/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA NEUQUÉN"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349008/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA PASO DE LOS LIBRES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349009/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA RÍO GRANDE"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349010/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA RÍO GRANDE"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349011/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA RÍO GRANDE"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349012/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA RÍO GRANDE"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349013/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA RÍO GRANDE"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349014/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA SANTO TOMÉ"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349015/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - DEPARTAMENTO PROCEDIMIENTOS LEGALES ADUANEROS"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349016/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE SEMILLAS"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349017/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE ENERGÍA ELÉCTRICA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349018/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - SECRETARÍA DE TRABAJO, EMPLEO Y SEGURIDAD SOCIAL - Resolución 554/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349019/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - SECRETARÍA DE TRABAJO, EMPLEO Y SEGURIDAD SOCIAL - Resolución 558/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349020/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349021/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349022/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349023/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349024/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL DE COMUNICACIONES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349025/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL DE COMUNICACIONES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349026/20261015",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE ASOCIATIVISMO Y ECONOMÍA SOCIAL"
+      }
+    ],
+    "BO16": [
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349027/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BIBLIOTECA NACIONAL DOCTOR MARIANO MORENO - Resolución 286/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349028/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD - Resolución 779/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349029/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL REGULADOR DEL GAS Y LA ELECTRICIDAD - Resolución 780/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349030/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE CINE Y ARTES AUDIOVISUALES - Resolución 426/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349031/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - JEFATURA DE GABINETE DE MINISTROS SECRETARÍA DE COORDINACIÓN LEGAL Y ADMINISTRATIVA - Resolución 322/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349032/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - JEFATURA DE GABINETE DE MINISTROS SECRETARÍA DE COORDINACIÓN LEGAL Y ADMINISTRATIVA - Resolución 323/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349033/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - JEFATURA DE GABINETE DE MINISTROS SECRETARÍA DE COORDINACIÓN LEGAL Y ADMINISTRATIVA - Resolución 325/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349034/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - JEFATURA DE GABINETE DE MINISTROS SECRETARÍA DE COORDINACIÓN LEGAL Y ADMINISTRATIVA - Resolución 327/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349035/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA SECRETARÍA DE AGRICULTURA, GANADERÍA Y PESCA - Resolución 200/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349036/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA SECRETARÍA DE ENERGÍA - Resolución 287/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349037/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE SEGURIDAD NACIONAL - Resolución 1041/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SERVICIO NACIONAL DE SANIDAD Y CALIDAD AGROALIMENTARIA - Resolución 872/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SERVICIO NACIONAL DE SANIDAD Y CALIDAD AGROALIMENTARIA - Resolución 873/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349040/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SERVICIO NACIONAL DE SANIDAD Y CALIDAD AGROALIMENTARIA - Resolución 898/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349041/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA SECRETARÍA DE FINANZAS Y SECRETARÍA DE HACIENDA - Resolución Conjunta 61/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349042/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA SECRETARÍA DE FINANZAS Y SECRETARÍA DE HACIENDA - Resolución Conjunta 62/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349043/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ADMINISTRACIÓN NACIONAL DE MEDICAMENTOS, ALIMENTOS Y TECNOLOGÍA MÉDICA - Disposición 6552/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349044/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ADMINISTRACIÓN NACIONAL DE MEDICAMENTOS, ALIMENTOS Y TECNOLOGÍA MÉDICA - Disposición 6650/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349045/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE ADMINISTRACIÓN DE BIENES DEL ESTADO DIRECCIÓN GENERAL DE ADMINISTRACIÓN - Disposición 150/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349046/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO DIRECCIÓN REGIONAL ROSARIO - Disposición 92/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349047/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA NACIONAL DE SEGURIDAD VIAL - Disposición 340/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349048/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - DIRECCIÓN NACIONAL ELECTORAL - Disposición 1/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349049/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - DIRECCIÓN NACIONAL ELECTORAL - Disposición 2/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349050/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SECRETARÍA GENERAL SUBSECRETARÍA DE GESTIÓN INSTITUCIONAL - Disposición 101/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349051/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SECRETARÍA GENERAL SUBSECRETARÍA DE GESTIÓN INSTITUCIONAL - Disposición 102/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349052/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SECRETARÍA GENERAL SUBSECRETARÍA DE GESTIÓN INSTITUCIONAL - Disposición 103/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349053/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SECRETARÍA GENERAL SUBSECRETARÍA DE GESTIÓN INSTITUCIONAL - Disposición 104/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349054/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SECRETARÍA GENERAL SUBSECRETARÍA DE GESTIÓN INSTITUCIONAL - Disposición 105/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA CONTADURÍA GENERAL DE LA NACIÓN Y TESORERÍA GENERAL DE LA NACIÓN - Disposición Conjunta 2/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349056/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO DE LA CIUDAD DE BUENOS AIRES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349057/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO DE LA NACIÓN ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349058/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA CLORINDA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349059/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA LA QUIACA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349060/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA POSADAS"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349061/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA POSADAS"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349062/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA SALTA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349063/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA SAN LORENZO"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349064/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - AGENCIA DE RECAUDACIÓN Y CONTROL ADUANERO - ADUANA TINOGASTA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349065/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL DE COMUNICACIONES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349066/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE SEMILLAS"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349067/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE ECONOMÍA - SUBSECRETARÍA DE ENERGÍA ELÉCTRICA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE JUSTICIA - DIRECCIÓN NACIONAL DEL DERECHO DE AUTOR"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349069/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SUPERINTENDENCIA DE SEGUROS DE LA NACIÓN"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349070/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - SUPERINTENDENCIA DE SEGUROS DE LA NACIÓN"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349071/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - DIRECCIÓN NACIONAL DE RELACIONES Y REGULACIONES DEL TRABAJO - Disposición 683/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349072/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - DIRECCIÓN NACIONAL DE RELACIONES Y REGULACIONES DEL TRABAJO - Disposición 682/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349073/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - DIRECCIÓN NACIONAL DE RELACIONES Y REGULACIONES DEL TRABAJO - Disposición 685/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349074/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - MINISTERIO DE CAPITAL HUMANO - DIRECCIÓN NACIONAL DE RELACIONES Y REGULACIONES DEL TRABAJO - Disposición 684/2026"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349075/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349076/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349077/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349078/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - BANCO CENTRAL DE LA REPÚBLICA ARGENTINA"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349079/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL DE COMUNICACIONES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349080/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - ENTE NACIONAL DE COMUNICACIONES"
+      },
+      {
+        "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349081/20261016",
+        "title": "BOLETIN OFICIAL REPUBLICA ARGENTINA - INSTITUTO NACIONAL DE SEMILLAS"
+      }
+    ]
+  },
+  "coverage_scope": "Initial relevance classification of110 bodies and substantive review of sources cited in report;37 annexfiles pending. Later observation of date16 does not prove publication within00:00–00:04."
+}
