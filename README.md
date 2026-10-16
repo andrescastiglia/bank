@@ -12,6 +12,7 @@ El stack elegido usa **Rust** para dominio y servicios, e imágenes propias con 
 - [Revisión integral y plan de mejoras](docs/review/README.md): análisis comercial, contable, legal, técnico, QA, seguridad, rentabilidad y operaciones.
 - [Skills locales](docs/skills.md): workflows reutilizables para desarrollar y revisar el proyecto.
 - [Vigilancia normativa diaria](docs/regulatory-watch/README.md): agente de IA, fuentes oficiales, cobertura, agenda y propuestas sin merge automático.
+- [Informe de análisis y datos relevados](INFORME_ANALISIS_BANK.md): hallazgos del 16/10/2026 en normativa, competencia, tecnología y seguridad, con evidencia y cobertura real.
 - [Plan de implementación por fases](PLAN_DE_IMPLEMENTACION_BANK.md): actualización legal, mercado, tecnología y seguridad, con propuestas trazables, esfuerzo y cobertura real de fuentes.
 
 La cobertura documental no acredita implementación, licencia, homologación o cumplimiento efectivo. Los documentos distinguen perfil jurídico, fuentes verificadas, supuestos, decisiones y evidencia pendiente. El corte normativo original es 15/10/2026; la revisión integral corresponde al 16/10/2026.
