@@ -6,6 +6,7 @@ Investigación en español basada en el análisis aportado por el usuario, ampli
 |---|---|
 | [market_analysis.md](market_analysis.md) | Demanda, segmentos, proveedores, evidencia de casos locales, escenarios de mercado y TCO, alternativas de construcción/compra y estrategia de entrada. |
 | [compliant.md](compliant.md) | Leyes, BCRA, UIF, AAIP, fiscalidad, ISO y estándares de industria, con aplicabilidad, vigencias, controles y evidencias. |
+| [LEGAL_TAX.md](LEGAL_TAX.md) | Requisitos de creación y apertura de un banco: autorización, sociedad, promotores, capital, impuestos y agentes, actualizaciones 2026, ejemplos CABA/PBA y matriz territorial de 24 jurisdicciones. |
 | [achitecture.md](achitecture.md) | Arquitectura modular, configuración versionada, consistencia financiera, asincronía, HA, baja latencia y carga inicial masiva con trazabilidad a requisitos. |
 | [Rust y runtime FROM scratch](deployment/rust-scratch.md) | Toolchain/lockfile, enlace estático por arquitectura, payload TLS/calendarios, endurecimiento de Kubernetes, probes, SIGTERM y evidencia pendiente de las imágenes propias. |
 | [ADR: Architectural Decision Records](adr/README.md) | Ocho registros de decisiones: contexto, alternativas, elección, consecuencias y criterios de revisión, con sus skills. |
