@@ -34,6 +34,16 @@ Se deja una [plantilla de ruleset](.github/main-ruleset.example.json) revisable 
 
 Las credenciales de un agente deben corresponder a una identidad separada, con mínimos permisos sobre ramas/PR y sin administración/bypass de `main`. Si usa credenciales indistinguibles de las del dueño, las reglas basadas en identidad no pueden distinguir al humano del agente; la política documentada sigue aplicándose, pero no constituye una barrera técnica suficiente.
 
+### Bloqueo de force-push/borrado y check obligatorio
+
+Por pedido explícito del mantenedor se intentó configurar estas tres protecciones. La API volvió a rechazar la creación del ruleset con **HTTP 403 — Resource not accessible by integration**; la lectura de protección también devolvió 403 y la lista de rulesets estaba vacía. Por tanto, **estas protecciones no quedaron aplicadas ni verificadas** desde esta integración.
+
+La [configuración lista para importar](.github/main-protection.ruleset.json) apunta sólo a `refs/heads/main`, bloquea borrado y actualizaciones no fast-forward y exige el check **`documentation`**, emitido por **GitHub Actions (app 15368)**. Exige que la rama esté actualizada con su base y no incluye actores de bypass. Es adicional a la plantilla de gobierno anterior: no concede permisos de merge ni reemplaza restricciones de identidad/PR existentes. El nombre del check y su app se verificaron contra una ejecución real aprobada en `main`.
+
+El [workflow](.github/workflows/docs.yml) ejecuta ese check en todas las PR, sin filtros de archivos en `pull_request`, para que una PR de código o estado no quede esperando un check omitido. Esto valida documentación; no sustituye pruebas de producto futuras. Antes de activar la exigencia, integrar este cambio de workflow mediante el merge del mantenedor.
+
+Para aplicar la configuración con una sesión administrativa autorizada: abrir **Settings → Rules → Rulesets → New ruleset → Import a ruleset**, seleccionar el JSON y comprobar `Active`, destino `main`, ausencia de bypass y los tres controles. Después verificar desde GitHub que un fallo o check pendiente impide el merge y que borrado/force-push están restringidos; no intentar borrar ni forzar `main` para probarlo. Importar el archivo o fusionar el workflow no se considera evidencia de protección hasta observar la regla activa.
+
 ## Vigilancia y decisiones regulatorias
 
 Se establece [vigilancia normativa diaria](docs/regulatory-watch/README.md), con fuentes oficiales, cobertura por fuente, agenda de vigencias, deduplicación e impacto trazable. El agente prepara propuestas y deja la integración al mantenedor.

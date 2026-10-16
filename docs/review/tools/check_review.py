@@ -221,8 +221,13 @@ def check_skills_and_links():
     require("* @andrescastiglia" in ownership.splitlines(), "Gobierno: falta asignación general de CODEOWNERS al mantenedor")
     triggers = workflow.get("on", {})
     for event in ["push", "pull_request"]:
-        paths = triggers.get(event, {}).get("paths", [])
-        require("*.md" in paths and ".github/**" in paths, f"CI: {event} no cubre documentos raíz/gobierno")
+        require(event in triggers, f"CI: falta evento {event}")
+        config = triggers.get(event) or {}
+        if event == "pull_request":
+            require("paths" not in config and "paths-ignore" not in config, "CI: el check obligatorio de PR no puede omitirse por filtros de archivos")
+        else:
+            paths = config.get("paths")
+            require(paths is None or "*.md" in paths and ".github/**" in paths, f"CI: {event} no cubre documentos raíz/gobierno")
     return len(names), len(markdowns)
 
 

@@ -9,13 +9,8 @@ name: Documentation checks
       - ".github/**"
       - "*.md"
       - "LICENSE"
-  pull_request:
-    paths:
-      - "docs/**"
-      - ".agents/**"
-      - ".github/**"
-      - "*.md"
-      - "LICENSE"
+  # El check obligatorio debe ejecutarse también en PR sin cambios documentales.
+  pull_request: {}
 
 permissions:
   contents: read
