@@ -5,87 +5,578 @@
   "reporting_timezone": "America/Buenos_Aires",
   "initial_backfill_from": "2026-10-15T00:00:00-03:00",
   "inventory_version": "2026-10-16.1",
-  "last_run_id": null,
+  "last_run_id": "RUN-20261016T014713Z",
   "source_checkpoints": [
     {
       "source_id": "WATCH-BO",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:49:26.427287+00:00",
+      "status": "UNAVAILABLE",
+      "open_gaps": [
+        {
+          "cause": "HTTP503 en raíz, primera sección y ruta por fecha; edición/suplementos/anexos desconocidos.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-BCRA-COM",
-      "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
+      "covered_through": "2026-10-15T22:47:13-03:00",
+      "last_attempt_at": "2026-10-16T01:52:08.141297+00:00",
+      "status": "COMPLETE",
       "open_gaps": []
     },
     {
       "source_id": "WATCH-BCRA-TO",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:50:17.076275+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Pendiente comparar corpus de 103 TO, sus modificatorias y versiones; consulta selectiva TI/SI y RRCI.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-BCRA-RI",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:53:18.133179+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Pendientes 55 RI de la faceta y otros canales; se recuperaron t-optico y manual SISCEN adicional, con lectura focal de 0019.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-UIF",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:53:18.133925+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Pendiente listado cronológico de reformas/rectificatorias y anexos no seleccionados; el conteo de tres textos es mínimo conocido.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-AAIP",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:51:33.579966+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Formulario sin resultados cronológicos acreditados; anexos de 47/2018 y otras modificaciones pendientes.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-ARCA",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:51:33.588350+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Novedades dinámicas sin resolver y ruta alternativa no disponible; faltan búsqueda cronológica y diseños/anexos completos por régimen.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-COMARB",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:49:26.210990+00:00",
+      "status": "UNAVAILABLE",
+      "open_gaps": [
+        {
+          "cause": "HTTP500 en raíces y rutas SIRCREB/SIRCUPA; cobertura y padrones sin acreditar.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-CNV",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:52:08.148444+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Pendiente conciliar índice por emisión frente a publicación, restantes actos e historia; los tres textos son mínimo conocido.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     },
     {
       "source_id": "WATCH-JURIS",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T02:04:45.799798+00:00",
+      "status": "NOT_APPLICABLE_WITH_BASIS",
+      "open_gaps": [],
+      "not_applicable_basis": "No hay operador/producto ni jurisdicciones subnacionales seleccionadas. El alcance aprobado en esta corrida es nacional; no prueba exención del futuro operador."
     },
     {
       "source_id": "WATCH-STANDARDS",
       "covered_through": null,
-      "last_attempt_at": null,
-      "status": "NOT_STARTED",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-16T01:50:17.068456+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Matrices de aplicabilidad/contratos y textos completos ISO/Swift pendientes; CISA directo403, sustituido para KEV por repositorio oficial. No cobertura universal de estándares.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ]
     }
   ],
-  "agenda": [],
-  "changes": [],
-  "run_index": []
+  "agenda": [
+    {
+      "agenda_id": "AGENDA-CNV1172-GENERAL",
+      "version": 1,
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "PSAV_REGISTRADO"
+      ],
+      "basis": "Art.5; publicación 15/10 según pie oficial",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-CNV1172-INFORMATIVO",
+      "version": 1,
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "PSAV_ALCANZADO_ART40B"
+      ],
+      "basis": "Art.4 y anexo; determinar primer período y presentación según inicio/actividad",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-BCRA-A8492",
+      "version": 1,
+      "normative_identity": "BCRA|A|8492|2026|AR",
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_SEGUN_GRUPO"
+      ],
+      "basis": "Texto y hojas con vigencia 1/11; conservar diseños anterior/futuro",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-BCRA-B13248",
+      "version": 1,
+      "normative_identity": "BCRA|B|13248|2026|AR",
+      "effective_at": "2027-01-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_INFORMANTE_SISCEN0019"
+      ],
+      "basis": "Período 2027 y manual versión03 desde enero; no fecha de presentación",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-CNV1173-TRANSICION",
+      "version": 1,
+      "normative_identity": "CNV|RG|1173|2026|AR",
+      "effective_at": "2026-12-15",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "IDONEIDAD_SUJETO_TRANSITORIO"
+      ],
+      "basis": "Sólo supuesto transitorio descrito; no plazo general del core",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    }
+  ],
+  "changes": [
+    {
+      "change_id": "CHANGE-BCRA-B13248-2026",
+      "normative_identity": "BCRA|B|13248|2026|AR",
+      "title": "SISCEN-0019: umbral 2027 ARS 1.700 millones y VALOR2=1700",
+      "published_at": null,
+      "effective_at": "2027-01-01",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:53:18.133179+00:00",
+      "subjects": [
+        "EF_INFORMANTE_SISCEN0019"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+              "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+              "fetched_at": "2026-10-16T01:52:08.141297+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12996.pdf",
+              "sha256": "d94c596637e7f7d19ace718bd38d96f179bcf2d62abd5c791d2ff01451b80cbf",
+              "fetched_at": "2026-10-16T01:53:18.132090+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/siscen.pdf",
+              "sha256": "cb8775c2a50182bf083aea2e1a846b66b0283d4d782adbd732f0c7c0d120f12d",
+              "fetched_at": "2026-10-16T01:53:18.133179+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-01",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "aa4ce9b68685c5f6e8c8b992ec6b8b71aeb288b258daab62783002d819ddde1c",
+      "issued_at": "2026-10-15",
+      "publication_limit": "Fecha BO vacía en el índice; se verifica emisión, período y texto, no publicación BO independiente.",
+      "related_identities": [
+        "BCRA|B|12996|2025|AR"
+      ],
+      "fr": [
+        "FR-RPT-001",
+        "FR-RPT-002",
+        "FR-RPT-007",
+        "FR-RPT-008",
+        "FR-RPT-012",
+        "FR-RPT-038"
+      ]
+    },
+    {
+      "change_id": "CHANGE-CNV-RG1172-2026",
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "title": "Sustitución régimen PSAV e información periódica desde noviembre",
+      "published_at": "2026-10-15",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:52:08.142952+00:00",
+      "subjects": [
+        "PSAV_REGISTRADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431259/norma.htm",
+              "sha256": "0c9664f202cccab6d76ff542eb9e93ad2c878fa5af60d4ebf05e1a1f18c7d72c",
+              "fetched_at": "2026-10-16T01:52:08.142952+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-02",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "9d9346233421cdf836160fa8643f4f54c6145402ec0be3b8968fa7f286d39159",
+      "issued_at": "2026-10-14",
+      "future_milestones": [
+        {
+          "date": "2026-11-01",
+          "basis": "art.4; información periódica art.40.b; primer período/vencimiento a determinar por situación del sujeto"
+        }
+      ],
+      "publication_basis": "Pie oficial del texto InfoLEG e.15/10/2026 N76113/26; acceso directo a BO falló.",
+      "fr": [
+        "FR-RPT-033",
+        "FR-INV-032"
+      ]
+    },
+    {
+      "change_id": "CHANGE-CNV-RG1173-2026",
+      "normative_identity": "CNV|RG|1173|2026|AR",
+      "title": "Modernización idoneidad y transición específica",
+      "published_at": "2026-10-15",
+      "effective_at": "2026-10-15",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:52:08.144282+00:00",
+      "subjects": [
+        "PERSONAS_ENTIDADES_ALCANZADAS_IDONEIDAD_CNV"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431260/norma.htm",
+              "sha256": "2810a3fd3652121a113fe80bd1f993b1e5b0b22660d7207af9215bd0dd7f1502",
+              "fetched_at": "2026-10-16T01:52:08.144282+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-04",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "e99b198556a47f05e806051e460827ea0a2db8e1c7de30c6f82224a2d8da3918",
+      "issued_at": "2026-10-14",
+      "publication_basis": "Pie oficial InfoLEG e.15/10/2026 N76111/26; BO no disponible.",
+      "scope_limit": "Evaluar evidencia de idoneidad/roles; no exige motor de exámenes dentro del core."
+    },
+    {
+      "change_id": "CHANGE-BCRA-A8492-REVALIDATED",
+      "normative_identity": "BCRA|A|8492|2026|AR",
+      "title": "Revalidación de transición A8492 ya documentada",
+      "published_at": null,
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:52:08.140462+00:00",
+      "subjects": [
+        "EF_SEGUN_GRUPO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "REVALIDATED_EXISTING_BASELINE_NO_CONTENT_CHANGE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+              "sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+              "fetched_at": "2026-10-16T01:52:08.140462+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-03",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "2195653c746b93e507eaf1cb6719c667ed2c46274c0fab629a2e201e8b44a1c9",
+      "issued_at": "2026-10-15",
+      "baseline_sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+      "fr": [
+        "FR-RPT-021",
+        "FR-RSK-019"
+      ],
+      "publication_limit": "Emisión verificada; publicación directa BO no acreditada en esta corrida."
+    },
+    {
+      "change_id": "CHANGE-SEC-PG-CVE202614666",
+      "normative_identity": "POSTGRESQL|CVE-2026-14666",
+      "title": "RLS caching y revocación: evaluar versiones/parches",
+      "published_at": "2026-08-13",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:50:17.067358+00:00",
+      "subjects": [
+        "STACK_POSTGRESQL_PROPUESTO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.postgresql.org/support/security/CVE-2026-14666/",
+              "sha256": "7d881bae442426da6d55b36656da387d64ce057710f494ce714682818b6f1186",
+              "fetched_at": "2026-10-16T01:50:17.065853+00:00"
+            },
+            {
+              "url": "https://www.postgresql.org/docs/release/18.6/",
+              "sha256": "0ab2a6a525a85606b041a1c0404f81ef533653f8c6778a7c9214c225eed3df20",
+              "fetched_at": "2026-10-16T01:50:17.067358+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-SEC-01",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "9f8bd632f0808c63621763473ecda4fddab6fa2634aa024833d24da211943238",
+      "nature": "VENDOR_SECURITY_ADVISORY_NOT_ARGENTINE_LAW",
+      "exposure": "NO_DEPLOYED_VERSION_OR_VULNERABILITY_PROVEN",
+      "fr": [
+        "FR-IAM-009",
+        "FR-IAM-030"
+      ]
+    },
+    {
+      "change_id": "CHANGE-SEC-PG-CVE202619385",
+      "normative_identity": "POSTGRESQL|CVE-2026-19385",
+      "title": "pg_dump: clientes y herramientas de backup vulnerables antes de parche",
+      "published_at": "2026-08-13",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:50:17.067358+00:00",
+      "subjects": [
+        "HERRAMIENTAS_BACKUP_MIGRACION_POSTGRESQL"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.postgresql.org/support/security/CVE-2026-19385/",
+              "sha256": "4d1345484fef903e245b70c095885a740f41c14b425b298c617dc3ecddb33ce6",
+              "fetched_at": "2026-10-16T01:50:17.066476+00:00"
+            },
+            {
+              "url": "https://www.postgresql.org/docs/release/18.6/",
+              "sha256": "0ab2a6a525a85606b041a1c0404f81ef533653f8c6778a7c9214c225eed3df20",
+              "fetched_at": "2026-10-16T01:50:17.067358+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-SEC-02",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "ffa82eca90be28ca915c8155cdf792862579c6748c3332aa400e23eb03fd6426",
+      "nature": "VENDOR_SECURITY_ADVISORY_NOT_ARGENTINE_LAW",
+      "exposure": "NO_INSTALLED_CLIENT_VERSION_PROVEN"
+    },
+    {
+      "change_id": "CHANGE-SEC-ATLASSIAN-CVE202621589",
+      "normative_identity": "ATLASSIAN|CVE-2026-21589",
+      "title": "Nueva incorporación KEV y comprobación de inventario",
+      "published_at": "2026-10-05",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:50:17.068456+00:00",
+      "subjects": [
+        "SI_EXISTEN_PRODUCTOS_ATLASSIAN_AFECTADOS"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+              "sha256": "7fda701404eed3046222cd91007a04c767ceb526c47fbb24d143c088966be542",
+              "fetched_at": "2026-10-16T01:50:17.068456+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "sha256": "0a4807c44c302e6c3f8ba5adbcd45f8163514f52059f636ad9048728cf0c57b8",
+              "fetched_at": "2026-10-16T01:49:28.826651+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-SEC-03",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "d0de95a79c22022aa7ae594b35f70cbbdd6e4a23635f339e326302f508315e99",
+      "nature": "THREAT_INTELLIGENCE_NOT_ARGENTINE_LEGAL_DEADLINE",
+      "kev_added_at": "2026-10-15",
+      "cisa_due_date": "2026-10-18",
+      "cisa_due_date_scope": "No se adopta como plazo legal argentino",
+      "exposure": "USE_NOT_IDENTIFIED"
+    }
+  ],
+  "run_index": [
+    {
+      "run_id": "RUN-20261016T014713Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261016T014713Z.json",
+      "finished_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    }
+  ]
 }
