@@ -7,6 +7,9 @@ Investigación en español basada en el análisis aportado por el usuario, ampli
 | [market_analysis.md](market_analysis.md) | Demanda, segmentos, proveedores, evidencia de casos locales, escenarios de mercado y TCO, alternativas de construcción/compra y estrategia de entrada. |
 | [compliant.md](compliant.md) | Leyes, BCRA, UIF, AAIP, fiscalidad, ISO y estándares de industria, con aplicabilidad, vigencias, controles y evidencias. |
 | [achitecture.md](achitecture.md) | Arquitectura modular, configuración versionada, consistencia financiera, asincronía, HA, baja latencia y carga inicial masiva con trazabilidad a requisitos. |
+| [ADR: Architectural Decision Records](adr/README.md) | Ocho registros de decisiones: contexto, alternativas, elección, consecuencias y criterios de revisión, con sus skills. |
+| [NFR: Non-Functional Requirements](nfr/README.md) | Trece familias de requisitos de calidad y restricciones verificables, con escenarios, métricas, objetivos, oráculos y skills. |
+| [Skills de ADR y NFR](skills.md) | Workflows para crear, mantener, aplicar y verificar registros y requisitos; selección e invocación de skills específicos. |
 | [Skill: core-bancario-argentina](../.agents/skills/core-bancario-argentina/SKILL.md) | Procedimiento reutilizable para verificar fuentes y convertir requisitos en controles, pruebas y backlog. |
 | [Registro de fuentes BCRA](research/bcra_sources.json) | Metadatos y huellas SHA-256 de los documentos descargados; las URLs de textos ordenados pueden actualizar su contenido. |
 

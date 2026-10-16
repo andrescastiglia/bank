@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-04 Asincronía durable"
+  short_description: "Trabajos recuperables, frescura y deadlines"
+  default_prompt: "Usá $nfr-04-asincronia-durable para trabajar durabilidad y oportunidad de los procesos asíncronos del alcance solicitado, verificando unicidad, recuperación, deadlines y evidencia."
+policy:
+  allow_implicit_invocation: true

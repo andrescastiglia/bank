@@ -1,0 +1,6 @@
+interface:
+  display_name: "Non-Functional Requirements"
+  short_description: "Crear y verificar requisitos de calidad"
+  default_prompt: "Creá o revisá los Non-Functional Requirements del alcance: definí escenarios, métricas, unidades, ventanas, objetivos con fuente y oráculos; realizá el trabajo solicitado y vinculá evidencia con ADR y controles."
+policy:
+  allow_implicit_invocation: true

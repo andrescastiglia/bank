@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-04 · Alta disponibilidad"
+  short_description: "Diseño y recuperación coherente del core"
+  default_prompt: "Aplicá $adr-04-alta-disponibilidad al pedido: diseñá, implementá o revisá la continuidad del core y verificá escritor único, quorum, fencing, persistencia síncrona y recuperación coherente de datos, eventos, claves y pagos. Registrá evidencia y lo no evaluado."
+policy:
+  allow_implicit_invocation: true

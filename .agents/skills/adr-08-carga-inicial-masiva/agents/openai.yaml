@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-08 · Carga inicial masiva"
+  short_description: "Implementar bulk, conciliación y corte seguro de cohortes."
+  default_prompt: "Usá $adr-08-carga-inicial-masiva para diseñar, implementar o revisar una importación bulk del core, con staging durable, conciliación, activación y retorno verificables."
+policy:
+  allow_implicit_invocation: true

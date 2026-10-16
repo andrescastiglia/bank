@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR 08 · Interoperabilidad y portabilidad"
+  short_description: "Contratos compatibles y salida comprobable"
+  default_prompt: "Aplicá $nfr-08-interoperabilidad-portabilidad a la tarea solicitada: diseñá, implementá o verificá contratos e integraciones y portabilidad del core, medí los criterios pertinentes y entregá evidencia y brechas sin asumir homologaciones."
+policy:
+  allow_implicit_invocation: true

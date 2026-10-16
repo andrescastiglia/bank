@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-02 Disponibilidad y recuperación"
+  short_description: "SLO, fallos y recuperación financiera coherente"
+  default_prompt: "Usá $nfr-02-disponibilidad-recuperacion para trabajar los criterios de disponibilidad y recuperación del alcance solicitado, distinguiendo metas, condiciones, RTO/RPO medidos y evidencia pendiente."
+policy:
+  allow_implicit_invocation: true

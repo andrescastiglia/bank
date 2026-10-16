@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-01 Integridad financiera"
+  short_description: "Exactitud, concurrencia y efectos monetarios únicos"
+  default_prompt: "Usá $nfr-01-integridad-financiera para diseñar, implementar o verificar los criterios de integridad financiera del alcance solicitado y registrar objetivos, evidencia y brechas."
+policy:
+  allow_implicit_invocation: true

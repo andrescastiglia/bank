@@ -31,6 +31,7 @@ Consultar sólo los datos faltantes que cambien una decisión. Mientras tanto, p
 4. Para certificaciones y sistemas de gestión, leer [ISO](references/iso.md).
 5. Para PCI, SWIFT, NIST, OWASP, COBIT y atestaciones, leer [normas y estándares de industria](references/estandares-industria.md).
 6. Para implementación o revisión técnica, aplicar [controles y criterios de aceptación](references/controles.md).
+7. Cuando el pedido afecte decisiones arquitectónicas, usar [core-adr-arquitectura](../core-adr-arquitectura/SKILL.md); para requisitos no funcionales y su medición, [core-nfr-calidad](../core-nfr-calidad/SKILL.md). Estos workflows complementan la aplicabilidad normativa; no convierten decisiones ni metas en obligaciones legales.
 
 Las referencias son autónomas para iniciar el trabajo. Si se está dentro del repositorio que originó este skill, ampliar con `docs/compliant.md` y `docs/market_analysis.md`; no requerir esos documentos para usar el skill en otro repositorio.
 

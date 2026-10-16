@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-12 Operabilidad y costos"
+  short_description: "Soporte, runbooks y economía del servicio"
+  default_prompt: "Aplicá NFR-12 al alcance indicado: revisá responsables y runbooks, medí operación/costo cuando exista evidencia y realizá el trabajo solicitado sin confundir metas con resultados."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-06 · Aislamiento por celda"
+  short_description: "Diseñar y verificar aislamiento entre entidades del core."
+  default_prompt: "Usá $adr-06-aislamiento-por-celda para diseñar, implementar o revisar el aislamiento entre entidades del core, con cambios autorizados y evidencia de accesos, recursos y datos."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-05 Configuración versionada"
+  short_description: "Reglas fechadas y reproducción histórica"
+  default_prompt: "Aplicá ADR-05 al cambio de reglas solicitado: definí ámbito y vigencias, simulá resultados, preservá versiones históricas y realizá o revisá la activación con evidencia."
+policy:
+  allow_implicit_invocation: true

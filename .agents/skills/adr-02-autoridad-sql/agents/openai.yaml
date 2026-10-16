@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-02 · Autoridad SQL"
+  short_description: "Transacciones, saldos, reservas y límites consistentes."
+  default_prompt: "Usá $adr-02-autoridad-sql para diseñar, implementar o revisar este cambio financiero, preservando la autoridad SQL y dejando evidencia de las invariantes y brechas."
+policy:
+  allow_implicit_invocation: true

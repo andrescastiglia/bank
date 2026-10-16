@@ -1,0 +1,6 @@
+interface:
+  display_name: "Architectural Decision Records"
+  short_description: "Crear, mantener y revisar ADR relacionados"
+  default_prompt: "Creá o revisá los Architectural Decision Records del cambio: identificá contexto, NFR motivadores, alternativas, decisión, consecuencias y evidencia; aplicá los skills especializados y actualizá la trazabilidad."
+policy:
+  allow_implicit_invocation: true

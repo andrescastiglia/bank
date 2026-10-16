@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-11 Calidad y reportes"
+  short_description: "Cortes completos, linaje y aceptación reproducibles"
+  default_prompt: "Aplicá NFR-11 a la tarea autorizada: diseñá, implementá o verificá calidad y reportes por entidad y período, con snapshots, completitud, conciliación, linaje y aceptación efectiva."
+policy:
+  allow_implicit_invocation: true

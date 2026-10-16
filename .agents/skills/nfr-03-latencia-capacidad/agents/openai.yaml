@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-03 Latencia y capacidad"
+  short_description: "Percentiles y carga con controles financieros activos"
+  default_prompt: "Usá $nfr-03-latencia-capacidad para definir o verificar presupuestos y escenarios de rendimiento del alcance solicitado, conservando controles y separando hipótesis de mediciones."
+policy:
+  allow_implicit_invocation: true

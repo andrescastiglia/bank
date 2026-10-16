@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-07 Auditoría y observabilidad"
+  short_description: "Auditoría durable, señales y evidencia sin secretos"
+  default_prompt: "Aplicá NFR-07 a la tarea autorizada: diseñá, implementá o verificá auditoría durable, correlación, alertas e incidentes; distinguí metas de mediciones y preservá evidencia sin datos sensibles."
+policy:
+  allow_implicit_invocation: true

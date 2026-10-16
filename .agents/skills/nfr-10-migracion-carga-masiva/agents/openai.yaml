@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR 10 · Migración y carga masiva"
+  short_description: "Carga medible, conciliación y corte seguro"
+  default_prompt: "Aplicá $nfr-10-migracion-carga-masiva al diseño, implementación o verificación solicitados: medí la ventana completa, probá duplicados y reanudación, conciliá la cartera y verificá activación y retorno sin doble autoridad ni efectos históricos."
+policy:
+  allow_implicit_invocation: true

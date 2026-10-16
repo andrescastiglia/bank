@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-13 Accesibilidad y experiencia"
+  short_description: "Canales claros, accesibles y fieles al saldo"
+  default_prompt: "Aplicá NFR-13 al recorrido solicitado: determiná los criterios aplicables, contrastá estados/documentos con la operación real y realizá o verificá mejoras con evidencia."
+policy:
+  allow_implicit_invocation: true

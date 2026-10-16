@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-01 Núcleo modular"
+  short_description: "Fronteras y contratos del núcleo financiero"
+  default_prompt: "Aplicá ADR-01 al cambio solicitado: identificá módulos, datos e invariantes, compará las fronteras de despliegue y realizá o revisá el trabajo con evidencia acorde al alcance."
+policy:
+  allow_implicit_invocation: true

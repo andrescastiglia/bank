@@ -475,7 +475,7 @@ Los regímenes UIF/ARCA/COMARB, los formatos de rieles y las reglas NIIF/BCRA pe
 
 No se prescribe Redis como condición de baja latencia ni se usa como saldo. Cada dependencia tiene versión exacta, licencia, SBOM, soporte, responsable, parcheo y procedimiento de salida. Las versiones concretas se congelan al implementar; no se despliega una RC o una imagen `latest` por estar recién publicada.
 
-Decisiones a registrar como ADR: **ADR-01** núcleo modular; **ADR-02** autoridad SQL y escritor único; **ADR-03** outbox/inbox; **ADR-04** activo/pasivo regional; **ADR-05** configuración limitada y versionada; **ADR-06** aislamiento por celda; **ADR-07** stack y mensajería gestionados; **ADR-08** carga inicial por staging y publicación controlada. Cambiar una decisión exige documentar alternativa, riesgo, costo y evidencia.
+Los [Architectural Decision Records](adr/README.md) formalizan estas decisiones: **ADR-01** núcleo modular; **ADR-02** autoridad SQL y escritor único; **ADR-03** outbox/inbox; **ADR-04** activo/pasivo regional; **ADR-05** configuración limitada y versionada; **ADR-06** aislamiento por celda; **ADR-07** stack y mensajería gestionados; **ADR-08** carga inicial por staging y publicación controlada. Su estado inicial es Propuesto, con implementación sin evaluar. Cambiar una decisión exige documentar alternativa, riesgo, costo y evidencia. Sus [skills](skills.md) permiten crear, mantener, aplicar o revisar los registros según el trabajo solicitado.
 
 <a id="operacion"></a>
 
@@ -566,6 +566,8 @@ Ensayar al menos: archivo duplicado, chunk repetido, checksum cambiado, corte de
 <a id="implementacion"></a>
 
 ## 17. Secuencia de implementación y aceptación
+
+Los [Non-Functional Requirements](nfr/README.md) formalizan las cualidades y restricciones verificables de este diseño. Cada criterio identifica alcance, escenario, métrica/unidad, ventana, objetivo y evidencia; se relaciona con los ADR que contribuyen a satisfacerlo. Los objetivos permanecen propuestos y sin medición operativa acreditada.
 
 | Etapa | Entregable | Condición para avanzar |
 |---|---|---|

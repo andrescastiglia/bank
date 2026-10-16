@@ -1,0 +1,6 @@
+interface:
+  display_name: "ADR-03 · Outbox e inbox"
+  short_description: "Eventos durables, reintentos y entregas conciliables."
+  default_prompt: "Usá $adr-03-outbox-inbox para diseñar, implementar o revisar este flujo asíncrono, haciendo explícitas la entrega al menos una vez, la idempotencia y la resolución de estados externos ambiguos."
+policy:
+  allow_implicit_invocation: true

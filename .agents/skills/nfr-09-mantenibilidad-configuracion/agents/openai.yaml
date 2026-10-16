@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR 09 · Mantenibilidad y configuración"
+  short_description: "Cambios trazables y reglas reproducibles"
+  default_prompt: "Aplicá $nfr-09-mantenibilidad-configuracion para diseñar, implementar o verificar el cambio solicitado: delimitá configuración soportada, temporalidad y versiones, probá activación y reversión, y entregá métricas y evidencia."
+policy:
+  allow_implicit_invocation: true

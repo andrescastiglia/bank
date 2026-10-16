@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-05 Seguridad y accesos"
+  short_description: "Autorización, revocación y aislamiento verificables"
+  default_prompt: "Aplicá NFR-05 a la tarea autorizada: diseñá, implementá o verificá seguridad y accesos por entidad, cuenta, objeto y acción; contrastá revocación, segregación y claves con evidencia."
+policy:
+  allow_implicit_invocation: true

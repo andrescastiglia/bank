@@ -1,0 +1,6 @@
+interface:
+  display_name: "NFR-06 Privacidad y retención"
+  short_description: "Finalidad, países, derechos y conservación por clase"
+  default_prompt: "Aplicá NFR-06 a la tarea autorizada: diseñá, implementá o verificá privacidad, residencia y retención por categoría, con disparadores, holds, transferencias y evidencia de disposición."
+policy:
+  allow_implicit_invocation: true
