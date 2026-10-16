@@ -5,6 +5,8 @@ description: "Usar al diseñar, implementar o verificar autenticación, autoriza
 
 # Seguridad y accesos verificables
 
+Para imágenes propias del core, aplicar también el [contrato Rust/scratch](../../../docs/deployment/rust-scratch.md): probar usuario no root, raíz de sólo lectura, capabilities/escalamiento denegados, payload sin secretos y confianza TLS efectiva sobre el digest final. Las probes no dependen de shell; DNS, CA, permisos de volúmenes y recuperación conservan sus controles. El runtime mínimo no demuestra por sí solo seguridad ni integridad financiera.
+
 ## Propósito y fuentes
 
 Convertir [NFR-05](../../../docs/nfr/NFR-05-seguridad-accesos.md) en mecanismos y pruebas trazables. Leer primero ese contrato y [seguridad arquitectónica](../../../docs/achitecture.md#seguridad). Para aplicabilidad, consultar [core bancario Argentina](../core-bancario-argentina/SKILL.md) y sus CTL-03/09/10/15/17; ampliar únicamente las referencias afectadas de cumplimiento. Línea base documental: 15/10/2026; no tratarla como investigación jurídica actualizada ni como certificado ISO/BCRA.

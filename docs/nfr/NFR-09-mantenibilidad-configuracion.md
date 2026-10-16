@@ -21,6 +21,8 @@ Evolución de módulos, reglas, configuración por entidad/contrato, esquemas y 
 
 Entregar historial de cambios, configuración efectiva, simulaciones financieras, pruebas de límites temporales y permisos, matriz de versiones y ensayo de despliegue/reversión. La reversión debe preservar el original y registrar ajustes autorizados cuando corresponda. Medir mantenibilidad mediante cambios representativos, incluyendo una nueva fórmula que requiera código; contar módulos o cobertura aislada no demuestra facilidad de cambio. Si falta un objetivo temporal/económico, registrar la medición y su aprobación pendiente.
 
+**Actualización de diseño 16/10/2026:** aplicar NFR-09-C01/C05 a toolchain Rust, Cargo.lock/features, targets, builder y digest de imágenes propias `FROM scratch`. Cada release conserva SBOM/procedencia de crates, bibliotecas nativas y payload de CA/zonas horarias; verifica build, promoción y reversión del digest bajo el [contrato Rust/scratch](../deployment/rust-scratch.md) y ADR-07. Mantener los IDs y separar la decisión de stack del ensayo pendiente; una reconstrucción por parche no borra historia monetaria.
+
 ## Dependencias y trazabilidad
 
 [Configuración](../achitecture.md#configuracion), [módulos](../achitecture.md#modulos), [operación](../achitecture.md#operacion); [ADR-01](../adr/ADR-01-nucleo-modular.md), [ADR-05](../adr/ADR-05-configuracion-versionada.md); [mercado/TCO](../market_analysis.md); [cumplimiento](../compliant.md#bcra-tecnologia), BCRA-T17, STD13–14. CTL-01–02, CTL-04, CTL-06, CTL-09, CTL-12, CTL-15, CTL-17–18 sustentan los escenarios.

@@ -4,6 +4,8 @@ Proyecto de software libre conforme a **[GNU GPL v2](LICENSE)**. Las contribucio
 
 Proyecto en etapa de diseño y validación de producto. El repositorio reúne investigación de mercado, cumplimiento, arquitectura, requisitos y workflows locales; todavía no contiene una implementación bancaria ni evidencia de operación productiva.
 
+El stack elegido usa **Rust** para dominio y servicios, e imágenes propias con runtime **`FROM scratch`** para Kubernetes. El [contrato de construcción y ejecución](docs/deployment/rust-scratch.md) concreta binarios estáticos, dependencias de runtime, seguridad y pruebas requeridas.
+
 - [Documentación general](docs/README.md): mercado, normativa y arquitectura modular.
 - [Requisitos funcionales](docs/functional/README.md): 1.016 FR organizados en 32 módulos.
 - [ADR](docs/adr/README.md) y [NFR](docs/nfr/README.md): decisiones propuestas y calidad verificable.

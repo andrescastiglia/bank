@@ -2,6 +2,8 @@
 
 **Versión:** 1.0. **Fecha:** 15 de octubre de 2026, Argentina. **Estado:** diseño propuesto para implementación; las metas operativas requieren validación con pruebas y un cliente de diseño. Se conserva el nombre `achitecture.md` solicitado.
 
+**Actualización de stack, 16/10/2026:** por decisión explícita del mantenedor, el lenguaje del dominio y los servicios pasa a **Rust** y las imágenes propias destinadas a Kubernetes tendrán una etapa final **`FROM scratch`**. La implementación y los ensayos siguen pendientes; se conserva el alcance financiero y el historial de ADR-07.
+
 La propuesta toma como base [el análisis de mercado](market_analysis.md), [el relevamiento de cumplimiento](compliant.md) y [el skill del proyecto](../.agents/skills/core-bancario-argentina/SKILL.md). Los identificadores `LAW`, `AML`, `DATA`, `TAX`, `BCRA-F`, `BCRA-T`, `PAY`, `RPT`, `STD` y `CTL` remiten a esos documentos. Las elecciones de arquitectura son decisiones de ingeniería; no equivalen a una certificación normativa ni a una autorización para prestar servicios financieros.
 
 ## Navegación
@@ -402,7 +404,7 @@ Se toma del modelo económico un universo **hipotético de 250.000 cuentas/contr
 - Hasta 1.000 lecturas/s concurrentes: mitad consistentes y mitad de proyecciones.
 - Datos con cuentas concentradoras, historial, distribución de saldos, límites y cardinalidad representativos. Medir también un año de crecimiento y la ejecución simultánea de procesos obligatorios.
 
-Son objetivos a validar con el cliente, no capacidad prometida de PostgreSQL, Go o la infraestructura. Un comando puede producir múltiples asientos, mensajes e I/O; el presupuesto de infraestructura se deriva de esa amplificación medida.
+Son objetivos a validar con el cliente, no capacidad prometida de PostgreSQL, Rust o la infraestructura. Un comando puede producir múltiples asientos, mensajes e I/O; el presupuesto de infraestructura se deriva de esa amplificación medida.
 
 | Trayecto medido desde el gateway hasta respuesta | Meta inicial p95 / p99 | Qué incluye |
 |---|---|---|
@@ -463,17 +465,21 @@ Los regímenes UIF/ARCA/COMARB, los formatos de rieles y las reglas NIIF/BCRA pe
 
 | Componente | Propuesta inicial | Razón y criterio de sustitución |
 |---|---|---|
-| Dominio y servicios | Go, módulos con interfaces explícitas; HTTP/JSON y OpenAPI | Tipos monetarios exactos, cancelación/timeouts y operación simple; lenguaje/versiones/librerías se fijan por soporte y experiencia real del equipo |
+| Dominio y servicios | Rust estable con toolchain fijado, módulos/crates e interfaces explícitas; HTTP/JSON y OpenAPI | Tipos monetarios exactos, manejo explícito de errores y concurrencia; runtime asíncrono y crates se evalúan por soporte, licencia, compatibilidad y mediciones |
 | Autoridad financiera | PostgreSQL 18 soportado por el proveedor elegido; acceso con driver/pool y migraciones versionadas | Transacciones, restricciones y recuperación; ningún cambio de motor se considera equivalente sin pruebas de invariantes y durabilidad |
 | Eventos | Kafka gestionado con esquemas versionados y envelope CloudEvents | Consumidores independientes, replay y orden por partición; dimensionar costo mínimo y cuota por celda |
 | Procesos durables | Workers y tablas de jobs/estado con leases y checkpoints | Menor número de motores para el alcance inicial; adoptar un orquestador especializado sólo si procesos largos/compensaciones justifican su costo operativo |
 | Archivo y evidencia | Almacenamiento de objetos cifrado con controles de integridad, retención y acceso | Documentos, respaldos, manifiestos y salida; bloqueo de objetos sólo por clase/plazo autorizado |
-| Ejecución | Contenedores sobre plataforma gestionada multizona con health checks, scheduling y cuotas | Kubernetes gestionado si el equipo puede operarlo; también es válida una plataforma gestionada equivalente que pruebe requisitos |
+| Ejecución | Imágenes propias con build multietapa y runtime mínimo `FROM scratch`, binario Rust estático, usuario no root y payload de runtime explícito | Kubernetes gestionado multizona con probes sin shell, cuotas y apagado seguro; una plataforma equivalente debe preservar el mismo contrato de imagen y los requisitos |
 | Identidad y claves | Proveedor IAM/SSO y gestor de secretos/KMS con soporte y recuperación | Construir sólo autorización de negocio propia; no crear un proveedor de identidad o criptografía casera |
 | Observabilidad | OpenTelemetry más métricas, logs y trazas con acceso/retención definidos | Correlación de operación y dependencia sin capturar datos sensibles por defecto |
 | Proyecciones y reportes | PostgreSQL separado/réplicas aptas para lectura y archivo columnar cuando se necesite | No imponer un data warehouse ni un buscador adicional hasta medir necesidad y costos |
 
 No se prescribe Redis como condición de baja latencia ni se usa como saldo. Cada dependencia tiene versión exacta, licencia, SBOM, soporte, responsable, parcheo y procedimiento de salida. Las versiones concretas se congelan al implementar; no se despliega una RC o una imagen `latest` por estar recién publicada.
+
+Fijar `rust-toolchain.toml`, `Cargo.lock`, features y target por arquitectura. Compilar código propio para Linux con enlace estático comprobado, preferentemente mediante targets musl soportados; verificar también dependencias nativas/FFI. Un binario Rust no es estático por defecto. Mantener cálculos monetarios exactos con redondeo y overflow controlados, y ejecutar CPU/I/O bloqueante fuera del executor asíncrono con concurrencia acotada. La seguridad de memoria no demuestra integridad financiera ni ausencia de deadlocks o doble efecto externo.
+
+En este proyecto, **distroless** significa una etapa final `FROM scratch` con payload explícito: binario, confianza TLS pública y datos de zonas horarias necesarios, incorporados o montados según contrato. Sin shell, gestor de paquetes, compilador, herramientas de desarrollo, credenciales o claves privadas dentro de la imagen. Probes HTTP/TCP/gRPC compatibles con el servicio y manejo de SIGTERM no requieren shell. El [contrato Rust/scratch](deployment/rust-scratch.md) define construcción, endurecimiento, apagado, evidencia y aceptación por arquitectura. El requisito aplica a imágenes propias del API, workers y jobs; los servicios de terceros mantienen sus artefactos y evaluación de soporte/seguridad correspondiente.
 
 Los [Architectural Decision Records](adr/README.md) formalizan estas decisiones: **ADR-01** núcleo modular; **ADR-02** autoridad SQL y escritor único; **ADR-03** outbox/inbox; **ADR-04** activo/pasivo regional; **ADR-05** configuración limitada y versionada; **ADR-06** aislamiento por celda; **ADR-07** stack y mensajería gestionados; **ADR-08** carga inicial por staging y publicación controlada. Su estado inicial es Propuesto, con implementación sin evaluar. Cambiar una decisión exige documentar alternativa, riesgo, costo y evidencia. Sus [skills](skills.md) permiten crear, mantener, aplicar o revisar los registros según el trabajo solicitado.
 

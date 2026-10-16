@@ -4,6 +4,8 @@
 
 **Licencia y autoridad:** continúa GNU GPL v2, conforme a [LICENSE](LICENSE) y [GOVERNANCE.md](GOVERNANCE.md). Únicamente `@andrescastiglia` fusiona a `main`. Las acciones siguientes son propuestas de documentación, implementación y pruebas; no constituyen despliegue, contratación, presentación regulatoria ni aceptación institucional. Las condiciones económicas corresponden a eventuales servicios comerciales, no a permisos para contribuir al software libre.
 
+**Actualización técnica 16/10/2026:** el mantenedor fija Rust para dominio/servicios y `FROM scratch` para el runtime de imágenes propias. Aplicar [ADR-07](docs/adr/ADR-07-stack-gestionado.md) y el [contrato Rust/scratch](docs/deployment/rust-scratch.md) a F1-03, F2-01/02/03/04/05 y a sus evidencias de release. Reestimar capacidad, compatibilidad de crates/FFI y esfuerzo al concretar el equipo; no presentar las estimaciones previas como mediciones de Rust. Los registros de investigación originales conservan su procedencia y fechas.
+
 ## 1. Decisión recomendada y hallazgos que cambian la prioridad
 
 La arquitectura de autoridad financiera SQL, módulos delimitados, outbox/inbox, celdas y carga masiva preparada sigue siendo una base adecuada para construir un primer circuito demostrable. La principal brecha es **convertir especificaciones en software, contratos de datos, pruebas independientes y operación recuperable**. No hay evidencia de una aplicación bancaria desplegada, versiones efectivas de sus componentes, inventario productivo o ensayo financiero en el repositorio examinado. Esto es una limitación del alcance, no una afirmación sobre sistemas externos.
@@ -120,7 +122,7 @@ Para sostener el proyecto: separar mantenibilidad comunitaria de una oferta even
 | ADR-04: HA local y DR regional con condiciones | Fallos de zona/región y doble writer | Fencing verificable, punto de recuperación, restauración con IAM/KMS y reconciliación antes de reapertura |
 | ADR-05: configuración versionada | Cambios fiscales/producto retroactivos o no reproducibles | Esquema, vigencias sin solapamiento ambiguo, simulación/dual control y vínculo operación–versión |
 | ADR-06: aislamiento por celda | Fuga y mezcla de obligaciones entre entidades | Identidad de entidad derivada de autorización, fronteras de soporte/bus/archivo y pruebas de revocación/aislamiento |
-| ADR-07: Go/PostgreSQL, servicios acotados | Complejidad y costo operacional | Versiones y proveedor con soporte, licencias, garantías de persistencia, SBOM, costos y salida verificados |
+| ADR-07: Rust/PostgreSQL, servicios acotados e imágenes propias FROM scratch | Complejidad y costo operacional | Toolchain, lockfile/features/targets, binarios estáticos, TLS/calendarios/probes y SIGTERM verificados junto con soporte, licencias, persistencia, SBOM, costos y salida |
 | ADR-08: bulk logged y cohortes | Ventana de migración y exposición de cartera incompleta | Staging, validación set-based, idempotencia entre corridas, barrera de origen y activación por época, ensayadas |
 
 Los ADR continúan **Propuestos**. Este informe no los acepta por el mantenedor ni reemplaza sus alternativas. No hay motivo demostrado para introducir un ecosistema de microservicios o un nuevo motor distribuido antes del primer flujo.
@@ -310,7 +312,7 @@ El paquete de información debe modelar clientes, operaciones, activos/redes y t
 | COMARB | Raíz y rutas SIRCREB/SIRCUPA devolvieron 500 | **UNAVAILABLE**; persistir todos los gaps y reintentar, sin inferir padrones ni reglamentos nuevos |
 | CNV | Se siguieron paneles oficiales y textos RG1172/1173/1166, con anexos contenidos en HTML | **PARTIAL**; conciliar índice por emisión frente a BO/publicación, historia y resto de actos; tres textos no equivalen a cobertura integral |
 | Jurisdicciones locales | No existe jurisdicción provincial/municipal seleccionada | **NOT_APPLICABLE_WITH_BASIS** a esta corrida nacional; no equivale a exención del futuro operador. Ampliar inventario al elegirlo |
-| Estándares/redes/seguridad | NIST/OWASP/FAPI/PCI públicos, avisos PostgreSQL, Go y feed KEV oficial alternativo a CISA 403 | **PARTIAL**; sirve al análisis técnico autorizado. Contratos/ediciones completas ISO/Swift y matriz de aplicabilidad siguen pendientes |
+| Estándares/redes/seguridad | NIST/OWASP/FAPI/PCI públicos, avisos PostgreSQL y feed KEV oficial alternativo a CISA 403; la consulta histórica de seguridad de Go corresponde al stack anterior | **PARTIAL**; sirve al análisis técnico autorizado. El stack actual Rust/scratch requiere inventario y revisión de avisos de sus componentes; contratos/ediciones completas ISO/Swift y matriz de aplicabilidad siguen pendientes |
 
 Resultado global **PARTIAL**, con novedades verificadas y decisiones pendientes. Sólo la ventana contigua de BCRA comunicaciones puede adelantar su `covered_through`; las restantes mantienen el corte previo nulo. No se publica un resultado `COMPLETE_NO_CHANGES` ni una certificación de vigencia general.
 
