@@ -1,0 +1,389 @@
+{
+  "baseline_commit": "ec0ef12a58ebc1c3e8d83334fc8fb947ab201755",
+  "baseline_date": "2026-10-15",
+  "architecture_modules": [
+    {
+      "id": "ARQ-M01",
+      "name": "Identidad y permisos",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-IAM-001",
+        "FR-IAM-005",
+        "FR-IAM-010"
+      ]
+    },
+    {
+      "id": "ARQ-M02",
+      "name": "Personas y elegibilidad",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-CLI-001",
+        "FR-CLI-007",
+        "FR-CLI-009",
+        "FR-AML-001"
+      ]
+    },
+    {
+      "id": "ARQ-M03",
+      "name": "Catálogo y configuración",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-CFG-001",
+        "FR-CFG-006",
+        "FR-CFG-021"
+      ]
+    },
+    {
+      "id": "ARQ-M04",
+      "name": "Contratos y cuentas",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-CON-001",
+        "FR-CON-006",
+        "FR-ACC-002",
+        "FR-CRE-001"
+      ]
+    },
+    {
+      "id": "ARQ-M05",
+      "name": "Disponibilidad y restricciones",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-BAL-001",
+        "FR-BAL-006",
+        "FR-BAL-009"
+      ]
+    },
+    {
+      "id": "ARQ-M06",
+      "name": "Exposición y autorizaciones",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-RSK-004",
+        "FR-RSK-005",
+        "FR-RSK-006",
+        "FR-RSK-007"
+      ]
+    },
+    {
+      "id": "ARQ-M07",
+      "name": "Ledger y contabilidad",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-LED-001",
+        "FR-LED-004",
+        "FR-LED-005",
+        "FR-LED-020"
+      ]
+    },
+    {
+      "id": "ARQ-M08",
+      "name": "Intereses y ciclo de crédito",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-INT-008",
+        "FR-INT-012",
+        "FR-CRE-018",
+        "FR-COL-001"
+      ]
+    },
+    {
+      "id": "ARQ-M09",
+      "name": "Pagos y liquidación",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-PAY-006",
+        "FR-PAY-007",
+        "FR-PAY-008",
+        "FR-PAY-010"
+      ]
+    },
+    {
+      "id": "ARQ-M10",
+      "name": "KYC, AML/FT/FP y fraude",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-CLI-015",
+        "FR-AML-005",
+        "FR-AML-013",
+        "FR-AML-017",
+        "FR-FRD-001",
+        "FR-FRD-014"
+      ]
+    },
+    {
+      "id": "ARQ-M11",
+      "name": "Conciliación",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-REC-001",
+        "FR-REC-004",
+        "FR-REC-007",
+        "FR-REC-020"
+      ]
+    },
+    {
+      "id": "ARQ-M12",
+      "name": "Localización y reportes",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-TAX-001",
+        "FR-RPT-001",
+        "FR-RPT-006",
+        "FR-RPT-010"
+      ]
+    },
+    {
+      "id": "ARQ-M13",
+      "name": "Contratación y atención",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-CON-004",
+        "FR-CON-009",
+        "FR-CST-001",
+        "FR-CST-011"
+      ]
+    },
+    {
+      "id": "ARQ-M14",
+      "name": "Evidencia y privacidad",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-DAT-001",
+        "FR-DAT-004",
+        "FR-DAT-010",
+        "FR-DAT-015",
+        "FR-DAT-017"
+      ]
+    },
+    {
+      "id": "ARQ-M15",
+      "name": "Operación de plataforma",
+      "source": "docs/achitecture.md#3-catálogo-de-módulos-y-propiedad-de-datos",
+      "fr": [
+        "FR-OPS-001",
+        "FR-OPS-003",
+        "FR-OPS-011",
+        "FR-OPS-019",
+        "FR-OPS-028"
+      ]
+    }
+  ],
+  "market_needs": [
+    {
+      "id": "MKT-01",
+      "name": "Entrada por crédito, pagos o cartera acotada con núcleo común",
+      "source": "docs/market_analysis.md#12-estrategia-de-entrada-producto-y-ejecución",
+      "fr": [
+        "FR-ENT-003",
+        "FR-ENT-019",
+        "FR-ENT-020",
+        "FR-CRE-001",
+        "FR-PAY-001"
+      ]
+    },
+    {
+      "id": "MKT-02",
+      "name": "Localización argentina versionada y verificable",
+      "source": "docs/market_analysis.md#6-dónde-puede-diferenciarse-un-nuevo-core-argentino",
+      "fr": [
+        "FR-CFG-003",
+        "FR-CFG-019",
+        "FR-ENT-017",
+        "FR-TAX-002",
+        "FR-RPT-002"
+      ]
+    },
+    {
+      "id": "MKT-03",
+      "name": "Convivencia con legado y migración por cohortes",
+      "source": "docs/market_analysis.md#9-migración-y-operación-el-riesgo-que-define-la-compra",
+      "fr": [
+        "FR-ENT-022",
+        "FR-RSK-007",
+        "FR-MIG-003",
+        "FR-MIG-020",
+        "FR-MIG-022"
+      ]
+    },
+    {
+      "id": "MKT-04",
+      "name": "Costo real de composición, operación y terceros",
+      "source": "docs/market_analysis.md#8-comprar-construir-y-modernizar-tco-a-cinco-años",
+      "fr": [
+        "FR-OPS-027",
+        "FR-OPS-028",
+        "FR-OPS-030",
+        "FR-CFG-030",
+        "FR-COR-005",
+        "FR-AIG-029"
+      ]
+    },
+    {
+      "id": "MKT-05",
+      "name": "Confianza, evidencia exportable y salida ensayada",
+      "source": "docs/market_analysis.md#11-rfirfp-para-seleccionar-o-contrastar-la-propuesta-propia",
+      "fr": [
+        "FR-INT-030",
+        "FR-DAT-024",
+        "FR-MIG-030",
+        "FR-MIG-031",
+        "FR-COR-022"
+      ]
+    },
+    {
+      "id": "MKT-06",
+      "name": "Profundidad financiera y aceptación del piloto por perfil",
+      "source": "docs/market_analysis.md#12-estrategia-de-entrada-producto-y-ejecución",
+      "fr": [
+        "FR-LED-003",
+        "FR-BAL-006",
+        "FR-INT-027",
+        "FR-ENT-030",
+        "FR-OPS-025"
+      ]
+    }
+  ],
+  "prose_capabilities": [
+    {
+      "id": "CAP-01",
+      "name": "Perímetro, fondos PSPCP, respaldo local separado y FCI solicitado",
+      "source": "docs/compliant.md#perímetro-decidir-la-entidad-antes-de-diseñar-los-productos",
+      "fr": [
+        "FR-ENT-004",
+        "FR-ACC-020",
+        "FR-ACC-021",
+        "FR-ACC-022",
+        "FR-INV-024",
+        "FR-COR-012",
+        "FR-REC-013"
+      ]
+    },
+    {
+      "id": "CAP-02",
+      "name": "PSPCP como Servicio, terceros y responsabilidad por el cliente",
+      "source": "docs/compliant.md#perímetro-decidir-la-entidad-antes-de-diseñar-los-productos",
+      "fr": [
+        "FR-COR-002",
+        "FR-COR-003",
+        "FR-COR-004",
+        "FR-COR-006",
+        "FR-COR-008"
+      ]
+    },
+    {
+      "id": "CAP-03",
+      "name": "PNFC y plataforma PSCPP sin captación o garantía ajena al rol",
+      "source": "docs/compliant.md#perímetro-decidir-la-entidad-antes-de-diseñar-los-productos",
+      "fr": [
+        "FR-ENT-004",
+        "FR-COR-028",
+        "FR-COR-030",
+        "FR-COR-031",
+        "FR-COR-032",
+        "FR-COR-033",
+        "FR-COR-034"
+      ]
+    },
+    {
+      "id": "CAP-04",
+      "name": "Biblioteca bancaria: cuentas, depósitos, crédito y garantías",
+      "source": "docs/market_analysis.md#3-qué-mercado-se-está-analizando",
+      "fr": [
+        "FR-ACC-007",
+        "FR-ACC-008",
+        "FR-ACC-009",
+        "FR-ACC-010",
+        "FR-ACC-012",
+        "FR-ACC-014",
+        "FR-ACC-018",
+        "FR-CRE-001",
+        "FR-GAR-001",
+        "FR-COL-001"
+      ]
+    },
+    {
+      "id": "CAP-05",
+      "name": "Pagos, cheques, CEDIP y tarjetas con perfil de red",
+      "source": "docs/compliant.md#pagos-e-integraciones-obligaciones-por-rol",
+      "fr": [
+        "FR-PAY-015",
+        "FR-PAY-018",
+        "FR-PAY-020",
+        "FR-PAY-023",
+        "FR-CHQ-011",
+        "FR-CHQ-018",
+        "FR-CHQ-023",
+        "FR-CRD-001",
+        "FR-CRD-017"
+      ]
+    },
+    {
+      "id": "CAP-06",
+      "name": "Tesorería, caja, exterior, valores y custodia por rol",
+      "source": "docs/compliant.md#bcra-negocio",
+      "fr": [
+        "FR-CSH-001",
+        "FR-TRE-001",
+        "FR-FXT-001",
+        "FR-FXT-023",
+        "FR-FXT-028",
+        "FR-FXT-031",
+        "FR-FXT-037",
+        "FR-INV-001",
+        "FR-INV-023",
+        "FR-COR-023"
+      ]
+    },
+    {
+      "id": "CAP-07",
+      "name": "Especialidades sin fuente suficiente: registrar restricción y análisis requerido",
+      "source": "docs/compliant.md#pendientes-que-deben-cerrarse-para-una-entidad-concreta",
+      "fr": [
+        "FR-ENT-020",
+        "FR-ENT-031",
+        "FR-TAX-030"
+      ]
+    },
+    {
+      "id": "CAP-08",
+      "name": "Bulk inicial, prepared aislado, publicación y salida reversible con condiciones",
+      "source": "docs/achitecture.md#carga-inicial",
+      "fr": [
+        "FR-ACC-030",
+        "FR-MIG-006",
+        "FR-MIG-011",
+        "FR-MIG-018",
+        "FR-MIG-022",
+        "FR-MIG-024",
+        "FR-MIG-029",
+        "FR-MIG-033"
+      ]
+    },
+    {
+      "id": "CAP-09",
+      "name": "Modelos e IA condicionales, explicabilidad y autoridad monetaria determinista",
+      "source": "docs/compliant.md#guías-de-supervisión-traducir-expectativas-sin-alterar-su-jerarquía",
+      "fr": [
+        "FR-AIG-001",
+        "FR-AIG-008",
+        "FR-AIG-013",
+        "FR-AIG-014",
+        "FR-AIG-028",
+        "FR-AIG-031"
+      ]
+    },
+    {
+      "id": "CAP-10",
+      "name": "Cliente, muerte/incapacidad, sucesión, facultades y cierre sin pérdida de obligaciones",
+      "source": "docs/compliant.md#leyes-contratos-documentación-y-protección-del-usuario",
+      "fr": [
+        "FR-CLI-031",
+        "FR-ACC-004",
+        "FR-ACC-026",
+        "FR-CST-001",
+        "FR-ENT-028"
+      ]
+    }
+  ]
+}
