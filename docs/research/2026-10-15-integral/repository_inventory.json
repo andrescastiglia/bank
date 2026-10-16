@@ -1,5 +1,8 @@
 {
   "base_commit": "6a784b1af7f3aafffc4a87d3c4315bfabf090341",
+  "scope": "Todos los archivos rastreados por Git en base_commit, según git ls-tree -r --name-only; incluye archivos ocultos, gobierno, CI y seed/estado regulatorio ya presentes en esa base. No incluye archivos sin seguimiento ni archivos agregados después de la base. El inventario sólo registra rutas, tamaños y hashes, no reproduce bitácoras operativas.",
+  "exclusions": [],
+  "file_count": 175,
   "files": [
     {
       "path": ".agents/skills/adr-01-nucleo-modular/SKILL.md",
@@ -337,6 +340,41 @@
       "bytes": 370
     },
     {
+      "path": ".github/CODEOWNERS",
+      "sha256": "f3bea1a7ccbcc7982f33bfecfd553299d38e4e166155077aa80fa807d627ff21",
+      "bytes": 101
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "2271cad67e6c620be6a8ea105c6aba68846cc773fac0824d06690323717469cd",
+      "bytes": 946
+    },
+    {
+      "path": ".github/main-ruleset.example.json",
+      "sha256": "a77cc05ae61b92b16f628c97b6ba7dd497992311304f5e0327b6476fb3a3898b",
+      "bytes": 799
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "sha256": "4a09ba57b5f4341236bbd5759c2aab19a1c9e7bd8abaed15064a27f680b75c4c",
+      "bytes": 1202
+    },
+    {
+      "path": ".regulatory-watch/README.md",
+      "sha256": "08c85d44e32db5955980d452338c678b6cdebad9b63a487468c2ce3b4cff4c03",
+      "bytes": 1312
+    },
+    {
+      "path": ".regulatory-watch/sources.json",
+      "sha256": "d18e1c8fb61555b6f6b694ad3f72057a787f297b3644c454bff685fe44ee9a3a",
+      "bytes": 5774
+    },
+    {
+      "path": ".regulatory-watch/state.json",
+      "sha256": "fb0f1a8af2563bc42b49b42bb475e8aed5b41a75a33a57e13fb57c6a2634d0ed",
+      "bytes": 2148
+    },
+    {
       "path": "AGENTS.md",
       "sha256": "29771980424355f9d20461da2e11be28ee2c7f4e9bf52ebed78cd1a51d5f7686",
       "bytes": 2639
@@ -355,6 +393,11 @@
       "path": "LICENSE",
       "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
       "bytes": 18092
+    },
+    {
+      "path": "README.md",
+      "sha256": "f9d2d9ddaa1db021106bd1b616a4d54dfa785293f45a32447aab21aa0b5403c5",
+      "bytes": 1844
     },
     {
       "path": "docs/README.md",
