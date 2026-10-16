@@ -60,7 +60,11 @@ La ventana de la corrida es una envolvente de trabajo; cada fuente declara su su
 
 El checkpoint `covered_through` avanza sólo por intervalos contiguos completamente cubiertos. `PARTIAL`, `UNAVAILABLE` y falta de acceso no lo adelantan. Las fuentes opcionales omitidas o no aplicables se identifican con fundamento. Una cobertura parcial puede producir novedades verificadas; no habilita declarar «sin novedades» global.
 
+Un resultado `COMPLETE` reconcilia siempre el checkpoint a `COMPLETE`, registra el intento dentro de la corrida y deja `open_gaps` vacío, aunque un reintento o solapamiento termine en el mismo corte ya acreditado. Una revisión de una ventana anterior conserva el corte posterior existente; una ventana completa que lo extiende debe registrar el nuevo corte contiguo. Las fuentes omitidas conservan su checkpoint íntegro.
+
 Cada novedad conserva identidad, versiones/hashes, procedencias, relación con la norma previa, fechas, materias/perfiles, impacto, propuesta y PR. Estados sugeridos: descubierto, fuente primaria verificada, clasificación pendiente, propuesta y PR abierta. Una integración humana observada puede referenciarse por PR/commit; no acredita implementación, pruebas o aceptación institucional sólo por el merge.
+
+`agenda`, `changes` y `run_index` son historiales de sólo adición: cada transición conserva íntegramente las entradas anteriores y su orden. Las actualizaciones de una novedad o vencimiento se añaden como revisiones vinculadas a su identidad/versión anterior; no se sobrescriben ni borran entradas. El estado vigente se obtiene de la última revisión de cada identidad. `run_index` usa entradas con `run_id` único y `status` de corrida; su última entrada coincide con `last_run_id`. Una transición agrega exactamente una entrada con la identidad y resultado de la corrida aplicada. Un reintento de consulta lleva un nuevo `run_id`; no vuelve a aplicar una corrida ya indexada. Ante una escritura concurrente, recargar el estado y reconciliar contra su última versión antes de validar/publicar.
 
 ## Verificación y operación
 
@@ -70,7 +74,7 @@ python3 docs/regulatory-watch/tools/test_check_watch.py
 python3 docs/regulatory-watch/tools/check_watch.py --state /ruta/state.json --run /ruta/run.json --previous-state /ruta/previous.json
 ```
 
-El primer comando valida el inventario y el seed. El segundo ejecuta 40 fixtures documentales sintéticas en un directorio temporal, sin consultas externas ni mutaciones del repositorio. La última forma permite comprobar corridas y transiciones de checkpoints; no ejecuta búsquedas ni acredita lectura real de documentos. Los archivos operativos de otra rama no se consideran presentes en esta workspace sin obtenerlos explícitamente.
+El primer comando valida el inventario y el seed. El segundo ejecuta 69 fixtures documentales sintéticas en un directorio temporal, sin consultas externas ni mutaciones del repositorio. La última forma comprueba corridas, conservación de historiales, indexación y transiciones de checkpoints, incluidos reintentos sin avance; no ejecuta búsquedas ni acredita lectura real de documentos. Los archivos operativos de otra rama no se consideran presentes en esta workspace sin obtenerlos explícitamente.
 
 Para pruebas documentales: página/anexo faltante produce parcial; 403 produce indisponible; contenido duplicado mantiene una novedad y varias procedencias; mismo ID con hash nuevo conserva revisión; corrida perdida exige backfill; cero cambios con todas las fuentes completas permite silencio; crear PR no mueve el estado a norma implementada ni ejecuta merge.
 

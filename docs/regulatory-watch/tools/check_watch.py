@@ -166,6 +166,15 @@ class Validator:
             self.identifier(data.get("last_run_id"), label + ".last_run_id")
         for field in ("agenda", "changes", "run_index"):
             self.array(data.get(field), label + "." + field)
+        indexed_runs = []
+        for entry in self.array(data.get("run_index"), label + ".run_index"):
+            entry = self.object(entry, label + ".run_index.entry")
+            run_id = entry.get("run_id")
+            if self.identifier(run_id, label + ".run_index.run_id"):
+                self.require(run_id not in indexed_runs, f"{label}: run_id duplicado en run_index: {run_id}")
+                indexed_runs.append(run_id)
+            self.enum(entry.get("status"), RUN_STATUSES, label + ".run_index.status")
+        self.require(data.get("last_run_id") == (indexed_runs[-1] if indexed_runs else None), f"{label}: last_run_id debe coincidir con la última corrida indexada")
         checkpoints = {}
         for item in self.array(data.get("source_checkpoints"), label + ".source_checkpoints"):
             item = self.object(item, label + ".checkpoint")
@@ -302,6 +311,16 @@ class Validator:
     def transition(self, previous, state, run, registry, old, new, results):
         self.require(state.get("last_run_id") == run.get("run_id"), "transición: last_run_id debe identificar la corrida aplicada")
         self.require(previous.get("repository") == state.get("repository"), "transición: repository cambió")
+        for field in ("agenda", "changes", "run_index"):
+            before = self.array(previous.get(field), "transición.previous." + field)
+            after = self.array(state.get(field), "transición." + field)
+            self.require(after[:len(before)] == before, f"transición: {field} debe conservar su historia completa y ordenada; añadir revisiones sin sobrescribir entradas")
+        old_index = self.array(previous.get("run_index"), "transición.previous.run_index")
+        new_index = self.array(state.get("run_index"), "transición.run_index")
+        self.require(len(new_index) == len(old_index) + 1, "transición: run_index debe añadir exactamente la corrida aplicada")
+        if new_index:
+            current = self.object(new_index[-1], "transición.run_index.current")
+            self.require(current.get("run_id") == run.get("run_id") and current.get("status") == run.get("status"), "transición: última entrada de run_index debe identificar la corrida aplicada y su resultado")
         initial = self.timestamp(registry.get("initial_backfill_from"), "transición.initial_backfill_from")
         started = self.timestamp(run.get("started_at"), "transición.started_at")
         finished = self.timestamp(run.get("finished_at"), "transición.finished_at")
@@ -330,6 +349,11 @@ class Validator:
                 if window is not None and baseline is not None:
                     self.require(window[0] <= baseline < window[1], f"{context}: avance sin cobertura contigua; falta backfill desde checkpoint previo")
                     self.require(new_cut == window[1], f"{context}: nuevo checkpoint debe ser to_exclusive de la corrida completa")
+            if result.get("status") == "COMPLETE":
+                self.require(after.get("status") == "COMPLETE", f"{context}: resultado COMPLETE debe reconciliar estado y gaps incluso sin avance de cobertura")
+                if window is not None:
+                    expected_cut = max(old_cut, window[1]) if old_cut is not None else window[1]
+                    self.require(new_cut == expected_cut, f"{context}: COMPLETE debe conservar o extender el corte hasta la ventana completada")
             if result.get("status") != "COMPLETE":
                 self.require(new_cut == old_cut, f"{context}: una fuente no COMPLETE debe conservar su checkpoint anterior")
                 self.require(after.get("status") == result.get("status"), f"{context}: estado debe reflejar el resultado no completo de la corrida")

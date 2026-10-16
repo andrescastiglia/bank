@@ -53,7 +53,7 @@ def apply(previous, run):
         cp['last_attempt_at'] = run['finished_at']
         cp['open_gaps'] = deepcopy(result['gaps'])
         if result['status'] == 'COMPLETE':
-            cp['covered_through'] = result['requested_window']['to_exclusive']
+            cp['covered_through'] = max(cp['covered_through'] or result['requested_window']['to_exclusive'], result['requested_window']['to_exclusive'])
         if result['status'] == 'NOT_APPLICABLE_WITH_BASIS':
             cp['not_applicable_basis'] = result['not_applicable_basis']
     return state
@@ -67,7 +67,7 @@ def unavailable(result):
     result['gaps'] = [{'cause': 'HTTP403', 'retry_required': True}]
 
 
-def check(name, expected, run=None, state=None, previous=None):
+def check(name, expected, run=None, state=None, previous=None, error=None):
     args = [sys.executable, str(TOOL)]
     if state is not None:
         args += ['--state', str(save(name + '.state', state))]
@@ -78,6 +78,8 @@ def check(name, expected, run=None, state=None, previous=None):
     result = subprocess.run(args, cwd=ROOT, capture_output=True, text=True)
     assert result.returncode == expected, (name, result.returncode, expected, result.stdout, result.stderr)
     assert 'Traceback' not in result.stderr, (name, result.stderr)
+    if error is not None:
+        assert error in result.stderr, (name, error, result.stderr)
     RESULTS.append({'case': name, 'exit_code': result.returncode, 'expected': expected, 'output': (result.stdout or result.stderr).splitlines()[:3]})
 
 
@@ -185,6 +187,7 @@ check('change_id_duplicate', 1, bad)
 # Per-source windows may differ; COMPLETE is local, global target can remain pending.
 previous_mixed = deepcopy(state1)
 previous_mixed['last_run_id'] = 'RUN-20261018'
+previous_mixed['run_index'].append({'run_id': 'RUN-20261018', 'status': 'COMPLETE_NO_CHANGES'})
 previous_mixed['source_checkpoints'][0]['covered_through'] = '2026-10-18T00:00:00-03:00'
 previous_mixed['source_checkpoints'][0]['last_attempt_at'] = '2026-10-18T08:05:00-03:00'
 mixed = full_run('RUN-MIXED-20261019', '2026-10-16T00:00:00-03:00', '2026-10-19T00:00:00-03:00', '2026-10-19')
@@ -220,6 +223,80 @@ check('source_window_outside_envelope', 1, outside)
 covered_outside = deepcopy(mixed)
 covered_outside['source_results'][0]['covered_window']['from_inclusive'] = '2026-10-16T00:00:00-03:00'
 check('coverage_outside_source_window', 1, covered_outside)
+
+# Historical collections are append-only; lifecycle updates preserve old versions.
+historical = apply(state1, overlap)
+historical['agenda'] = [
+    {'id': 'DUE-1', 'status': 'PENDING', 'effective_at': '2026-11-01T00:00:00-03:00'},
+    {'id': 'DUE-2', 'status': 'PENDING', 'effective_at': '2026-12-01T00:00:00-03:00'},
+]
+historical['changes'] = [
+    {'id': 'CHANGE-1', 'status': 'DISCOVERED', 'hashes': ['0' * 64]},
+    {'id': 'CHANGE-2', 'status': 'PROPOSED', 'hashes': ['1' * 64]},
+]
+history_run = full_run('RUN-HISTORY', '2026-10-17T00:00:00-03:00', '2026-10-19T00:00:00-03:00', '2026-10-19')
+history_state = apply(historical, history_run)
+history_state['agenda'].append({'id': 'DUE-1', 'status': 'NOTIFIED', 'supersedes_version': 1})
+history_state['changes'].append({'id': 'CHANGE-1', 'status': 'PROPOSED', 'hashes': ['0' * 64], 'supersedes_version': 1})
+check('history_preserved_with_appended_revisions', 0, history_run, history_state, historical)
+for field in ('agenda', 'changes', 'run_index'):
+    for operation in ('delete_all', 'delete_one', 'overwrite', 'reorder'):
+        bad_state = deepcopy(history_state)
+        if operation == 'delete_all':
+            bad_state[field] = []
+        elif operation == 'delete_one':
+            del bad_state[field][0]
+        elif operation == 'overwrite':
+            bad_state[field][0]['status'] = 'FAILED' if field == 'run_index' else 'LOST'
+        else:
+            bad_state[field][0], bad_state[field][1] = bad_state[field][1], bad_state[field][0]
+        check('history_' + field + '_' + operation, 1, history_run, bad_state, historical,
+              error='transición: ' + field + ' debe conservar su historia completa y ordenada')
+bad_state = deepcopy(history_state)
+bad_state['run_index'].pop()
+check('current_run_not_appended', 1, history_run, bad_state, historical,
+      error='run_index debe añadir exactamente la corrida aplicada')
+bad_state = deepcopy(history_state)
+bad_state['run_index'][-1]['status'] = 'FAILED'
+check('current_run_wrong_status', 1, history_run, bad_state, historical,
+      error='última entrada de run_index debe identificar la corrida aplicada y su resultado')
+bad_state = deepcopy(history_state)
+bad_state['run_index'][-1]['run_id'] = 'RUN-OTHER'
+check('current_run_wrong_identity', 1, history_run, bad_state, historical,
+      error='última entrada de run_index debe identificar la corrida aplicada y su resultado')
+bad_state = deepcopy(history_state)
+bad_state['run_index'].insert(-1, deepcopy(historical['run_index'][0]))
+check('duplicated_run_index_identity', 1, history_run, bad_state, historical,
+      error='run_id duplicado en run_index')
+check('indexed_run_reapplied', 1, history_run, apply(history_state, history_run), history_state,
+      error='run_id duplicado en run_index')
+
+# A successful retry reconciles failures even when the coverage cutoff stays put.
+retry = full_run('RUN-RETRY', day='2026-10-18')
+for old_status in ('PARTIAL', 'UNAVAILABLE'):
+    stale = deepcopy(state2)
+    stale['source_checkpoints'][0]['status'] = old_status
+    reconciled = apply(stale, retry)
+    check('same_cutoff_retry_' + old_status, 0, retry, reconciled, stale)
+    bad_state = deepcopy(reconciled)
+    bad_state['source_checkpoints'][0]['status'] = old_status
+    bad_state['source_checkpoints'][0]['open_gaps'] = deepcopy(stale['source_checkpoints'][0]['open_gaps'])
+    check('same_cutoff_stale_status_' + old_status, 1, retry, bad_state, stale,
+          error='resultado COMPLETE debe reconciliar estado y gaps incluso sin avance de cobertura')
+    bad_state = deepcopy(reconciled)
+    bad_state['source_checkpoints'][0]['open_gaps'] = deepcopy(stale['source_checkpoints'][0]['open_gaps'])
+    check('same_cutoff_stale_gaps_' + old_status, 1, retry, bad_state, stale,
+          error='COMPLETE no admite gaps abiertos')
+    bad_state = deepcopy(reconciled)
+    bad_state['source_checkpoints'][0]['last_attempt_at'] = stale['source_checkpoints'][0]['last_attempt_at']
+    check('same_cutoff_stale_attempt_' + old_status, 1, retry, bad_state, stale,
+          error='último intento fuera de la corrida aplicada')
+check('same_cutoff_complete_replay', 0, retry, apply(state1, retry), state1)
+check('earlier_cutoff_replay_preserves_coverage', 0, retry, apply(historical, retry), historical)
+bad_state = apply(state1, overlap)
+bad_state['source_checkpoints'][0]['covered_through'] = state1['source_checkpoints'][0]['covered_through']
+check('complete_must_record_new_coverage', 1, overlap, bad_state, state1,
+      error='COMPLETE debe conservar o extender el corte hasta la ventana completada')
 
 (OUT / 'results.json').write_text(json.dumps(RESULTS, indent=2, ensure_ascii=False) + '\n')
 print('PASS', len(RESULTS), 'documentary fixtures; no Internet, product execution, or repository mutations.')
