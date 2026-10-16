@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vigilancia normativa del core"
+  short_description: "Novedades oficiales, cobertura y propuestas en PR"
+  default_prompt: "Revisá las novedades oficiales pertinentes al core argentino, retomá cobertura y gaps por fuente, verificá texto/anexos, fechas y aplicabilidad, actualizá bitácora y prepará propuestas trazables en PR sin fusionar ni publicar a main."
+policy:
+  allow_implicit_invocation: true

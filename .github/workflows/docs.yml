@@ -6,15 +6,15 @@ name: Documentation checks
     paths:
       - "docs/**"
       - ".agents/**"
-      - ".github/workflows/docs.yml"
-      - "README.md"
+      - ".github/**"
+      - "*.md"
       - "LICENSE"
   pull_request:
     paths:
       - "docs/**"
       - ".agents/**"
-      - ".github/workflows/docs.yml"
-      - "README.md"
+      - ".github/**"
+      - "*.md"
       - "LICENSE"
 
 permissions:
@@ -35,3 +35,7 @@ jobs:
         run: python3 docs/functional/tools/build_catalog.py --check
       - name: Check review, links and local skills
         run: python3 docs/review/tools/check_review.py
+      - name: Check regulatory watch inventory and initial state
+        run: python3 docs/regulatory-watch/tools/check_watch.py
+      - name: Check regulatory coverage and checkpoint regressions
+        run: python3 docs/regulatory-watch/tools/test_check_watch.py

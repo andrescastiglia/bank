@@ -2,6 +2,8 @@
 
 Para cada fila registrar alcance, responsable/suplente, evidencia con versión, resultado, pendiente y próxima acción. Usar `no evaluado`, `preparado`, `verificado`, `brecha` o `no aplica con fundamento`; nunca prellenar verificaciones.
 
+En contribuciones al proyecto libre, sustituir las puertas comerciales por alcance/recursos, mantenimiento y reutilización observables. Ventas y ARR sólo condicionan una operación comercial efectivamente elegida. La integración a `main` corresponde al mantenedor; el checklist no autoriza a un agente a realizarla.
+
 | Hito | Debe quedar concreto | Criterio de avance |
 |---|---|---|
 | G0 — Kickoff de desarrollo | Charter provisional, trabajo autorizado, roles propuestos, repositorio/accesos, datos sintéticos, primeras dependencias y backlog | Trabajo independiente seguro y acotado; decisiones pendientes visibles. No implica permisos para operar fondos o datos reales |

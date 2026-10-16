@@ -12,8 +12,9 @@ Los skills locales están versionados bajo `.agents/skills/`. Una sesión de Cod
 | Revisar el proyecto desde negocio, controles y operación | [core-project-review](../.agents/skills/core-project-review/SKILL.md) | Diagnóstico por perspectiva, hallazgos sustentados y plan con dependencias y cierre verificable |
 | Crear, mantener o retirar **Functional Requirements** | [core-fr-requisitos](../.agents/skills/core-fr-requisitos/SKILL.md) | FR observables, IDs estables, aplicabilidad, aceptación, diferencias semánticas y relación con casos/evidencia |
 | Preparar kickoff o evaluar preparación de piloto | [core-pilot-kickoff](../.agents/skills/core-pilot-kickoff/SKILL.md) | Charter, economía, responsables, dependencias, agenda operativa y criterios G0–G4 |
+| Ejecutar vigilancia normativa y preparar propuestas | [core-regulatory-watch](../.agents/skills/core-regulatory-watch/SKILL.md) | Cobertura por fuente, novedades verificadas, agenda/checkpoints y PR; únicamente el mantenedor realiza el merge |
 
-El repositorio incluye **27 skills: seis workflows generales, ocho específicos de ADR y trece de NFR**, enlazados junto con sus registros en [el catálogo ADR](adr/README.md) y [el catálogo NFR](nfr/README.md). Los tres workflows de revisión, FR y kickoff se incorporan con la [revisión integral](review/README.md); reutilizan los de arquitectura/calidad/cumplimiento y evitan un skill por rol o por cada FR.
+El repositorio incluye **28 skills: siete workflows generales, ocho específicos de ADR y trece de NFR**, enlazados junto con sus registros en [el catálogo ADR](adr/README.md) y [el catálogo NFR](nfr/README.md). Los workflows de revisión, FR y kickoff se incorporan con la [revisión integral](review/README.md); vigilancia normativa se incorpora con el [gobierno GPL](../GOVERNANCE.md). Reutilizan arquitectura/calidad/cumplimiento y evitan un skill por rol o por cada FR.
 
 ## Cómo trabajar con ellos
 
@@ -46,8 +47,13 @@ y propagá aceptación, fuentes, casos, NFR, ADR y evidencia afectados.
 
 $core-pilot-kickoff Prepará el kickoff de una ruta de producto con equipo,
 dependencias y criterios de avance; distinguí desarrollo de piloto real.
+
+$core-regulatory-watch Revisá novedades oficiales, recuperá gaps de cobertura,
+verificá fechas y aplicabilidad y prepará una PR sin fusionarla.
 ```
 
 La línea base es del 15/10/2026. Registros ADR y NFR se crean como **Propuestos**, con implementación/efectividad sin evaluar salvo evidencia real registrada. Este trabajo agrega documentación y workflows; no afirma infraestructura desplegada, ensayos operativos, homologaciones o certificaciones obtenidas.
 
 Los workflows agregados el 16/10/2026 no revalidan por sí solos las fuentes regulatorias del día anterior. El [plan de mejoras](review/improvement_plan.md) conserva pendientes de retiro de FR, deriva semántica y regresión de comportamiento. La comprobación YAML/enlaces valida estructura y no demuestra que el agente aplique correctamente cada escenario.
+
+Todos los workflows están sujetos a [AGENTS.md](../AGENTS.md): ramas y propuestas; ningún agente hace push directo, merge o auto-merge a `main`. La programación de vigilancia se gestiona por separado; un archivo SKILL no es un proceso activo ni prueba cobertura.

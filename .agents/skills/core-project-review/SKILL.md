@@ -11,6 +11,8 @@ Evaluar si el alcance documentado puede convertirse en un producto vendible, ope
 
 Identificar repositorio/commit, fecha de evaluación y fecha de las fuentes, perfil del proveedor y de sus clientes, producto/etapa, trabajo pedido y evidencia disponible. Inventariar documentos, registros, scripts, skills, licencias y anexos. No leer sólo los índices ni confundir archivos generados con fuentes independientes. Distribuir la lectura por materias cuando convenga y comprobar que ninguna fuente quede sin revisión.
 
+Aplicar [GOVERNANCE.md](../../../GOVERNANCE.md): proyecto conforme a GPL v2 y merge exclusivo del mantenedor. Separar sostenibilidad/mantenimiento del software libre de una eventual empresa de servicios: no exigir ventas, ARR o contratos comerciales como condición general para contribuir. El agente entrega ramas/PR, sin publicar o fusionar a `main`.
+
 ## Procedimiento
 
 1. **Separar estados.** Registrar especificación, aplicabilidad, decisión, implementación, ensayo y aprobación por separado. Un FR propuesto no es una función ejecutada; una referencia no demuestra corrección semántica. Ausencia de evidencia en el repositorio no prueba que una organización carezca de ella fuera del alcance examinado.
