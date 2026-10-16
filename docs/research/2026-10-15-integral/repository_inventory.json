@@ -1,0 +1,883 @@
+{
+  "base_commit": "6a784b1af7f3aafffc4a87d3c4315bfabf090341",
+  "scope": "Todos los archivos rastreados por Git en base_commit, según git ls-tree -r --name-only; incluye archivos ocultos, gobierno, CI y seed/estado regulatorio ya presentes en esa base. No incluye archivos sin seguimiento ni archivos agregados después de la base. El inventario sólo registra rutas, tamaños y hashes, no reproduce bitácoras operativas.",
+  "exclusions": [],
+  "file_count": 175,
+  "files": [
+    {
+      "path": ".agents/skills/adr-01-nucleo-modular/SKILL.md",
+      "sha256": "c4c5e913e36515e078f77578bb8f0b4fb836637a6de8b25d6fe370c8a13ad07f",
+      "bytes": 5055
+    },
+    {
+      "path": ".agents/skills/adr-01-nucleo-modular/agents/openai.yaml",
+      "sha256": "e83b8027d545b0c7484e1efa7b2485bb4599f6d40443edbeaccbad67fc4e71ec",
+      "bytes": 364
+    },
+    {
+      "path": ".agents/skills/adr-02-autoridad-sql/SKILL.md",
+      "sha256": "b50bc5d1b545366ccc3c0b722c841b1a3be69c2e16e3f90c240eb3129ac60288",
+      "bytes": 7035
+    },
+    {
+      "path": ".agents/skills/adr-02-autoridad-sql/agents/openai.yaml",
+      "sha256": "cbe552565d9eb0c6c91ba38aa8ba260d512d9595d71b73d7717a3ef808a6fdd2",
+      "bytes": 362
+    },
+    {
+      "path": ".agents/skills/adr-03-outbox-inbox/SKILL.md",
+      "sha256": "9a217e189efd49e84c3aeea195c73566a27ffb37383deae383a17437495df2ac",
+      "bytes": 6910
+    },
+    {
+      "path": ".agents/skills/adr-03-outbox-inbox/agents/openai.yaml",
+      "sha256": "26a14f1fff6d36fb989909817ca315715e7610b0856431222c624bc560b004bc",
+      "bytes": 392
+    },
+    {
+      "path": ".agents/skills/adr-04-alta-disponibilidad/SKILL.md",
+      "sha256": "699881b05ba3f7070ab23160ef9472204d4c7b012361dd311f5552af027aebff",
+      "bytes": 6369
+    },
+    {
+      "path": ".agents/skills/adr-04-alta-disponibilidad/agents/openai.yaml",
+      "sha256": "191b78a27cad2d5ef15b74c559848359e8f7bd92660d00cac9e5ec976d9a9098",
+      "bytes": 458
+    },
+    {
+      "path": ".agents/skills/adr-05-configuracion-versionada/SKILL.md",
+      "sha256": "1f095511fc4b27ae11570fb5665236ebc4bce01ddc970d9a69bace2973135402",
+      "bytes": 4993
+    },
+    {
+      "path": ".agents/skills/adr-05-configuracion-versionada/agents/openai.yaml",
+      "sha256": "4ed38b6119855ed7fcc00246d08143ba75e9802c36d890d0b551bde881cf2c08",
+      "bytes": 369
+    },
+    {
+      "path": ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md",
+      "sha256": "d6612ca8183db360910d4db665e074f34fe9ebf095d77f1d6211d97f813ef034",
+      "bytes": 6486
+    },
+    {
+      "path": ".agents/skills/adr-06-aislamiento-por-celda/agents/openai.yaml",
+      "sha256": "db08bc20446e2c077d737297af44bcba7b23696aae6a452ea85758bbc46a4f7a",
+      "bytes": 384
+    },
+    {
+      "path": ".agents/skills/adr-07-stack-gestionado/SKILL.md",
+      "sha256": "2819f470a126516f032e84ccb7b3cec5cb4a283e70b93e5c94028568f152915c",
+      "bytes": 6489
+    },
+    {
+      "path": ".agents/skills/adr-07-stack-gestionado/agents/openai.yaml",
+      "sha256": "d0c0cd707a3c0c36580a371e94af7bb38f490bd677dc89ce0dc166e6254b1d40",
+      "bytes": 436
+    },
+    {
+      "path": ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+      "sha256": "ba38c139cc762ae13a509fe86703bb32cfd6e214e0c75808213f31c480f1785d",
+      "bytes": 6879
+    },
+    {
+      "path": ".agents/skills/adr-08-carga-inicial-masiva/agents/openai.yaml",
+      "sha256": "0f13a3bb26a1b677f346d9acfdfc918a2e544dc0e3d2e4450b161527e023e8ab",
+      "bytes": 380
+    },
+    {
+      "path": ".agents/skills/core-adr-arquitectura/SKILL.md",
+      "sha256": "62d69dc29aabb0f8176ad742813700c732ccfe3514c8361f7a84500f6d59f9cd",
+      "bytes": 6883
+    },
+    {
+      "path": ".agents/skills/core-adr-arquitectura/agents/openai.yaml",
+      "sha256": "90d9efc2fd9ebf2de3b33112892a557bf009433f08774d31e80fd4894873b2be",
+      "bytes": 406
+    },
+    {
+      "path": ".agents/skills/core-adr-arquitectura/references/plantilla-adr.md",
+      "sha256": "59ebebd9f61dbbe42239f648a6eac4e54d8579d4268d50b2f21fa7d82126e35a",
+      "bytes": 1697
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/SKILL.md",
+      "sha256": "d965a71d1fb78548456449290d79f15e4b5b0ef53aeb3296ad8796a7da7f47c4",
+      "bytes": 10187
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/agents/openai.yaml",
+      "sha256": "e3f8c87882d27fdc77cb481ce133ae71f0ef111e9e7ab9f3f3b1af2a0dd95db4",
+      "bytes": 386
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/references/controles.md",
+      "sha256": "79974617594f713e81f66a858946bbc74ea417502cd465e669ef36ad55024084",
+      "bytes": 9618
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/references/estandares-industria.md",
+      "sha256": "e20a4a7a8f6f774bfa5df45b7a5b7ca0415cc1d090accfd5fb3cdffbdaccc3c8",
+      "bytes": 7973
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/references/iso.md",
+      "sha256": "f1f2b80a4176f17885fa6b2b1541d76ee2221311b3ddcce7668c85933c36a393",
+      "bytes": 7149
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/references/leyes.md",
+      "sha256": "b459f05b35a14c4f4efb34334f296fadf6aaa1cdccb4bfaa56bab88e14359ecf",
+      "bytes": 11594
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/references/metodologia.md",
+      "sha256": "cc705ea67755da8ab662899469d43c2ba5b85625e4585b4d7526987ef6f0225c",
+      "bytes": 3560
+    },
+    {
+      "path": ".agents/skills/core-bancario-argentina/references/regulaciones-bcra.md",
+      "sha256": "c9a8743061d4a8d623fef50dcf53c6d06be3a43030a4e5e66a27cbb97ccb517f",
+      "bytes": 18676
+    },
+    {
+      "path": ".agents/skills/core-fr-requisitos/SKILL.md",
+      "sha256": "4b20f6778d0e14b0c8cb213ae4517c401323e89d7479b72149978b96d38afb4a",
+      "bytes": 3874
+    },
+    {
+      "path": ".agents/skills/core-fr-requisitos/agents/openai.yaml",
+      "sha256": "03533efde808785d39aedc81aff450c6971e96151bc3b7a1fb8c5c5582d5392f",
+      "bytes": 450
+    },
+    {
+      "path": ".agents/skills/core-fr-requisitos/references/fr-template.md",
+      "sha256": "92415b933f506c8a461db8a2e542298c58bfa24f64a443e6d1e32c7330b2b66e",
+      "bytes": 1631
+    },
+    {
+      "path": ".agents/skills/core-nfr-calidad/SKILL.md",
+      "sha256": "b566ca1bd2168613dc0f430eca8beea78639dfdfbc18ad1fb7f1b013e22167e1",
+      "bytes": 6879
+    },
+    {
+      "path": ".agents/skills/core-nfr-calidad/agents/openai.yaml",
+      "sha256": "20a0bde0c2700c7c92496d20e3b087a950911219187ba16b3b6d3d3d12664f6d",
+      "bytes": 401
+    },
+    {
+      "path": ".agents/skills/core-nfr-calidad/references/plantilla-nfr.md",
+      "sha256": "676f054bdbbd04afc74d8acbc7409c19d5a69353cb0297090b064e7a662fdaa7",
+      "bytes": 1703
+    },
+    {
+      "path": ".agents/skills/core-pilot-kickoff/SKILL.md",
+      "sha256": "2df1c6fc5bbbe005f892350d633c314e8da80d371778ebee9528aa94fd66245e",
+      "bytes": 4462
+    },
+    {
+      "path": ".agents/skills/core-pilot-kickoff/agents/openai.yaml",
+      "sha256": "5c986d45ae67354f0e3c78a74a1f79f481e0e7da70e71818a33cf90c5d07cd36",
+      "bytes": 426
+    },
+    {
+      "path": ".agents/skills/core-pilot-kickoff/references/kickoff-checklist.md",
+      "sha256": "80f460299cb900ef6f714072bcdcfb0848450ec2591b227c0dd23d9d6c0f4e08",
+      "bytes": 2888
+    },
+    {
+      "path": ".agents/skills/core-project-review/SKILL.md",
+      "sha256": "7020dc5d1c70ce7b00d663c7bb55a9761ca2e435e99b1f145e5e134e4dede7df",
+      "bytes": 5131
+    },
+    {
+      "path": ".agents/skills/core-project-review/agents/openai.yaml",
+      "sha256": "5d6669e4fa0bc3c2a2ee219738ee9e6000ea4bf33a442486c76ffb0bb9195eb7",
+      "bytes": 443
+    },
+    {
+      "path": ".agents/skills/core-project-review/references/review-template.md",
+      "sha256": "07bd5e1a290045e15cdcda16509fb6b54f41f3d9435e0743d1d514a161a2a8b4",
+      "bytes": 3005
+    },
+    {
+      "path": ".agents/skills/core-regulatory-watch/SKILL.md",
+      "sha256": "2dfbccdf4239ac03f5e8ccb1a1d30f116f959710819fdc353a6dca0dc29994de",
+      "bytes": 4996
+    },
+    {
+      "path": ".agents/skills/core-regulatory-watch/agents/openai.yaml",
+      "sha256": "1448222e89ef019265aa82a83c70bb0095623a65fbb0c01e6385ec4e912cecfd",
+      "bytes": 434
+    },
+    {
+      "path": ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+      "sha256": "36276b35d86fe5d904a36cb88b1a7f5516ea66b4b73b100de929bd62dc8af1f6",
+      "bytes": 4584
+    },
+    {
+      "path": ".agents/skills/nfr-01-integridad-financiera/agents/openai.yaml",
+      "sha256": "98214692c8e7edd28414ac7b4ebf6e37a56d57f40756f40eb411e53ea156bc24",
+      "bytes": 376
+    },
+    {
+      "path": ".agents/skills/nfr-02-disponibilidad-recuperacion/SKILL.md",
+      "sha256": "9f4c65f20b2e80a1d2edb5149d654127ecff7004d8c787991c4cd45d1336ff9d",
+      "bytes": 4067
+    },
+    {
+      "path": ".agents/skills/nfr-02-disponibilidad-recuperacion/agents/openai.yaml",
+      "sha256": "e632dd5caf2796f8857b09b390b570a65332622a94771874fc87778519edd6a8",
+      "bytes": 401
+    },
+    {
+      "path": ".agents/skills/nfr-03-latencia-capacidad/SKILL.md",
+      "sha256": "d7163af6be9d2f6848cf440743439911aa917e85c36238e72ce5582cbdd0370f",
+      "bytes": 3988
+    },
+    {
+      "path": ".agents/skills/nfr-03-latencia-capacidad/agents/openai.yaml",
+      "sha256": "753936915e3fa1be00604f2109fb7afb2404effc2b95e0c39c214edcb75f27bf",
+      "bytes": 378
+    },
+    {
+      "path": ".agents/skills/nfr-04-asincronia-durable/SKILL.md",
+      "sha256": "7ef4795a0efdc8188b82e1d927a06b9e2d5765ba5c789f6e1a40b09918c09add",
+      "bytes": 4179
+    },
+    {
+      "path": ".agents/skills/nfr-04-asincronia-durable/agents/openai.yaml",
+      "sha256": "d86d94f26fcfbb5ce148f0b7a8d9c530dfb6492c46f7d2e0c3f71f3db7eebc2d",
+      "bytes": 369
+    },
+    {
+      "path": ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+      "sha256": "2fc4285991896dd7c6f00918da5431236dc68228bf675b0d5e8cc7b4e3f7e11e",
+      "bytes": 4293
+    },
+    {
+      "path": ".agents/skills/nfr-05-seguridad-accesos/agents/openai.yaml",
+      "sha256": "55ef37ec6e776f68dae94853c4e520c0b4891783a1c618ff51230845dc46b891",
+      "bytes": 387
+    },
+    {
+      "path": ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+      "sha256": "a48420040086b29d15f69e9114abbf18b0a067148208b74576fb307ffc2a364b",
+      "bytes": 4364
+    },
+    {
+      "path": ".agents/skills/nfr-06-privacidad-residencia-retencion/agents/openai.yaml",
+      "sha256": "b0e2c46812aace6fde2a3d60f111b20eb6696a00c1f23fca0b3d34531c464e38",
+      "bytes": 393
+    },
+    {
+      "path": ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md",
+      "sha256": "42b3f410c5f68d53bb193a3844e52a56957e3c7bf2901501a4c0ece78fdc621b",
+      "bytes": 4374
+    },
+    {
+      "path": ".agents/skills/nfr-07-auditoria-observabilidad/agents/openai.yaml",
+      "sha256": "d750a3541258404d029dab1d4fbb228e85827ea6d7607c20572a50153f813c27",
+      "bytes": 405
+    },
+    {
+      "path": ".agents/skills/nfr-08-interoperabilidad-portabilidad/SKILL.md",
+      "sha256": "a1cacfe7655d93697084763b828852e3393b1dc7760e14c5e561d2d8525d2d04",
+      "bytes": 4376
+    },
+    {
+      "path": ".agents/skills/nfr-08-interoperabilidad-portabilidad/agents/openai.yaml",
+      "sha256": "495a2eebeb4d950655aa42b175b1edbc013e234d8a7088b812ff368a0fe4d5e7",
+      "bytes": 445
+    },
+    {
+      "path": ".agents/skills/nfr-09-mantenibilidad-configuracion/SKILL.md",
+      "sha256": "bd1429f393baf01f55e864445504c73430ce108702cee4748e4865b0115ef434",
+      "bytes": 4418
+    },
+    {
+      "path": ".agents/skills/nfr-09-mantenibilidad-configuracion/agents/openai.yaml",
+      "sha256": "b3636b48cd46724cb5ecb737020de018bee04f38f4d31ad0a188db01da9d47d5",
+      "bytes": 432
+    },
+    {
+      "path": ".agents/skills/nfr-10-migracion-carga-masiva/SKILL.md",
+      "sha256": "0da3be0810d38a524bd5e9e78f4a8a843a2176bb47c3f66e4c98c8a29fb24493",
+      "bytes": 4819
+    },
+    {
+      "path": ".agents/skills/nfr-10-migracion-carga-masiva/agents/openai.yaml",
+      "sha256": "8668e5ced4f038fd661cdbad60c4c35f37a65f5856783ffa8e6c25826061a76d",
+      "bytes": 450
+    },
+    {
+      "path": ".agents/skills/nfr-11-calidad-datos-reportes/SKILL.md",
+      "sha256": "9017bb7d65a2eab4f632a1d52c35bc11353ff1dac6b1687760efb576ac2658cb",
+      "bytes": 4327
+    },
+    {
+      "path": ".agents/skills/nfr-11-calidad-datos-reportes/agents/openai.yaml",
+      "sha256": "e57c94e2d11eb4392ac56a5291347e26e4e364c5d0e2b56d5ace7893af52ed55",
+      "bytes": 382
+    },
+    {
+      "path": ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+      "sha256": "99cca1ffe717158a93a399e428e9283359f936f73fb90ed265a8e838c5bf2e04",
+      "bytes": 3888
+    },
+    {
+      "path": ".agents/skills/nfr-12-operabilidad-costos/agents/openai.yaml",
+      "sha256": "5f4ef121d220e681ff7aa7de85a602f4097a4320e017579666d9a2b7ea08af03",
+      "bytes": 371
+    },
+    {
+      "path": ".agents/skills/nfr-13-accesibilidad-experiencia/SKILL.md",
+      "sha256": "71fcad0bd4a1a108eca753f52abcd74d1cad6dd753af625a54ff72786c555730",
+      "bytes": 3746
+    },
+    {
+      "path": ".agents/skills/nfr-13-accesibilidad-experiencia/agents/openai.yaml",
+      "sha256": "3c6a78fedb0be6b380f629a68f4c6800861dba76a9566e2f99a52d0a835b70a5",
+      "bytes": 370
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "sha256": "f3bea1a7ccbcc7982f33bfecfd553299d38e4e166155077aa80fa807d627ff21",
+      "bytes": 101
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "2271cad67e6c620be6a8ea105c6aba68846cc773fac0824d06690323717469cd",
+      "bytes": 946
+    },
+    {
+      "path": ".github/main-ruleset.example.json",
+      "sha256": "a77cc05ae61b92b16f628c97b6ba7dd497992311304f5e0327b6476fb3a3898b",
+      "bytes": 799
+    },
+    {
+      "path": ".github/workflows/docs.yml",
+      "sha256": "4a09ba57b5f4341236bbd5759c2aab19a1c9e7bd8abaed15064a27f680b75c4c",
+      "bytes": 1202
+    },
+    {
+      "path": ".regulatory-watch/README.md",
+      "sha256": "08c85d44e32db5955980d452338c678b6cdebad9b63a487468c2ce3b4cff4c03",
+      "bytes": 1312
+    },
+    {
+      "path": ".regulatory-watch/sources.json",
+      "sha256": "d18e1c8fb61555b6f6b694ad3f72057a787f297b3644c454bff685fe44ee9a3a",
+      "bytes": 5774
+    },
+    {
+      "path": ".regulatory-watch/state.json",
+      "sha256": "fb0f1a8af2563bc42b49b42bb475e8aed5b41a75a33a57e13fb57c6a2634d0ed",
+      "bytes": 2148
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "29771980424355f9d20461da2e11be28ee2c7f4e9bf52ebed78cd1a51d5f7686",
+      "bytes": 2639
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "2245b73de3daa73b819d6e5bc4544f328108260ff7cb67298629a03d51afe4e4",
+      "bytes": 2498
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "sha256": "fbc16f033a8d3e4117a9faf611ff0399c792836a008b5dbfe0d2c810a342bffd",
+      "bytes": 5356
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092
+    },
+    {
+      "path": "README.md",
+      "sha256": "f9d2d9ddaa1db021106bd1b616a4d54dfa785293f45a32447aab21aa0b5403c5",
+      "bytes": 1844
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "7267faf43f9953e25151fefa965a9721f97b0d872ad1937d50a52a440d3d8410",
+      "bytes": 4474
+    },
+    {
+      "path": "docs/achitecture.md",
+      "sha256": "783ec9540fd319e0b2ae4640179b43469c0d6729e5162558e44fea3bff365dd0",
+      "bytes": 111389
+    },
+    {
+      "path": "docs/adr/ADR-01-nucleo-modular.md",
+      "sha256": "783aeabe379f622bdcfb784a60ee5077ea997fd13b0f45ca8f0876ed0cebf421",
+      "bytes": 4650
+    },
+    {
+      "path": "docs/adr/ADR-02-autoridad-sql.md",
+      "sha256": "00ab611fd5063042fabd440a60ce388b0de54731b806f5c5bad6aa92e44b8cad",
+      "bytes": 5408
+    },
+    {
+      "path": "docs/adr/ADR-03-outbox-inbox.md",
+      "sha256": "8fd0b9431eb287dfc8124bf404b2aeddef0d9729ce2df93ea62efc5e504bd536",
+      "bytes": 5449
+    },
+    {
+      "path": "docs/adr/ADR-04-alta-disponibilidad.md",
+      "sha256": "09f1ef2f9556225195bc4a582cf4b792c6221755c21fa86415f10de27ed219bd",
+      "bytes": 5192
+    },
+    {
+      "path": "docs/adr/ADR-05-configuracion-versionada.md",
+      "sha256": "8857fc4a540c7b333eb8ec2cc9ea1a0efc95e02dd6e64c7dce7ce701c5fb7103",
+      "bytes": 4781
+    },
+    {
+      "path": "docs/adr/ADR-06-aislamiento-por-celda.md",
+      "sha256": "3916280f2b10b20fd6c173cbe7591134c54413d0c88c36ee8bc1ea324db3bf4d",
+      "bytes": 5670
+    },
+    {
+      "path": "docs/adr/ADR-07-stack-gestionado.md",
+      "sha256": "447039e872985b055980b9b2ace5476630dde36caf3460fffb477d70cd93ca2f",
+      "bytes": 5488
+    },
+    {
+      "path": "docs/adr/ADR-08-carga-inicial-masiva.md",
+      "sha256": "2b3b114f635d241722098df3a7cd0ed7605f29e0a6cb2a160b94dec04c98d6c4",
+      "bytes": 6120
+    },
+    {
+      "path": "docs/adr/README.md",
+      "sha256": "54342b26180f6efe494e521dbaeea24f895487e6776abf4049a13b4d73e50810",
+      "bytes": 4469
+    },
+    {
+      "path": "docs/compliant.md",
+      "sha256": "cb330b1cc353687cb5fb556f5d0dc20204f86894c119b8ffe26e073bfac30900",
+      "bytes": 157613
+    },
+    {
+      "path": "docs/functional/01-entidades-perimetro.md",
+      "sha256": "d6cb00a9b6a12ab62f770a889c3c4de8caf8744b1519c67879c6ceed70db935a",
+      "bytes": 12718
+    },
+    {
+      "path": "docs/functional/02-identidad-accesos.md",
+      "sha256": "069d2cc88135a80df9d4c022ec568eee507b0d79472a0edec5c4f8913e12f304",
+      "bytes": 14661
+    },
+    {
+      "path": "docs/functional/03-personas-clientes-kyc.md",
+      "sha256": "f120564ac70185f511ddc21f4700b17690fca77a2a430b46a0e3f0780a320b96",
+      "bytes": 14470
+    },
+    {
+      "path": "docs/functional/04-productos-configuracion.md",
+      "sha256": "72b0fd4d2b780902b6ea85e2855501db3ee5069ff11b8cbbd733b585d76331d6",
+      "bytes": 11298
+    },
+    {
+      "path": "docs/functional/05-contratos-documentos.md",
+      "sha256": "ace27a784d9086d0fc7804455f86a7934e0bf588b2ceab01e1a8b46bc09f25fb",
+      "bytes": 14476
+    },
+    {
+      "path": "docs/functional/06-cuentas-depositos.md",
+      "sha256": "9b31c43471b3924885fee70cb5a8d4f7afef790ea585bd7931f0589de7bc85de",
+      "bytes": 16610
+    },
+    {
+      "path": "docs/functional/07-saldos-reservas-restricciones.md",
+      "sha256": "914d0c5dbe5bae9fd2518094ae666e3d12832d536804796de84bafa89975aa6f",
+      "bytes": 15864
+    },
+    {
+      "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+      "sha256": "bf6370a4de4d684bfedab550c288bb5c344fe126b6e506e70cb89c95b09243fb",
+      "bytes": 16354
+    },
+    {
+      "path": "docs/functional/09-originacion-administracion-credito.md",
+      "sha256": "29a3c899cd5adf8c6c0c4ff25168e4ed71222e850a22668f36880d6031adc40e",
+      "bytes": 17216
+    },
+    {
+      "path": "docs/functional/10-intereses-comisiones.md",
+      "sha256": "245587be614208fe08a0cafa6cf6e0894e50f99ccfaca304ac58ac285f6a6397",
+      "bytes": 16981
+    },
+    {
+      "path": "docs/functional/11-garantias-avales.md",
+      "sha256": "ef4ccdfcc3e83964b318d7e556c7491eec2bd625f0396bf134157b0a535ede34",
+      "bytes": 14770
+    },
+    {
+      "path": "docs/functional/12-cobranzas-mora-recupero.md",
+      "sha256": "990e72e5889508b9a76c6dc6937eb38b2996991f05b28355be8150072e370560",
+      "bytes": 15366
+    },
+    {
+      "path": "docs/functional/13-pagos-transferencias.md",
+      "sha256": "c89b4005ccb4fcb4f94dd6e346c367f57d74c87355523eaf15ac7bd9c06be12b",
+      "bytes": 17977
+    },
+    {
+      "path": "docs/functional/14-cheques-echeq-cedip.md",
+      "sha256": "e8f3bd93f3d7618798649af7065f6ed8dbb3ef80ece8470d1de62a420942e2b2",
+      "bytes": 17218
+    },
+    {
+      "path": "docs/functional/15-tarjetas-adquirencia.md",
+      "sha256": "6561b01e1f07fd478a5f13bf7abe4fbf980a7156407b121f5498aab94889bd1d",
+      "bytes": 19761
+    },
+    {
+      "path": "docs/functional/16-caja-sucursales-efectivo.md",
+      "sha256": "6060a363c3a687ced5fcd48366734bf15635356acefb43c40cfccf4210b56d44",
+      "bytes": 17961
+    },
+    {
+      "path": "docs/functional/17-tesoreria-liquidez.md",
+      "sha256": "556d13e07b57f7c819414906f8af7038f9d29c58d36785c4df8e63079513a535",
+      "bytes": 15008
+    },
+    {
+      "path": "docs/functional/18-exterior-cambios-comercio.md",
+      "sha256": "7441e2af055cc96e462d8483de1a47f3b2f0c4ce26cc6013a2c96498060d947c",
+      "bytes": 18733
+    },
+    {
+      "path": "docs/functional/19-inversiones-custodia-fondos.md",
+      "sha256": "5f0a816ffc69b3692b2ef4d57b91e15607740de0d680dead7e1ed86d0af5b49f",
+      "bytes": 17331
+    },
+    {
+      "path": "docs/functional/20-prevencion-la-ft-fp.md",
+      "sha256": "19c190609d7de80f1c4e5964c07b789a8318db86c78be983491766842a21a370",
+      "bytes": 13801
+    },
+    {
+      "path": "docs/functional/21-prevencion-fraude.md",
+      "sha256": "bffd8b119433e3c45d0421a3324b4c410c01fbf1bb186d8151548fdd606708e4",
+      "bytes": 13527
+    },
+    {
+      "path": "docs/functional/22-conciliacion-excepciones.md",
+      "sha256": "7aa862d638e91e877c2bd8f28c15567ee2c04bb3c38695581840c6d08ef65d9c",
+      "bytes": 17538
+    },
+    {
+      "path": "docs/functional/23-riesgos-prudencia-exposiciones.md",
+      "sha256": "a6ad14764dcbcaf1abe32e6d21844253f5b824e9d0fd8ac2789e70a14019ec57",
+      "bytes": 15958
+    },
+    {
+      "path": "docs/functional/24-tributos-recaudaciones.md",
+      "sha256": "58a50c31f5e3cebe13905a0f4f323ae3db0fd54846c3a815696bd94aa46a3761",
+      "bytes": 14881
+    },
+    {
+      "path": "docs/functional/25-reportes-localizacion.md",
+      "sha256": "fa414378b6d7511ebfc601798f67a90e5ffee53226dc97cb343490b56c61cb75",
+      "bytes": 15103
+    },
+    {
+      "path": "docs/functional/26-canales-atencion-usuarios.md",
+      "sha256": "89b1e880936f7519c90c8b308ab6da3d581257ff6c1c55c29693bc1254f917b5",
+      "bytes": 17196
+    },
+    {
+      "path": "docs/functional/27-auditoria-privacidad-archivo.md",
+      "sha256": "eb9409e80c3ce1a1c91973b023fd65e3df51a6571a2c5e87ebb2ab9399809f9f",
+      "bytes": 15073
+    },
+    {
+      "path": "docs/functional/28-integraciones-eventos-trabajos.md",
+      "sha256": "abcc241dadb560db8373d1c4ddcb4c430bb64a2dceb6ddfee814dd82cb80b1f7",
+      "bytes": 14991
+    },
+    {
+      "path": "docs/functional/29-carga-inicial-migracion-salida.md",
+      "sha256": "b8a3b2ec8358b8e89023780a0d7346c96be61162f1d854b5b80c3c896de1adc1",
+      "bytes": 15946
+    },
+    {
+      "path": "docs/functional/30-operacion-continuidad-terceros.md",
+      "sha256": "f9d0306e748ce385653f643a60aab80ea2b62aacfab53847a9559a915e2c2d9d",
+      "bytes": 21579
+    },
+    {
+      "path": "docs/functional/31-gobierno-modelos-ia.md",
+      "sha256": "c8c0635a761ba8dccd140c6cd05404c6bf4ef6644f42183f18311d703b92506e",
+      "bytes": 17317
+    },
+    {
+      "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+      "sha256": "ae1f68d9e88ea100be0f55b9ab27dbc6aaf7270a1b7e414aecd1035219d18da3",
+      "bytes": 20048
+    },
+    {
+      "path": "docs/functional/README.md",
+      "sha256": "c0d7ac9212d4d7837df16d3c4027e62bde74d9af4566175cd70071b5b2798559",
+      "bytes": 6453
+    },
+    {
+      "path": "docs/functional/catalog.json",
+      "sha256": "5abd57d1cfd0747b0c896f81cd55eec3151cd2b33b5caca25aafebf56874bf4a",
+      "bytes": 1144027
+    },
+    {
+      "path": "docs/functional/coverage.md",
+      "sha256": "e0d61b8c15cd3048b1fda71c542a8b4664e5f41c58debf82d56e4998e3d5e6f1",
+      "bytes": 135499
+    },
+    {
+      "path": "docs/functional/coverage_map.json",
+      "sha256": "87fbfbdfcfc129f9893710bbb99837b5cc1f8332acf41d7b5ba54097cdec0c93",
+      "bytes": 10094
+    },
+    {
+      "path": "docs/functional/flows.md",
+      "sha256": "d45066515ab2b0be9734525144361815c8479e564740a7ad299cb46972348310",
+      "bytes": 25900
+    },
+    {
+      "path": "docs/functional/scope.md",
+      "sha256": "86f206a4fde272ad0ae6bbdf6fc4f9a9cbd922cb7648d842a4aba830187a5465",
+      "bytes": 14710
+    },
+    {
+      "path": "docs/functional/tools/build_catalog.py",
+      "sha256": "db2ce66b62ebe8f4f6f0f93520e0b983e400e60940a82dfba0b8a13a5d6aed13",
+      "bytes": 18541
+    },
+    {
+      "path": "docs/market_analysis.md",
+      "sha256": "b3ad4e4f88c2bfc149d6bfb0bd77362f752e03d7ede6c9a82a6d0979de42e34e",
+      "bytes": 70358
+    },
+    {
+      "path": "docs/nfr/NFR-01-integridad-financiera.md",
+      "sha256": "c0e2cebcf42348efa8e7c35750908d1ea70b743920db2a30aba6a635e51e95e6",
+      "bytes": 3282
+    },
+    {
+      "path": "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+      "sha256": "1064b5a3ced05b84b5b6ebb6d14b28dc08e53474f66e9ea2ff39858d94ad7599",
+      "bytes": 3197
+    },
+    {
+      "path": "docs/nfr/NFR-03-latencia-capacidad.md",
+      "sha256": "e8172d6a9d95efc9eb1ca89edf99cb98c914e0b5a0d5ff005eb6d66b87467567",
+      "bytes": 3224
+    },
+    {
+      "path": "docs/nfr/NFR-04-asincronia-durable.md",
+      "sha256": "14711bf24102f464671a276a6bc3bcc304cc6438b6bf09027d93bf84d7e1eb15",
+      "bytes": 3191
+    },
+    {
+      "path": "docs/nfr/NFR-05-seguridad-accesos.md",
+      "sha256": "dfaa27349226a606950219254ea80ed6b60fe9feb6ecb784073ff281befb61b0",
+      "bytes": 3414
+    },
+    {
+      "path": "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+      "sha256": "65f3bd01010bdc0057b277c56ce765b66966e3f45367f3d9c18808008ac05d84",
+      "bytes": 3705
+    },
+    {
+      "path": "docs/nfr/NFR-07-auditoria-observabilidad.md",
+      "sha256": "61381cae129e7f97a856aaf4c9b6ed845dbe7c6535a0abebbb9c4850b92e9e6a",
+      "bytes": 3931
+    },
+    {
+      "path": "docs/nfr/NFR-08-interoperabilidad-portabilidad.md",
+      "sha256": "62438c8b00a87b26267876b49767de18a94e34b559fa3aa79e155a402d427514",
+      "bytes": 3739
+    },
+    {
+      "path": "docs/nfr/NFR-09-mantenibilidad-configuracion.md",
+      "sha256": "b59b7cab1b21064dc97a8819b10a3b0f75fcb41297589753fb50d6be6dc4c1f6",
+      "bytes": 3797
+    },
+    {
+      "path": "docs/nfr/NFR-10-migracion-carga-masiva.md",
+      "sha256": "f61b29efcda9333c06d4c344454ee7529baf9e5a53ad53ac9b68348c077bb947",
+      "bytes": 4074
+    },
+    {
+      "path": "docs/nfr/NFR-11-calidad-datos-reportes.md",
+      "sha256": "ac4a33ac60c29c56627f5fbc0c2aa7d69992ab7f2441cf4cf18b903301c97715",
+      "bytes": 3729
+    },
+    {
+      "path": "docs/nfr/NFR-12-operabilidad-costos.md",
+      "sha256": "d5f88067fa98642b16b24aa6ea82959d54bb8bd36b5197e31cc3d02eb4aa50b9",
+      "bytes": 2960
+    },
+    {
+      "path": "docs/nfr/NFR-13-accesibilidad-experiencia.md",
+      "sha256": "2453eb85e9ca38fc7317f238f002527dd5bf5af8acf9a04cad750f814f445477",
+      "bytes": 2960
+    },
+    {
+      "path": "docs/nfr/README.md",
+      "sha256": "87ac6c4c56d6b6c1f1d1b4727d5ac2c08299dfc678a6e9ceb369975361b12be4",
+      "bytes": 7635
+    },
+    {
+      "path": "docs/regulatory-watch/README.md",
+      "sha256": "f8bc11f373ccf070d6620d0d353b977eafcef12155c88b949a6d5638ca750c1f",
+      "bytes": 12389
+    },
+    {
+      "path": "docs/regulatory-watch/automation.md",
+      "sha256": "f822e01f2c84d38aac0ccc2911dcc538bed3972d50d0b52ae3c0425b464cae3d",
+      "bytes": 3010
+    },
+    {
+      "path": "docs/regulatory-watch/sources.json",
+      "sha256": "d18e1c8fb61555b6f6b694ad3f72057a787f297b3644c454bff685fe44ee9a3a",
+      "bytes": 5774
+    },
+    {
+      "path": "docs/regulatory-watch/state.initial.json",
+      "sha256": "fb0f1a8af2563bc42b49b42bb475e8aed5b41a75a33a57e13fb57c6a2634d0ed",
+      "bytes": 2148
+    },
+    {
+      "path": "docs/regulatory-watch/tools/check_watch.py",
+      "sha256": "279b9ab586e95a107aff0057e4531d96ccc24ff83440c13fa6981529bae8fff9",
+      "bytes": 28345
+    },
+    {
+      "path": "docs/regulatory-watch/tools/test_check_watch.py",
+      "sha256": "5aaff38dc78be60bd0c4fc566a4d34211f71fb36485b2d3445816214ca0a9bde",
+      "bytes": 16181
+    },
+    {
+      "path": "docs/research/bcra_sources.json",
+      "sha256": "3658b1d38030eb766b989c7cb57ad634620152d6a95e7b187265c78db2b5e839",
+      "bytes": 43375
+    },
+    {
+      "path": "docs/review/01-commercial-ceo.md",
+      "sha256": "255934b45453cc120b00d6aad2d6d976cc09968e9dbe34c069d2975e15d9da3c",
+      "bytes": 45004
+    },
+    {
+      "path": "docs/review/02-accounting-tax.md",
+      "sha256": "e56bd0ef312d90fad5cf62ac50112a20365b6f9db4015ed08fe5f45da08acf93",
+      "bytes": 32727
+    },
+    {
+      "path": "docs/review/03-legal-compliance.md",
+      "sha256": "430cffc2450ec7d705336a54935d309e54e3553057b4152d17662101dfa610b5",
+      "bytes": 42001
+    },
+    {
+      "path": "docs/review/04-architecture-data.md",
+      "sha256": "6630fee8987e1e45cdfd6821d472f4af3c2faa64041a921a601e81a33fd4e4c8",
+      "bytes": 41095
+    },
+    {
+      "path": "docs/review/05-quality-skills.md",
+      "sha256": "25c0048e78b5f0710ee89a5feffb895601fdc8ff57e24445e53a4274e68eaf7c",
+      "bytes": 17217
+    },
+    {
+      "path": "docs/review/06-security-operations.md",
+      "sha256": "816d1de70d0624bc5ed230b04236a26ed39e71fd95152e854f34148e162a9665",
+      "bytes": 39819
+    },
+    {
+      "path": "docs/review/README.md",
+      "sha256": "5d8fa786e8db68103d2dd92fa363f54aa957ac2432907166eb07c559ae927ed4",
+      "bytes": 7582
+    },
+    {
+      "path": "docs/review/backlog.json",
+      "sha256": "ffcf17c9bbb88f9605c9e26d305fa2a116028da06d00a37f47e73440def007b3",
+      "bytes": 54154
+    },
+    {
+      "path": "docs/review/findings/accounting.json",
+      "sha256": "7eaa14aaac98e0b90a98b909346fd15cae855b733c3d812d4bf0d8841068e743",
+      "bytes": 35541
+    },
+    {
+      "path": "docs/review/findings/architecture.json",
+      "sha256": "1b7bc0f6c48e871650fe58963e79e2f8b6c3c0ff416cdbcdf73235f9f23b5f6c",
+      "bytes": 40881
+    },
+    {
+      "path": "docs/review/findings/commercial.json",
+      "sha256": "4e720a1fa60e6913814a1dfbc9663c916708db649f32ef6a11f046a7c13cd17c",
+      "bytes": 42265
+    },
+    {
+      "path": "docs/review/findings/legal.json",
+      "sha256": "480c9bc9320aaf9c0ffc5616a560a40becace71fe80fd418799b74020bcdaf46",
+      "bytes": 39102
+    },
+    {
+      "path": "docs/review/findings/quality.json",
+      "sha256": "845106608de6bc0715520ce5c07b9d986c7a6f971ae0fa654b9d9a275b0d4478",
+      "bytes": 34337
+    },
+    {
+      "path": "docs/review/findings/security_operations.json",
+      "sha256": "8ea2cff0a56a496b39963256e36f9bd18b5a012c926120869dd610c13a38c832",
+      "bytes": 44861
+    },
+    {
+      "path": "docs/review/improvement_plan.md",
+      "sha256": "2a830244a374b6259aeacbc35f3224b671a884c1337755bf0046f96298b42067",
+      "bytes": 21484
+    },
+    {
+      "path": "docs/review/review_inventory.json",
+      "sha256": "2a71b9ce916f42902c266fab71be0406c6a7215d363b89912d64bea2ff1ef138",
+      "bytes": 55188
+    },
+    {
+      "path": "docs/review/templates/business_case.md",
+      "sha256": "98b03742da23efc38aac4cf2bf35158bcfc77ed9a4274380edd4a69f0adcb733",
+      "bytes": 3767
+    },
+    {
+      "path": "docs/review/templates/evidence_register.md",
+      "sha256": "d93f3ebeade708d054dd06d3dde3e62606f61304cc1edaed29d04e27bae14ea6",
+      "bytes": 2089
+    },
+    {
+      "path": "docs/review/templates/project_charter.md",
+      "sha256": "e32286b898077efdf7d7f8a2c938f23131624f4dc1fd37104fdf52f7d04f245c",
+      "bytes": 2581
+    },
+    {
+      "path": "docs/review/tools/check_review.py",
+      "sha256": "3eb6ce185be8a3fab030e5be1a906530168e3fcab5b88200105ba8aee14e9216",
+      "bytes": 14797
+    },
+    {
+      "path": "docs/review/tools/requirements.txt",
+      "sha256": "0969da99a0bc2a1b71ed50584560f4588a37567ac63af3ddbaf3c4617ca5621a",
+      "bytes": 14
+    },
+    {
+      "path": "docs/review/validation.md",
+      "sha256": "d421eaa299e439645fe4fdefbdcfb3785bd18e47e2ba9f4f79b357648d8ca67b",
+      "bytes": 3610
+    },
+    {
+      "path": "docs/skills.md",
+      "sha256": "760f60af63e42fd4ff11f4026a31dfa4a3c3810f588f2bee6e0c40d31668c170",
+      "bytes": 5703
+    }
+  ]
+}

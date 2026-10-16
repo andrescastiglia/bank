@@ -13,6 +13,7 @@ Investigación en español basada en el análisis aportado por el usuario, ampli
 | [Revisión integral y plan de mejoras](review/README.md) | Diagnóstico comercial/CEO, contable, legal, arquitectura/datos, QA/skills y seguridad/operaciones; 63 hallazgos en 14 paquetes con responsables, dependencias y criterios de cierre. Revisión del 16/10/2026, sin cambiar el corte normativo original. |
 | [Gobierno GPL y contribuciones](../GOVERNANCE.md) | Proyecto conforme a la licencia actual; únicamente el mantenedor realiza merges a main. Agentes y contribuyentes trabajan con ramas/PR. |
 | [Vigilancia normativa diaria](regulatory-watch/README.md) | Fuentes oficiales, cobertura por fuente, bitácora durable, agenda y propuestas normativas sin integración automática. |
+| [Plan de implementación por fases](../PLAN_DE_IMPLEMENTACION_BANK.md) | Revisión de normativa, mercado, tecnología y seguridad del 15/10/2026 en hora argentina; propuestas por módulo, esfuerzo, dependencias y evidencia, con gaps de cobertura explícitos. |
 | [Skills de ADR y NFR](skills.md) | Workflows para crear, mantener, aplicar y verificar registros y requisitos; selección e invocación de skills específicos. |
 | [Skill: core-bancario-argentina](../.agents/skills/core-bancario-argentina/SKILL.md) | Procedimiento reutilizable para verificar fuentes y convertir requisitos en controles, pruebas y backlog. |
 | [Registro de fuentes BCRA](research/bcra_sources.json) | Metadatos y huellas SHA-256 de los documentos descargados; las URLs de textos ordenados pueden actualizar su contenido. |
