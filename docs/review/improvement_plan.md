@@ -2,6 +2,8 @@
 
 **Revisión:** 16/10/2026 UTC. **Línea base examinada:** `2e5d579103b94ab70c16d81debe73bf5840ba0c8`. Las fuentes regulatorias y de mercado conservan su corte del 15/10/2026; esta revisión no acredita una actualización jurídica exhaustiva al día siguiente. **Estado del plan: Propuesto.** Responsables, inversión, contrataciones y aceptaciones institucionales no están designados/aprobados por crear este archivo.
 
+**Decisión posterior:** el mantenedor eligió continuar conforme a GNU GPL v2, reservándose los merges a `main` y estableciendo vigilancia normativa diaria; ver [gobierno](../../GOVERNANCE.md) y [procedimiento](../regulatory-watch/README.md). El plan conserva el diagnóstico histórico. Las acciones comerciales/económicas se aplican a una eventual operación comercial, no como requisito para contribuir al proyecto libre; calidad, mantenibilidad, trazabilidad y requisitos del perfil financiero conservan su relevancia. La decisión de licencia no cierra por sí sola procedencia, compatibilidad, contratos o evidencia del producto.
+
 ## Diagnóstico ejecutivo
 
 El proyecto cuenta con una biblioteca de diseño sólida: mercado con supuestos identificados, perímetros regulatorios diferenciados, ocho ADR, trece familias NFR, 1.016 FR en 32 módulos, 24 flujos integrados y 24 skills en la línea base. Son fortalezas la autoridad financiera SQL, dinero exacto, prevención de doble efecto, tratamiento de ambigüedad externa, aislamiento jurídico, migración preparada y distinción entre propuesta y evidencia. Conviene conservarlas.

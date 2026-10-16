@@ -4,6 +4,8 @@
 
 **Fecha de revisión:** 16/10/2026 UTC. **Línea base:** `2e5d579103b94ab70c16d81debe73bf5840ba0c8`. Las fuentes de mercado/cumplimiento conservan su corte del **15/10/2026**. Los informes analizan documentos y evidencia disponible; no acreditan implementación bancaria, contratos, personal financiado, producción o certificaciones.
 
+La [decisión posterior del mantenedor](../../GOVERNANCE.md) fija GPL v2, merge exclusivo por el dueño y vigilancia diaria. Los informes conservan su valor histórico; ventas, financiación y ARR se interpretan como opciones de negocio y no como condiciones de contribución al proyecto libre. El inventario de 24 skills de la línea base no se cambia al agregar workflows posteriores.
+
 Empezar por el [plan integral de mejoras](improvement_plan.md): prioridades, 14 paquetes, responsables sugeridos, dependencias, criterios G0–G4 y una agenda propuesta para los primeros diez días hábiles. El [backlog estructurado](backlog.json) enlaza las acciones con **63 hallazgos**; todos permanecen abiertos hasta cumplir su criterio con evidencia.
 
 ## Perspectivas y hallazgos

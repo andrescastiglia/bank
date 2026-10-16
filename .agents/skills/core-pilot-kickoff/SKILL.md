@@ -9,6 +9,8 @@ description: "Usar para preparar el kickoff de desarrollo o evaluar la preparaci
 
 Preparar trabajo concreto y verificable para una ruta de producto. Distinguir kickoff de investigación/desarrollo con datos sintéticos de activación con datos/fondos/clientes reales. Leer [plan de mejoras](../../../docs/review/improvement_plan.md), revisión de [seguridad/operación](../../../docs/review/06-security-operations.md), perfiles/FR y NFR/ADR afectados. Reutilizar [el checklist](references/kickoff-checklist.md); no repetir los trece workflows NFR para cada edición.
 
+Aplicar [el gobierno GPL](../../../GOVERNANCE.md). Para contribución al proyecto libre, adaptar G1/G4 a alcance, recursos, mantenimiento y reutilización; no imponer ventas, ARR o clientes de diseño como requisito de contribución. Para un servicio comercial, usar además su economía/contratos. Un piloto con datos/fondos reales mantiene todos los controles del sujeto. Todo cambio del agente va en rama/PR y sólo el mantenedor fusiona a `main`.
+
 ## Procedimiento
 
 1. **Fijar el hito pedido.** G0 kickoff; G1 decisión de inversión/oferta; G2 diseño validado; G3 piloto real limitado; G4 repetibilidad/escala. Los criterios son de gestión del proyecto, no nuevos permisos legales. Registrar estado observado y evidencia, sin aprobar en nombre de responsables.

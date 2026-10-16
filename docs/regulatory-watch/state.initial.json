@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "repository": "andrescastiglia/bank",
+  "state_branch": "automation/regulatory-state",
+  "reporting_timezone": "America/Buenos_Aires",
+  "initial_backfill_from": "2026-10-15T00:00:00-03:00",
+  "inventory_version": "2026-10-16.1",
+  "last_run_id": null,
+  "source_checkpoints": [
+    {
+      "source_id": "WATCH-BO",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-BCRA-COM",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-BCRA-TO",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-BCRA-RI",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-UIF",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-AAIP",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-ARCA",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-COMARB",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-CNV",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-JURIS",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-STANDARDS",
+      "covered_through": null,
+      "last_attempt_at": null,
+      "status": "NOT_STARTED",
+      "open_gaps": []
+    }
+  ],
+  "agenda": [],
+  "changes": [],
+  "run_index": []
+}

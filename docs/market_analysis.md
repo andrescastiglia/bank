@@ -6,6 +6,8 @@
 
 **Versión:** 1.0. Importes de los modelos: USD constantes, salvo indicación contraria.
 
+**Decisión posterior del mantenedor (16/10/2026):** el proyecto sigue GNU GPL v2 y sólo el mantenedor realiza merges a `main`; ver [GOVERNANCE.md](../GOVERNANCE.md). Este análisis comercial se conserva como investigación y referencia para eventuales servicios compatibles con la licencia. Sus puertas de ventas/ARR no son requisitos para contribuir al software libre ni decisiones comerciales ya adoptadas.
+
 ## 1. Decisión ejecutiva
 
 La oportunidad más defendible para un nuevo proveedor consiste en resolver una parte delimitada de la operación financiera argentina con trazabilidad contable, integraciones locales y evidencia de control. Intentar competir desde el inicio como reemplazo integral de todos los sistemas de un banco universal exige una amplitud funcional, una capacidad de migración y un compromiso de soporte que no quedan demostrados por disponer de un buen ledger o de APIs modernas.

@@ -204,8 +204,8 @@ def check_skills_and_links():
         except (OSError, IndexError, yaml.YAMLError) as exc:
             ERRORS.append(f"{path.parent.name}: YAML/metadata inválidos: {exc}")
     markdowns = sorted((ROOT / "docs").rglob("*.md")) + sorted((ROOT / ".agents").rglob("*.md"))
-    if (ROOT / "README.md").exists():
-        markdowns.append(ROOT / "README.md")
+    markdowns += sorted(ROOT.glob("*.md"))
+    markdowns += sorted((ROOT / ".github").rglob("*.md"))
     for path in markdowns:
         text = path.read_text()
         # Las plantillas pueden mostrar Markdown como datos dentro de bloques de código.
@@ -216,7 +216,13 @@ def check_skills_and_links():
     workflow = yaml.safe_load((ROOT / ".github/workflows/docs.yml").read_text())
     require(workflow.get("permissions", {}).get("contents") == "read", "CI: permisos de contenido deben ser read")
     runs = [step.get("run", "") for job in workflow.get("jobs", {}).values() for step in job.get("steps", [])]
-    require(any("build_catalog.py --check" in run for run in runs) and any("check_review.py" in run for run in runs), "CI: faltan verificaciones documentales")
+    require(all(any(command in run for run in runs) for command in ["build_catalog.py --check", "check_review.py", "check_watch.py", "test_check_watch.py"]), "CI: faltan verificaciones documentales")
+    ownership = (ROOT / ".github/CODEOWNERS").read_text()
+    require("* @andrescastiglia" in ownership.splitlines(), "Gobierno: falta asignación general de CODEOWNERS al mantenedor")
+    triggers = workflow.get("on", {})
+    for event in ["push", "pull_request"]:
+        paths = triggers.get(event, {}).get("paths", [])
+        require("*.md" in paths and ".github/**" in paths, f"CI: {event} no cubre documentos raíz/gobierno")
     return len(names), len(markdowns)
 
 

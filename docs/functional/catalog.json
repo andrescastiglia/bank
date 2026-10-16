@@ -20,7 +20,7 @@
     ".agents/skills/core-bancario-argentina/references/estandares-industria.md": "e20a4a7a8f6f774bfa5df45b7a5b7ca0415cc1d090accfd5fb3cdffbdaccc3c8",
     ".agents/skills/core-bancario-argentina/references/iso.md": "f1f2b80a4176f17885fa6b2b1541d76ee2221311b3ddcce7668c85933c36a393",
     ".agents/skills/core-bancario-argentina/references/leyes.md": "b459f05b35a14c4f4efb34334f296fadf6aaa1cdccb4bfaa56bab88e14359ecf",
-    ".agents/skills/core-bancario-argentina/references/metodologia.md": "b1f27cd88f58486787f595d9409ab641955c57836ebe8f7b55da54ced9a0584f",
+    ".agents/skills/core-bancario-argentina/references/metodologia.md": "cc705ea67755da8ab662899469d43c2ba5b85625e4585b4d7526987ef6f0225c",
     ".agents/skills/core-bancario-argentina/references/regulaciones-bcra.md": "c9a8743061d4a8d623fef50dcf53c6d06be3a43030a4e5e66a27cbb97ccb517f",
     "docs/achitecture.md": "783ec9540fd319e0b2ae4640179b43469c0d6729e5162558e44fea3bff365dd0",
     "docs/adr/ADR-01-nucleo-modular.md": "783aeabe379f622bdcfb784a60ee5077ea997fd13b0f45ca8f0876ed0cebf421",
@@ -32,7 +32,7 @@
     "docs/adr/ADR-07-stack-gestionado.md": "447039e872985b055980b9b2ace5476630dde36caf3460fffb477d70cd93ca2f",
     "docs/adr/ADR-08-carga-inicial-masiva.md": "2b3b114f635d241722098df3a7cd0ed7605f29e0a6cb2a160b94dec04c98d6c4",
     "docs/compliant.md": "cb330b1cc353687cb5fb556f5d0dc20204f86894c119b8ffe26e073bfac30900",
-    "docs/market_analysis.md": "387d17c90be9b0100ae560babe18414e2b6f17407c64ae15c0837afe2915968d",
+    "docs/market_analysis.md": "b3ad4e4f88c2bfc149d6bfb0bd77362f752e03d7ede6c9a82a6d0979de42e34e",
     "docs/nfr/NFR-01-integridad-financiera.md": "c0e2cebcf42348efa8e7c35750908d1ea70b743920db2a30aba6a635e51e95e6",
     "docs/nfr/NFR-02-disponibilidad-recuperacion.md": "1064b5a3ced05b84b5b6ebb6d14b28dc08e53474f66e9ea2ff39858d94ad7599",
     "docs/nfr/NFR-03-latencia-capacidad.md": "e8172d6a9d95efc9eb1ca89edf99cb98c914e0b5a0d5ff005eb6d66b87467567",
@@ -46,7 +46,7 @@
     "docs/nfr/NFR-11-calidad-datos-reportes.md": "ac4a33ac60c29c56627f5fbc0c2aa7d69992ab7f2441cf4cf18b903301c97715",
     "docs/nfr/NFR-12-operabilidad-costos.md": "d5f88067fa98642b16b24aa6ea82959d54bb8bd36b5197e31cc3d02eb4aa50b9",
     "docs/nfr/NFR-13-accesibilidad-experiencia.md": "2453eb85e9ca38fc7317f238f002527dd5bf5af8acf9a04cad750f814f445477",
-    "docs/skills.md": "43ae77becea06608ea4af68e71907a1031d99a55ffb2072cec754803251ee589"
+    "docs/skills.md": "760f60af63e42fd4ff11f4026a31dfa4a3c3810f588f2bee6e0c40d31668c170"
   },
   "fr_documents_sha256": {
     "docs/functional/01-entidades-perimetro.md": "d6cb00a9b6a12ab62f770a889c3c4de8caf8744b1519c67879c6ceed70db935a",

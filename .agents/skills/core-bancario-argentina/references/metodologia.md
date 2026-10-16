@@ -21,6 +21,8 @@ Si el texto ordenado se actualizó después del corte histórico, reconstruir co
 
 Al inicio de una evaluación y antes de una salida a producción, revisar cambios desde el corte. En un producto operativo, asignar seguimiento a un responsable y definir una frecuencia acorde con cambios y criticidad; este skill no crea automatizaciones por sí solo. Para cada modificación, analizar sujetos, productos, datos, parámetros, contratos, reportes, pruebas, transición y evidencia de adopción. Guardar historial: no reescribir operaciones antiguas con la regla nueva.
 
+En este proyecto, el mantenedor autorizó [vigilancia diaria](../../../../docs/regulatory-watch/README.md), con checkpoints/bitácora en rama independiente y propuestas vía PR. Usar [core-regulatory-watch](../../core-regulatory-watch/SKILL.md), sin asumir que invocarlo crea la programación o garantiza cobertura. Sólo el mantenedor realiza merges a `main`; ver [gobierno](../../../../GOVERNANCE.md). Las fallas de fuente no avanzan el corte ni justifican afirmar ausencia de novedades.
+
 ## Alcance de las afirmaciones
 
 Una familia relevada no demuestra cobertura de todas las circulares ni de todas las actividades del cliente. No usar la palabra «exhaustivo» como garantía universal. Mantener un registro explícito de productos sin evaluar, anexos no leídos, fuentes inaccesibles y decisiones de interpretación. Una norma voluntaria puede convertirse en obligación contractual: citar el contrato que produce ese cambio.

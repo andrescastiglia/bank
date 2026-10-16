@@ -1438,5 +1438,13 @@
       "state": "open",
       "closure_evidence": []
     }
+  ],
+  "subsequent_decisions": [
+    {
+      "date": "2026-10-16",
+      "decision": "El proyecto continúa conforme a GNU GPL v2; únicamente el mantenedor realiza merges a main; vigilancia normativa diaria mediante agente con propuestas en ramas/PR.",
+      "reference": "GOVERNANCE.md",
+      "effect": "Orientación de licencia decidida; contribución libre no condicionada a ventas/ARR. Procedencia, compatibilidad, obligaciones por sujeto y hallazgos con evidencia pendiente no se cierran automáticamente."
+    }
   ]
 }
