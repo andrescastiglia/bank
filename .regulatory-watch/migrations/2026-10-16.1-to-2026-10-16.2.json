@@ -1,0 +1,15 @@
+{
+  "from_inventory_version": "2026-10-16.1",
+  "to_inventory_version": "2026-10-16.2",
+  "scope": "Sólo endpoints BO: gov preferido y gob alternativo. Identidad, alcance, obligatoriedad, backfill y demás fuentes sin cambios. No convierte cobertura ni fecha de intento en checkpoint completo.",
+  "previous_state": ".regulatory-watch/previous/RUN-20261016T023356Z/state.json",
+  "previous_registry": ".regulatory-watch/previous/RUN-20261016T023356Z/sources.json",
+  "registry": ".regulatory-watch/sources.json",
+  "run_id": "RUN-20261016T023356Z",
+  "previous_commit": "be8359560b2901b5367eca800d862f3f4bc9d3f6",
+  "previous_state_blob_sha": "8656b99cd57621002c4a0b692affcbdc7abd31c0",
+  "snapshot_sha256": {
+    "state.json": "fae4a7164e802456ce67ec935011957ccafd7f21f70b5fca85ef3cce7df8936b",
+    "sources.json": "d18e1c8fb61555b6f6b694ad3f72057a787f297b3644c454bff685fe44ee9a3a"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "inventory_version": "2026-10-16.1",
+  "inventory_version": "2026-10-16.2",
   "reporting_timezone": "America/Buenos_Aires",
   "initial_backfill_from": "2026-10-15T00:00:00-03:00",
   "overlap_days": 7,
@@ -12,6 +12,7 @@
       "category": "regulation",
       "required_for_detection": true,
       "entrypoints": [
+        "https://www.boletinoficial.gov.ar/seccion/primera",
         "https://www.boletinoficial.gob.ar/seccion/primera"
       ],
       "coverage_scope": "Primera sección: normas pertinentes a servicios financieros, datos, contratos, impuestos y operación; registrar filtros, ediciones, suplementos, rectificatorias y anexos."

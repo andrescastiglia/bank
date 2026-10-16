@@ -14,6 +14,8 @@ La detección abarca materias de la biblioteca; la aplicación depende de sujeto
 
 Las fuentes se recorren con filtros declarados, páginas, ediciones/suplementos y anexos pertinentes. Búsquedas web y noticias sirven para localizar documentos, nunca como sustituto de la fuente primaria. Un endpoint del sitio puede cambiar; validar su esquema/paginación antes de usarlo. Una página HTTP 200, un título o una raíz con JavaScript sin resultados legibles no acreditan cobertura.
 
+Para Boletín Oficial, el inventario `2026-10-16.2` prioriza `https://www.boletinoficial.gov.ar/seccion/primera` y conserva el alias `.gob.ar` como alternativa. Ante fallo de un host, consultar la alternativa oficial y la edición por fecha antes de clasificar la fuente completa como indisponible. Una portada o un aviso recuperado sólo acreditan ese contenido: si faltan otros avisos, suplementos o anexos, registrar cobertura parcial. Conservar fallos e intentos previos; una recuperación no reescribe la historia.
+
 ## Persistencia independiente de `main`
 
 | Destino | Contenido y regla |

@@ -4,157 +4,218 @@
   "state_branch": "automation/regulatory-state",
   "reporting_timezone": "America/Buenos_Aires",
   "initial_backfill_from": "2026-10-15T00:00:00-03:00",
-  "inventory_version": "2026-10-16.1",
-  "last_run_id": "RUN-20261016T014713Z",
+  "inventory_version": "2026-10-16.2",
+  "last_run_id": "RUN-20261016T023356Z",
   "source_checkpoints": [
     {
       "source_id": "WATCH-BO",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:49:26.427287+00:00",
-      "status": "UNAVAILABLE",
+      "last_attempt_at": "2026-10-16T02:36:10.085969+00:00",
+      "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "HTTP503 en raíz, primera sección y ruta por fecha; edición/suplementos/anexos desconocidos.",
+          "cause": "Edición recuperada por host gov; avisos individuales con HTTP503 y anexos pendientes, no indisponibilidad total.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios.",
+          "pending_notice_urls": [
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348972/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348974/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348977/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348978/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348980/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348981/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348982/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348983/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348984/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348985/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348987/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348988/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348989/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348990/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348991/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348992/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348994/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348995/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348996/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348997/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/348999/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349000/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349001/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349004/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349005/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349006/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349007/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349008/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349009/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349010/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349011/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349013/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349014/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349015/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349016/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349017/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349018/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349019/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349020/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349021/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349022/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349023/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349024/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349025/20261015",
+            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349026/20261015"
+          ],
+          "pending_annex_notice_ids": [
+            "348974",
+            "348976",
+            "348979",
+            "348980",
+            "348981",
+            "348982",
+            "348983",
+            "348984",
+            "348985",
+            "348988",
+            "348993",
+            "349002",
+            "349003",
+            "349005",
+            "349018",
+            "349019"
+          ]
         }
       ]
     },
     {
       "source_id": "WATCH-BCRA-COM",
       "covered_through": "2026-10-15T22:47:13-03:00",
-      "last_attempt_at": "2026-10-16T01:52:08.141297+00:00",
+      "last_attempt_at": "2026-10-16T02:36:36.722484+00:00",
       "status": "COMPLETE",
       "open_gaps": []
     },
     {
       "source_id": "WATCH-BCRA-TO",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:50:17.076275+00:00",
+      "last_attempt_at": "2026-10-16T02:36:03.888249+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Pendiente comparar corpus de 103 TO, sus modificatorias y versiones; consulta selectiva TI/SI y RRCI.",
+          "cause": "Índice de103 TO reconsultado; falta comparación de textos/modificatorias y anexos.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
     {
       "source_id": "WATCH-BCRA-RI",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:53:18.133179+00:00",
+      "last_attempt_at": "2026-10-16T02:36:03.892279+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Pendientes 55 RI de la faceta y otros canales; se recuperaron t-optico y manual SISCEN adicional, con lectura focal de 0019.",
+          "cause": "Faceta55 RI y t-optico reconsultados; pendientes otros documentos y canales fuera de faceta.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
     {
       "source_id": "WATCH-UIF",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:53:18.133925+00:00",
+      "last_attempt_at": "2026-10-16T02:36:03.902621+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Pendiente listado cronológico de reformas/rectificatorias y anexos no seleccionados; el conteo de tres textos es mínimo conocido.",
+          "cause": "Índices sectorial y transversal reconsultados; búsqueda cronológica y textos/anexos pendientes.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
     {
       "source_id": "WATCH-AAIP",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:51:33.579966+00:00",
+      "last_attempt_at": "2026-10-16T02:36:03.903212+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Formulario sin resultados cronológicos acreditados; anexos de 47/2018 y otras modificaciones pendientes.",
+          "cause": "Formulario reconsultado sin resultados cronológicos acreditados; falta resolver textos/anexos.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
     {
       "source_id": "WATCH-ARCA",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:51:33.588350+00:00",
+      "last_attempt_at": "2026-10-16T02:36:04.260815+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Novedades dinámicas sin resolver y ruta alternativa no disponible; faltan búsqueda cronológica y diseños/anexos completos por régimen.",
+          "cause": "Biblioteca/formulario y portada reconsultados; listado cronológico y anexos pendientes; HTTP200 no prueba cobertura.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
     {
       "source_id": "WATCH-COMARB",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:49:26.210990+00:00",
+      "last_attempt_at": "2026-10-16T02:36:04.265758+00:00",
       "status": "UNAVAILABLE",
       "open_gaps": [
         {
-          "cause": "HTTP500 en raíces y rutas SIRCREB/SIRCUPA; cobertura y padrones sin acreditar.",
+          "cause": "HTTP500 en este reintento; mantiene ventana sin cobertura.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
     {
       "source_id": "WATCH-CNV",
       "covered_through": null,
-      "last_attempt_at": "2026-10-16T01:52:08.148444+00:00",
+      "last_attempt_at": "2026-10-16T02:36:04.353326+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Pendiente conciliar índice por emisión frente a publicación, restantes actos e historia; los tres textos son mínimo conocido.",
+          "cause": "Marco regulatorio reconsultado y publicación BO de RG1172 verificada; otros actos/historia pendientes.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
             "to_exclusive": "2026-10-15T22:47:13-03:00"
           },
           "retry_required": true,
-          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
-          "first_observed_in": "RUN-20261016T014713Z"
+          "next_action": "Recuperar avisos/anexos o listado cronológico pendientes; no declarar ausencia global de cambios."
         }
       ]
     },
@@ -568,6 +629,66 @@
       "cisa_due_date": "2026-10-18",
       "cisa_due_date_scope": "No se adopta como plazo legal argentino",
       "exposure": "USE_NOT_IDENTIFIED"
+    },
+    {
+      "change_id": "CHANGE-CNV-RG1172-2026",
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "title": "Sustitución régimen PSAV e información periódica desde noviembre",
+      "published_at": "2026-10-15",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T02:34:26.713985+00:00",
+      "subjects": [
+        "PSAV_REGISTRADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "REVALIDATED_WITH_OFFICIAL_BO_PUBLICATION",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431259/norma.htm",
+              "sha256": "0c9664f202cccab6d76ff542eb9e93ad2c878fa5af60d4ebf05e1a1f18c7d72c",
+              "fetched_at": "2026-10-16T01:52:08.142952+00:00"
+            }
+          ]
+        },
+        {
+          "version": 2,
+          "evidence_refs": [
+            {
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348986/20261015",
+              "sha256": "c107f4e487a7933dfec96cf1098f3fe87c05596be2c8f04c04a35946513bd3a3",
+              "fetched_at": "2026-10-16T02:34:26.713985+00:00"
+            }
+          ],
+          "relation": "ADDITIONAL_OFFICIAL_PUBLICATION_PROVENANCE",
+          "substantive_normative_change": false
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-02",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "9d9346233421cdf836160fa8643f4f54c6145402ec0be3b8968fa7f286d39159",
+      "issued_at": "2026-10-14",
+      "future_milestones": [
+        {
+          "date": "2026-11-01",
+          "basis": "art.4; información periódica art.40.b; primer período/vencimiento a determinar por situación del sujeto"
+        }
+      ],
+      "publication_basis": "BORA oficial, aviso348986 del15/10/2026, texto/art.4-5 y anexoI; identidad y fechas coinciden con registro previo InfoLEG.",
+      "fr": [
+        "FR-RPT-033",
+        "FR-INV-032"
+      ],
+      "revision": 2,
+      "supersedes_revision": 1
     }
   ],
   "run_index": [
@@ -577,6 +698,13 @@
       "path": ".regulatory-watch/runs/RUN-20261016T014713Z.json",
       "finished_at": "2026-10-16T02:04:45.799798+00:00",
       "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "run_id": "RUN-20261016T023356Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261016T023356Z.json",
+      "finished_at": "2026-10-16T02:39:24.404760+00:00",
+      "review_pr": "https://github.com/andrescastiglia/bank/pull/4"
     }
   ]
 }
