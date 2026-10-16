@@ -7,6 +7,7 @@ Investigación en español basada en el análisis aportado por el usuario, ampli
 | [market_analysis.md](market_analysis.md) | Demanda, segmentos, proveedores, evidencia de casos locales, escenarios de mercado y TCO, alternativas de construcción/compra y estrategia de entrada. |
 | [compliant.md](compliant.md) | Leyes, BCRA, UIF, AAIP, fiscalidad, ISO y estándares de industria, con aplicabilidad, vigencias, controles y evidencias. |
 | [achitecture.md](achitecture.md) | Arquitectura modular, configuración versionada, consistencia financiera, asincronía, HA, baja latencia y carga inicial masiva con trazabilidad a requisitos. |
+| [Rust y runtime FROM scratch](deployment/rust-scratch.md) | Toolchain/lockfile, enlace estático por arquitectura, payload TLS/calendarios, endurecimiento de Kubernetes, probes, SIGTERM y evidencia pendiente de las imágenes propias. |
 | [ADR: Architectural Decision Records](adr/README.md) | Ocho registros de decisiones: contexto, alternativas, elección, consecuencias y criterios de revisión, con sus skills. |
 | [NFR: Non-Functional Requirements](nfr/README.md) | Trece familias de requisitos de calidad y restricciones verificables, con escenarios, métricas, objetivos, oráculos y skills. |
 | [FR: Functional Requirements por módulo](functional/README.md) | 1.016 requisitos funcionales en 32 módulos, con aceptación, excepciones, perfiles, 24 flujos integrados y cobertura trazable del inventario documental. |

@@ -1,6 +1,6 @@
 interface:
   display_name: "ADR-07 · Stack gestionado"
-  short_description: "Stack, garantías, costos y salida del core"
-  default_prompt: "Aplicá $adr-07-stack-gestionado al pedido: seleccioná, implementá o revisá la plataforma del core con garantías financieras, soporte, TCO, seguridad, capacidad y salida verificables. Conservá outbox/inbox y registrá evidencia y lo no evaluado."
+  short_description: "Rust, scratch, garantías y costos del core"
+  default_prompt: "Aplicá $adr-07-stack-gestionado al pedido: seleccioná, implementá o revisá Rust y las imágenes propias FROM scratch del core con garantías financieras, soporte, TCO, seguridad, capacidad y salida verificables. Conservá outbox/inbox; verificá enlace estático, TLS, probes y SIGTERM y registrá evidencia y lo no evaluado."
 policy:
   allow_implicit_invocation: true
