@@ -32,6 +32,7 @@ Consultar sólo los datos faltantes que cambien una decisión. Mientras tanto, p
 5. Para PCI, SWIFT, NIST, OWASP, COBIT y atestaciones, leer [normas y estándares de industria](references/estandares-industria.md).
 6. Para implementación o revisión técnica, aplicar [controles y criterios de aceptación](references/controles.md).
 7. Cuando el pedido afecte decisiones arquitectónicas, usar [core-adr-arquitectura](../core-adr-arquitectura/SKILL.md); para requisitos no funcionales y su medición, [core-nfr-calidad](../core-nfr-calidad/SKILL.md). Estos workflows complementan la aplicabilidad normativa; no convierten decisiones ni metas en obligaciones legales.
+8. Para mantener comportamiento y aceptación de funciones, usar [core-fr-requisitos](../core-fr-requisitos/SKILL.md) y revisar impacto fuente↔FR↔caso/evidencia↔NFR/ADR↔skill. Una revisión global de negocio/controles usa [core-project-review](../core-project-review/SKILL.md); preparar equipo e hitos usa [core-pilot-kickoff](../core-pilot-kickoff/SKILL.md). No ejecutar todos los workflows para un ajuste menor ni reutilizar evidencia de otra versión/perfil sin contrastar su alcance.
 
 Las referencias son autónomas para iniciar el trabajo. Si se está dentro del repositorio que originó este skill, ampliar con `docs/compliant.md` y `docs/market_analysis.md`; no requerir esos documentos para usar el skill en otro repositorio.
 

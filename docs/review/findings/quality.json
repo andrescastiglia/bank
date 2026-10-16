@@ -1,0 +1,707 @@
+{
+  "area": "quality",
+  "baseline_commit": "2e5d579103b94ab70c16d81debe73bf5840ba0c8",
+  "review_date": "2026-10-16",
+  "lenses": [
+    "QA funcional y oráculos",
+    "Trazabilidad documental y robustez del generador",
+    "Gobierno y regresión de skills"
+  ],
+  "documents_reviewed": [
+    ".agents/skills/adr-01-nucleo-modular/SKILL.md",
+    ".agents/skills/adr-01-nucleo-modular/agents/openai.yaml",
+    ".agents/skills/adr-02-autoridad-sql/SKILL.md",
+    ".agents/skills/adr-02-autoridad-sql/agents/openai.yaml",
+    ".agents/skills/adr-03-outbox-inbox/SKILL.md",
+    ".agents/skills/adr-03-outbox-inbox/agents/openai.yaml",
+    ".agents/skills/adr-04-alta-disponibilidad/SKILL.md",
+    ".agents/skills/adr-04-alta-disponibilidad/agents/openai.yaml",
+    ".agents/skills/adr-05-configuracion-versionada/SKILL.md",
+    ".agents/skills/adr-05-configuracion-versionada/agents/openai.yaml",
+    ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md",
+    ".agents/skills/adr-06-aislamiento-por-celda/agents/openai.yaml",
+    ".agents/skills/adr-07-stack-gestionado/SKILL.md",
+    ".agents/skills/adr-07-stack-gestionado/agents/openai.yaml",
+    ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+    ".agents/skills/adr-08-carga-inicial-masiva/agents/openai.yaml",
+    ".agents/skills/core-adr-arquitectura/SKILL.md",
+    ".agents/skills/core-adr-arquitectura/agents/openai.yaml",
+    ".agents/skills/core-adr-arquitectura/references/plantilla-adr.md",
+    ".agents/skills/core-bancario-argentina/SKILL.md",
+    ".agents/skills/core-bancario-argentina/agents/openai.yaml",
+    ".agents/skills/core-bancario-argentina/references/controles.md",
+    ".agents/skills/core-bancario-argentina/references/estandares-industria.md",
+    ".agents/skills/core-bancario-argentina/references/iso.md",
+    ".agents/skills/core-bancario-argentina/references/leyes.md",
+    ".agents/skills/core-bancario-argentina/references/metodologia.md",
+    ".agents/skills/core-bancario-argentina/references/regulaciones-bcra.md",
+    ".agents/skills/core-nfr-calidad/SKILL.md",
+    ".agents/skills/core-nfr-calidad/agents/openai.yaml",
+    ".agents/skills/core-nfr-calidad/references/plantilla-nfr.md",
+    ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+    ".agents/skills/nfr-01-integridad-financiera/agents/openai.yaml",
+    ".agents/skills/nfr-02-disponibilidad-recuperacion/SKILL.md",
+    ".agents/skills/nfr-02-disponibilidad-recuperacion/agents/openai.yaml",
+    ".agents/skills/nfr-03-latencia-capacidad/SKILL.md",
+    ".agents/skills/nfr-03-latencia-capacidad/agents/openai.yaml",
+    ".agents/skills/nfr-04-asincronia-durable/SKILL.md",
+    ".agents/skills/nfr-04-asincronia-durable/agents/openai.yaml",
+    ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+    ".agents/skills/nfr-05-seguridad-accesos/agents/openai.yaml",
+    ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+    ".agents/skills/nfr-06-privacidad-residencia-retencion/agents/openai.yaml",
+    ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md",
+    ".agents/skills/nfr-07-auditoria-observabilidad/agents/openai.yaml",
+    ".agents/skills/nfr-08-interoperabilidad-portabilidad/SKILL.md",
+    ".agents/skills/nfr-08-interoperabilidad-portabilidad/agents/openai.yaml",
+    ".agents/skills/nfr-09-mantenibilidad-configuracion/SKILL.md",
+    ".agents/skills/nfr-09-mantenibilidad-configuracion/agents/openai.yaml",
+    ".agents/skills/nfr-10-migracion-carga-masiva/SKILL.md",
+    ".agents/skills/nfr-10-migracion-carga-masiva/agents/openai.yaml",
+    ".agents/skills/nfr-11-calidad-datos-reportes/SKILL.md",
+    ".agents/skills/nfr-11-calidad-datos-reportes/agents/openai.yaml",
+    ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+    ".agents/skills/nfr-12-operabilidad-costos/agents/openai.yaml",
+    ".agents/skills/nfr-13-accesibilidad-experiencia/SKILL.md",
+    ".agents/skills/nfr-13-accesibilidad-experiencia/agents/openai.yaml",
+    "docs/README.md",
+    "docs/achitecture.md",
+    "docs/adr/ADR-01-nucleo-modular.md",
+    "docs/adr/ADR-02-autoridad-sql.md",
+    "docs/adr/ADR-03-outbox-inbox.md",
+    "docs/adr/ADR-04-alta-disponibilidad.md",
+    "docs/adr/ADR-05-configuracion-versionada.md",
+    "docs/adr/ADR-06-aislamiento-por-celda.md",
+    "docs/adr/ADR-07-stack-gestionado.md",
+    "docs/adr/ADR-08-carga-inicial-masiva.md",
+    "docs/adr/README.md",
+    "docs/compliant.md",
+    "docs/functional/01-entidades-perimetro.md",
+    "docs/functional/02-identidad-accesos.md",
+    "docs/functional/03-personas-clientes-kyc.md",
+    "docs/functional/04-productos-configuracion.md",
+    "docs/functional/05-contratos-documentos.md",
+    "docs/functional/06-cuentas-depositos.md",
+    "docs/functional/07-saldos-reservas-restricciones.md",
+    "docs/functional/08-ledger-contabilidad-cierres.md",
+    "docs/functional/09-originacion-administracion-credito.md",
+    "docs/functional/10-intereses-comisiones.md",
+    "docs/functional/11-garantias-avales.md",
+    "docs/functional/12-cobranzas-mora-recupero.md",
+    "docs/functional/13-pagos-transferencias.md",
+    "docs/functional/14-cheques-echeq-cedip.md",
+    "docs/functional/15-tarjetas-adquirencia.md",
+    "docs/functional/16-caja-sucursales-efectivo.md",
+    "docs/functional/17-tesoreria-liquidez.md",
+    "docs/functional/18-exterior-cambios-comercio.md",
+    "docs/functional/19-inversiones-custodia-fondos.md",
+    "docs/functional/20-prevencion-la-ft-fp.md",
+    "docs/functional/21-prevencion-fraude.md",
+    "docs/functional/22-conciliacion-excepciones.md",
+    "docs/functional/23-riesgos-prudencia-exposiciones.md",
+    "docs/functional/24-tributos-recaudaciones.md",
+    "docs/functional/25-reportes-localizacion.md",
+    "docs/functional/26-canales-atencion-usuarios.md",
+    "docs/functional/27-auditoria-privacidad-archivo.md",
+    "docs/functional/28-integraciones-eventos-trabajos.md",
+    "docs/functional/29-carga-inicial-migracion-salida.md",
+    "docs/functional/30-operacion-continuidad-terceros.md",
+    "docs/functional/31-gobierno-modelos-ia.md",
+    "docs/functional/32-corresponsalia-baas-plataformas.md",
+    "docs/functional/README.md",
+    "docs/functional/catalog.json",
+    "docs/functional/coverage.md",
+    "docs/functional/coverage_map.json",
+    "docs/functional/flows.md",
+    "docs/functional/scope.md",
+    "docs/functional/tools/build_catalog.py",
+    "docs/market_analysis.md",
+    "docs/nfr/NFR-01-integridad-financiera.md",
+    "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+    "docs/nfr/NFR-03-latencia-capacidad.md",
+    "docs/nfr/NFR-04-asincronia-durable.md",
+    "docs/nfr/NFR-05-seguridad-accesos.md",
+    "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+    "docs/nfr/NFR-07-auditoria-observabilidad.md",
+    "docs/nfr/NFR-08-interoperabilidad-portabilidad.md",
+    "docs/nfr/NFR-09-mantenibilidad-configuracion.md",
+    "docs/nfr/NFR-10-migracion-carga-masiva.md",
+    "docs/nfr/NFR-11-calidad-datos-reportes.md",
+    "docs/nfr/NFR-12-operabilidad-costos.md",
+    "docs/nfr/NFR-13-accesibilidad-experiencia.md",
+    "docs/nfr/README.md",
+    "docs/skills.md"
+  ],
+  "findings": [
+    {
+      "id": "REV-QA-01",
+      "title": "La extracción contigua contradice el retiro estable de FR",
+      "kind": "inconsistency",
+      "priority": "P1",
+      "trigger": "Antes de retirar, dividir o sustituir un requisito intermedio.",
+      "statement": "scope.md prescribe IDs estables/no reutilizables; extract_modules exige número contiguo según posición. Una copia sin FR-CFG-007 falla al conservar FR-CFG-008 y siguientes. No hay registro de IDs retirados.",
+      "evidence": [
+        {
+          "path": "docs/functional/scope.md",
+          "section": "Identidad, datos y contratos de operación",
+          "detail": "IDs estables y únicos; no reutilizar retirados.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/tools/build_catalog.py",
+          "section": "extract_modules",
+          "detail": "expected_id usa len(module[requirements]) + 1; mutación aislada de FR-CFG-007 rechazada por secuencia.",
+          "ids": [
+            "FR-CFG-007",
+            "FR-CFG-008"
+          ]
+        }
+      ],
+      "impact": "La evolución puede forzar renumeración/reutilización y romper trazabilidad histórica de pruebas y consumidores.",
+      "actions": [
+        "Registrar IDs activos/retirados y reemplazos con motivo/versión.",
+        "Validar pertenencia y unicidad sin exigir contigüidad."
+      ],
+      "acceptance": [
+        "Fixture de retiro intermedio conserva todos los demás IDs.",
+        "Reutilizar un ID retirado o dejar referencias activas sin resolución falla; catálogo conserva la historia."
+      ],
+      "owner_role": "Arquitectura de requisitos y responsable de herramientas documentales",
+      "dependencies": [
+        "Política de identidad FR y semántica de sustitución"
+      ],
+      "suggested_deliverables": [
+        "docs/functional/requirements_lifecycle.json",
+        "docs/functional/tools/test_catalog_validation.py"
+      ],
+      "skill_impact": [
+        "core-fr-requisitos (nuevo workflow recomendado)"
+      ]
+    },
+    {
+      "id": "REV-QA-02",
+      "title": "El 100 % referenciado no detecta pérdida semántica ni retiro del denominador manual",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de aprobar un cambio material y regenerar su cobertura.",
+      "statement": "En copias aisladas, cambiar conducta/aceptación de FR-COR-032 a consulta de hora conserva comprobación exitosa después de regenerar; quitar MKT-06 reduce seis necesidades a cinco y publica 5/5 sin decisión explícita. La advertencia semántica actual es correcta, pero no hay gate de cambio.",
+      "evidence": [
+        {
+          "path": "docs/functional/tools/build_catalog.py",
+          "section": "main y coverage_document",
+          "detail": "Se valida existencia de FR y se calcula cada mapa manual respecto de sus propias entradas actuales.",
+          "ids": [
+            "FR-COR-032"
+          ]
+        },
+        {
+          "path": "docs/functional/coverage_map.json",
+          "section": "market_needs / MKT-06",
+          "detail": "MKT-06 representa profundidad financiera y aceptación del piloto; retiro aislado regenera sin error.",
+          "ids": [
+            "FR-ENT-030",
+            "FR-OPS-025"
+          ]
+        },
+        {
+          "path": "docs/functional/coverage.md",
+          "section": "Revisión semántica y límites de la comprobación",
+          "detail": "Reconoce que IDs y artefactos no detectan toda contradicción semántica.",
+          "ids": []
+        }
+      ],
+      "impact": "Un porcentaje documental estable puede acompañar la pérdida de una prohibición o capacidad comercial material.",
+      "actions": [
+        "Versionar altas/retiros del inventario manual contra base anterior y registrar su decisión.",
+        "Mostrar diff de comportamiento, aceptación y relaciones con revisión semántica por riesgo antes de regenerar.",
+        "Mantener denominadores fechados 173/71/21/8 explícitos; cualquier ampliación requiere cambio de versión y alcance."
+      ],
+      "acceptance": [
+        "Retirar MKT-06 exige motivo/decisor y diff contra inventario previo.",
+        "Vaciar FR-COR-032 se marca como cambio material pendiente aunque la estructura sea válida.",
+        "La salida distingue consistencia estructural de aprobación semántica; no sustituye interpretación jurídica por automatismo."
+      ],
+      "owner_role": "Responsable de requisitos con Producto y revisor de dominio",
+      "dependencies": [
+        "Inventario versionado",
+        "Clasificación de materialidad y responsables de revisión"
+      ],
+      "suggested_deliverables": [
+        "docs/functional/change_manifest.json",
+        "docs/quality/semantic-review.md"
+      ],
+      "skill_impact": [
+        "core-fr-requisitos (nuevo workflow recomendado)",
+        "core-project-review (nuevo workflow recomendado)"
+      ]
+    },
+    {
+      "id": "REV-QA-03",
+      "title": "La comprobación funcional no valida los skills y metadatos que guían la implementación",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de promover cambios de workflows o utilizarlos como política del equipo.",
+      "statement": "Los 24 skills de la base tienen estructura útil y enlaces locales existentes. Sin embargo, romper el enlace del skill ADR-08 o quitar short_description y apuntar a skill inexistente en metadatos NFR-01 pasa --check sin regeneración, porque esos archivos no pertenecen a su alcance de validación.",
+      "evidence": [
+        {
+          "path": "docs/functional/tools/build_catalog.py",
+          "section": "main / source_paths y comprobación de enlaces",
+          "detail": "Sólo comprueba Markdown funcional y huellas seleccionadas; no incluye los 24 pares SKILL/openai.",
+          "ids": []
+        },
+        {
+          "path": ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+          "section": "Propósito y referencias",
+          "detail": "Enlace a ADR-08 correcto en base; mutación a archivo ausente no detectada.",
+          "ids": [
+            "ADR-08"
+          ]
+        },
+        {
+          "path": ".agents/skills/nfr-01-integridad-financiera/agents/openai.yaml",
+          "section": "interface",
+          "detail": "Campos correctos en base; metadato incompleto/prompt alterado no detectado.",
+          "ids": [
+            "NFR-01"
+          ]
+        }
+      ],
+      "impact": "Un workflow puede perder su fuente o activar una instrucción incoherente manteniendo verde la validación documental conocida.",
+      "actions": [
+        "Validar nombres/frontmatter, metadatos, enlaces, registro asociado y versiones de skills.",
+        "Agregar pocos casos positivos/negativos de selección y resultados, elegidos por riesgo.",
+        "No considerar validación YAML como prueba de comportamiento del agente."
+      ],
+      "acceptance": [
+        "Las dos mutaciones aisladas fallan el chequeo correspondiente y la base real lo supera.",
+        "Edición editorial sólo valida estructura; instrucción financiera modificada requiere regresión material sin ejecutar producción."
+      ],
+      "owner_role": "Responsable de plataforma de agentes y QA",
+      "dependencies": [
+        "Contrato de metadatos",
+        "Matriz de selección de workflows"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/skill-validation.md",
+        "docs/functional/tools/check_skills.py"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-adr-arquitectura/SKILL.md",
+        ".agents/skills/core-nfr-calidad/SKILL.md",
+        "core-project-review (nuevo workflow recomendado)"
+      ]
+    },
+    {
+      "id": "REV-QA-04",
+      "title": "Falta seleccionar el denominador de aceptación material del primer piloto",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de aceptar el piloto o comprometer su alcance de entrega; no bloquea análisis/desarrollo independiente.",
+      "statement": "La base distingue CREDITO/PAGOS alternativas y 1016 FR integrales; tiene preparación y expediente de release, pero no una selección concreta de perfil, casos obligatorios, criticidad, responsables y excepciones de la primera entrega. Los 24 flujos citan 219 FR distintos y no pretenden ser una suite exhaustiva.",
+      "evidence": [
+        {
+          "path": "docs/functional/scope.md",
+          "section": "Perfiles y activación",
+          "detail": "Etapas no posponen obligaciones del producto; rutas iniciales alternativas.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/01-entidades-perimetro.md",
+          "section": "FR-ENT-030",
+          "detail": "Lista de preparación funcional/NFR por perfil prevista, no instancia de piloto elegida.",
+          "ids": [
+            "FR-ENT-030"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-025",
+          "detail": "Expediente de release y QA independiente exigidos.",
+          "ids": [
+            "FR-OPS-025"
+          ]
+        },
+        {
+          "path": "docs/market_analysis.md",
+          "section": "6.2 y 12.2",
+          "detail": "Seleccionar ruta y demostrar invariantes/operación antes de ampliar.",
+          "ids": []
+        }
+      ],
+      "impact": "El equipo puede medir avance por amplitud documental y aceptar una demo sin probar la integridad/operación de la ruta realmente vendida.",
+      "actions": [
+        "Elegir ruta, perfil, productos/canales/rieles y responsables del piloto.",
+        "Crear matriz FR/criterio/caso/riesgo/oráculo/entorno/evidencia y gates no compensables por promedio.",
+        "Diferenciar ampliaciones pospuestas de controles obligatorios del alcance activo."
+      ],
+      "acceptance": [
+        "Todos los flujos financieros activos tienen integridad, autorización/restricción, incertidumbre, conciliación y recuperación verificables.",
+        "Un defecto material no se compensa con un porcentaje global de pruebas aprobadas.",
+        "No se exige implementar/probar las 1016 funciones para un piloto acotado."
+      ],
+      "owner_role": "Responsable de Producto y QA con funciones institucionales del cliente",
+      "dependencies": [
+        "Elección comercial/perfil de piloto",
+        "Contratos/rieles en alcance",
+        "Responsables de negocio y control"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/pilot-acceptance.md"
+      ],
+      "skill_impact": [
+        "core-pilot-kickoff (nuevo workflow recomendado)"
+      ]
+    },
+    {
+      "id": "REV-QA-05",
+      "title": "No hay todavía vectores monetarios y temporales con resultados independientes",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de aceptar corrección de cálculos o ejecutar el piloto financiero afectado.",
+      "statement": "FR y NFR exigen vectores aprobados y reproducción histórica; el repositorio aún no contiene fixtures entrada/salida revisadas. Esto es falta de evidencia/datos de aceptación, no un cálculo de producto demostrado incorrecto.",
+      "evidence": [
+        {
+          "path": "docs/functional/04-productos-configuracion.md",
+          "section": "FR-CFG-008",
+          "detail": "Asocia vectores a fórmula/producto/regla.",
+          "ids": [
+            "FR-CFG-008"
+          ]
+        },
+        {
+          "path": "docs/functional/10-intereses-comisiones.md",
+          "section": "Exactitud, CFT e identidad de devengo",
+          "detail": "Reglas monetarias y recalculo conservan resultado original y ajuste.",
+          "ids": [
+            "FR-INT-002",
+            "FR-INT-009",
+            "FR-INT-012",
+            "FR-INT-014"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-01-integridad-financiera.md",
+          "section": "NFR-01-C04",
+          "detail": "Cero diferencia respecto de vector histórico aprobado.",
+          "ids": [
+            "NFR-01-C04"
+          ]
+        },
+        {
+          "path": "docs/adr/ADR-05-configuracion-versionada.md",
+          "section": "Criterios de aceptación",
+          "detail": "Vigencia/conocimiento, calendarios y cambio de regla no duplican base.",
+          "ids": [
+            "ADR-05"
+          ]
+        }
+      ],
+      "impact": "Un test puede comparar el cálculo consigo mismo y pasar con CFT, redondeo, período o ajuste económicamente equivocados.",
+      "actions": [
+        "Crear datos sintéticos exactos con resultado revisado fuera del algoritmo bajo prueba.",
+        "Cubrir conceptos, redondeos, pago parcial, reverso, cambio de regla y devengo base estable.",
+        "Agregar zona de negocio, cierre/bisiesto/feriado, vigencia frente a conocimiento e índice ausente/corregido; variantes indexadas/forward sólo cuando se activen."
+      ],
+      "acceptance": [
+        "Cada fixture tiene versión, regla/fuente, valor esperado exacto y revisión independiente.",
+        "Cotización, contrato, asiento y reporte concuerdan sobre el mismo caso.",
+        "Fixtures distinguen UVA/UVI y no pagan nocional en forward por diferencias cuando esos productos entren al alcance."
+      ],
+      "owner_role": "Finanzas y QA de dominio con Ingeniería",
+      "dependencies": [
+        "Producto/fórmulas en alcance",
+        "Política de cálculo y calendario aprobados"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/golden-vectors.md",
+        "docs/quality/fixtures/financial-vectors.json"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+        ".agents/skills/adr-05-configuracion-versionada/SKILL.md",
+        "core-pilot-kickoff (nuevo workflow recomendado)"
+      ]
+    },
+    {
+      "id": "REV-QA-06",
+      "title": "Faltan historias de prueba controladas para carreras y estados externos",
+      "kind": "specification_gap",
+      "priority": "P0",
+      "trigger": "Antes de mover fondos en el piloto y antes de aceptar un adaptador financiero.",
+      "statement": "La documentación fija correctamente guardianes, identidad y estados ambiguos, pero aún no convierte las fronteras de caída y concurrencia en casos separados con intercalado reproducible y estados permitidos/prohibidos.",
+      "evidence": [
+        {
+          "path": "docs/adr/ADR-02-autoridad-sql.md",
+          "section": "Criterios de aceptación",
+          "detail": "Concurrencia de restricciones nuevas, débitos y límite de grupo.",
+          "ids": [
+            "ADR-02"
+          ]
+        },
+        {
+          "path": "docs/adr/ADR-03-outbox-inbox.md",
+          "section": "Criterios de aceptación",
+          "detail": "Commit/publish/inbox/offset, lease y respuesta incierta.",
+          "ids": [
+            "ADR-03"
+          ]
+        },
+        {
+          "path": "docs/functional/28-integraciones-eventos-trabajos.md",
+          "section": "Intención/callback y ambigüedad",
+          "detail": "Intención durable y resolución externa, no reenvío ciego.",
+          "ids": [
+            "FR-ASY-011",
+            "FR-ASY-012",
+            "FR-ASY-013",
+            "FR-ASY-014"
+          ]
+        },
+        {
+          "path": "docs/functional/02-identidad-accesos.md",
+          "section": "FR-IAM-007",
+          "detail": "Separación se expresa por principal; debe probarse independencia real con dos credenciales del mismo controlador.",
+          "ids": [
+            "FR-IAM-007"
+          ]
+        },
+        {
+          "path": "docs/functional/flows.md",
+          "section": "FL-04, FL-07 y FL-08",
+          "detail": "Carreras, incertidumbre y dos recaudos reales nombrados, sin fixtures de pasos/estados.",
+          "ids": []
+        }
+      ],
+      "impact": "Pruebas aleatorias sin control del intercalado pueden no observar dobles efectos, restricción omitida o falsa independencia de aprobadores.",
+      "actions": [
+        "Preparar modelo/fixture de estados y fallos por frontera con pasos y oráculo independiente.",
+        "Incluir bloqueo inicialmente inexistente, dos disposiciones, respuesta perdida, worker rezagado/callback tardío y dos recaudos distintos.",
+        "Probar creador/aprobador con dos credenciales de una persona o controlador; coordinar con el modelo de autorización.",
+        "Registrar contingencia concreta si el riel no tiene deduplicación, consulta o fencing."
+      ],
+      "acceptance": [
+        "Cada historia admite un orden válido, un efecto por hecho y fondos protegidos ante ambigüedad.",
+        "Repetir transporte no repite dinero; dos recaudos reales generan dos recibos y excedente correcto.",
+        "Decisión manual no se usa como oráculo de no envío/liquidación ni dos principales como prueba automática de independencia."
+      ],
+      "owner_role": "QA técnico con Ingeniería de núcleo/integraciones y Seguridad",
+      "dependencies": [
+        "Modelo autoritativo de restricciones/límites",
+        "Capacidades reales del riel",
+        "Modelo de sujetos y controladores independientes"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/concurrency-failure-matrix.md",
+        "docs/quality/fixtures/financial-histories.json"
+      ],
+      "skill_impact": [
+        ".agents/skills/adr-02-autoridad-sql/SKILL.md",
+        ".agents/skills/adr-03-outbox-inbox/SKILL.md",
+        ".agents/skills/nfr-05-seguridad-accesos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-QA-07",
+      "title": "La campaña de carga, bulk y recuperación no tiene perfil representativo aprobado",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de prometer capacidad, ventana de migración o recuperación y aceptar el corte afectado.",
+      "statement": "Existen metas propuestas y condiciones correctas para carga, bulk y DR; faltan ambiente/dataset, presupuestos degradados y campaña aprobada/ejecutada que los componga para un cliente. No se presenta el perfil hipotético de 250000 cuentas como benchmark real.",
+      "evidence": [
+        {
+          "path": "docs/nfr/NFR-03-latencia-capacidad.md",
+          "section": "NFR-03-C04/C05",
+          "detail": "Mezcla propuesta; presupuestos degradados pendientes.",
+          "ids": [
+            "NFR-03-C04",
+            "NFR-03-C05"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-10-migracion-carga-masiva.md",
+          "section": "Ventana, coexistencia y retorno",
+          "detail": "Total completo y SLO con sus denominadores.",
+          "ids": [
+            "NFR-10-C01",
+            "NFR-10-C07",
+            "NFR-10-C08"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+          "section": "Región y copia limpia",
+          "detail": "RPO observado y restauración/conciliación integral.",
+          "ids": [
+            "NFR-02-C04",
+            "NFR-02-C05",
+            "NFR-02-C06"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-013",
+          "detail": "Ensayos previstos sin ejecución acreditada.",
+          "ids": [
+            "FR-OPS-013"
+          ]
+        }
+      ],
+      "impact": "Capacidad o ventana comercial podrían calcularse con datos uniformes, COPY aislado o promoción DB sin restablecimiento real del servicio.",
+      "actions": [
+        "Definir volumen/historial, cuentas calientes, mezcla, backlog, topología, recursos y dependencias con BIA/perfil.",
+        "Componer carga/batch/pérdida de zona, bulk coexistente/corte/deltas/retorno, restauración SQL-broker y salida independiente.",
+        "Medir costos y controles activos; no inferir mensualidad de una muestra breve."
+      ],
+      "acceptance": [
+        "Resultados preservan carga ofrecida/completada, histogramas/errores, puntos durables, conciliación y costo.",
+        "Bulk incluye extracción, transferencia, carga, validación, aplicación, conciliación, corte y margen.",
+        "DR regional informa pérdida real y no promete RPO cero; no hay SLO contratado sin evidencia/limitación explícita."
+      ],
+      "owner_role": "QA de rendimiento y continuidad con Operaciones y cliente de diseño",
+      "dependencies": [
+        "BIA y perfil/objetivos aprobados",
+        "Entorno y llaves/países habilitados",
+        "Datos/rieles de ensayo"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/performance-recovery-campaign.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-02-disponibilidad-recuperacion/SKILL.md",
+        ".agents/skills/nfr-03-latencia-capacidad/SKILL.md",
+        ".agents/skills/nfr-10-migracion-carga-masiva/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-QA-08",
+      "title": "Falta identidad común de caso, corrida y evidencia preservada por versión",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de aceptar resultados de pruebas o reutilizarlos para una nueva versión.",
+      "statement": "Los documentos piden evidencia versionada y las salidas de skills son útiles, pero no existe aún un contrato común de case_id/run_id, fixture/oráculo, entorno, artefacto, revisión y causa de revalidación. El catálogo generado queda correctamente sin evaluar; no debe editarse como registro mutable de ejecuciones.",
+      "evidence": [
+        {
+          "path": "docs/functional/flows.md",
+          "section": "Condiciones de lectura y aceptación",
+          "detail": "Se solicitan versiones, esperado/observado, evidencia y decisiones, sin identidad de corrida común.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-025",
+          "detail": "Expediente release previsto.",
+          "ids": [
+            "FR-OPS-025"
+          ]
+        },
+        {
+          "path": ".agents/skills/core-nfr-calidad/SKILL.md",
+          "section": "Salida y estados",
+          "detail": "Tabla por criterio, no esquema compartido de evidencias/corridas.",
+          "ids": [
+            "NFR-09-C01"
+          ]
+        },
+        {
+          "path": "docs/functional/catalog.json",
+          "section": "requirements",
+          "detail": "Estado not_evaluated generado; no registro separado de ejecución.",
+          "ids": []
+        }
+      ],
+      "impact": "Una aprobación podría reutilizar evidencia de otra versión o perder el vínculo con datos/oráculo, impidiendo reproducir y revisar el resultado.",
+      "actions": [
+        "Definir registro separado con caso, FR/NFR/versiones, fixture/oráculo, corrida, entorno/digests y artefactos clasificados.",
+        "Conservar fallos/resultados previos y revisión/decisión con disparadores de revalidación.",
+        "Integrar referencias al catálogo sin reescribir sus estados generados como fuente manual."
+      ],
+      "acceptance": [
+        "Otra persona reconstruye datos, esperado, observado y versión probada.",
+        "Regenerar catálogo no elimina resultados y cambiar significado invalida evidencia incompatible.",
+        "Evidencia sensible tiene permisos, sanitización y conservación por categoría."
+      ],
+      "owner_role": "QA y responsable de evidencia con Seguridad/Auditoría",
+      "dependencies": [
+        "Contrato de versiones y clasificación de evidencia",
+        "Responsables de revisión"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/evidence-contract.md",
+        "docs/quality/evidence-index.json"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-nfr-calidad/SKILL.md",
+        "core-project-review (nuevo workflow recomendado)",
+        "core-pilot-kickoff (nuevo workflow recomendado)"
+      ]
+    },
+    {
+      "id": "REV-QA-09",
+      "title": "Los coordinadores no incluyen la biblioteca FR en propagación y regresión",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de mantener nuevas decisiones/reglas o ampliar productos con agentes.",
+      "statement": "Los coordinadores ADR/NFR actualizan arquitectura y registros/skills pero aún no enlazan la biblioteca FR posterior. El skill ADR-08 enumera medición extracción a corte sin explicitar transferencia/margen de NFR-10-C01, ejemplo de listas copiadas que pueden divergir.",
+      "evidence": [
+        {
+          "path": ".agents/skills/core-adr-arquitectura/SKILL.md",
+          "section": "Procedimiento 8",
+          "detail": "Propaga a arquitectura/índice/NFR/skills, sin análisis FR/casos.",
+          "ids": []
+        },
+        {
+          "path": ".agents/skills/core-nfr-calidad/SKILL.md",
+          "section": "Procedimiento 9",
+          "detail": "Historia/propagación sin biblioteca FR explícita.",
+          "ids": []
+        },
+        {
+          "path": ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+          "section": "Invariantes y aceptación",
+          "detail": "Lista de medición no explicita transferencia/margen.",
+          "ids": [
+            "ADR-08"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-10-migracion-carga-masiva.md",
+          "section": "NFR-10-C01",
+          "detail": "Ventana completa sí incluye transferencia y margen.",
+          "ids": [
+            "NFR-10-C01"
+          ]
+        }
+      ],
+      "impact": "Un cambio correctamente documentado en ADR/NFR puede dejar conducta, aceptación o workflow asociado desactualizados.",
+      "actions": [
+        "Incorporar cadena inversa cambio-FR-NFR/ADR-caso/evidencia-skill en coordinadores.",
+        "Reutilizar tres workflows: revisión integral, ciclo FR y kickoff/readiness de piloto; no uno por rol o FR.",
+        "Seleccionar regresión por materialidad: regla/golden; dinero-concurrencia-duplicados; bulk/DR-PREPARED-externos; datos/país/ROS; editorial-estructura.",
+        "Obtener fases/métricas desde la fuente NFR para evitar reducciones accidentales por copias."
+      ],
+      "acceptance": [
+        "Cambio de regla señala FR/casos afectados y mantiene evidencia histórica.",
+        "Cambio financiero selecciona escenarios materiales; editorial no genera cargas bancarias.",
+        "Workflow documental no ejecuta producción y pedido implementable realiza el cambio autorizado.",
+        "Los nuevos coordinadores delegan atributos/decisiones al skill existente y no duplican 24 checklists."
+      ],
+      "owner_role": "Arquitectura de requisitos y plataforma de agentes con QA",
+      "dependencies": [
+        "Gobierno del cambio semántico",
+        "Registro de evidencia",
+        "Elección de piloto"
+      ],
+      "suggested_deliverables": [
+        "docs/quality/change-regression-policy.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-adr-arquitectura/SKILL.md",
+        ".agents/skills/core-nfr-calidad/SKILL.md",
+        ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+        "core-project-review (nuevo workflow recomendado)",
+        "core-fr-requisitos (nuevo workflow recomendado)",
+        "core-pilot-kickoff (nuevo workflow recomendado)"
+      ]
+    }
+  ]
+}

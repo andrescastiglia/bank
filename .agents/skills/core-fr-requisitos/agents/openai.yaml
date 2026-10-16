@@ -1,0 +1,6 @@
+interface:
+  display_name: "Requisitos funcionales del core"
+  short_description: "FR estables, aceptación y trazabilidad verificable"
+  default_prompt: "Creá o revisá los requisitos funcionales afectados por este cambio; conservá IDs, ámbito y fuentes, definí excepciones y casos con oráculos, y propagá el impacto a módulos, NFR, ADR y evidencia sin confundir documentación con implementación."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,639 @@
+{
+  "area": "accounting",
+  "baseline_commit": "2e5d579103b94ab70c16d81debe73bf5840ba0c8",
+  "review_date": "2026-10-16",
+  "lenses": [
+    "Funciones contables/fiscales del core por sujeto y perfil",
+    "Empresa proveedora de software: ingresos, impuestos, cobros, costos y caja"
+  ],
+  "documents_reviewed": [
+    "docs/market_analysis.md",
+    "docs/compliant.md",
+    "docs/achitecture.md",
+    "docs/functional/README.md",
+    "docs/functional/scope.md",
+    "docs/functional/05-contratos-documentos.md",
+    "docs/functional/06-cuentas-depositos.md",
+    "docs/functional/08-ledger-contabilidad-cierres.md",
+    "docs/functional/09-originacion-administracion-credito.md",
+    "docs/functional/10-intereses-comisiones.md",
+    "docs/functional/12-cobranzas-mora-recupero.md",
+    "docs/functional/22-conciliacion-excepciones.md",
+    "docs/functional/23-riesgos-prudencia-exposiciones.md",
+    "docs/functional/24-tributos-recaudaciones.md",
+    "docs/functional/25-reportes-localizacion.md",
+    "docs/functional/30-operacion-continuidad-terceros.md",
+    "docs/nfr/NFR-01-integridad-financiera.md",
+    "docs/nfr/NFR-11-calidad-datos-reportes.md",
+    "docs/nfr/NFR-12-operabilidad-costos.md",
+    ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+    ".agents/skills/nfr-11-calidad-datos-reportes/SKILL.md",
+    ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+    ".agents/skills/adr-05-configuracion-versionada/SKILL.md",
+    ".agents/skills/core-bancario-argentina/SKILL.md",
+    ".agents/skills/core-bancario-argentina/references/controles.md"
+  ],
+  "findings": [
+    {
+      "id": "REV-ACC-01",
+      "title": "Concretar el paquete contable y los oráculos del primer perfil",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de aceptar el diseño financiero del piloto elegido o comprometer una migración de saldos.",
+      "statement": "LED/INT/NFR ya exigen plan, mapeos, vectores y aprobación; arquitectura §19 los declara pendientes. El repositorio no aporta todavía un catálogo contable del perfil ni valores esperados independientes. Es una decisión/entregable reconocido como pendiente, no ausencia de partida doble o de control propuesto.",
+      "evidence": [
+        {
+          "path": "docs/achitecture.md",
+          "section": "§19 — Autoridad y modelo contable",
+          "detail": "Se solicita catálogo de asientos, reservas, cuentas puente, límites y definiciones de saldo.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+          "section": "FR-LED-001, FR-LED-002, FR-LED-006",
+          "detail": "Plan y mapeos versionados; vector aprobado requerido para exactitud.",
+          "ids": [
+            "FR-LED-001",
+            "FR-LED-002",
+            "FR-LED-006"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-01-integridad-financiera.md",
+          "section": "NFR-01-C04; Validación y evidencia",
+          "detail": "Cero diferencia contra vector histórico aprobado y muestras sintéticas.",
+          "ids": [
+            "NFR-01-C04"
+          ]
+        }
+      ],
+      "impact": "Un ledger puede balancear y aun así imputar principal, interés, IVA, tránsito o cobranza al concepto equivocado; sin oráculo profesional la prueba puede repetir el mismo error del código.",
+      "actions": [
+        "Elegir entidad/perfil y confeccionar matriz evento económico → contrato/concepto → débito/crédito/dimensiones → saldo → impuesto → reporte.",
+        "Crear casos sintéticos con resultados calculados independientemente, fuente/política, responsable y aprobación; incluir pago parcial, mora, precancelación, reverso, refinanciación, migración y cierre."
+      ],
+      "acceptance": [
+        "El paquete del perfil cubre cada evento monetario habilitado, identifica cuentas/categorías y demuestra ecuación de saldos por titular y moneda.",
+        "Cada vector tiene insumos, fórmula, calendario, redondeo, asientos y salida esperada, con revisor distinto del implementador; su aprobación no se presenta como prueba ejecutada."
+      ],
+      "owner_role": "Finanzas/Contabilidad de la entidad de diseño y líder de dominio financiero",
+      "dependencies": [
+        "Perfil comercial inicial",
+        "Políticas fiscales/contables aplicables",
+        "Catálogo de productos y formatos del cliente"
+      ],
+      "suggested_deliverables": [
+        "docs/accounting/initial-profile-posting-matrix.md",
+        "docs/accounting/financial-vectors.json"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+        ".agents/skills/adr-05-configuracion-versionada/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-ACC-02",
+      "title": "Definir medición y presentación para el prestamista no bancario",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de prometer que la ruta inicial PNFC entrega contabilidad financiera completa o estados de ese sujeto.",
+      "statement": "La ruta PNFC/CREDITO dispone de auxiliares y movimientos; los FR de adopción contable, valuación, inflación y publicación completos están acotados principalmente a EF/BANCA. Falta explicitar la interfaz y el paquete de política/presentación para un operador no EF, o limitar contractualmente el producto a submayor y exportación a su contabilidad externa.",
+      "evidence": [
+        {
+          "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+          "section": "Propósito; FR-LED-022, FR-LED-025, FR-LED-026",
+          "detail": "PNFC/CREDITO aparece en alcance; medición NIIF BCRA, FX e inflación se especifican para EF.",
+          "ids": [
+            "FR-LED-022",
+            "FR-LED-025",
+            "FR-LED-026"
+          ]
+        },
+        {
+          "path": "docs/functional/25-reportes-localizacion.md",
+          "section": "FR-RPT-017",
+          "detail": "Estados/notas de publicación están definidos para EF bajo NIIF adoptadas por BCRA.",
+          "ids": [
+            "FR-RPT-017"
+          ]
+        },
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§1 y §6.2",
+          "detail": "Prestamistas y cartera acotada son una ruta de entrada comercial.",
+          "ids": []
+        }
+      ],
+      "impact": "Un comprador PNFC podría interpretar un submayor reconciliado como una solución de estados financieros, y recibir reglas bancarias que no corresponden a su marco.",
+      "actions": [
+        "Precisar qué libro/auxiliar entrega el core y qué libro/ERP mantiene la contabilidad legal del PNFC.",
+        "Registrar marco, política de reconocimiento/medición/presentación y mapeo externo efectivos del sujeto; no presumir NIIF BCRA ni un marco profesional particular."
+      ],
+      "acceptance": [
+        "La ficha PNFC distingue operación, contabilidad financiera, reporting y responsables; cada salida prometida tiene mapeo y caso de conciliación.",
+        "Un caso PNFC y uno EF del mismo producto seleccionan sus políticas propias sin herencia automática; los servicios excluidos quedan expresos en oferta."
+      ],
+      "owner_role": "Producto y Contador del cliente PNFC, con Finanzas del proveedor",
+      "dependencies": [
+        "Sujeto y marco contable concreto",
+        "Alcance de servicing frente a contabilidad completa",
+        "Integración ERP del cliente"
+      ],
+      "suggested_deliverables": [
+        "docs/accounting/non-bank-accounting-profile.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-bancario-argentina/SKILL.md",
+        ".agents/skills/nfr-11-calidad-datos-reportes/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-ACC-03",
+      "title": "Resolver la diferencia entre costo contractual y rendimiento contable",
+      "kind": "missing_decision",
+      "priority": "P1",
+      "trigger": "Antes de aceptar cálculos contables de un producto con comisiones iniciales, costos de originación, modificación o medición por costo amortizado cuando aplique.",
+      "statement": "INT define TNA/TEA/CFT, cargos y separación de obligación contractual/medición; LED remite a política aprobada. No está seleccionado el tratamiento de comisión/costo inicial, rendimiento contable, diferimiento y modificación para un producto real. El CFT del cliente y el ingreso devengado del acreedor no deben equipararse por compartir flujos.",
+      "evidence": [
+        {
+          "path": "docs/functional/10-intereses-comisiones.md",
+          "section": "FR-INT-009, FR-INT-019, FR-INT-020",
+          "detail": "CFT y capitalización/suspensión se condicionan a regla; refinanciación no decide baja contable.",
+          "ids": [
+            "FR-INT-009",
+            "FR-INT-019",
+            "FR-INT-020"
+          ]
+        },
+        {
+          "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+          "section": "FR-LED-022, FR-LED-024",
+          "detail": "Política de reconocimiento/medición y evaluación de modificación/baja permanecen institucionales.",
+          "ids": [
+            "FR-LED-022",
+            "FR-LED-024"
+          ]
+        },
+        {
+          "path": "docs/compliant.md",
+          "section": "BCRA-F18; Precisiones contables",
+          "detail": "Adopción BCRA con excepciones y transiciones, sin NIIF puras universales.",
+          "ids": [
+            "BCRA-F18"
+          ]
+        }
+      ],
+      "impact": "Reconocer una comisión cobrada como ingreso íntegro puede distorsionar resultado, valor del activo y conciliación de cuotas si la política efectiva requiere otro tratamiento.",
+      "actions": [
+        "Completar ficha por concepto: obligación contractual, base de cálculo al cliente, reconocimiento contable, eventual diferimiento/amortización e incidencia tributaria.",
+        "Cuando el marco efectivo lo exija, especificar motor o integración para interés efectivo/costo amortizado y revisión de modificaciones; conservar puentes a los flujos contractuales."
+      ],
+      "acceptance": [
+        "Un caso con cargo inicial y otro refinanciado muestran flujos, CFT, cobros, ingreso/medición y asientos diferenciados con política aprobada.",
+        "La reproducción posterior conserva saldos diferidos/medición y reglas originales; no se declara universal una metodología no determinada para el sujeto."
+      ],
+      "owner_role": "Finanzas/Contabilidad y Producto, con Fiscal y Riesgos",
+      "dependencies": [
+        "Marco y producto efectivos",
+        "Paquete contable inicial",
+        "Política de modificación/baja de activos"
+      ],
+      "suggested_deliverables": [
+        "docs/accounting/contractual-and-accounting-yield.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-01-integridad-financiera/SKILL.md",
+        ".agents/skills/adr-05-configuracion-versionada/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-ACC-04",
+      "title": "Obtener evidencia integral de cierre y del puente contable-prudencial",
+      "kind": "evidence_gap",
+      "priority": "P1",
+      "trigger": "Antes de declarar aceptado un cierre piloto, una cifra prudencial o un reporte de producción.",
+      "statement": "La especificación sí separa ECL/previsión regulatoria, fuentes completas, ajustes y aceptación del receptor. No hay corrida implementada acreditada ni paquete observado que atraviese contrato, devengo, cobro, clasificación, mayor, prudencia y reporte. Es falta de evidencia operativa del diseño propuesto, no un control omitido.",
+      "evidence": [
+        {
+          "path": "docs/functional/23-riesgos-prudencia-exposiciones.md",
+          "section": "FR-RSK-014, FR-RSK-015, FR-RSK-016, FR-RSK-034",
+          "detail": "Previsión y ECL separados y dataset desde corte completo.",
+          "ids": [
+            "FR-RSK-014",
+            "FR-RSK-015",
+            "FR-RSK-016",
+            "FR-RSK-034"
+          ]
+        },
+        {
+          "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+          "section": "FR-LED-017, FR-LED-019, FR-LED-023",
+          "detail": "Cierre, conciliación y bases contable/prudencial diferenciadas están propuestos.",
+          "ids": [
+            "FR-LED-017",
+            "FR-LED-019",
+            "FR-LED-023"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-11-calidad-datos-reportes.md",
+          "section": "Estado; NFR-11-C01, NFR-11-C02, NFR-11-C04",
+          "detail": "Metas no medidas: completitud, diferencias y aceptación.",
+          "ids": [
+            "NFR-11-C01",
+            "NFR-11-C02",
+            "NFR-11-C04"
+          ]
+        }
+      ],
+      "impact": "Un cuadre técnico no prueba cifra prudencial correcta, población completa ni presentación aceptada; una diferencia puede reaparecer después de refinanciar, castigar o rectificar.",
+      "actions": [
+        "Preparar guion integrado y, al existir prototipo/entorno, ejecutar cierre con saldos iniciales, cartera, intereses, impuestos, mora, provisiones, recupero y reporte del perfil.",
+        "Conservar puente por posición entre valor contractual, medición contable, previsión regulatoria y base prudencial, con fuentes/exclusiones explicadas y revisión independiente."
+      ],
+      "acceptance": [
+        "Paquete esperado/observado versionado concilia por entidad, titular, moneda y concepto; fuente faltante deja cierre pendiente.",
+        "Se demuestra rectificación/reapertura sin reemplazo silencioso y estados recibido/validado/aceptado separados; mientras no se ejecute permanece no evaluado."
+      ],
+      "owner_role": "Finanzas y QA financiero, con Riesgos, Fiscal y responsable de RPT",
+      "dependencies": [
+        "Prototipo y entorno de prueba",
+        "Oráculos aprobados",
+        "Perímetro y diseños regulatorios efectivos"
+      ],
+      "suggested_deliverables": [
+        "docs/accounting/integrated-close-evidence-plan.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-11-calidad-datos-reportes/SKILL.md",
+        ".agents/skills/nfr-01-integridad-financiera/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-ACC-05",
+      "title": "Determinar el perfil fiscal propio de la empresa proveedora",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de emitir la primera factura, presentar una oferta tributariamente cerrada o contratar servicios exteriores con impacto fiscal.",
+      "statement": "La documentación fiscal se concentra en operadores financieros y expresamente deja fuera de la configuración genérica la facturación del proveedor, IIBB propio y exterior. No se aportan sujeto, inscripción, actividad, domicilios/jurisdicciones, forma jurídica ni documentación fiscal del proveedor; no se puede concluir su tratamiento ni que esté al día.",
+      "evidence": [
+        {
+          "path": "docs/compliant.md",
+          "section": "Impuestos; Fuera de una configuración genérica",
+          "detail": "Facturación operador/proveedor, Sellos, IIBB propio y beneficiarios del exterior requieren delimitación.",
+          "ids": [
+            "TAX-03",
+            "TAX-04",
+            "TAX-09"
+          ]
+        },
+        {
+          "path": "docs/functional/24-tributos-recaudaciones.md",
+          "section": "FR-TAX-030; Dependencias y validación pendiente",
+          "detail": "Regímenes locales/especiales se remiten a regla/dictamen efectivos; designaciones/jurisdicciones siguen pendientes.",
+          "ids": [
+            "FR-TAX-030"
+          ]
+        },
+        {
+          "path": "docs/functional/scope.md",
+          "section": "Perfiles y activación — PROVEEDOR",
+          "detail": "Perfil tecnológico y contractual no identifica una situación fiscal concreta.",
+          "ids": []
+        }
+      ],
+      "impact": "Precio neto, comprobante, percepción/retención, costo de compras y obligación provincial pueden presupuestarse de manera incorrecta si se confunde tributo del core con tributo de su fabricante.",
+      "actions": [
+        "Abrir legajo fiscal empresarial mínimo con sujeto, actividad, forma jurídica, jurisdicciones y evidencia fechada; completar matriz nacional/provincial/municipal sin presumir inscripciones.",
+        "Separar rol de agente de retención del cliente financiero, impuestos propios del proveedor y retenciones sufridas; validar normas vigentes sólo una vez determinado el sujeto/período.",
+        "Si hay cliente/proveedor exterior, documentar residencia, prestación, utilización, moneda y nexo para evaluar exportación/importación de servicios y requisitos aplicables; no presumir exportación por facturar en USD."
+      ],
+      "acceptance": [
+        "Contador/Legal registran aplicable, condicional o no aplicable fundado por tributo/régimen y jurisdicción, con fuente efectiva y documentos pendientes.",
+        "Obligación, determinación, declaración, pago, imputación y estado oficial quedan separados; los no acreditados figuran pendientes, sin afirmar cumplimiento."
+      ],
+      "owner_role": "Contador del proveedor y representante/administración de la sociedad, con Legal para exterior",
+      "dependencies": [
+        "Identidad y actividad del proveedor",
+        "Localización real de operaciones/clientes/servicios",
+        "Documentos fiscales autorizados"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/tax-and-accounting-perimeter.md"
+      ],
+      "skill_impact": [
+        "Workflow nuevo recomendado: revisión fiscal empresarial del proveedor, separado del core financiero"
+      ]
+    },
+    {
+      "id": "REV-ACC-06",
+      "title": "Especificar medición de consumo y facturación B2B del proveedor",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de vender una suscripción por cuenta, contrato o consumo y liquidar su primer período.",
+      "statement": "Mercado pide definir unidades cobrables, mínimos/bandas y simulador de factura; OPS mide costo por unidad técnica. El catálogo no desarrolla un ciclo propio del proveedor que concilie contrato comercial, consumo cobrable, cierre de factura y comprobante fiscal. TAX-030 menciona facturación en forma condicional, sin ese contrato operativo.",
+      "evidence": [
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§8.1; §12.1",
+          "detail": "Se distinguen cuentas/contratos y reintentos/rechazos; se recomienda simulador de factura y consumo trazable.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-027",
+          "detail": "Calcula costo técnico y de servicio; no define qué consumo se factura al comprador.",
+          "ids": [
+            "FR-OPS-027"
+          ]
+        },
+        {
+          "path": "docs/functional/24-tributos-recaudaciones.md",
+          "section": "FR-TAX-030",
+          "detail": "Facturación aplicable remite a definición por régimen.",
+          "ids": [
+            "FR-TAX-030"
+          ]
+        }
+      ],
+      "impact": "Duplicados técnicos, cuentas inactivas o cambio de tarifa pueden incrementar la factura sin base contractual o impedir reproducir un ingreso.",
+      "actions": [
+        "Especificar workflow B2B o integración con sistema de facturación/ERP: contrato/tarifa, identidad del evento cobrable, bandas/mínimos, moneda/indexación, corte, validación, factura y nota correctiva.",
+        "Definir tratamiento de retries, rechazos, consultas, reversos, sandbox, promociones y créditos de servicio; no reutilizar automáticamente el ledger de clientes para la caja propia del proveedor."
+      ],
+      "acceptance": [
+        "Un lote sintético con reintentos, cuenta cerrada, cambio de banda y corrección tardía genera unidades e importe reproducibles desde contrato y fuentes.",
+        "Simulador, factura propuesta y consumo conciliado coinciden; emisión fiscal se efectúa sólo por interfaz/proceso efectivo y sujeto habilitado."
+      ],
+      "owner_role": "Finanzas/Administración comercial del proveedor y Producto",
+      "dependencies": [
+        "Contrato/tarifario comercial",
+        "Perfil fiscal empresarial",
+        "Fuente independiente de consumo cobrable"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/billing-metering-and-invoicing.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+        "Workflow nuevo recomendado: administración comercial del proveedor"
+      ]
+    },
+    {
+      "id": "REV-ACC-07",
+      "title": "Separar ingreso devengado, facturación y cobro de contratos de software",
+      "kind": "missing_decision",
+      "priority": "P1",
+      "trigger": "Antes de aprobar presupuesto o estados del proveedor con diagnósticos, pilotos, implementación y suscripción.",
+      "statement": "Mercado separa ARR/ACV de implementación y advierte que no equivalen a ingreso/caja. No hay política empresarial de reconocimiento para anticipos, hitos, aceptación del cliente, soporte, variable por consumo, descuentos o créditos SLA. La expresión ingreso de implementación del modelo no resuelve cuándo se devenga contablemente.",
+      "evidence": [
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§7.1, §7.2 y §12.1",
+          "detail": "ARR de salida, cobro único e hitos de implementación se distinguen; su calendarización se deja pendiente.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/05-contratos-documentos.md",
+          "section": "Propósito; FR-CON-003, FR-CON-018",
+          "detail": "CON conserva contrato financiero y versión económica, no política de ingresos del contrato de venta de software.",
+          "ids": [
+            "FR-CON-003",
+            "FR-CON-018"
+          ]
+        }
+      ],
+      "impact": "Un anticipo o ARR de salida tratado como ingreso inmediato sobreestima rentabilidad y oculta obligaciones de implementación/soporte pendientes.",
+      "actions": [
+        "Crear matriz de contratos del proveedor que separe cobros/anticipos, facturas, prestaciones/hitos, aceptación, devengo e ingresos diferidos cuando corresponda al marco efectivo.",
+        "Asignar precio/criterio de medición a diagnóstico, piloto, implementación, licencia/suscripción, mantenimiento y consumo; resolver principal/agente para servicios de terceros si corresponde."
+      ],
+      "acceptance": [
+        "Un contrato sintético con anticipo, aceptación diferida y suscripción muestra tres cronologías reconciliadas: ingreso, facturación y caja.",
+        "Contador documenta marco y juicio aplicado sin imponer NIIF 15 a un sujeto no determinado; descuentos/bonificaciones quedan vinculados a su período/contrato."
+      ],
+      "owner_role": "Contador y Dirección financiera del proveedor, con Comercial y Legal",
+      "dependencies": [
+        "Marco contable empresarial",
+        "Modelo contractual y evidencia de aceptación",
+        "Tarifario y política de créditos comerciales"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/revenue-recognition-policy.md"
+      ],
+      "skill_impact": [
+        "Workflow nuevo recomendado: cierre contable de ingresos del proveedor"
+      ]
+    },
+    {
+      "id": "REV-ACC-08",
+      "title": "Conciliar cobros netos y retenciones sufridas del proveedor",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de cobrar facturas propias de bancos/PSP u otros clientes que descuenten retenciones, comisiones o diferencias de cambio.",
+      "statement": "TAX define funciones de agente que retiene a terceros y REC concilia flujos financieros del producto. No se especifica la cuenta por cobrar empresarial del proveedor con factura bruta, transferencia neta, certificados de retención sufrida, notas de crédito, diferencias y crédito tributario propio.",
+      "evidence": [
+        {
+          "path": "docs/functional/24-tributos-recaudaciones.md",
+          "section": "FR-TAX-011, FR-TAX-013, FR-TAX-018",
+          "detail": "Retener, emitir certificado y liquidar obligación del agente están previstos.",
+          "ids": [
+            "FR-TAX-011",
+            "FR-TAX-013",
+            "FR-TAX-018"
+          ]
+        },
+        {
+          "path": "docs/functional/22-conciliacion-excepciones.md",
+          "section": "FR-REC-019; Propósito",
+          "detail": "Conciliación de régimen/comisiones/certificados del producto; no es un submayor de facturas propias del fabricante.",
+          "ids": [
+            "FR-REC-019"
+          ]
+        },
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§12.3 — Economía",
+          "detail": "Incluye caja y demora de cobro como indicadores del proveedor.",
+          "ids": []
+        }
+      ],
+      "impact": "Registrar sólo el depósito neto como venta subestima ingresos o da de baja saldos incorrectos; certificado faltante puede dejar crédito fiscal sin soporte o duplicarlo.",
+      "actions": [
+        "Definir workflow en administración/ERP del proveedor para imputación de cobro parcial, certificado sufrido, comisión bancaria y diferencia en moneda, por factura y tributo/jurisdicción.",
+        "Conciliar bruto facturado con neto bancario, retenciones/percepciones acreditables y saldo pendiente; validar autenticidad/período de certificados y llevar excepciones."
+      ],
+      "acceptance": [
+        "Una factura cobrada neta de deducciones concilia ingreso, cuenta por cobrar, banco, gasto y crédito fiscal según política sin tratar todo descuento como gasto ni toda retención como pago definitivo.",
+        "Pago/certificado duplicado no extingue dos veces saldo ni crea doble crédito; faltante conserva responsable y estado pendiente."
+      ],
+      "owner_role": "Tesorería/Administración y Contador del proveedor",
+      "dependencies": [
+        "Facturación B2B",
+        "Regímenes de retenciones sufridas aplicables",
+        "Extractos/certificados autorizados"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/receivables-and-withholding-reconciliation.md"
+      ],
+      "skill_impact": [
+        "Workflow nuevo recomendado: conciliación de ventas, bancos y créditos fiscales propios"
+      ]
+    },
+    {
+      "id": "REV-ACC-09",
+      "title": "Resolver costeo por cliente y política de desarrollo capitalizable",
+      "kind": "missing_decision",
+      "priority": "P1",
+      "trigger": "Antes de fijar margen/precio sostenible o utilizar un presupuesto de desarrollo como valor de activo.",
+      "statement": "NFR-12/OPS ya exigen costo por celda y fuentes; mercado distingue producto común/integración y advierte que inversión frente a gasto necesita análisis. Faltan reglas de imputación de horas/costos comunes, ociosidad, implementación, soporte y evolución, y política del marco propio para capitalizar/gastar y eventualmente amortizar/deteriorar desarrollo.",
+      "evidence": [
+        {
+          "path": "docs/nfr/NFR-12-operabilidad-costos.md",
+          "section": "NFR-12-C03, NFR-12-C04",
+          "detail": "Costos mensuales y contraste con presupuesto están propuestos, sin medición.",
+          "ids": [
+            "NFR-12-C03",
+            "NFR-12-C04"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-027, FR-OPS-028",
+          "detail": "Incluye componentes de servicio/capacidad; no fija política contable ni bases de reparto.",
+          "ids": [
+            "FR-OPS-027",
+            "FR-OPS-028"
+          ]
+        },
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§7.3, §8.3 y §12.1",
+          "detail": "Evitar doble conteo de personas; inversión/gasto requiere análisis; producto común e integración separados.",
+          "ids": []
+        }
+      ],
+      "impact": "Puede aparentar margen por trasladar soporte a desarrollo o sobrevalorar un activo; el mismo personal/costo puede contarse en proyecto y plataforma.",
+      "actions": [
+        "Definir centros de costo y bases verificables de reparto entre producto, cliente, implantación, operación y administración; incluir costos compartidos y capacidad ociosa explícitos.",
+        "Aprobar política de gasto/activo y costos elegibles bajo marco real, con evidencias de fase, horas, entregables y revisión posterior; no inferir capitalización por llamarlo desarrollo propio.",
+        "Separar impuestos recuperables de costos no recuperables y de efectos transitorios de caja en cada escenario."
+      ],
+      "acceptance": [
+        "Una muestra de horas/facturas se imputa una vez y concilia al mayor/presupuesto; margen por cliente mantiene bases/moneda y muestra subsidios cruzados.",
+        "Cada importe activado tiene fundamento y soporte; lo no elegible se trata según política, y presupuesto de inversión no se confunde con activo contable."
+      ],
+      "owner_role": "Dirección financiera/Contador del proveedor y líderes de Entrega/Operaciones",
+      "dependencies": [
+        "Marco contable empresarial",
+        "Registro de horas/consumo y contratos",
+        "Tratamiento fiscal de compras"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/cost-allocation-and-development-accounting.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-ACC-10",
+      "title": "Definir moneda e inflación del negocio proveedor por separado del módulo bancario",
+      "kind": "missing_decision",
+      "priority": "P1",
+      "trigger": "Antes de consolidar presupuesto, cierre o precio en varias monedas del proveedor.",
+      "statement": "El modelo de mercado está en USD constantes; LED prevé FX e inflación para EF. Esa funcionalidad del producto no determina moneda de registración/presentación, conversión de facturas/cobros, exposición monetaria ni ajuste aplicable del proveedor. Tampoco debe copiarse sin análisis al PNFC.",
+      "evidence": [
+        {
+          "path": "docs/market_analysis.md",
+          "section": "Versión; §4.3; §8.2",
+          "detail": "Modelos en USD constantes; moneda/indexación y descalce deben validarse; tasas/flujos deben ser consistentes.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/08-ledger-contabilidad-cierres.md",
+          "section": "FR-LED-025, FR-LED-026",
+          "detail": "FX y ajuste por inflación del catálogo están definidos para EF.",
+          "ids": [
+            "FR-LED-025",
+            "FR-LED-026"
+          ]
+        }
+      ],
+      "impact": "Un precio USD con costo ARS puede verse rentable en moneda constante y perder caja; mezclar resultados nominales, convertidos y reexpresados altera margen y patrimonio.",
+      "actions": [
+        "Documentar monedas de contrato/factura/cobro/contabilidad/presentación y fuentes/fechas de conversión para cada evento del proveedor.",
+        "Determinar marco y tratamiento inflacionario efectivo, separando modelo real comercial, registración nominal y ajustes contables/fiscales que correspondan; especificar conciliación mediante ERP o proceso externo."
+      ],
+      "acceptance": [
+        "Caso sintético entre contratación, factura, cierre y cobro a cotizaciones distintas explica toda diferencia y separa resultado, impuesto y caja.",
+        "El presupuesto identifica moneda/base temporal y escenario de devaluación/inflación; no usa la funcionalidad EF como evidencia del cierre empresarial propio."
+      ],
+      "owner_role": "Contador y Tesorería del proveedor",
+      "dependencies": [
+        "Marco contable y fiscal empresarial",
+        "Condiciones de moneda/indexación del contrato",
+        "Fuentes de cotización/índices efectivas"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/currency-inflation-and-cash-policy.md"
+      ],
+      "skill_impact": [
+        "Workflow nuevo recomendado: cierre multimoneda y planificación financiera empresarial"
+      ]
+    },
+    {
+      "id": "REV-ACC-11",
+      "title": "Calendarizar el modelo económico con impuestos y capital de trabajo",
+      "kind": "specification_gap",
+      "priority": "P0",
+      "trigger": "Antes de aprobar financiación, estructura fija o propuesta a precio cerrado usando los modelos ilustrativos como presupuesto de caja.",
+      "statement": "Las sumas de ARR/TCO y equilibrio son consistentes; el modelo declara que excluye impuestos/retenciones/financiación y que debe calendarizar anticipos, aceptación y cobros. Aún no existe un presupuesto empresarial mensual integrado de resultados y caja con esos efectos y sensibilidad por demora.",
+      "evidence": [
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§7.2, §7.3 y §8.2–8.4",
+          "detail": "ARR de salida no es ingreso acumulado; equilibrio excluye financiamiento/impuestos; TCO excluye impuestos y necesita otro cronograma para caja.",
+          "ids": []
+        },
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§12.3 — Entrega/Economía",
+          "detail": "Horas hasta aceptación, caja y demora de cobro son indicadores expresos.",
+          "ids": []
+        },
+        {
+          "path": "docs/nfr/NFR-12-operabilidad-costos.md",
+          "section": "NFR-12-C04",
+          "detail": "Límite económico debe fijarse por caso aprobado, sin umbral universal.",
+          "ids": [
+            "NFR-12-C04"
+          ]
+        }
+      ],
+      "impact": "Puede financiarse una estructura fija con ARR esperado al mes 36 aunque faltan meses de caja, anticipo suficiente o cobertura de impuestos/costos previos a cobrar.",
+      "actions": [
+        "Construir calendario por contrato/escenario con hitos, probabilidad, reconocimiento, facturación, cobro, pagos de equipo/nube y tributos aplicables, sin reemplazar datos faltantes por tasas legales supuestas.",
+        "Separar EBITDA/resultado u otra medida elegida, caja, créditos fiscales recuperables, retenciones, capital de trabajo y financiación; usar escenarios de atraso/cancelación y salida.",
+        "Aprobar supuestos/base de moneda y presupuesto por puerta de inversión, conservando el TCO comparativo original como escenario de alcance limitado."
+      ],
+      "acceptance": [
+        "Modelo mensual reproduce ARR de salida e ingresos/caja de cada contrato sin equivalerlos; apertura más entradas menos salidas concilia saldo final.",
+        "Muestra necesidad máxima de caja y sensibilidad a atraso, impuestos recuperables/no recuperables, FX y costo de soporte, con supuestos y responsable; no se fija solvencia por una cifra sin fondos acreditados."
+      ],
+      "owner_role": "Dirección financiera/Contador y Dirección del proveedor",
+      "dependencies": [
+        "Hitos comerciales/contratos y plazos de cobro",
+        "Costeo por cliente",
+        "Perfil fiscal y moneda del proveedor"
+      ],
+      "suggested_deliverables": [
+        "docs/provider/integrated-financial-model.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+        "Workflow nuevo recomendado: presupuesto y seguimiento de caja empresarial"
+      ]
+    }
+  ]
+}

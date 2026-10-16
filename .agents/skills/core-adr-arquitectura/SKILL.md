@@ -26,7 +26,7 @@ La base del 15/10/2026 es propuesta y no acredita implementación. Si faltan dat
 5. **Escribir o actualizar.** Usar [la plantilla local](references/plantilla-adr.md). Documentar decisión, alcance, consecuencias favorables y costos, límites, dependencias, criterios observables y condiciones que obligan a reconsiderar. Relacionar NFR y CTL por ID y fuente concreta.
 6. **Gestionar estados e historia.** Usar `Propuesto`, `Aceptado`, `Reemplazado` o `Descartado`. Cambiar a Aceptado sólo cuando exista evidencia de una decisión real del responsable competente; no inferirlo de crear un archivo o pasar pruebas. La aceptación de diseño es distinta de implementación y verificación. Si se reemplaza una decisión aceptada, conservarla y enlazar el nuevo ADR en ambos sentidos con motivo/fecha. Una aclaración editorial puede actualizarse conservando su historial.
 7. **Aplicar la acción autorizada.** Para implementación, utilizar los skills especializados, realizar cambios compatibles y verificaciones materiales; no cerrar sólo con un plan si el trabajo es realizable. Para revisión, informar desviaciones con escenario, efecto y evidencia. Para diseño, entregar decisión y backlog de validación; no desplegar por un pedido de documentación.
-8. **Comprobar propagación.** Actualizar arquitectura, índice, NFR, criterios, skills y enlaces afectados. Un nuevo componente o región necesita análisis de contrato/país/perfil; el ADR por sí solo no autoriza producción ni elimina requisitos legales.
+8. **Comprobar propagación.** Actualizar arquitectura, índice, NFR, criterios, skills y enlaces afectados. Revisar en ambos sentidos el cambio con los FR, casos, oráculos y evidencia de la [biblioteca funcional](../../../docs/functional/README.md), usando [core-fr-requisitos](../core-fr-requisitos/SKILL.md); no conservar evidencia incompatible por el solo hecho de mantener un ID. Un nuevo componente o región necesita análisis de contrato/país/perfil; el ADR por sí solo no autoriza producción ni elimina requisitos legales.
 
 ## Selección de skills especializados
 
@@ -42,6 +42,8 @@ La base del 15/10/2026 es propuesta y no acredita implementación. Si faltan dat
 | Importación inicial, deltas y corte | [adr-08-carga-inicial-masiva](../adr-08-carga-inicial-masiva/SKILL.md) |
 
 Leer los aplicables, sin ejecutar todos los workflows para una edición menor. Las relaciones son dependencias técnicas; no un orden de aprobación. No ordenar despliegues, comunicaciones externas o acciones productivas por haber abierto un skill.
+
+Si la elección afecta rentabilidad/alcance del producto, usar [core-project-review](../core-project-review/SKILL.md); para secuenciar equipo y preparación operativa, [core-pilot-kickoff](../core-pilot-kickoff/SKILL.md). La regresión se selecciona por materialidad: una regla requiere oráculo; dinero/colas, carreras y duplicados; bulk/DR, fronteras de autoridad y externos; datos/país, autorización y secreto. Una edición editorial no justifica cargas bancarias.
 
 ## Salida
 

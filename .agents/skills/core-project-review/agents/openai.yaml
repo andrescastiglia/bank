@@ -1,0 +1,6 @@
+interface:
+  display_name: "Revisión integral del core"
+  short_description: "Negocio, controles y plan de mejoras con evidencia"
+  default_prompt: "Revisá integralmente este proyecto de core bancario desde negocio, contabilidad, legal, arquitectura, QA, seguridad y operaciones; contrastá documentos y evidencia y elaborá un plan priorizado con responsables, dependencias y criterios de cierre."
+policy:
+  allow_implicit_invocation: true

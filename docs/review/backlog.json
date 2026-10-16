@@ -1,0 +1,1442 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-16",
+  "baseline_commit": "2e5d579103b94ab70c16d81debe73bf5840ba0c8",
+  "plan_status": "proposed",
+  "priority_definition": "P0 is conditional on each finding trigger; no current incident or blanket block is inferred.",
+  "dependency_definition": "Dependencies identify principal inputs for closure; preparatory work may run concurrently. Shared evidence can serve several packages without duplicating execution.",
+  "summary": {
+    "findings": 63,
+    "work_packages": 14,
+    "by_priority": {
+      "P0": 37,
+      "P1": 26
+    },
+    "closed_findings": 0
+  },
+  "work_packages": [
+    {
+      "id": "WP-01",
+      "title": "Producto inicial y alcance",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "CEO / Producto / Cumplimiento",
+      "gates": [
+        "G1"
+      ],
+      "dependencies": [],
+      "state": "planned",
+      "actions_deliverables": "Completar [charter](templates/project_charter.md); resolver ICP, sociedad/rol, ruta, flujos incluidos/excluidos y manifiesto de FR/dependencias. Incorporar decisión a mercado §12 y alcance funcional",
+      "acceptance": "Problema/cliente objetivo y exclusiones motivados; dependencias materiales con dueño/costo; condiciones por licencia preservadas",
+      "finding_ids": [
+        "REV-ACC-02",
+        "REV-COM-01",
+        "REV-COM-03",
+        "REV-LEG-01",
+        "REV-QA-04"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-02",
+      "title": "Demanda y proceso de compra",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Comercial / Producto",
+      "gates": [
+        "G1"
+      ],
+      "dependencies": [
+        "WP-01"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Convertir hipótesis de mercado en censo deduplicado, entrevistas y pipeline; identificar comprador económico, operación, TI, Legal/Seguridad y compras, con presupuesto/decisión y fechas fundamentadas",
+      "acceptance": "Evidencia de compradores compatibles y siguiente decisión por oportunidad; conversión y ahorro distinguen dato, supuesto y medición; un legado activo no se computa como ahorro retirado",
+      "finding_ids": [
+        "REV-COM-02",
+        "REV-COM-04",
+        "REV-COM-05"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-03",
+      "title": "Economía, precio y administración del proveedor",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "CEO / CFO / Contador",
+      "gates": [
+        "G1",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-01"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Completar [caso de negocio](templates/business_case.md), separar segmentos/cohortes; definir mínimo/bandas/consumo, alcance de soporte, margen de implantación y recurrente. Especificar ciclo consumo–factura–cobro neto–retenciones–caja mediante ERP/integración, no ampliando el core a un ERP",
+      "acceptance": "Modelo mensual reconciliable, cotizaciones/capacidad y financiación trazables; precio sostenible bajo sensibilidad aprobada; perfil fiscal propio y medición/devengo/cobro diferenciados",
+      "finding_ids": [
+        "REV-ACC-05",
+        "REV-ACC-06",
+        "REV-ACC-07",
+        "REV-ACC-08",
+        "REV-ACC-09",
+        "REV-ACC-10",
+        "REV-ACC-11",
+        "REV-ARC-07",
+        "REV-COM-06",
+        "REV-COM-07",
+        "REV-COM-08",
+        "REV-COM-09",
+        "REV-COM-12",
+        "REV-SEC-07"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-04",
+      "title": "Contratos, GPL/IP y promesas",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Legal / CEO / Comercial",
+      "gates": [
+        "G1",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-01"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Preparar MSA/SOW/SLA/DPA y aceptación, límites y salida; decidir derechos/procedencia/contribuciones y modalidad SaaS/instalación. Determinar estándares/aseguramiento realmente contratados",
+      "acceptance": "Política de derechos y ejemplo de entrega compatibles con LICENSE y titularidad; cláusulas enlazadas a alcance/FR/NFR/evidencia; certificaciones pendientes no se venden como obtenidas",
+      "finding_ids": [
+        "REV-COM-06",
+        "REV-COM-11",
+        "REV-LEG-02",
+        "REV-LEG-03",
+        "REV-LEG-04",
+        "REV-LEG-07",
+        "REV-LEG-08"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-05",
+      "title": "Contabilidad e impuestos del primer producto",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Contador del perfil / Producto / QA",
+      "gates": [
+        "G2"
+      ],
+      "dependencies": [
+        "WP-01"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Concretar políticas, plan de cuentas/asientos y vectores de LED/INT/TAX/RSK/RPT; distinguir PNFC/EF, costo contractual/CFT y rendimiento/medición contable, previsión regulatoria y deterioro",
+      "acceptance": "Paquete por evento con importes exactos, fechas, redondeos, cuentas y salidas revisadas independientemente; cierre/rectificativa y conciliación pueden explicarse de extremo a extremo",
+      "finding_ids": [
+        "REV-ACC-01",
+        "REV-ACC-02",
+        "REV-ACC-03",
+        "REV-ACC-04",
+        "REV-LEG-08",
+        "REV-QA-05",
+        "REV-SEC-10"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-06",
+      "title": "Contratos técnicos y modelo de datos",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Arquitectura / Ingeniería / Datos",
+      "gates": [
+        "G2"
+      ],
+      "dependencies": [
+        "WP-01",
+        "WP-05"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Desarrollar contratos API/estados y modelo lógico SQL del primer flujo, protocolo de guardianes y revocación; resolver secuencias filtradas/replay, barreras SQL/fuentes y consistencia SQL/objetos de evidencia. Ampliar ADR afectados sin aceptarlos ficticiamente",
+      "acceptance": "Transiciones y errores normativos con datos/versión; historias concurrentes tienen un orden válido; barrera prueba completitud por fuente; documento faltante no puede presentarse como contrato/evidencia íntegros",
+      "finding_ids": [
+        "REV-ARC-01",
+        "REV-ARC-02",
+        "REV-ARC-04",
+        "REV-ARC-05",
+        "REV-ARC-09",
+        "REV-QA-06",
+        "REV-SEC-01",
+        "REV-SEC-02"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-07",
+      "title": "Plataforma, recuperación y capacidad",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Arquitectura / SRE / CFO",
+      "gates": [
+        "G2",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-01",
+        "WP-03",
+        "WP-06"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Contrastar ofertas reales de servicios/regiones/países, garantías de persistencia/HA, costo mínimo y capacidad. Concretar backlog/WAL/catch-up y pérdida regional de hechos confirmados localmente, incluidos movimientos internos sin riel",
+      "acceptance": "Por clase, identificar fuente sobreviviente o pérdida no reconstruible y tratamiento compatible con obligaciones; si el perfil no la admite, ajustar persistencia/topología o restringir activación. Ensayo posterior observa RTO/RPO y límites; documentar riesgo no demuestra recuperabilidad ni habilita prometer RPO regional cero",
+      "finding_ids": [
+        "REV-ARC-06",
+        "REV-ARC-07",
+        "REV-ARC-08",
+        "REV-COM-07",
+        "REV-COM-08",
+        "REV-QA-07",
+        "REV-SEC-03",
+        "REV-SEC-08"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-08",
+      "title": "Amenazas, identidades y desarrollo seguro",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Seguridad / Arquitectura / Ingeniería",
+      "gates": [
+        "G2",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-01",
+        "WP-06"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Crear modelo de amenazas/fronteras y matriz de autorización; reforzar IAM007 y controles con identidad de persona/control delegado, no sólo principal. Diseñar bootstrap/recuperación IAM–KMS–control plane y evidencia de cadena de suministro/SDLC",
+      "acceptance": "Dos credenciales de la misma persona no eluden doble intervención; cambiar destino/importe invalida aprobación. Un rol alternativo recupera control/claves sin dependencia circular; release muestra procedencia, revisión y pruebas en su alcance",
+      "finding_ids": [
+        "REV-LEG-05",
+        "REV-QA-06",
+        "REV-SEC-01",
+        "REV-SEC-02",
+        "REV-SEC-03",
+        "REV-SEC-04",
+        "REV-SEC-05",
+        "REV-SEC-06"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-09",
+      "title": "Aceptación y evidencia QA",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "QA / Producto / Contabilidad / Operaciones",
+      "gates": [
+        "G2",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-05",
+        "WP-06",
+        "WP-07",
+        "WP-08",
+        "WP-12",
+        "WP-13"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Seleccionar denominador del piloto y matriz FR/NFR–caso–riesgo–oráculo–evidencia; crear fixtures monetarios/temporales, historias de carreras/rieles y campaña representativa de carga/fallo. Usar [registro](templates/evidence_register.md)",
+      "acceptance": "Resultados esperado/observado y entorno/versiones reproducibles; integridad/autorización/ambigüedad/conciliación/recuperación no se compensan con un promedio de casos aprobados. Producto no implementado permanece sin evaluar",
+      "finding_ids": [
+        "REV-ACC-04",
+        "REV-QA-04",
+        "REV-QA-05",
+        "REV-QA-06",
+        "REV-QA-07",
+        "REV-QA-08",
+        "REV-SEC-08",
+        "REV-SEC-10"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-10",
+      "title": "Equipo, kickoff y día de negocio",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Entrega / Operaciones / SRE / Cliente",
+      "gates": [
+        "G0",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-01",
+        "WP-03",
+        "WP-04"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Completar RACI/capacidad/suplencia y presupuesto de guardia. Preparar agenda intradía/cierre, ajustes manuales, reclamos/AML/incidentes y relojes; instanciar contingencias preventivas por operación/riel y SLA proveedor–entidad",
+      "acceptance": "Otra persona ejecuta runbooks con permisos y facultades reales; ausencia del titular tiene suplencia; pruebas de mesa/con posterior ejecución preservan relojes y constancias. Desarrollo sintético no se anuncia como servicio 24×7 disponible",
+      "finding_ids": [
+        "REV-COM-08",
+        "REV-LEG-07",
+        "REV-SEC-04",
+        "REV-SEC-07",
+        "REV-SEC-09",
+        "REV-SEC-10"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-11",
+      "title": "Terceros, datos y mantenimiento regulatorio",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Cumplimiento / Legal / Seguridad / Operaciones",
+      "gates": [
+        "G2",
+        "G3"
+      ],
+      "dependencies": [
+        "WP-01",
+        "WP-04"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Poblar cadena de servicios/países/acceso/retención/originales, DPA y derechos de auditoría/salida; calendarizar avisos por sujeto/servicio. Definir responsable y alcance contractual del mantenimiento normativo y transiciones",
+      "acceptance": "Fuente/aplicabilidad/versión/regla/cambio/evidencia trazables; país de DB no oculta soporte/telemetría/DR; restauración no repone difusión vencida ni destruye hold; documentos/avisos reales del caso cuando sean exigibles",
+      "finding_ids": [
+        "REV-ACC-05",
+        "REV-COM-10",
+        "REV-COM-11",
+        "REV-LEG-04",
+        "REV-LEG-05",
+        "REV-LEG-06",
+        "REV-LEG-09",
+        "REV-LEG-10",
+        "REV-SEC-05",
+        "REV-SEC-12"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-12",
+      "title": "Gobierno de FR, skills y documentación",
+      "priority": "P1",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Producto / Arquitectura / QA",
+      "gates": [
+        "G0",
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "dependencies": [],
+      "state": "in_progress",
+      "actions_deliverables": "Evolucionar el generador para estados/retiros sin renumerar, manifiestos versionados y diffs semánticos. Validar todos los links/skills/metadatos y revisar propagación inversa cambio→FR→NFR/ADR→caso/evidencia→skill. Mantener pocos workflows",
+      "acceptance": "Retirar un ID conserva historia y excluye cobertura activa; fuentes/capacidades quedan cubiertas por reemplazo o con brecha. Borrar una capacidad del denominador requiere justificación; validación estructural no se presenta como revisión semántica",
+      "finding_ids": [
+        "REV-QA-01",
+        "REV-QA-02",
+        "REV-QA-03",
+        "REV-QA-08",
+        "REV-QA-09"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-13",
+      "title": "Coexistencia, migración, retorno y salida",
+      "priority": "P0",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "Migración / Operaciones / Cliente / QA",
+      "gates": [
+        "G3"
+      ],
+      "dependencies": [
+        "WP-05",
+        "WP-06",
+        "WP-07",
+        "WP-08",
+        "WP-10",
+        "WP-11"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Especificar cierre de autoridad/época y callbacks en vuelo; ensayar snapshot/deltas/transacciones completas, PREPARED, conciliación y activación. Probar retorno con actividad nueva y exportación/restauración independiente",
+      "acceptance": "Un escritor por contrato, ninguna exposición PREPARED, apertura/historia excluyentes, cero diferencias inexplicadas y pendientes externos preservados. Medir ventana completa/costo; volver al legado no borra liquidaciones",
+      "finding_ids": [
+        "REV-ARC-03",
+        "REV-ARC-06",
+        "REV-COM-11",
+        "REV-LEG-09",
+        "REV-QA-07",
+        "REV-SEC-11"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    },
+    {
+      "id": "WP-14",
+      "title": "Valor, repetibilidad y expansión",
+      "priority": "P1",
+      "priority_scope": "Before the specific material commitment or gate; not an incident severity.",
+      "owner_role": "CEO / Producto / Comercial / Operaciones",
+      "gates": [
+        "G4"
+      ],
+      "dependencies": [
+        "WP-02",
+        "WP-03",
+        "WP-04",
+        "WP-09",
+        "WP-10",
+        "WP-11",
+        "WP-13"
+      ],
+      "state": "planned",
+      "actions_deliverables": "Completar paquete de compra/due diligence con evidencia sanitizada, retorno del piloto y soporte real; comparar segundo cliente sobre producto común, sustitución de partners y pérdida de cliente principal",
+      "acceptance": "Menor trabajo específico sin forks materiales, margen/caja sostenibles y operación compatible; sólo expandir productos/países al demostrar financiación, controles y capacidad. No fabricar casos o certificaciones de referencia",
+      "finding_ids": [
+        "REV-COM-04",
+        "REV-COM-05",
+        "REV-COM-09",
+        "REV-COM-10",
+        "REV-COM-11",
+        "REV-COM-12"
+      ],
+      "actual_owner": null,
+      "budget": null,
+      "committed_date": null,
+      "closure_evidence": []
+    }
+  ],
+  "findings": [
+    {
+      "id": "REV-ACC-01",
+      "area": "accounting",
+      "title": "Concretar el paquete contable y los oráculos del primer perfil",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de aceptar el diseño financiero del piloto elegido o comprometer una migración de saldos.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-05"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-02",
+      "area": "accounting",
+      "title": "Definir medición y presentación para el prestamista no bancario",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de prometer que la ruta inicial PNFC entrega contabilidad financiera completa o estados de ese sujeto.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-01",
+        "WP-05"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-03",
+      "area": "accounting",
+      "title": "Resolver la diferencia entre costo contractual y rendimiento contable",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de aceptar cálculos contables de un producto con comisiones iniciales, costos de originación, modificación o medición por costo amortizado cuando aplique.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-05"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-04",
+      "area": "accounting",
+      "title": "Obtener evidencia integral de cierre y del puente contable-prudencial",
+      "priority": "P1",
+      "kind": "evidence_gap",
+      "trigger": "Antes de declarar aceptado un cierre piloto, una cifra prudencial o un reporte de producción.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-05",
+        "WP-09"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-05",
+      "area": "accounting",
+      "title": "Determinar el perfil fiscal propio de la empresa proveedora",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de emitir la primera factura, presentar una oferta tributariamente cerrada o contratar servicios exteriores con impacto fiscal.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03",
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-06",
+      "area": "accounting",
+      "title": "Especificar medición de consumo y facturación B2B del proveedor",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de vender una suscripción por cuenta, contrato o consumo y liquidar su primer período.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-07",
+      "area": "accounting",
+      "title": "Separar ingreso devengado, facturación y cobro de contratos de software",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de aprobar presupuesto o estados del proveedor con diagnósticos, pilotos, implementación y suscripción.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-08",
+      "area": "accounting",
+      "title": "Conciliar cobros netos y retenciones sufridas del proveedor",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de cobrar facturas propias de bancos/PSP u otros clientes que descuenten retenciones, comisiones o diferencias de cambio.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-09",
+      "area": "accounting",
+      "title": "Resolver costeo por cliente y política de desarrollo capitalizable",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de fijar margen/precio sostenible o utilizar un presupuesto de desarrollo como valor de activo.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-10",
+      "area": "accounting",
+      "title": "Definir moneda e inflación del negocio proveedor por separado del módulo bancario",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de consolidar presupuesto, cierre o precio en varias monedas del proveedor.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ACC-11",
+      "area": "accounting",
+      "title": "Calendarizar el modelo económico con impuestos y capital de trabajo",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de aprobar financiación, estructura fija o propuesta a precio cerrado usando los modelos ilustrativos como presupuesto de caja.",
+      "source": "docs/review/findings/accounting.json",
+      "report": "docs/review/02-accounting-tax.md",
+      "work_packages": [
+        "WP-03"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-01",
+      "area": "architecture",
+      "title": "Fijar el contrato de comandos y estados del primer flujo",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de dividir entre equipos la implementación del primer comando monetario y de integrar su primer canal o riel.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-06"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-02",
+      "area": "architecture",
+      "title": "Concretar el modelo lógico y el protocolo de guardianes SQL",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de implementar el esquema financiero y los comandos concurrentes del primer producto.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-06"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-03",
+      "area": "architecture",
+      "title": "Definir el corte entre cores y el destino de callbacks en vuelo",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de un ensayo de corte de cohorte que incluya operación concurrente o instrucciones externas pendientes.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-13"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-04",
+      "area": "architecture",
+      "title": "Resolver secuencias filtradas, cursores y horizonte de replay",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de implementar publicadores redundantes, consumidores con orden o la política de purga/reconstrucción.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-06"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-05",
+      "area": "architecture",
+      "title": "Seleccionar una barrera de corte que vincule SQL y fuentes externas",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de implementar el primer cierre o dataset regulatorio que combine más de una fuente.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-06"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-06",
+      "area": "architecture",
+      "title": "Demostrar qué hechos locales son reconstruibles tras perder la región",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de aceptar el perfil de DR regional o comprometer su RTO/RPO con un cliente.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-07",
+        "WP-13"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-07",
+      "area": "architecture",
+      "title": "Contrastar topología, garantías gestionadas y costo con una oferta real",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de seleccionar proveedor, fijar presupuesto de infraestructura o vender el perfil de disponibilidad/latencia.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-03",
+        "WP-07"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-08",
+      "area": "architecture",
+      "title": "Dimensionar backlog durable, WAL y recuperación con ingreso continuo",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de dimensionar almacenamiento/pools y aceptar el ensayo conjunto de carga, caída de broker e importación.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-07"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-ARC-09",
+      "area": "architecture",
+      "title": "Definir consistencia entre referencias SQL y objetos probatorios",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de formalizar contratos o cierres que dependan de documentos almacenados fuera de PostgreSQL.",
+      "source": "docs/review/findings/architecture.json",
+      "report": "docs/review/04-architecture-data.md",
+      "work_packages": [
+        "WP-06"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-01",
+      "area": "commercial",
+      "title": "El primer comprador y su caso de compra siguen sin seleccionarse",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de aprobar presupuesto material y un alcance/fecha de primera entrega para un segmento concreto.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-01"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-02",
+      "area": "commercial",
+      "title": "La demanda comprable aún no está demostrada por evidencia de compradores",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de financiar el programa de construcción como negocio de producto o usar el escenario de ventas para justificar una inversión material.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-02"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-03",
+      "area": "commercial",
+      "title": "La biblioteca de 1.016 FR todavía no tiene un manifiesto financiado de primera entrega",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de estimar precio fijo, fecha de piloto integrado o capacidad de entrega del primer producto.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-01"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-04",
+      "area": "commercial",
+      "title": "La diferenciación necesita comparación y retorno demostrados en el problema elegido",
+      "priority": "P1",
+      "kind": "evidence_gap",
+      "trigger": "Antes de afirmar una ventaja cuantificada en una propuesta o elegir el posicionamiento de venta.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-02",
+        "WP-14"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-05",
+      "area": "commercial",
+      "title": "El proceso de compra y su calendario no están instanciados por oportunidad",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de comprometer fecha de firma, ingresos, piloto con datos reales o puesta en producción de una oportunidad.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-02",
+        "WP-14"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-06",
+      "area": "commercial",
+      "title": "Faltan paquetes y unidades contractuales para convertir costo de servicio en precio defendible",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de emitir una cotización vinculante o desarrollar facturación de consumo para el proveedor.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-03",
+        "WP-04"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-07",
+      "area": "commercial",
+      "title": "El piso de costo de una celda aislada todavía no está contrastado con el primer ACV",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de firmar precio de producción, capacidad y SLO de una celda para un cliente.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-03",
+        "WP-07"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-08",
+      "area": "commercial",
+      "title": "La promesa de operación continua no tiene aún dotación y costo de guardia acreditados",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de contratar soporte/recuperación continuos o admitir fondos reales bajo ese perfil operativo.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-03",
+        "WP-07",
+        "WP-10"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-09",
+      "area": "commercial",
+      "title": "El TCO del comprador no resuelve la decisión de construir de un proveedor nuevo",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de financiar construcción propia de un motor completo o pactar reventa/OEM de un tercero.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-03",
+        "WP-14"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-10",
+      "area": "commercial",
+      "title": "Alianzas y concentración se reconocen, pero aún no tienen una ruta comercial de sustitución",
+      "priority": "P1",
+      "kind": "evidence_gap",
+      "trigger": "Antes de ofertar un riel, implementación o soporte que dependa de un único partner, banco o persona, y antes de ampliar exposición comercial.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-11",
+        "WP-14"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-11",
+      "area": "commercial",
+      "title": "La localización y la salida requieren alcance contractual y financiación durante toda la vida del servicio",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de incluir cambios normativos, certificaciones, conservación o asistencia de salida en un precio/plazo vinculantes.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-04",
+        "WP-11",
+        "WP-13",
+        "WP-14"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-COM-12",
+      "area": "commercial",
+      "title": "El escenario base aún no financia la estructura ilustrativa y falta un modelo mensual de caja",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de aprobar el programa de inversión, contratar costos fijos relevantes o firmar un acuerdo cuyo cobro dependa del go-live del cliente.",
+      "source": "docs/review/findings/commercial.json",
+      "report": "docs/review/01-commercial-ceo.md",
+      "work_packages": [
+        "WP-03",
+        "WP-14"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-01",
+      "area": "legal",
+      "title": "Falta cerrar el perímetro jurídico del primer caso de uso",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de comprometer un piloto que contrate clientes, trate datos reales o mueva fondos.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-01"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-02",
+      "area": "legal",
+      "title": "La oferta carece de paquete contractual proveedor–cliente",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de emitir una oferta vinculante, aceptar un piloto remunerado o asumir operación productiva.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-04"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-03",
+      "area": "legal",
+      "title": "GPL v2 no está integrada en la estrategia de IP y distribución",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de ofrecer derechos exclusivos, una licencia incompatible o entregar software/artefactos a un cliente o tercero.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-04"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-04",
+      "area": "legal",
+      "title": "No está definido qué estándares y aseguramiento se contratarán",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de responder una licitación o prometer una certificación, validación de red o conformidad por cláusula.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-04",
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-05",
+      "area": "legal",
+      "title": "El tratamiento de datos aún no tiene un DPA y mapa de países aplicado",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de recibir datos personales reales, habilitar soporte externo o replicar datos/telemetría a un destino internacional.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-08",
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-06",
+      "area": "legal",
+      "title": "La contratación de terceros no tiene cadena de derechos y calendario aplicados",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de cerrar proveedor/fecha de piloto con tercerización regulada o cambiar una ubicación/subcontratista en alcance.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-07",
+      "area": "legal",
+      "title": "Falta convertir los relojes regulatorios en un SLA proveedor–entidad",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de asumir guardia/operación de un servicio alcanzado o firmar su SLA.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-04",
+        "WP-10"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-08",
+      "area": "legal",
+      "title": "El primer producto aún no tiene condiciones y plazos legales concretos",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de ofrecer/contratar el primer préstamo, cuenta u otro producto a usuarios reales.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-04",
+        "WP-05"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-09",
+      "area": "legal",
+      "title": "El archivo legal y la equivalencia del soporte no están resueltos para la migración",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de migrar/destruir originales, llevar libros oficiales en el nuevo soporte o terminar el servicio con datos reales.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-11",
+        "WP-13"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-LEG-10",
+      "area": "legal",
+      "title": "El mantenimiento regulatorio carece de dueño y compromiso de servicio aplicados",
+      "priority": "P1",
+      "kind": "missing_decision",
+      "trigger": "Antes de fijar precio/alcance de localización mantenida y, en todo caso, antes del piloto alcanzado por una transición.",
+      "source": "docs/review/findings/legal.json",
+      "report": "docs/review/03-legal-compliance.md",
+      "work_packages": [
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-01",
+      "area": "quality",
+      "title": "La extracción contigua contradice el retiro estable de FR",
+      "priority": "P1",
+      "kind": "inconsistency",
+      "trigger": "Antes de retirar, dividir o sustituir un requisito intermedio.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-12"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-02",
+      "area": "quality",
+      "title": "El 100 % referenciado no detecta pérdida semántica ni retiro del denominador manual",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de aprobar un cambio material y regenerar su cobertura.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-12"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-03",
+      "area": "quality",
+      "title": "La comprobación funcional no valida los skills y metadatos que guían la implementación",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de promover cambios de workflows o utilizarlos como política del equipo.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-12"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-04",
+      "area": "quality",
+      "title": "Falta seleccionar el denominador de aceptación material del primer piloto",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de aceptar el piloto o comprometer su alcance de entrega; no bloquea análisis/desarrollo independiente.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-01",
+        "WP-09"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-05",
+      "area": "quality",
+      "title": "No hay todavía vectores monetarios y temporales con resultados independientes",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de aceptar corrección de cálculos o ejecutar el piloto financiero afectado.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-05",
+        "WP-09"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-06",
+      "area": "quality",
+      "title": "Faltan historias de prueba controladas para carreras y estados externos",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de mover fondos en el piloto y antes de aceptar un adaptador financiero.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-06",
+        "WP-08",
+        "WP-09"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-07",
+      "area": "quality",
+      "title": "La campaña de carga, bulk y recuperación no tiene perfil representativo aprobado",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de prometer capacidad, ventana de migración o recuperación y aceptar el corte afectado.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-07",
+        "WP-09",
+        "WP-13"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-08",
+      "area": "quality",
+      "title": "Falta identidad común de caso, corrida y evidencia preservada por versión",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de aceptar resultados de pruebas o reutilizarlos para una nueva versión.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-09",
+        "WP-12"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-QA-09",
+      "area": "quality",
+      "title": "Los coordinadores no incluyen la biblioteca FR en propagación y regresión",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de mantener nuevas decisiones/reglas o ampliar productos con agentes.",
+      "source": "docs/review/findings/quality.json",
+      "report": "docs/review/05-quality-skills.md",
+      "work_packages": [
+        "WP-12"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-01",
+      "area": "security_operations",
+      "title": "Falta concretar amenazas y contratos de autorización por ruta",
+      "priority": "P1",
+      "kind": "specification_gap",
+      "trigger": "Antes de congelar APIs, interfaces de administración e integraciones del primer producto; el modelado puede comenzar durante el kickoff con datos sintéticos.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-06",
+        "WP-08"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-02",
+      "area": "security_operations",
+      "title": "La independencia de aprobaciones debe vincularse a persona y delegación",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de habilitar aprobación/liberación de ajustes, parámetros, importaciones o reportes con efectos reales.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-06",
+        "WP-08"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-03",
+      "area": "security_operations",
+      "title": "Bootstrap y recuperación de IAM/KMS no tienen diseño operativo concreto",
+      "priority": "P0",
+      "kind": "specification_gap",
+      "trigger": "Antes de elegir definitivamente la organización de cuentas/administradores cloud y antes de confiar datos o backups reales a ese plano de control.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-07",
+        "WP-08"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-04",
+      "area": "security_operations",
+      "title": "Las contingencias preventivas todavía no están instanciadas por operación y riel",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de autorizar dinero real en un producto/canal o conectar un riel de producción.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-08",
+        "WP-10"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-05",
+      "area": "security_operations",
+      "title": "Retención, residencia y derechos necesitan una matriz poblada y ensayo de restauración",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de recibir legajos, cartera importada, soporte o telemetría con datos personales reales.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-08",
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-06",
+      "area": "security_operations",
+      "title": "SDLC y cadena de suministro carecen todavía de evidencia de ejecución",
+      "priority": "P1",
+      "kind": "evidence_gap",
+      "trigger": "Al iniciar el repositorio de producto y antes de promover un release candidato con acceso a un entorno sensible.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-08"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-07",
+      "area": "security_operations",
+      "title": "No hay modelo operativo dotado para asumir guardia y responsabilidades de cliente",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de prometer cobertura de soporte/SLA o habilitar un piloto con clientes y fondos; en kickoff basta designar responsables de trabajo y plan de dotación.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-03",
+        "WP-10"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-08",
+      "area": "security_operations",
+      "title": "BIA y recuperación aún no convierten metas propuestas en compromisos demostrados",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de firmar un SLA/RPO, seleccionar una región como suficiente para un cliente o habilitar operación monetaria del piloto.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-07",
+        "WP-09"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-09",
+      "area": "security_operations",
+      "title": "Falta un calendario operativo ejecutable de incidentes, AML y reclamos",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de recibir solicitudes/reclamos de clientes o hechos sujetos a notificación en el piloto.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-10"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-10",
+      "area": "security_operations",
+      "title": "El día operativo y la resolución manual todavía no fueron ensayados",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes del primer cierre o conciliación que determine fondos, reporte o estado contractual del piloto.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-05",
+        "WP-09",
+        "WP-10"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-11",
+      "area": "security_operations",
+      "title": "Corte, retorno y salida necesitan ensayo independiente de una cohorte representativa",
+      "priority": "P0",
+      "kind": "evidence_gap",
+      "trigger": "Antes de cada migración/activación de cohorte real y antes de afirmar portabilidad o retirada del proveedor.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-13"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    },
+    {
+      "id": "REV-SEC-12",
+      "area": "security_operations",
+      "title": "La cadena de proveedores no tiene aún expediente operativo/contractual verificable",
+      "priority": "P0",
+      "kind": "missing_decision",
+      "trigger": "Antes de contratar servicio crítico, habilitar país/subencargado o comprometer capacidades gestionadas y soporte de producción.",
+      "source": "docs/review/findings/security_operations.json",
+      "report": "docs/review/06-security-operations.md",
+      "work_packages": [
+        "WP-11"
+      ],
+      "state": "open",
+      "closure_evidence": []
+    }
+  ]
+}

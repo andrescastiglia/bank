@@ -1,0 +1,830 @@
+{
+  "area": "security_operations",
+  "baseline_commit": "2e5d579103b94ab70c16d81debe73bf5840ba0c8",
+  "review_date": "2026-10-16",
+  "lenses": [
+    "seguridad informática de producto y plataforma",
+    "operaciones y kickoff de desarrollo frente a piloto con clientes"
+  ],
+  "documents_reviewed": [
+    "docs/market_analysis.md",
+    "docs/compliant.md",
+    "docs/achitecture.md",
+    "docs/functional/README.md",
+    "docs/functional/scope.md",
+    "docs/functional/flows.md",
+    "docs/functional/coverage.md",
+    "docs/functional/01-entidades-perimetro.md",
+    "docs/functional/02-identidad-accesos.md",
+    "docs/functional/20-prevencion-la-ft-fp.md",
+    "docs/functional/21-prevencion-fraude.md",
+    "docs/functional/22-conciliacion-excepciones.md",
+    "docs/functional/26-canales-atencion-usuarios.md",
+    "docs/functional/27-auditoria-privacidad-archivo.md",
+    "docs/functional/28-integraciones-eventos-trabajos.md",
+    "docs/functional/29-carga-inicial-migracion-salida.md",
+    "docs/functional/30-operacion-continuidad-terceros.md",
+    "docs/functional/32-corresponsalia-baas-plataformas.md",
+    "docs/adr/ADR-04-alta-disponibilidad.md",
+    "docs/adr/ADR-06-aislamiento-por-celda.md",
+    "docs/adr/ADR-07-stack-gestionado.md",
+    "docs/adr/ADR-08-carga-inicial-masiva.md",
+    "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+    "docs/nfr/NFR-05-seguridad-accesos.md",
+    "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+    "docs/nfr/NFR-07-auditoria-observabilidad.md",
+    "docs/nfr/NFR-12-operabilidad-costos.md",
+    ".agents/skills/core-bancario-argentina/SKILL.md",
+    ".agents/skills/core-bancario-argentina/references/controles.md",
+    ".agents/skills/nfr-02-disponibilidad-recuperacion/SKILL.md",
+    ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+    ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+    ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md",
+    ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+    ".agents/skills/adr-04-alta-disponibilidad/SKILL.md",
+    ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md",
+    ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md"
+  ],
+  "findings": [
+    {
+      "id": "REV-SEC-01",
+      "title": "Falta concretar amenazas y contratos de autorización por ruta",
+      "kind": "specification_gap",
+      "priority": "P1",
+      "trigger": "Antes de congelar APIs, interfaces de administración e integraciones del primer producto; el modelado puede comenzar durante el kickoff con datos sintéticos.",
+      "statement": "El catálogo exige autorización por entidad, objeto y acción y prevé pruebas negativas, pero sigue siendo conceptual: no contiene matriz de rutas/campos, principales, relaciones de confianza y permisos efectivos. Falta un artefacto que permita revisar cómo se deriva entidad/objeto en API, callback, exportación, job e importador, y qué atributos no puede cambiar el solicitante. Esto es una brecha de especificación verificable, no una vulnerabilidad ejecutada.",
+      "evidence": [
+        {
+          "path": "docs/functional/02-identidad-accesos.md",
+          "section": "FR-IAM-004, FR-IAM-023, FR-IAM-027",
+          "detail": "El requisito define autorización y matriz de pruebas, sin una matriz instanciada de endpoints/campos y permisos.",
+          "ids": [
+            "FR-IAM-004",
+            "FR-IAM-023",
+            "FR-IAM-027"
+          ]
+        },
+        {
+          "path": "docs/functional/scope.md",
+          "section": "Identidad, datos y contratos de operación",
+          "detail": "Declara conceptuales los comandos y deja esquema, campos y límites para diseño de APIs.",
+          "ids": []
+        },
+        {
+          "path": "docs/nfr/NFR-05-seguridad-accesos.md",
+          "section": "NFR-05-C01 y pendientes",
+          "detail": "El oráculo requiere matriz de pertenencia/permisos y evidencia negativa todavía pendiente.",
+          "ids": [
+            "NFR-05-C01"
+          ]
+        }
+      ],
+      "impact": "Una implementación puede proteger el endpoint y permitir lectura o modificación de un atributo, cuenta o trabajo de otra entidad; exportación e idempotencia amplifican la fuga.",
+      "actions": [
+        "Crear diagrama de flujos y fronteras de confianza del perfil inicial, con activos dinero, identidad, PII, ROS y claves.",
+        "Definir por ruta mensaje/campos admitidos, principal, derivación de entidad/objeto, autorización y límites de abuso; incluir mass assignment, referencias cruzadas, callback falsificado, archivo malicioso y agotamiento de recursos.",
+        "Derivar casos positivos/negativos de cada frontera y asignarlos a FR/NFR existentes."
+      ],
+      "acceptance": [
+        "Matriz revisada por Arquitectura y Seguridad cubre cada ruta habilitada y recurso SQL/evento/objeto asociado.",
+        "Casos sintéticos de dos entidades prueban denegación de lectura, escritura, respuesta idempotente y exportación cruzadas; las rutas aún no implementadas se marcan sin evaluar."
+      ],
+      "owner_role": "Seguridad de producto y Arquitectura",
+      "dependencies": [
+        "Perfil/producto inicial",
+        "Contratos de APIs/eventos y roles de servicio"
+      ],
+      "suggested_deliverables": [
+        "docs/security/threat-model.md",
+        "docs/security/authorization-matrix.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+        ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-02",
+      "title": "La independencia de aprobaciones debe vincularse a persona y delegación",
+      "kind": "specification_gap",
+      "priority": "P0",
+      "trigger": "Antes de habilitar aprobación/liberación de ajustes, parámetros, importaciones o reportes con efectos reales.",
+      "statement": "FR-IAM-007 compara un mismo principal e impide evasión por cuenta técnica o canal, y REC exige aprobador independiente. No se especifica de forma comprobable cómo se reconoce a una misma persona con dos cuentas administrativas, identidades federadas o un servicio delegado, ni quién puede modificar ese vínculo. La intención de separación existe; falta precisar el sujeto de incompatibilidad para poder probarla.",
+      "evidence": [
+        {
+          "path": "docs/functional/02-identidad-accesos.md",
+          "section": "FR-IAM-001, FR-IAM-007 y FR-IAM-008",
+          "detail": "Vincula identidad/principal y formula incompatibilidad por principal; no define identidad canónica del empleado ni delegación de servicios para aprobaciones.",
+          "ids": [
+            "FR-IAM-001",
+            "FR-IAM-007",
+            "FR-IAM-008"
+          ]
+        },
+        {
+          "path": "docs/functional/22-conciliacion-excepciones.md",
+          "section": "FR-REC-022 y FR-REC-023",
+          "detail": "El preparador no aprueba/libera y una aprobación debe acompañar el ajuste al núcleo.",
+          "ids": [
+            "FR-REC-022",
+            "FR-REC-023"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-05-seguridad-accesos.md",
+          "section": "NFR-05-C03",
+          "detail": "La aceptación exige cero combinaciones incompatibles habilitadas.",
+          "ids": [
+            "NFR-05-C03"
+          ]
+        }
+      ],
+      "impact": "Una misma persona podría ejercer maker y checker mediante identidades distintas si se implementa literalmente sólo la comparación de principal; una cuenta técnica podría ocultar al iniciador.",
+      "actions": [
+        "Definir identidad canónica del operador humano y procedencia de acciones delegadas, sin confundirla con deduplicación de clientes.",
+        "Evaluar incompatibilidad por persona/control efectivo y por cadena de delegación; proteger cambios del vínculo y de la matriz.",
+        "Definir tratamiento de emergencia limitado, con motivo, alcance, expiración y revisión independiente aplicables; no habilitar excepciones que eliminen una obligación."
+      ],
+      "acceptance": [
+        "Dos credenciales de la misma persona no pueden crear y aprobar/liberar el mismo ajuste ni aprobar su propia asignación sensible.",
+        "Servicio delegado conserva iniciador y aprobador identificables; cambiar importe/destino/invariante invalida aprobación anterior.",
+        "Auditor reconstruye quién hizo cada etapa y cómo se comprobó independencia."
+      ],
+      "owner_role": "Seguridad IAM y dueño institucional de cada aprobación",
+      "dependencies": [
+        "Matriz de incompatibilidades",
+        "Directorio de operadores y modelo de delegación"
+      ],
+      "suggested_deliverables": [
+        "docs/security/segregation-of-duties.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-05-seguridad-accesos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-03",
+      "title": "Bootstrap y recuperación de IAM/KMS no tienen diseño operativo concreto",
+      "kind": "specification_gap",
+      "priority": "P0",
+      "trigger": "Antes de elegir definitivamente la organización de cuentas/administradores cloud y antes de confiar datos o backups reales a ese plano de control.",
+      "statement": "ADR-04 y ADR-06 identifican IAM/KMS y administración compartidos como dependencias comunes y exigen recuperación. No hay aún un diseño instanciado de raíces de confianza, custodios, acceso de emergencia, separación de administración de copias/claves y restauración cuando el proveedor de identidad o el administrador productivo están comprometidos. El control está diseñado en intención, no demostrado en su implementación.",
+      "evidence": [
+        {
+          "path": "docs/adr/ADR-06-aislamiento-por-celda.md",
+          "section": "Decisión propuesta y Aceptación",
+          "detail": "Separa claves por celda y reconoce IAM/KMS/red/plano operativo como dependencias comunes.",
+          "ids": [
+            "ADR-06"
+          ]
+        },
+        {
+          "path": "docs/functional/02-identidad-accesos.md",
+          "section": "FR-IAM-008 y FR-IAM-022",
+          "detail": "Exige acceso temporal y recuperación/rotación de credenciales, sin un bootstrap específico.",
+          "ids": [
+            "FR-IAM-008",
+            "FR-IAM-022"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-009 y FR-OPS-010",
+          "detail": "Copias protegidas frente al administrador productivo y recuperación integral quedan propuestas.",
+          "ids": [
+            "FR-OPS-009",
+            "FR-OPS-010"
+          ]
+        }
+      ],
+      "impact": "Comprometer una administración común puede vencer el aislamiento entre celdas o impedir recuperar copias aparentemente íntegras; una dependencia circular de credenciales puede bloquear el DR.",
+      "actions": [
+        "Diseñar dominios de administración y raíces de confianza para producción, copias, claves, auditoría y CI/CD, con responsabilidades y dependencias explícitas.",
+        "Crear procedimiento de recuperación de identidad/claves con custodios, acceso de emergencia limitado, evidencias y ubicación autorizada.",
+        "Ensayar pérdida de IAM, revocación de claves y compromiso de un administrador en entorno aislado, preservando separación entre entidades."
+      ],
+      "acceptance": [
+        "Administrador productivo comprometido no puede eliminar/modificar simultáneamente todas las copias y el material necesario para restaurarlas.",
+        "Otro rol autorizado recupera identidad, claves y auditoría siguiendo el procedimiento sin depender del componente perdido.",
+        "Ensayo conserva configuración efectiva, accesos usados, punto recuperado y límites residuales del modelo de amenazas."
+      ],
+      "owner_role": "Seguridad de plataforma y Operaciones/SRE",
+      "dependencies": [
+        "Proveedor/topología elegidos",
+        "Mapa de países y responsabilidad compartida",
+        "Custodios efectivos"
+      ],
+      "suggested_deliverables": [
+        "docs/security/control-plane-recovery.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/adr-04-alta-disponibilidad/SKILL.md",
+        ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-04",
+      "title": "Las contingencias preventivas todavía no están instanciadas por operación y riel",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de autorizar dinero real en un producto/canal o conectar un riel de producción.",
+      "statement": "AML y FRD separan controles preventivos de monitoreo posterior y prohíben rechazos entrantes genéricos, y ASY preserva estados ambiguos. Faltan las decisiones específicas del primer producto para lista vencida, proveedor sin respuesta, score no disponible, mandato revocado y callback pendiente: quién decide, qué estado financiero se conserva y qué permite cada contraparte. No falta el requisito; falta su política operable.",
+      "evidence": [
+        {
+          "path": "docs/functional/20-prevencion-la-ft-fp.md",
+          "section": "FR-AML-005, FR-AML-009 y FR-AML-011",
+          "detail": "Exige resultado vigente/contingencia permitida, congelamiento autoritativo y causas admisibles de recepción.",
+          "ids": [
+            "FR-AML-005",
+            "FR-AML-009",
+            "FR-AML-011"
+          ]
+        },
+        {
+          "path": "docs/functional/21-prevencion-fraude.md",
+          "section": "FR-FRD-004 y FR-FRD-005",
+          "detail": "Exige decisión preventiva vigente y contingencia diferenciada por riel/sentido.",
+          "ids": [
+            "FR-FRD-004",
+            "FR-FRD-005"
+          ]
+        },
+        {
+          "path": "docs/functional/28-integraciones-eventos-trabajos.md",
+          "section": "FR-ASY-012 y FR-ASY-013",
+          "detail": "Timeout/lease no autorizan reenvío ni liberación de reserva ambigua.",
+          "ids": [
+            "FR-ASY-012",
+            "FR-ASY-013"
+          ]
+        }
+      ],
+      "impact": "Una política global de continuar o bloquear puede permitir fraude o incumplir el tratamiento de recepción del esquema; liberar/reintentar ante incertidumbre puede duplicar dinero.",
+      "actions": [
+        "Crear tabla por operación, sentido, perfil, dependencia y estado de frescura con conducta permitida, dueño y escalamiento.",
+        "Acordar contrato técnico/operativo con rieles y proveedores preventivos, incluyendo consultas de estado y autenticidad de callback.",
+        "Probar concurrencia entre restricción/revocación y autorización y caída entre intención externa y confirmación."
+      ],
+      "acceptance": [
+        "Cada combinación habilitada tiene un resultado explícito y fundado: rechazo permitido, pendiente, derivación o ejecución con controles exigibles.",
+        "Fallos sintéticos no liberan reservas ambiguas, no reenvían a ciegas ni convierten indisponibilidad interna en rechazo entrante universal."
+      ],
+      "owner_role": "Cumplimiento/AML, Fraude, Pagos y Seguridad",
+      "dependencies": [
+        "Perfil/licencia inicial",
+        "Contratos y perfil del riel",
+        "Política de riesgo y fuentes vigentes"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/dependency-contingencies.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+        ".agents/skills/core-bancario-argentina/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-05",
+      "title": "Retención, residencia y derechos necesitan una matriz poblada y ensayo de restauración",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de recibir legajos, cartera importada, soporte o telemetría con datos personales reales.",
+      "statement": "DAT/NFR-06 ya requieren mapa de tratamientos, retención por categoría, holds y reaplicación de disposiciones al restaurar. No constan inventario poblado, políticas efectivas por almacén ni prueba de que el dato retirado de difusión no reaparezca desde backups, DLQ o proyecciones. Las referencias legales y los FR son diseño; no son evidencia de tratamiento aplicado.",
+      "evidence": [
+        {
+          "path": "docs/functional/27-auditoria-privacidad-archivo.md",
+          "section": "FR-DAT-007, FR-DAT-010, FR-DAT-014 y FR-DAT-021",
+          "detail": "Cubre países, retención, restauración y reserva ROS pero su estado es sin evaluar.",
+          "ids": [
+            "FR-DAT-007",
+            "FR-DAT-010",
+            "FR-DAT-014",
+            "FR-DAT-021"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+          "section": "NFR-06-C01, NFR-06-C02, NFR-06-C03 y NFR-06-C04",
+          "detail": "Requiere cero flujos/categorías sin política y resolver derechos en plazo; pendientes incluyen países y fundamentos.",
+          "ids": [
+            "NFR-06-C01",
+            "NFR-06-C02",
+            "NFR-06-C03",
+            "NFR-06-C04"
+          ]
+        },
+        {
+          "path": "docs/compliant.md",
+          "section": "DATA-02, DATA-04, DATA-05, DATA-06 y TAX-09",
+          "detail": "La conservación y transferencia dependen de categoría, sujeto, finalidad y deber concurrente.",
+          "ids": [
+            "DATA-02",
+            "DATA-04",
+            "DATA-05",
+            "DATA-06",
+            "TAX-09"
+          ]
+        }
+      ],
+      "impact": "Una supresión indiscriminada puede destruir soporte exigible; una restauración o soporte exterior puede reintroducir difusión vencida o una transferencia no evaluada.",
+      "actions": [
+        "Poblar categorías de identidad/legajo, contratos, diario, ROS, logs, colas, backups y soporte con fundamento, disparador, duración, acceso, país y disposición.",
+        "Resolver mecanismos de transferencia, originales locales cuando corresponda y responsabilidad de subencargados.",
+        "Ensayar derechos, hold/levantamiento y restauración con datos sintéticos, preservando registros legales y exclusión de ROS."
+      ],
+      "acceptance": [
+        "Inventario se contrasta con servicios y destinos reales del perfil, incluidos KMS/DR/APM/soporte.",
+        "Caso de acceso/corrección conserva reloj desde recepción; restaurar no repone datos a difusión vencida ni borra evidencia bajo hold.",
+        "Resultado explica remanentes, plazos concurrentes y disposición por almacén, sin declarar borrado completo sólo por un flag."
+      ],
+      "owner_role": "Responsable de datos de la entidad, Legal y Seguridad",
+      "dependencies": [
+        "Entidades/países/terceros definidos",
+        "Políticas de archivo por categoría",
+        "Inventario de activos"
+      ],
+      "suggested_deliverables": [
+        "docs/data/processing-retention-matrix.md",
+        "docs/operations/privacy-restore-test.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+        ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-06",
+      "title": "SDLC y cadena de suministro carecen todavía de evidencia de ejecución",
+      "kind": "evidence_gap",
+      "priority": "P1",
+      "trigger": "Al iniciar el repositorio de producto y antes de promover un release candidato con acceso a un entorno sensible.",
+      "statement": "La arquitectura y OPS prescriben revisión, separación, SBOM, artefactos verificables, pruebas y QA independiente; no se acreditan pipeline de producto, configuración de repositorio, credenciales de build ni release reproducible. La cobertura documental del catálogo no valida un binario o despliegue. Es una tarea de construcción del proyecto, no un fallo de una aplicación existente.",
+      "evidence": [
+        {
+          "path": "docs/achitecture.md",
+          "section": "15. Operación, entrega segura y costos",
+          "detail": "CI/CD y migración de esquemas se describen como diseño, no como ejecuciones.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-022, FR-OPS-025 y FR-OPS-026",
+          "detail": "Vincula cambio, QA/tercero independiente aplicable y versiones/SBOM.",
+          "ids": [
+            "FR-OPS-022",
+            "FR-OPS-025",
+            "FR-OPS-026"
+          ]
+        },
+        {
+          "path": "docs/adr/ADR-07-stack-gestionado.md",
+          "section": "Decisión propuesta",
+          "detail": "Cada dependencia debe tener versión, licencia, SBOM, responsable y parcheo; la elección sigue propuesta.",
+          "ids": [
+            "ADR-07"
+          ]
+        }
+      ],
+      "impact": "Un cambio no revisado, dependencia comprometida o credencial de CI excesiva puede modificar la autoridad financiera y eludir controles del runtime.",
+      "actions": [
+        "Definir repositorio protegido, revisores/entornos, credenciales de CI de mínimo alcance y proceso de promoción con procedencia verificable.",
+        "Implementar build/versionado y verificaciones de secretos, dependencias, código e infraestructura proporcionales al alcance, vinculadas a casos financieros y permisos negativos.",
+        "Planificar QA y pruebas externas independientes cuando el sujeto/contrato lo exija; mantenerlas separadas de escáneres propios."
+      ],
+      "acceptance": [
+        "Release de prueba enlaza requisito, revisión, fuentes/dependencias, pruebas, artefacto identificado y despliegue; secretos no aparecen en repositorio/logs.",
+        "Autor no puede sustituir por sí solo artefacto/promoción aprobada y una dependencia vulnerable conserva tratamiento/retest.",
+        "Pruebas independientes aplicables tienen alcance y evidencia propia antes de la activación afectada, sin exigirlas para escribir documentación."
+      ],
+      "owner_role": "Ingeniería, Plataforma, Seguridad y QA independiente",
+      "dependencies": [
+        "Primer producto seleccionado",
+        "Herramientas/repositorio de implementación",
+        "Roles y política de cambios"
+      ],
+      "suggested_deliverables": [
+        "docs/engineering/secure-delivery-plan.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-05-seguridad-accesos/SKILL.md",
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-07",
+      "title": "No hay modelo operativo dotado para asumir guardia y responsabilidades de cliente",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de prometer cobertura de soporte/SLA o habilitar un piloto con clientes y fondos; en kickoff basta designar responsables de trabajo y plan de dotación.",
+      "statement": "Arquitectura sección 19 deja RACI, guardia, formación y presupuesto como decisiones pendientes, y OPS/NFR-12 proponen responsables y suplencias. No constan personas/servicios contratados, horario de cobertura, financiación recurrente o prueba de que una ausencia no deja sin conciliación, aprobación o atención a la entidad. Un organigrama de roles propuestos no constituye un equipo disponible.",
+      "evidence": [
+        {
+          "path": "docs/achitecture.md",
+          "section": "19. Decisiones pendientes para convertir el diseño en implementación",
+          "detail": "Capacidad de operación incluye RACI, guardia, soporte, formación y presupuesto por resolver.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-003 y FR-OPS-037",
+          "detail": "Pide dueño/guardia/runbook y designaciones; no acredita designaciones reales.",
+          "ids": [
+            "FR-OPS-003",
+            "FR-OPS-037"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-12-operabilidad-costos.md",
+          "section": "NFR-12-C01, NFR-12-C03 y NFR-12-C05",
+          "detail": "Exige cobertura del inventario crítico, costo reproducible y ejecución por roles distintos del autor.",
+          "ids": [
+            "NFR-12-C01",
+            "NFR-12-C03",
+            "NFR-12-C05"
+          ]
+        }
+      ],
+      "impact": "Se puede tener software correcto y no responder un incidente, cerrar la cartera o atender al usuario dentro del plazo; concentrar todo en el fundador impide independencia y continuidad.",
+      "actions": [
+        "Separar RACI de desarrollo, operación técnica del proveedor y funciones institucionales del cliente.",
+        "Asignar dueño, suplente, horario/escalamiento y autoridad por operación crítica, incluida conciliación, ajustes, reclamos, AML/fraude y presentación de reportes.",
+        "Presupuestar dotación y soporte de terceros con el servicio efectivamente ofrecido; resolver ubicación de funciones TI/SI cuando aplique al sujeto."
+      ],
+      "acceptance": [
+        "Matriz poblada y compromisos de disponibilidad cubren todos los flujos activos y las incompatibilidades de funciones.",
+        "Simulacro con ausencia del titular llega a un suplente con acceso mínimo y potestad real; costos de guardia/localización/QA quedan en el TCO.",
+        "El kickoff identifica responsables de implementación sin anunciar que esa dotación ya presta servicio productivo."
+      ],
+      "owner_role": "Dirección del proveedor y responsable operativo de la entidad",
+      "dependencies": [
+        "Perfil/servicio inicial y exposición",
+        "Presupuesto y modelo contractual",
+        "Matriz de incompatibilidades"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/operating-model-raci.md",
+        "docs/operations/staffing-support-budget.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-08",
+      "title": "BIA y recuperación aún no convierten metas propuestas en compromisos demostrados",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de firmar un SLA/RPO, seleccionar una región como suficiente para un cliente o habilitar operación monetaria del piloto.",
+      "statement": "ADR-04 distingue correctamente durabilidad multizona y pérdida regional potencial, y exige fencing y conciliación. Faltan BIA del cliente, topología efectiva, independencia de dominios, capacidad remanente y ensayos con IAM/KMS/rieles. Los valores propuestos de recuperación no prueban recuperabilidad ni disponibilidad mensual.",
+      "evidence": [
+        {
+          "path": "docs/adr/ADR-04-alta-disponibilidad.md",
+          "section": "Decisión propuesta y Aceptación y revisión",
+          "detail": "RPO regional depende del punto recuperado; metas quedan por validar.",
+          "ids": [
+            "ADR-04"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-002 y FR-OPS-006 a FR-OPS-013",
+          "detail": "Diseña BIA, persistencia, fencing, backups, restauración y reapertura, todos sin evaluar.",
+          "ids": [
+            "FR-OPS-002",
+            "FR-OPS-006",
+            "FR-OPS-007",
+            "FR-OPS-008",
+            "FR-OPS-009",
+            "FR-OPS-010",
+            "FR-OPS-011",
+            "FR-OPS-012",
+            "FR-OPS-013"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+          "section": "NFR-02-C03, NFR-02-C04, NFR-02-C05 y NFR-02-C06",
+          "detail": "Las metas exigen fallos/restore observados y reconciliación antes de reabrir.",
+          "ids": [
+            "NFR-02-C03",
+            "NFR-02-C04",
+            "NFR-02-C05",
+            "NFR-02-C06"
+          ]
+        }
+      ],
+      "impact": "Contratar RPO cero regional sobre réplica asíncrona o reabrir con eventos posteriores al punto SQL puede perder operaciones reconocidas o generar doble efecto externo.",
+      "actions": [
+        "Acordar BIA por flujo y escenarios con pérdida máxima aceptable, tolerancia y dependencias, separando objetivo de contrato.",
+        "Obtener evidencia de independencia de sitios/política síncrona/fencing y dimensionar capacidad tras pérdida de dominio.",
+        "Ensayar pérdida de writer/región, copia limpia y desfase DB-broker con primario/adaptadores anteriores aislados y consulta de efectos externos ambiguos."
+      ],
+      "acceptance": [
+        "Acta distingue meta, observado y brecha; registra punto WAL/offset y RPO real, incluidos commits reconocidos ausentes en DR si los hubiera.",
+        "No hay dos escritores ni replay externo; reapertura exige conciliación y restricciones íntegras.",
+        "Un ensayo corto no se presenta como disponibilidad mensual; si negocio exige RPO regional cero se revisa el diseño antes de prometerlo."
+      ],
+      "owner_role": "Operaciones/SRE, Arquitectura y dueño del BIA de la entidad",
+      "dependencies": [
+        "Topología/proveedor y mapas de dependencias",
+        "Pérdida tolerable y volumen representativo",
+        "Modelo de raíces de confianza"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/bia-recovery-plan.md",
+        "docs/operations/recovery-test-results.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/adr-04-alta-disponibilidad/SKILL.md",
+        ".agents/skills/nfr-02-disponibilidad-recuperacion/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-09",
+      "title": "Falta un calendario operativo ejecutable de incidentes, AML y reclamos",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de recibir solicitudes/reclamos de clientes o hechos sujetos a notificación en el piloto.",
+      "statement": "OPS, AML, CST y COR conservan correctamente relojes distintos y hechos originales. No hay aún calendario poblado con disparadores, zona/calendario, canales efectivos, delegados/suplentes y procedimientos de envío/acuse. Falta un ejercicio que cruce incidente de tercero, reclamo, investigación reservada y aviso inicial sin esperar la causa raíz.",
+      "evidence": [
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-016 a FR-OPS-019 y Contratos de operación",
+          "detail": "Separa ocurrido/detectado, primera hora RRCI y cierre; preparación no acredita envío.",
+          "ids": [
+            "FR-OPS-016",
+            "FR-OPS-017",
+            "FR-OPS-018",
+            "FR-OPS-019"
+          ]
+        },
+        {
+          "path": "docs/functional/20-prevencion-la-ft-fp.md",
+          "section": "FR-AML-017, FR-AML-018, FR-AML-019 y FR-AML-020",
+          "detail": "Mantiene relojes LA, FT y FP independientes y circuito reservado.",
+          "ids": [
+            "FR-AML-017",
+            "FR-AML-018",
+            "FR-AML-019",
+            "FR-AML-020"
+          ]
+        },
+        {
+          "path": "docs/functional/26-canales-atencion-usuarios.md",
+          "section": "FR-CST-015, FR-CST-017 y FR-CST-018",
+          "detail": "Recibo del reclamo, suplencia, decisión y comunicación son hechos distintos.",
+          "ids": [
+            "FR-CST-015",
+            "FR-CST-017",
+            "FR-CST-018"
+          ]
+        },
+        {
+          "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+          "section": "FR-COR-019",
+          "detail": "Incidente del tercero conserva hitos originales e impacto propio.",
+          "ids": [
+            "FR-COR-019"
+          ]
+        }
+      ],
+      "impact": "Colas o transferencias entre proveedor/entidad pueden consumir el plazo mientras cada equipo cree que otro presentará; un caso puede cerrarse internamente sin respuesta al cliente o acuse externo.",
+      "actions": [
+        "Crear matriz de obligaciones/servicios activos con hecho disparador, plazo/fuente, calendario, dueño, suplente, canal y evidencia de recepción.",
+        "Preparar runbooks de clasificación, comunicación autorizada, actualización, cierre y respuesta al usuario, manteniendo reserva AML y acceso mínimo.",
+        "Realizar tabletop fuera del horario habitual con proveedor tardío, titular ausente y envío sin respuesta; usar canales simulados, sin comunicar externamente en esta revisión."
+      ],
+      "acceptance": [
+        "El ejercicio produce una línea temporal única y expedientes vinculados con relojes que no se reinician por cola/ticket.",
+        "Responsables preparan avisos/respuestas dentro de plazos del perfil y diferencian generado, enviado, recibido/aceptado; constancias simuladas están identificadas como tales.",
+        "No se importa un aviso general AAIP de 72 horas ni otro plazo ajeno al inventario aplicable."
+      ],
+      "owner_role": "Operaciones de la entidad, Cumplimiento/AML, Atención y responsable RRCI",
+      "dependencies": [
+        "Perfil de obligaciones y fuentes revalidadas",
+        "Contactos/facultades reales y canales",
+        "RACI de guardia"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/obligation-calendar.md",
+        "docs/operations/incident-complaint-tabletop.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md",
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-10",
+      "title": "El día operativo y la resolución manual todavía no fueron ensayados",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes del primer cierre o conciliación que determine fondos, reporte o estado contractual del piloto.",
+      "statement": "REC y ASY exigen universos completos, excepciones trazables y ajustes aprobados por el núcleo. No constan perfiles de fuentes, horarios/cortes, umbrales de intervención, runbooks ni ejercicios de una jornada con archivo tardío, pago ambiguo, diferencia por titular y ajuste en período cerrado. Los FR ya cubren el comportamiento; falta convertirlo en operación repetible con personas distintas.",
+      "evidence": [
+        {
+          "path": "docs/functional/22-conciliacion-excepciones.md",
+          "section": "FR-REC-001, FR-REC-020, FR-REC-021, FR-REC-022, FR-REC-023 y FR-REC-026",
+          "detail": "Fuente, dueño, plazo, ajuste y completitud son condiciones del cierre, no sólo jobs terminados.",
+          "ids": [
+            "FR-REC-001",
+            "FR-REC-020",
+            "FR-REC-021",
+            "FR-REC-022",
+            "FR-REC-023",
+            "FR-REC-026"
+          ]
+        },
+        {
+          "path": "docs/functional/28-integraciones-eventos-trabajos.md",
+          "section": "FR-ASY-019, FR-ASY-020 y FR-ASY-024",
+          "detail": "Exige deadlines, manifiesto y barreras de todas las fuentes.",
+          "ids": [
+            "FR-ASY-019",
+            "FR-ASY-020",
+            "FR-ASY-024"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-12-operabilidad-costos.md",
+          "section": "NFR-12-C01 y NFR-12-C05",
+          "detail": "Runbook y ejecución por roles distintos aún requieren evidencia.",
+          "ids": [
+            "NFR-12-C01",
+            "NFR-12-C05"
+          ]
+        }
+      ],
+      "impact": "Un total general correcto puede esconder asignación a otro titular; una excepción marcada resuelta puede liberar fondos o alimentar un reporte incompleto, o dejar un pago ambiguo sin dueño.",
+      "actions": [
+        "Diseñar calendario de negocio y cortes por producto/riel/fuente con esperado, recibido y tratamiento de tardíos.",
+        "Preparar runbook de diferencias y límites de acción manual: consulta, investigación, propuesta, aprobación, contabilización y reapertura.",
+        "Ejecutar jornada sintética completa con cierre parcial, suplencia, ajuste rechazado y consulta externa ambigua, sin acceso SQL corrector de saldos."
+      ],
+      "acceptance": [
+        "Cada diferencia tiene titular/moneda/importe, propietario, deadline y decisión; excepción aceptada no se etiqueta conciliación completa.",
+        "Ajuste cambiado exige nueva aprobación y reintento no duplica asiento; período cerrado sigue política aprobada.",
+        "Un operador distinto del autor reconstruye corte y reporte con fuentes/versiones y explica todos los faltantes."
+      ],
+      "owner_role": "Operaciones de negocio, Conciliación y Finanzas de la entidad",
+      "dependencies": [
+        "Plan contable y calendarios del producto",
+        "Fuentes/contratos de contraparte",
+        "Facultades y sustitución operativa"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/business-day-runbook.md",
+        "docs/operations/manual-exception-playbook.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+        ".agents/skills/nfr-07-auditoria-observabilidad/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-11",
+      "title": "Corte, retorno y salida necesitan ensayo independiente de una cohorte representativa",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de cada migración/activación de cohorte real y antes de afirmar portabilidad o retirada del proveedor.",
+      "statement": "ADR-08 y MIG especifican bulk logged, unicidad entre corridas, transacción fuente completa, PREPARED aislado, una autoridad y retorno conciliado después de operar. No se acredita un origen, mapeo, población de control, ensayo completo o acta de corte/retorno ejecutada. La calidad del diseño no demuestra ventana, exclusión efectiva ni capacidad del receptor de salida.",
+      "evidence": [
+        {
+          "path": "docs/adr/ADR-08-carga-inicial-masiva.md",
+          "section": "Aceptación, revisión y dependencias",
+          "detail": "Los ensayos están pendientes de ejecución.",
+          "ids": [
+            "ADR-08"
+          ]
+        },
+        {
+          "path": "docs/functional/29-carga-inicial-migracion-salida.md",
+          "section": "FR-MIG-021, FR-MIG-022, FR-MIG-029, FR-MIG-031 y FR-MIG-033",
+          "detail": "Barrera, autoridad, retorno tras actividad y restauración fuera del proveedor requieren resultados.",
+          "ids": [
+            "FR-MIG-021",
+            "FR-MIG-022",
+            "FR-MIG-029",
+            "FR-MIG-031",
+            "FR-MIG-033"
+          ]
+        },
+        {
+          "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+          "section": "FR-COR-022",
+          "detail": "La salida mantiene pendientes y obligaciones del proveedor regulado.",
+          "ids": [
+            "FR-COR-022"
+          ]
+        }
+      ],
+      "impact": "Un corte incompleto puede tener dos autoridades o fondos duplicados; volver con backup después de pagos reales pierde obligaciones; exportar sin reconstruir puede dejar al cliente cautivo.",
+      "actions": [
+        "Elegir origen/cohorte y modo de apertura o historia con Finanzas, mapeos versionados y universo esperado.",
+        "Ensayar carga y cutover con fuente dividida, checksum modificado, nueva corrida duplicada, delta tardío, réplica atrasada y operaciones en vuelo.",
+        "Ensayar retorno tras actividad sintética equivalente y reconstrucción en destino independiente con claves/documentos/reglas; asignar autoridad y procedimiento de decisión por rol real."
+      ],
+      "acceptance": [
+        "Resultados incluyen cero diferencias inexplicadas por titular/moneda, ninguna exposición PREPARED a mayor/RI/eventos y un solo escritor por contrato.",
+        "Ventana completa y efecto en cohortes activas se miden con WAL/durabilidad/seguridad activos; no se declara éxito sólo por terminar COPY.",
+        "Retorno preserva liquidaciones y traslada novedades; destino independiente reconstruye cartera y pendientes con evidencia legible."
+      ],
+      "owner_role": "Migración, Operaciones, Finanzas y receptor de la cartera",
+      "dependencies": [
+        "Origen y calidad de datos",
+        "Barrera/CDC y contratos de coexistencia",
+        "Ventana y destino de salida"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/cutover-return-rehearsal.md",
+        "docs/operations/exit-reconstruction-results.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/adr-08-carga-inicial-masiva/SKILL.md",
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-SEC-12",
+      "title": "La cadena de proveedores no tiene aún expediente operativo/contractual verificable",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de contratar servicio crítico, habilitar país/subencargado o comprometer capacidades gestionadas y soporte de producción.",
+      "statement": "ADR-07 propone servicios gestionados y OPS/COR requieren responsabilidad compartida, derechos de auditoría, avisos, revisión SOC y salida. No se identifica proveedor/región/cadena contratada ni se aportan informes completos, CUEC, constancias de aviso o ejercicio de soporte/supervisión. Esto limita la contratación y activación concreta; no impide explorar alternativas o probar con datos sintéticos.",
+      "evidence": [
+        {
+          "path": "docs/adr/ADR-07-stack-gestionado.md",
+          "section": "Decisión propuesta y Aceptación",
+          "detail": "La preferencia gestionada depende de garantías, jurisdicción, contrato y pruebas.",
+          "ids": [
+            "ADR-07"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-029, FR-OPS-030, FR-OPS-031, FR-OPS-032, FR-OPS-033, FR-OPS-035 y FR-OPS-036",
+          "detail": "Requiere cadena, contrato, supervisor, avisos/cambios, revisión SOC y salida, no acreditados.",
+          "ids": [
+            "FR-OPS-029",
+            "FR-OPS-030",
+            "FR-OPS-031",
+            "FR-OPS-032",
+            "FR-OPS-033",
+            "FR-OPS-035",
+            "FR-OPS-036"
+          ]
+        },
+        {
+          "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+          "section": "FR-COR-020 y FR-COR-021",
+          "detail": "Distingue corresponsalía de tercerización y rechaza sustituir acceso supervisor por un certificado.",
+          "ids": [
+            "FR-COR-020",
+            "FR-COR-021"
+          ]
+        },
+        {
+          "path": "docs/compliant.md",
+          "section": "BCRA-T26 a BCRA-T34 y STD31",
+          "detail": "El análisis exige sujeto/servicio/criticidad, cadena completa y alcance/período de aseguramiento.",
+          "ids": [
+            "BCRA-T26",
+            "BCRA-T27",
+            "BCRA-T28",
+            "BCRA-T29",
+            "BCRA-T30",
+            "BCRA-T31",
+            "BCRA-T32",
+            "BCRA-T33",
+            "BCRA-T34",
+            "STD31"
+          ]
+        }
+      ],
+      "impact": "Un tercero puede impedir inspección, no sostener el fencing o soporte prometido, trasladar datos sin margen para avisos o exigir costos/tiempos de salida que vuelvan inviable la operación.",
+      "actions": [
+        "Comparar candidatos con matriz técnica/contractual por servicio: administración, ubicación/control, subcontratistas, incidentes, recuperación, evidencia y sustitución.",
+        "Revisar informes íntegros por alcance/período/excepciones/CUEC y comprobar controles del usuario en la configuración del core; ISO/SOC no son certificación de producto ni eximen al cliente.",
+        "Cerrar avisos aplicables según entidad/criticidad/servicio digital con calendarios separados, y ensayar pedido de evidencia, soporte de incidente y salida."
+      ],
+      "acceptance": [
+        "Expediente identifica cadena y responsables, brechas resueltas o limitación explícita de la contratación afectada, sin usar aceptación de riesgo para suprimir ley.",
+        "Contrato permite derechos exigibles en toda cadena y evidencia de acceso/soporte/portabilidad del escenario, incluidos costos de egreso/inspección aplicables.",
+        "Calendario distingue notificación y autorización y no asume que todo servicio o corresponsalía está sujeto al mismo aviso."
+      ],
+      "owner_role": "Compras/Legal, Seguridad, Operaciones y entidad contratante",
+      "dependencies": [
+        "Servicio/perfil/criticidad definidos",
+        "Regiones y mapa de datos",
+        "TCO y capacidad de guardia"
+      ],
+      "suggested_deliverables": [
+        "docs/operations/supplier-assurance-matrix.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-bancario-argentina/SKILL.md",
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md"
+      ]
+    }
+  ]
+}

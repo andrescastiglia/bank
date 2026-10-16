@@ -27,13 +27,15 @@ La documentación del 15/10/2026 propone objetivos; no hay pruebas de la aplicac
 6. **Seleccionar los skills de atributo.** Leer los NFR específicos afectados. Para cambios de dinero/colas revisar integridad y asincronía; topología requiere recuperación, seguridad y residencia; bulk requiere migración, integridad y reportes; configuración requiere mantenibilidad, integridad y experiencia.
 7. **Actuar según el pedido.** Diseñar el mecanismo, realizar cambios autorizados en código/configuración existente o verificar evidencia. Elegir pruebas materiales por riesgo; no agregar pruebas que sólo repliquen el texto del requisito. Usar datos sintéticos y no cargar producción para un pedido documental.
 8. **Medir correctamente.** Distinguir objetivo, configuración y resultado. Medir latencia extremo a extremo con percentiles/errores, sin sumar percentiles. Separar disponibilidad por solicitudes de equivalencia por tiempo; objetivo de lag no prueba RPO regional. Comparar población y entorno con lo contratado y registrar exclusiones, muestras y límites de inferencia.
-9. **Mantener historia.** Actualizar registro, índice, arquitectura y skills afectados; conservar motivo/versión y pruebas previas. No cambiar un umbral después del ensayo para ocultar una brecha ni reducir un control material sin fundamento. La aceptación y la evidencia observada se registran por separado.
+9. **Mantener historia.** Actualizar registro, índice, arquitectura y skills afectados; conservar motivo/versión y pruebas previas. Revisar en ambos sentidos FR, casos, oráculos y evidencia de la [biblioteca funcional](../../../docs/functional/README.md) con [core-fr-requisitos](../core-fr-requisitos/SKILL.md). Relacionar caso/corrida/entorno/versiones y resultados preservados; cambiar significado puede invalidar evidencia aunque conserve el ID. No cambiar un umbral después del ensayo para ocultar una brecha ni reducir un control material sin fundamento. La aceptación y la evidencia observada se registran por separado.
 
 ## Familias y aplicación
 
 El [índice NFR](../../../docs/nfr/README.md) enlaza los trece skills: integridad; disponibilidad/recuperación; latencia/capacidad; asincronía durable; seguridad; privacidad/residencia/retención; auditoría/observabilidad; interoperabilidad/portabilidad; mantenibilidad/configuración; migración; calidad de datos/reportes; operabilidad/costos; accesibilidad/experiencia.
 
 No ejecutar todas las familias para cualquier cambio menor. Si se usa IA o se activa un producto especializado, ampliar el alcance de calidad y normativa correspondiente sin asumir que el catálogo inicial lo verifica automáticamente.
+
+Seleccionar regresión según riesgo: cálculo con oráculo/fechas; dinero y asincronía con concurrencia/duplicados; migración y DR con PREPARED/autoridad/efectos externos; datos y jurisdicción con permisos/secreto; edición editorial con comprobación estructural pertinente. Para selección económica de alcance usar [core-project-review](../core-project-review/SKILL.md); para preparación de piloto, [core-pilot-kickoff](../core-pilot-kickoff/SKILL.md). Obtener métricas/umbrales desde el NFR vigente, evitando copias divergentes en los workflows.
 
 ## Salida y estados
 

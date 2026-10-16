@@ -1,0 +1,728 @@
+{
+  "area": "legal",
+  "baseline_commit": "2e5d579103b94ab70c16d81debe73bf5840ba0c8",
+  "review_date": "2026-10-16",
+  "lenses": [
+    "Legal y cumplimiento",
+    "Contratos de venta y propiedad intelectual",
+    "Proveedor tecnológico frente a operador regulado",
+    "Protección de datos y consumidor",
+    "Tercerización y evidencia institucional"
+  ],
+  "documents_reviewed": [
+    ".agents/skills/adr-05-configuracion-versionada/SKILL.md",
+    ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md",
+    ".agents/skills/adr-07-stack-gestionado/SKILL.md",
+    ".agents/skills/core-adr-arquitectura/SKILL.md",
+    ".agents/skills/core-bancario-argentina/SKILL.md",
+    ".agents/skills/core-bancario-argentina/references/controles.md",
+    ".agents/skills/core-bancario-argentina/references/estandares-industria.md",
+    ".agents/skills/core-bancario-argentina/references/iso.md",
+    ".agents/skills/core-bancario-argentina/references/leyes.md",
+    ".agents/skills/core-bancario-argentina/references/metodologia.md",
+    ".agents/skills/core-bancario-argentina/references/regulaciones-bcra.md",
+    ".agents/skills/core-nfr-calidad/SKILL.md",
+    ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+    ".agents/skills/nfr-08-interoperabilidad-portabilidad/SKILL.md",
+    ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+    ".agents/skills/nfr-13-accesibilidad-experiencia/SKILL.md",
+    "LICENSE",
+    "docs/README.md",
+    "docs/achitecture.md",
+    "docs/adr/ADR-01-nucleo-modular.md",
+    "docs/adr/ADR-02-autoridad-sql.md",
+    "docs/adr/ADR-03-outbox-inbox.md",
+    "docs/adr/ADR-04-alta-disponibilidad.md",
+    "docs/adr/ADR-05-configuracion-versionada.md",
+    "docs/adr/ADR-06-aislamiento-por-celda.md",
+    "docs/adr/ADR-07-stack-gestionado.md",
+    "docs/adr/ADR-08-carga-inicial-masiva.md",
+    "docs/adr/README.md",
+    "docs/compliant.md",
+    "docs/functional/01-entidades-perimetro.md",
+    "docs/functional/02-identidad-accesos.md",
+    "docs/functional/03-personas-clientes-kyc.md",
+    "docs/functional/04-productos-configuracion.md",
+    "docs/functional/05-contratos-documentos.md",
+    "docs/functional/06-cuentas-depositos.md",
+    "docs/functional/09-originacion-administracion-credito.md",
+    "docs/functional/12-cobranzas-mora-recupero.md",
+    "docs/functional/13-pagos-transferencias.md",
+    "docs/functional/14-cheques-echeq-cedip.md",
+    "docs/functional/15-tarjetas-adquirencia.md",
+    "docs/functional/18-exterior-cambios-comercio.md",
+    "docs/functional/19-inversiones-custodia-fondos.md",
+    "docs/functional/20-prevencion-la-ft-fp.md",
+    "docs/functional/21-prevencion-fraude.md",
+    "docs/functional/25-reportes-localizacion.md",
+    "docs/functional/26-canales-atencion-usuarios.md",
+    "docs/functional/27-auditoria-privacidad-archivo.md",
+    "docs/functional/29-carga-inicial-migracion-salida.md",
+    "docs/functional/30-operacion-continuidad-terceros.md",
+    "docs/functional/31-gobierno-modelos-ia.md",
+    "docs/functional/32-corresponsalia-baas-plataformas.md",
+    "docs/functional/README.md",
+    "docs/functional/catalog.json",
+    "docs/functional/coverage.md",
+    "docs/functional/coverage_map.json",
+    "docs/functional/flows.md",
+    "docs/functional/scope.md",
+    "docs/market_analysis.md",
+    "docs/nfr/NFR-01-integridad-financiera.md",
+    "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+    "docs/nfr/NFR-05-seguridad-accesos.md",
+    "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+    "docs/nfr/NFR-07-auditoria-observabilidad.md",
+    "docs/nfr/NFR-08-interoperabilidad-portabilidad.md",
+    "docs/nfr/NFR-09-mantenibilidad-configuracion.md",
+    "docs/nfr/NFR-10-migracion-carga-masiva.md",
+    "docs/nfr/NFR-11-calidad-datos-reportes.md",
+    "docs/nfr/NFR-12-operabilidad-costos.md",
+    "docs/nfr/NFR-13-accesibilidad-experiencia.md",
+    "docs/nfr/README.md",
+    "docs/research/bcra_sources.json",
+    "docs/skills.md"
+  ],
+  "findings": [
+    {
+      "id": "REV-LEG-01",
+      "title": "Falta cerrar el perímetro jurídico del primer caso de uso",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de comprometer un piloto que contrate clientes, trate datos reales o mueva fondos.",
+      "statement": "ENT/COR especifican correctamente perfiles y responsabilidades, pero no existe un expediente aplicado a una sociedad, licencia, producto, custodio y canal reales. La biblioteca no permite decidir todavía si el proveedor sólo vende tecnología o ejecutará una función regulada propia. No se observó intermediación ilegal ni se afirma que falten FR de habilitación.",
+      "evidence": [
+        {
+          "path": "docs/functional/01-entidades-perimetro.md",
+          "section": "FR-ENT-002, FR-ENT-003, FR-ENT-004 y FR-ENT-021",
+          "detail": "Exigen permisos y relación institucional; son especificaciones propuestas, sin sociedad/caso instanciado.",
+          "ids": [
+            "FR-ENT-002",
+            "FR-ENT-003",
+            "FR-ENT-004",
+            "FR-ENT-021"
+          ]
+        },
+        {
+          "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+          "section": "FR-COR-001, FR-COR-002, FR-COR-004, FR-COR-006 y Dependencias y límites",
+          "detail": "Distingue software, PSPCP como Servicio y cliente del proveedor regulado; las habilitaciones/contratos siguen pendientes.",
+          "ids": [
+            "FR-COR-001",
+            "FR-COR-002",
+            "FR-COR-004",
+            "FR-COR-006"
+          ]
+        },
+        {
+          "path": "docs/functional/scope.md",
+          "section": "Perfiles y activación",
+          "detail": "La aplicabilidad por sociedad, perfil, producto, canal y fecha está exigida, no resuelta para un operador.",
+          "ids": [
+            "FR-ENT-030"
+          ]
+        }
+      ],
+      "impact": "Una propuesta puede asignar al proveedor obligaciones que no puede cumplir, ocultar al PSPCP responsable o incluir productos fuera de la licencia del cliente; el costo de corregir contrato y arquitectura aparece después de vender.",
+      "actions": [
+        "Preparar un expediente jurídico del cliente de diseño con personas legales, licencias/registros y alcance de operaciones.",
+        "Dibujar titularidad de fondos y cuentas, acreedor contractual, KYC/AML, atención, reportes, terceros y fronteras del proveedor.",
+        "Obtener decisión fundada por función y registrar aplicabilidad/exclusión y condiciones de activación; no inferir habilitación desde BaaS o la marca."
+      ],
+      "acceptance": [
+        "Matriz aplicada al primer producto con evidencia de autorización/registro y responsable de cada flujo.",
+        "Prueba de mesa de alta, cobro, restitución y cierre con una única entidad responsable; exclusiones y dependencias aprobadas."
+      ],
+      "owner_role": "Legal/Cumplimiento de la entidad y dirección del proveedor",
+      "dependencies": [
+        "Cliente de diseño y producto inicial seleccionados",
+        "Modelo de provisión y custodia"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/perimetro-primer-piloto.md",
+        "docs/legal/matriz-responsabilidades.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-bancario-argentina/SKILL.md",
+        ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-02",
+      "title": "La oferta carece de paquete contractual proveedor–cliente",
+      "kind": "specification_gap",
+      "priority": "P0",
+      "trigger": "Antes de emitir una oferta vinculante, aceptar un piloto remunerado o asumir operación productiva.",
+      "statement": "CON cubre contratos de productos financieros y OPS/COR permiten registrar contratos de terceros; no hay borrador de contrato marco de venta tecnológica, SOW, orden de servicio o anexo de aceptación para este proveedor. El análisis comercial propone diagnóstico, piloto, implementación y suscripción, pero no distribuye jurídicamente entregables, dependencia del cliente, garantía, reparación de errores, límites/excepciones de responsabilidad, propiedad de mejoras y finalización.",
+      "evidence": [
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§§8.1, 11.1 y 12.1",
+          "detail": "Identifica unidades facturables, IP y responsabilidades como materias contractuales sin aportar términos del proveedor.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/05-contratos-documentos.md",
+          "section": "Propósito y FR-CON-001, FR-CON-022 a FR-CON-025",
+          "detail": "Especifica documentación de los productos del operador; no equivale al contrato de comercialización del core.",
+          "ids": [
+            "FR-CON-001",
+            "FR-CON-022",
+            "FR-CON-023",
+            "FR-CON-024",
+            "FR-CON-025"
+          ]
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-030 y FR-OPS-036",
+          "detail": "Registrar un contrato y un plan de salida no fija sus condiciones comerciales/jurídicas.",
+          "ids": [
+            "FR-OPS-030",
+            "FR-OPS-036"
+          ]
+        }
+      ],
+      "impact": "Alcance abierto, aceptación discutible, pago ligado a dependencias ajenas y exposición no presupuestada por dinero incorrecto, datos o indisponibilidad; garantías publicitarias pueden superar lo construido.",
+      "actions": [
+        "Preparar MSA/SOW y anexos de alcance, aceptación, precios, cambios, datos, seguridad, soporte y salida, con jerarquía documental.",
+        "Separar producto común, localización común, integración específica y servicios; fijar entregables del piloto y qué depende del cliente/tercero.",
+        "Negociar responsabilidad y remedios por clase de riesgo, preservando obligaciones imperativas aplicables; no copiar el descargo GPL como contrato de servicio."
+      ],
+      "acceptance": [
+        "Paquete revisable aprobado por dirección/Legal con ejemplos de rechazo, subsanación y aceptación de un hito.",
+        "Matriz cláusula–FR/NFR–evidencia y exclusiones comerciales coherentes con el producto realmente disponible."
+      ],
+      "owner_role": "Dirección comercial, Legal y responsable de entrega",
+      "dependencies": [
+        "Perímetro del servicio",
+        "Política de IP/licencias",
+        "Costos y capacidad de soporte"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/contrato-marco-proveedor.md",
+        "docs/legal/sow-piloto.md",
+        "docs/legal/anexos-servicio.md"
+      ],
+      "skill_impact": [
+        "Workflow recomendado de contratación tecnológica basado en el skill regulatorio; no creado por esta revisión"
+      ]
+    },
+    {
+      "id": "REV-LEG-03",
+      "title": "GPL v2 no está integrada en la estrategia de IP y distribución",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de ofrecer derechos exclusivos, una licencia incompatible o entregar software/artefactos a un cliente o tercero.",
+      "statement": "LICENSE contiene GNU GPL versión 2. Los documentos comparan SaaS/licencia/operación propia y prevén mejoras comunes/exportación, pero no delimitan qué obras quedan licenciadas, titularidad/contribuciones, avisos por artefacto, componentes de terceros ni derechos que se prometerán al banco. No se identificó infracción: GPL permite cobrar y el mero acceso a un servicio remoto no se equipara automáticamente a distribución bajo GPL v2. Tampoco puede presumirse titularidad suficiente para relicenciar.",
+      "evidence": [
+        {
+          "path": "LICENSE",
+          "section": "GNU GENERAL PUBLIC LICENSE v2, §§0–3, 6 y 11–12",
+          "detail": "Distingue distribución, código fuente, derechos y descargos; existe licencia, no un repositorio sin licencia.",
+          "ids": []
+        },
+        {
+          "path": "docs/market_analysis.md",
+          "section": "§§8.1, 11.1 y 12.1",
+          "detail": "Contempla licencia, IP y mejoras comunes sin una decisión de licenciamiento aplicable a este repositorio.",
+          "ids": []
+        },
+        {
+          "path": "docs/adr/ADR-07-stack-gestionado.md",
+          "section": "Decisión propuesta",
+          "detail": "Exige inventariar licencia/SBOM de dependencias; no resuelve IP del producto, documentos y contribuciones.",
+          "ids": [
+            "ADR-07",
+            "FR-OPS-026"
+          ]
+        }
+      ],
+      "impact": "Prometer exclusividad, restricciones adicionales o entrega/escrow sin derechos compatibles puede impedir cumplir el contrato o forzar rediseño de la oferta. El copyright de la licencia de FSF no identifica a los titulares del proyecto.",
+      "actions": [
+        "Inventariar obras, autores/cesiones o permisos y dependencias; definir alcance de GPL para software, documentación y skills.",
+        "Acordar modelos de SaaS/distribución/on-premise y política de mejoras, integraciones y contribuciones con sus avisos/licencias.",
+        "Revisar obligaciones por combinación y distribución concretas y cualquier promesa de exclusividad, fuentes o escrow; no cambiar unilateralmente derechos ajenos."
+      ],
+      "acceptance": [
+        "Decisión escrita de IP/licenciamiento con titularidad/procedencia suficiente y avisos consistentes por artefacto.",
+        "Ejemplo de entrega SaaS/on-premise con materiales/obligaciones identificados y términos MSA compatibles, sin inferir obligaciones AGPL inexistentes."
+      ],
+      "owner_role": "Legal de propiedad intelectual y dirección del proveedor",
+      "dependencies": [
+        "Inventario de autores y componentes",
+        "Modelo comercial/entrega elegido"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/politica-ip-licencias.md",
+        "docs/legal/inventario-derechos.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/adr-07-stack-gestionado/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-04",
+      "title": "No está definido qué estándares y aseguramiento se contratarán",
+      "kind": "missing_decision",
+      "priority": "P1",
+      "trigger": "Antes de responder una licitación o prometer una certificación, validación de red o conformidad por cláusula.",
+      "statement": "La biblioteca distingue correctamente ISO, SOC, PCI, EMVCo, Swift y ley, pero sólo releva metadatos/descripciones públicas de ISO y no acredita certificados/informes ni textos completos autorizados. El catálogo de 100 % mide relaciones. Falta un perfil contractual de adopción y evidencia que diga qué edición/servicio/sitio debe demostrarse por el proveedor, el cliente y cada tercero. No se halló una certificación falsamente declarada.",
+      "evidence": [
+        {
+          "path": "docs/compliant.md",
+          "section": "Estándares ISO; Cómo interpretar su exigibilidad",
+          "detail": "Declara acceso al catálogo, no auditoría del texto íntegro ni conformidad por cláusula.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-035, FR-OPS-038 y FR-OPS-042",
+          "detail": "Son funciones propuestas de evaluación y registro de alcance, CUEC y programa de validación.",
+          "ids": [
+            "FR-OPS-035",
+            "FR-OPS-038",
+            "FR-OPS-042"
+          ]
+        },
+        {
+          "path": "docs/functional/coverage.md",
+          "section": "Denominadores y resultado",
+          "detail": "El porcentaje expresa trazabilidad documental y conserva pendientes, sin informe de auditoría.",
+          "ids": [
+            "STD01",
+            "STD19",
+            "STD25",
+            "STD31"
+          ]
+        }
+      ],
+      "impact": "Un comprador puede incorporar por referencia una obligación mucho mayor que el producto presupuestado; una certificación de nube no cubre app, controles del cliente o auditoría supervisora.",
+      "actions": [
+        "Definir perfil de estándares por función/cliente con edición, contrato activador, alcance, dueño y forma de evaluación.",
+        "Obtener acceso autorizado a los textos que se comprometerán y evaluar por cláusula cuando corresponda.",
+        "Preparar política de afirmaciones comerciales y expediente de certificados/informes completos, exclusiones, controles del usuario y períodos sin cobertura."
+      ],
+      "acceptance": [
+        "Anexo de adopción sin PCI/Swift universales ni ISO de producto por analogía.",
+        "Cada afirmación de certificado/validación se vincula a evidencia íntegra vigente del servicio/sitio/versión contratado o se conserva como pendiente."
+      ],
+      "owner_role": "Seguridad/GRC, Legal y dirección comercial",
+      "dependencies": [
+        "Cliente/funciones/redes elegidos",
+        "Presupuesto y calendario de aseguramiento"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/perfil-estandares-contratados.md",
+        "docs/legal/afirmaciones-comerciales.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-bancario-argentina/references/iso.md",
+        ".agents/skills/core-bancario-argentina/references/estandares-industria.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-05",
+      "title": "El tratamiento de datos aún no tiene un DPA y mapa de países aplicado",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de recibir datos personales reales, habilitar soporte externo o replicar datos/telemetría a un destino internacional.",
+      "statement": "DAT/NFR-06/ADR-06 especifican inventario, roles, finalidades y transferencias, incluidos DR, KMS y soporte; faltan el mapa aplicado y los instrumentos de encargo/transferencia de una cadena real. No se puede deducir país adecuado, finalidad autorizada, acceso de soporte o habilitación de entrenamiento de IA de la contratación del core. No se observó transferencia real de datos en el repositorio.",
+      "evidence": [
+        {
+          "path": "docs/functional/27-auditoria-privacidad-archivo.md",
+          "section": "FR-DAT-006, FR-DAT-007, FR-DAT-008, FR-DAT-026 y FR-DAT-028",
+          "detail": "Las capacidades están definidas; no incluyen DPA firmado o destinos/subencargados seleccionados.",
+          "ids": [
+            "FR-DAT-006",
+            "FR-DAT-007",
+            "FR-DAT-008",
+            "FR-DAT-026",
+            "FR-DAT-028"
+          ]
+        },
+        {
+          "path": "docs/functional/31-gobierno-modelos-ia.md",
+          "section": "FR-AIG-005, FR-AIG-006 y FR-AIG-023",
+          "detail": "El uso secundario de datos y países del modelo exige decisión/contrato, no permiso implícito.",
+          "ids": [
+            "FR-AIG-005",
+            "FR-AIG-006",
+            "FR-AIG-023"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-06-privacidad-residencia-retencion.md",
+          "section": "C01 y C05; pendientes",
+          "detail": "Registra finalidad/rol/país/destinatario y ausencia de cambios no habilitados, aún sin evidencia.",
+          "ids": [
+            "NFR-06-C01",
+            "NFR-06-C05",
+            "ADR-06"
+          ]
+        }
+      ],
+      "impact": "Procesamiento fuera de instrucciones/finalidad, secreto o transferencias sin mecanismo aplicable; un despliegue primario local puede ocultar exportación por logs, soporte, backups o modelos.",
+      "actions": [
+        "Cerrar inventario de tratamientos por flujo y rol de responsable/encargado/subencargado, incluyendo retorno y copias.",
+        "Preparar DPA e instrumentos de transferencia que correspondan al destino/operación, con instrucciones y cadena completa.",
+        "Ensayar con datos sintéticos y denegar datos reales/destinos pendientes hasta disponer del expediente del flujo."
+      ],
+      "acceptance": [
+        "Mapa aplicado con países, accesos remotos, finalidades, conservación y mecanismo fundado; DPA/contratos exigibles formalizados antes del flujo real.",
+        "Revisión de configuración/contrato que incluya telemetría, DLQ, KMS, DR y terceros de IA, sin exposición general de ROS."
+      ],
+      "owner_role": "Responsable de datos/Legal de la entidad y privacidad del proveedor",
+      "dependencies": [
+        "Perímetro de participantes",
+        "Proveedor y topología elegidos"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/dpa-proveedor.md",
+        "docs/legal/mapa-tratamientos-transferencias.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+        ".agents/skills/adr-06-aislamiento-por-celda/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-06",
+      "title": "La contratación de terceros no tiene cadena de derechos y calendario aplicados",
+      "kind": "evidence_gap",
+      "priority": "P0",
+      "trigger": "Antes de cerrar proveedor/fecha de piloto con tercerización regulada o cambiar una ubicación/subcontratista en alcance.",
+      "statement": "OPS/COR y el TO relevado prevén due diligence, contratos, acceso supervisor, salida y avisos; no existe proveedor seleccionado con contratos de toda la cadena ni expediente de notificación. Una cláusula de auditoría genérica o SOC no permite presumir acceso exigible a SEFYC. El aviso depende de sujeto/servicio, no es una autorización universal; una corresponsalía no se clasifica automáticamente como outsourcing TI/SI.",
+      "evidence": [
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-029 a FR-OPS-036",
+          "detail": "Define evaluación, contrato, derechos, aviso y salida, pero no acredita un expediente de contratación concreto.",
+          "ids": [
+            "FR-OPS-029",
+            "FR-OPS-030",
+            "FR-OPS-031",
+            "FR-OPS-032",
+            "FR-OPS-033",
+            "FR-OPS-034",
+            "FR-OPS-035",
+            "FR-OPS-036"
+          ]
+        },
+        {
+          "path": "docs/compliant.md",
+          "section": "Tercerización; BCRA-T27, BCRA-T29, BCRA-T32 y BCRA-T34",
+          "detail": "Distingue 60 días/servicio crítico, cambios de proceso, cadena supervisora y reglas propias de EF; no se verificó un servicio real.",
+          "ids": []
+        },
+        {
+          "path": "docs/functional/32-corresponsalia-baas-plataformas.md",
+          "section": "FR-COR-020, FR-COR-021 y FR-COR-022",
+          "detail": "Preserva separación de figuras y derechos/salida como condición de activación.",
+          "ids": [
+            "FR-COR-020",
+            "FR-COR-021",
+            "FR-COR-022",
+            "CTL-16"
+          ]
+        }
+      ],
+      "impact": "Comprometer una fecha sin plazo de aviso o aceptar términos estándar que limiten auditoría, fuentes/documentación y salida puede dejar sin vía de habilitación al servicio ya vendido.",
+      "actions": [
+        "Clasificar servicios/terceros por figura y criticidad con el régimen del cliente.",
+        "Comparar contratos y subcontratos con matriz de derechos de entidad/supervisor, incidentes, cambio de país, continuidad y salida.",
+        "Construir cronograma por disparador real y conservar notificación por responsable cuando corresponda, sin inventar una aprobación regulatoria."
+      ],
+      "acceptance": [
+        "Contratos de la cadena cerrados sin bloqueos materiales de auditoría/salida y con brechas decididas de forma compatible con obligaciones.",
+        "Fecha de servicio viable frente a avisos aplicables, constancias antes del inicio y ejercicio de pedido de evidencia/exportación."
+      ],
+      "owner_role": "Compras/Legal, responsable TI/SI de la entidad y gestión de terceros",
+      "dependencies": [
+        "Selección de proveedor y país",
+        "BIA/criticidad",
+        "Calendario de contratación"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/anexo-tercerizacion-regulada.md",
+        "docs/legal/cadena-proveedores-avisos.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/adr-07-stack-gestionado/SKILL.md",
+        ".agents/skills/nfr-08-interoperabilidad-portabilidad/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-07",
+      "title": "Falta convertir los relojes regulatorios en un SLA proveedor–entidad",
+      "kind": "specification_gap",
+      "priority": "P0",
+      "trigger": "Antes de asumir guardia/operación de un servicio alcanzado o firmar su SLA.",
+      "statement": "OPS registra los relojes y responsables de incidentes y NFR-02 conserva metas propuestas, pero no hay presupuesto contractual entre detección del proveedor, escalamiento, clasificación propia del cliente y envío autorizado. Tampoco se han pactado cobertura de guardia, información mínima temprana, contingencia del presentante ni remedios por indisponibilidad. Un SLO de API local de 99,95 % no sustituye el aviso RRCI en la primera hora ni garantiza pagos de punta a punta.",
+      "evidence": [
+        {
+          "path": "docs/functional/30-operacion-continuidad-terceros.md",
+          "section": "FR-OPS-016, FR-OPS-017, FR-OPS-018, FR-OPS-019 y FR-OPS-021",
+          "detail": "Exige hitos, envío autorizado y crisis, sin SLA operativo de una cadena contratada.",
+          "ids": [
+            "FR-OPS-016",
+            "FR-OPS-017",
+            "FR-OPS-018",
+            "FR-OPS-019",
+            "FR-OPS-021"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-02-disponibilidad-recuperacion.md",
+          "section": "C01 a C06 y Validación",
+          "detail": "Los objetivos son hipótesis y no contratos ni medidas; RPO regional asíncrono no es cero.",
+          "ids": [
+            "NFR-02-C01",
+            "NFR-02-C04",
+            "NFR-12-C01"
+          ]
+        },
+        {
+          "path": "docs/compliant.md",
+          "section": "BCRA-T45 y BCRA-T46; Incidentes y plazos",
+          "detail": "RRCI y plazos contractuales/datos son circuitos separados; no se importa AAIP 72 horas universal.",
+          "ids": []
+        }
+      ],
+      "impact": "El banco puede recibir tarde o incompleto el incidente de su proveedor y perder capacidad de cumplir su propio aviso, aunque el ticket interno cumpla el SLA elegido; exposición contractual por garantías no ensayadas.",
+      "actions": [
+        "Descomponer cada reloj en hitos proveedor–entidad–responsable autorizado y pactar márgenes internos compatibles con el plazo aplicable, sin inventar minutos legales.",
+        "Acordar guardia/suplencia, contenido temprano, acuses, actualizaciones, comunicaciones y evidencia ante caída de canales.",
+        "Mantener SLA de servicio, NFR/BIA y notificaciones con denominadores/alcance propios y hacer un simulacro de mesa previo al servicio."
+      ],
+      "acceptance": [
+        "SLA/anexo de incidentes aprobado con contactos/cobertura y presupuesto compatible con obligaciones por sujeto.",
+        "Simulacro demuestra escalamiento y borrador/envío de prueba a responsable autorizado a tiempo; no se envía comunicación regulatoria real por esta revisión."
+      ],
+      "owner_role": "Legal, SRE/Seguridad y responsable de incidentes de la entidad",
+      "dependencies": [
+        "BIA y servicio contratado",
+        "Contrato de terceros",
+        "Guardia y facultades de presentación"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/sla-y-anexo-incidentes.md",
+        "docs/legal/tabla-notificaciones.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-12-operabilidad-costos/SKILL.md",
+        ".agents/skills/core-bancario-argentina/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-08",
+      "title": "El primer producto aún no tiene condiciones y plazos legales concretos",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de ofrecer/contratar el primer préstamo, cuenta u otro producto a usuarios reales.",
+      "statement": "CON/CST describen avisos, costo financiero, firma, revocación, bajas y reclamos con selección por régimen. No se eligió un producto contractual ni una matriz de contenido, canal, disparador, plazo, excepción y autoridad aplicada a sus recorridos. Esa parametrización pendiente no es una función ausente ni implica que deba aplicarse un único plazo a todos los productos.",
+      "evidence": [
+        {
+          "path": "docs/functional/05-contratos-documentos.md",
+          "section": "FR-CON-003, FR-CON-006, FR-CON-007, FR-CON-010, FR-CON-012, FR-CON-016 y FR-CON-017",
+          "detail": "Separa contenido, firma electrónica/digital, entrega, cambios y baja, pendientes de plantillas/condiciones aprobadas.",
+          "ids": [
+            "FR-CON-003",
+            "FR-CON-006",
+            "FR-CON-007",
+            "FR-CON-010",
+            "FR-CON-012",
+            "FR-CON-016",
+            "FR-CON-017"
+          ]
+        },
+        {
+          "path": "docs/functional/26-canales-atencion-usuarios.md",
+          "section": "FR-CST-009, FR-CST-010, FR-CST-015 a FR-CST-023 y FR-CST-026",
+          "detail": "Contiene recorridos y excepciones, pero no perfil/plazos legales concretos para un operador/producto.",
+          "ids": [
+            "FR-CST-009",
+            "FR-CST-010",
+            "FR-CST-015",
+            "FR-CST-017",
+            "FR-CST-018",
+            "FR-CST-021",
+            "FR-CST-022",
+            "FR-CST-023",
+            "FR-CST-026"
+          ]
+        },
+        {
+          "path": "docs/nfr/NFR-13-accesibilidad-experiencia.md",
+          "section": "C01, C03, C04 y C05",
+          "detail": "Perfil de accesibilidad, contenido y evidencias permanecen pendientes.",
+          "ids": [
+            "NFR-13-C01",
+            "NFR-13-C03",
+            "NFR-13-C04",
+            "NFR-13-C05",
+            "CTL-18"
+          ]
+        }
+      ],
+      "impact": "Oferta/contrato puede no coincidir con cargos, omitirse una comunicación o impedirse baja/reintegro por una regla genérica; OTP puede ofrecerse con presunciones de firma digital que no tiene.",
+      "actions": [
+        "Preparar anexos/plantillas del producto seleccionado con tablas económicas, fuentes, advertencias y recorridos de firma/entrega/cambio/baja.",
+        "Cerrar matriz de derechos/plazos por producto/canal, incluyendo reglas particulares de teléfono/mensajería y reclamos de tarjetas sólo al activarse.",
+        "Revisar ejemplos completos contrato–cálculo–asiento–extracto y mensajes de rechazo/accesibilidad con responsables institucionales."
+      ],
+      "acceptance": [
+        "Plantillas y reglas aprobadas que reproducen casos permitidos, excepciones y vías de revisión del producto.",
+        "Pruebas de mesa muestran costo contractual igual al calculado/debitado, plazos desde recepción y entrega fiel sin ROS/datos ajenos."
+      ],
+      "owner_role": "Legal de producto, responsable de atención y Finanzas",
+      "dependencies": [
+        "Producto/perímetro del piloto",
+        "Política económica y canales",
+        "Facultades/representación"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/anexo-producto-piloto.md",
+        "docs/legal/matriz-derechos-plazos.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-13-accesibilidad-experiencia/SKILL.md",
+        ".agents/skills/core-bancario-argentina/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-09",
+      "title": "El archivo legal y la equivalencia del soporte no están resueltos para la migración",
+      "kind": "missing_decision",
+      "priority": "P0",
+      "trigger": "Antes de migrar/destruir originales, llevar libros oficiales en el nuevo soporte o terminar el servicio con datos reales.",
+      "statement": "DAT/MIG prevén retención por categoría, originales locales y evidencia, pero no existe cuadro aplicado que asigne custodio, país, soporte legal, disparadores y autorización registral cuando corresponda. Los mínimos de seis años TI/SI y diez años de otros regímenes no forman un único TTL; un hash, WORM o PDF no concede por sí solo equivalencia legal al original o a un título.",
+      "evidence": [
+        {
+          "path": "docs/functional/27-auditoria-privacidad-archivo.md",
+          "section": "FR-DAT-009 a FR-DAT-014, FR-DAT-024 y FR-DAT-026",
+          "detail": "Originales, retención, hold, disposición y salida están diseñados, sin autorización/contrato de custodia aplicado.",
+          "ids": [
+            "FR-DAT-009",
+            "FR-DAT-010",
+            "FR-DAT-011",
+            "FR-DAT-012",
+            "FR-DAT-013",
+            "FR-DAT-014",
+            "FR-DAT-024",
+            "FR-DAT-026"
+          ]
+        },
+        {
+          "path": "docs/functional/29-carga-inicial-migracion-salida.md",
+          "section": "FR-MIG-015, FR-MIG-016, FR-MIG-028 y FR-MIG-030",
+          "detail": "Los modos de historia y aborto/salida conservan evidencia; la decisión sobre originales y soporte sigue siendo institucional.",
+          "ids": [
+            "FR-MIG-015",
+            "FR-MIG-016",
+            "FR-MIG-028",
+            "FR-MIG-030",
+            "ADR-08"
+          ]
+        },
+        {
+          "path": "docs/compliant.md",
+          "section": "Conservación; LAW-05, BCRA-T23 y BCRA-T34",
+          "detail": "Exige distinguir categoría/disparador, plazos concurrentes, originales EF y medios electrónicos autorizados.",
+          "ids": []
+        }
+      ],
+      "impact": "Pérdida de fuerza probatoria/disponibilidad supervisora o destrucción ilícita; en el sentido opuesto, archivo indefinido o difundido sin finalidad. El cierre de un contrato de nube puede dejar archivos obligatorios inaccesibles.",
+      "actions": [
+        "Preparar cuadro de conservación por clase, entidad y régimen, con disparadores, concurrencias, hold, custodio y destino de fin de servicio.",
+        "Resolver soporte de libros/documentos/títulos y autorizaciones pertinentes antes de reemplazar o destruir originales; preservar lo no resuelto.",
+        "Incluir pruebas de legibilidad, verificación temporal/firma cuando corresponda, recuperación local/supervisora y reaplicación de disposición tras restauración."
+      ],
+      "acceptance": [
+        "Cuadro aplicado y decisión documentada de soporte/residencia por clase material, con permisos/autorizaciones exigibles.",
+        "Ensayo sintético de requerimiento, salida y restauración demuestra integridad, búsqueda y no borrado/reintroducción indebidos."
+      ],
+      "owner_role": "Legal/Archivo, Finanzas y responsable de datos de la entidad",
+      "dependencies": [
+        "Inventario de contratos/libros/legajos",
+        "Política contable y modo de migración",
+        "Proveedor/custodios"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/cuadro-conservacion-custodia.md",
+        "docs/legal/soporte-libros-originales.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/nfr-06-privacidad-residencia-retencion/SKILL.md",
+        ".agents/skills/nfr-08-interoperabilidad-portabilidad/SKILL.md"
+      ]
+    },
+    {
+      "id": "REV-LEG-10",
+      "title": "El mantenimiento regulatorio carece de dueño y compromiso de servicio aplicados",
+      "kind": "missing_decision",
+      "priority": "P1",
+      "trigger": "Antes de fijar precio/alcance de localización mantenida y, en todo caso, antes del piloto alcanzado por una transición.",
+      "statement": "CFG/RPT y el skill regulatorio especifican versiones, fuentes y análisis de cambios; no hay servicio aplicado que asigne quién releva, interpreta, aprueba y entrega cada cambio, con plazo por exigibilidad, presupuesto, sustitución y responsabilidad contractual. Las huellas del catálogo y los 173 vínculos no demuestran seguimiento de nuevas normas, todos los anexos o cada obligación de un producto.",
+      "evidence": [
+        {
+          "path": "docs/functional/04-productos-configuracion.md",
+          "section": "FR-CFG-019 y FR-CFG-030",
+          "detail": "Se puede registrar transición/costo; falta asignación contractual y operativa del servicio de localización.",
+          "ids": [
+            "FR-CFG-019",
+            "FR-CFG-030",
+            "ADR-05"
+          ]
+        },
+        {
+          "path": "docs/functional/25-reportes-localizacion.md",
+          "section": "FR-RPT-002 y FR-RPT-038",
+          "detail": "Diseños y cambios necesitan fuentes completas y responsables, no sólo una fila de inventario.",
+          "ids": [
+            "FR-RPT-002",
+            "FR-RPT-038",
+            "CTL-19"
+          ]
+        },
+        {
+          "path": ".agents/skills/core-bancario-argentina/references/metodologia.md",
+          "section": "Actualización y Alcance de las afirmaciones",
+          "detail": "Ordena revalidar antes de producción y asignar seguimiento; no crea por sí mismo una operación de vigilancia.",
+          "ids": []
+        },
+        {
+          "path": "docs/research/bcra_sources.json",
+          "section": "metodo, no_cubierto y fuentes",
+          "detail": "URLs y hashes identifican snapshots, sin demostrar custodia de toda fuente ni lectura integral de anexos.",
+          "ids": []
+        }
+      ],
+      "impact": "Vender actualizaciones incluidas sin dueño/capacidad puede dejar un período con reglas incorrectas o una transición fuera de plazo; el costo de cambio se discute después de asumir obligación frente al cliente.",
+      "actions": [
+        "Asignar RACI y rutina de revisión con fuentes, edición/anexo, estado de lectura e interpretación, impacto, prueba y fecha efectiva.",
+        "Definir qué cambios están incluidos, quién aporta dictamen/formato/regla y cómo se presupuestan urgencias o productos nuevos.",
+        "Conservar versiones recuperables de fuentes permitidas y probar una transición vigente/futura y una rectificativa histórica sin reescribir pasado."
+      ],
+      "acceptance": [
+        "Servicio de mantenimiento con dueño/suplente, fuente verificable, flujo y obligaciones comerciales explícitos.",
+        "Ejercicio sobre A8492 o transición A8471/A8473 demuestra detección, aplicabilidad, versión por período, revisión institucional y evidencia de entrega; sin declarar exhaustividad futura."
+      ],
+      "owner_role": "Responsable de cumplimiento/localización del proveedor y de la entidad",
+      "dependencies": [
+        "Perfil normativo del cliente",
+        "Contrato de mantenimiento",
+        "Capacidad de análisis/QA y fuentes autorizadas"
+      ],
+      "suggested_deliverables": [
+        "docs/legal/mantenimiento-regulatorio.md",
+        "docs/legal/registro-aplicabilidad-cambios.md"
+      ],
+      "skill_impact": [
+        ".agents/skills/core-bancario-argentina/SKILL.md",
+        ".agents/skills/core-bancario-argentina/references/metodologia.md",
+        ".agents/skills/adr-05-configuracion-versionada/SKILL.md"
+      ]
+    }
+  ]
+}

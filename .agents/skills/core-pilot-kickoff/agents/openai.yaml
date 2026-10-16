@@ -1,0 +1,6 @@
+interface:
+  display_name: "Kickoff y piloto del core"
+  short_description: "Alcance, responsables y preparación del piloto"
+  default_prompt: "Prepará el kickoff o evaluá la preparación del piloto indicado: delimitá producto y perfil, economía, equipo, dependencias, tareas operativas, evidencias y criterios de avance, distinguiendo desarrollo sintético de operación real."
+policy:
+  allow_implicit_invocation: true

@@ -15,7 +15,7 @@
     "architectural_decisions": 8
   },
   "source_documents_sha256": {
-    ".agents/skills/core-bancario-argentina/SKILL.md": "d46ef5e5dbb160359a116bcff228b48299381a93c54a405c578b9d18e1655743",
+    ".agents/skills/core-bancario-argentina/SKILL.md": "d965a71d1fb78548456449290d79f15e4b5b0ef53aeb3296ad8796a7da7f47c4",
     ".agents/skills/core-bancario-argentina/references/controles.md": "79974617594f713e81f66a858946bbc74ea417502cd465e669ef36ad55024084",
     ".agents/skills/core-bancario-argentina/references/estandares-industria.md": "e20a4a7a8f6f774bfa5df45b7a5b7ca0415cc1d090accfd5fb3cdffbdaccc3c8",
     ".agents/skills/core-bancario-argentina/references/iso.md": "f1f2b80a4176f17885fa6b2b1541d76ee2221311b3ddcce7668c85933c36a393",
@@ -46,7 +46,7 @@
     "docs/nfr/NFR-11-calidad-datos-reportes.md": "ac4a33ac60c29c56627f5fbc0c2aa7d69992ab7f2441cf4cf18b903301c97715",
     "docs/nfr/NFR-12-operabilidad-costos.md": "d5f88067fa98642b16b24aa6ea82959d54bb8bd36b5197e31cc3d02eb4aa50b9",
     "docs/nfr/NFR-13-accesibilidad-experiencia.md": "2453eb85e9ca38fc7317f238f002527dd5bf5af8acf9a04cad750f814f445477",
-    "docs/skills.md": "bbda6c063ac032445bc14a038c887643dce5674220f7bdd2149bada87624f61f"
+    "docs/skills.md": "43ae77becea06608ea4af68e71907a1031d99a55ffb2072cec754803251ee589"
   },
   "fr_documents_sha256": {
     "docs/functional/01-entidades-perimetro.md": "d6cb00a9b6a12ab62f770a889c3c4de8caf8744b1519c67879c6ceed70db935a",
