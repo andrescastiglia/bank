@@ -1,0 +1,813 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-20261016T014713Z",
+  "started_at": "2026-10-16T01:47:13Z",
+  "finished_at": "2026-10-16T02:04:45.799798+00:00",
+  "inventory_version": "2026-10-16.1",
+  "requested_window": {
+    "from_inclusive": "2026-10-15T00:00:00-03:00",
+    "to_exclusive": "2026-10-15T22:47:13-03:00"
+  },
+  "status": "PARTIAL",
+  "source_results": [
+    {
+      "source_id": "WATCH-BO",
+      "status": "UNAVAILABLE",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 0,
+        "annexes_expected": 0,
+        "annexes_processed": 0,
+        "outstanding_cursor": null,
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [],
+      "gaps": [
+        {
+          "cause": "HTTP503 en raíz, primera sección y ruta por fecha; edición/suplementos/anexos desconocidos.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-BCRA-COM",
+      "status": "COMPLETE",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "coverage_basis": {
+        "all_pages_processed": true,
+        "all_annexes_processed": true,
+        "pages_expected": 1,
+        "pages_processed": 1,
+        "annexes_expected": 6,
+        "annexes_processed": 6,
+        "outstanding_cursor": null,
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://www.bcra.gob.ar/api/endpoints/buscador-comunicaciones.php",
+          "sha256": "0893a7b32515c628518004d2936c603843ce9aa24ab3b137936e9c383dc29f0d",
+          "fetched_at": "2026-10-16T01:51:16.151155+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+          "sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+          "fetched_at": "2026-10-16T01:52:08.140462+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+          "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+          "fetched_at": "2026-10-16T01:52:08.141297+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102432.pdf",
+          "sha256": "ba67c4b69016b4d8aaf820787b95296d88a800deb02cee6303680d2d4d126dae",
+          "fetched_at": "2026-10-16T01:52:08.139897+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102433.pdf",
+          "sha256": "98f028a719c58be365df7e05a3e916ce5e050a0359548a0337d8f33106bd483e",
+          "fetched_at": "2026-10-16T01:52:08.138924+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102434.pdf",
+          "sha256": "939e755c23537f5410e19a4692a713313dcdce87d67c79d602cda29e2003eca9",
+          "fetched_at": "2026-10-16T01:52:08.138028+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102435.pdf",
+          "sha256": "5ea565197b199e2a151bbe1052b9401f525d08c01563e877b9bf6af9735eea66",
+          "fetched_at": "2026-10-16T01:52:08.137024+00:00"
+        }
+      ],
+      "gaps": [],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        },
+        "types": [
+          "A",
+          "B",
+          "C",
+          "P"
+        ],
+        "fecha_desde": "2026-10-15",
+        "fecha_hasta": "2026-10-15",
+        "paginaabsoluta": 1,
+        "tamanopagina": 100,
+        "mode": "fecha"
+      },
+      "observations": [
+        "Snapshot consultado después del corte; fechas de emisión del 15/10, sin fecha BO en índice. Completo sólo bajo estos filtros; detectar indexación tardía por solapamiento.",
+        "Se inspeccionó JavaScript público como texto para identificar API/parametrización; no se ejecutó código descargado."
+      ],
+      "pagination": {
+        "page": 1,
+        "totalPages": 1,
+        "totalRecords": 6,
+        "records_processed": 6
+      },
+      "pdf_pages_processed": 14,
+      "record_dispositions": [
+        {
+          "identity": "BCRA|A|8492|2026|AR",
+          "evidence_id": "A8492",
+          "disposition": "REVALIDATED_SAME_HASH_AS_BASELINE"
+        },
+        {
+          "identity": "BCRA|B|13248|2026|AR",
+          "evidence_id": "B13248",
+          "disposition": "VERIFIED_CHANGE_PROPOSED"
+        },
+        {
+          "identity": "BCRA|C|102432|2026|AR",
+          "evidence_id": "C102432",
+          "disposition": "MACRO_STATISTICS_NO_CORE_RULE_CHANGE"
+        },
+        {
+          "identity": "BCRA|C|102433|2026|AR",
+          "evidence_id": "C102433",
+          "disposition": "MACRO_STATISTICS_NO_CORE_RULE_CHANGE"
+        },
+        {
+          "identity": "BCRA|C|102434|2026|AR",
+          "evidence_id": "C102434",
+          "disposition": "REFERENCE_DATA_CONDITIONAL_USE"
+        },
+        {
+          "identity": "BCRA|C|102435|2026|AR",
+          "evidence_id": "C102435",
+          "disposition": "REFERENCE_SERIES_CONDITIONAL_USE"
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-BCRA-TO",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 1,
+        "annexes_expected": 103,
+        "annexes_processed": 2,
+        "outstanding_cursor": "Pendiente comparar corpus de 103 TO, sus modificatorias y versiones; consulta selectiva TI/SI y RRCI.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+          "sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+          "fetched_at": "2026-10-16T01:48:20.494579+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rmgcti.pdf",
+          "sha256": "d362171378ee6a624b7c2cd7978510c50d25c03edff60b175cace13d4de54e0c",
+          "fetched_at": "2026-10-16T01:49:26.182172+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-rrci.pdf",
+          "sha256": "14d5138378f10cb72bd554b78338ed93face81f608ec1973f09c32720403cdb9",
+          "fetched_at": "2026-10-16T01:49:26.183029+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8401.pdf",
+          "sha256": "721be1ccc39bd8017e837259c86327797840afccde73a67f04873d2be44a929f",
+          "fetched_at": "2026-10-16T01:50:17.076275+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Pendiente comparar corpus de 103 TO, sus modificatorias y versiones; consulta selectiva TI/SI y RRCI.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-BCRA-RI",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 1,
+        "annexes_expected": 56,
+        "annexes_processed": 2,
+        "outstanding_cursor": "Pendientes 55 RI de la faceta y otros canales; se recuperaron t-optico y manual SISCEN adicional, con lectura focal de 0019.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+          "sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+          "fetched_at": "2026-10-16T01:48:20.496207+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-optico.pdf",
+          "sha256": "21dbb58e668f76d8c375e58de192eccdbcea9ab252d94f1e541bf67505d98c15",
+          "fetched_at": "2026-10-16T01:48:20.498192+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/siscen.pdf",
+          "sha256": "cb8775c2a50182bf083aea2e1a846b66b0283d4d782adbd732f0c7c0d120f12d",
+          "fetched_at": "2026-10-16T01:53:18.133179+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+          "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+          "fetched_at": "2026-10-16T01:52:08.141297+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12996.pdf",
+          "sha256": "d94c596637e7f7d19ace718bd38d96f179bcf2d62abd5c791d2ff01451b80cbf",
+          "fetched_at": "2026-10-16T01:53:18.132090+00:00"
+        },
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+          "sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+          "fetched_at": "2026-10-16T01:52:08.140462+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Pendientes 55 RI de la faceta y otros canales; se recuperaron t-optico y manual SISCEN adicional, con lectura focal de 0019.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-UIF",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 2,
+        "annexes_expected": 3,
+        "annexes_processed": 3,
+        "outstanding_cursor": "Pendiente listado cronológico de reformas/rectificatorias y anexos no seleccionados; el conteo de tres textos es mínimo conocido.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-cada-sujeto-obligado",
+          "sha256": "fbddd02196cfaefd1133728deae65bf992b0ad0b48b59b3775ce12a273808747",
+          "fetched_at": "2026-10-16T01:48:20.500478+00:00"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-todos-los-sujetos-obligados",
+          "sha256": "d5f52cc881612e5c39b97e65cf1d615bf58a05797883f5090a750f506072bfe0",
+          "fetched_at": "2026-10-16T01:48:20.500968+00:00"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-14-2023-379085/actualizacion",
+          "sha256": "c5b7c06c0c70aa51ac0c9cfc9c678a5feb0a046c14eb01702cc4de5a4c811284",
+          "fetched_at": "2026-10-16T01:51:33.577917+00:00"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-200-2024-407429/texto",
+          "sha256": "33ae207c35882b5fb9f40534caa95350b77950fcdefde50ad7e350a2de3541bf",
+          "fetched_at": "2026-10-16T01:53:18.133925+00:00"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-3-2026-422247/texto",
+          "sha256": "e3ab8a16f126d9a0ae2cfd399786d33de73782211134e7f4ff1317a155d92efd",
+          "fetched_at": "2026-10-16T01:51:33.579465+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Pendiente listado cronológico de reformas/rectificatorias y anexos no seleccionados; el conteo de tres textos es mínimo conocido.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-AAIP",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 1,
+        "annexes_expected": 3,
+        "annexes_processed": 1,
+        "outstanding_cursor": "Formulario sin resultados cronológicos acreditados; anexos de 47/2018 y otras modificaciones pendientes.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://www.argentina.gob.ar/aaip/buscador-normativa",
+          "sha256": "a0ee2aaea767c5ced7341be5035eb02b7ba38e89675d3b8a47e6fe69c79fade3",
+          "fetched_at": "2026-10-16T01:48:20.504465+00:00"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-47-2018-312662/texto",
+          "sha256": "b1e93b9ab5beff6cfd62f1c922146cf4422db5da82b889a7b585dcb29f8bec41",
+          "fetched_at": "2026-10-16T01:51:33.579966+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Formulario sin resultados cronológicos acreditados; anexos de 47/2018 y otras modificaciones pendientes.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-ARCA",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 3,
+        "annexes_expected": 3,
+        "annexes_processed": 3,
+        "outstanding_cursor": "Novedades dinámicas sin resolver y ruta alternativa no disponible; faltan búsqueda cronológica y diseños/anexos completos por régimen.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://biblioteca.arca.gob.ar/search/query/index.aspx",
+          "sha256": "4a7111e04f8bec4a717b722f3e8d687ac68af7981e5aea28dc26cfc8e3d4ed36",
+          "fetched_at": "2026-10-16T01:48:20.723669+00:00"
+        },
+        {
+          "url": "https://www.arca.gob.ar/operacionesFinancieras/",
+          "sha256": "cf5283270144b6d7e1131b90608205868d90d716a34bb7d1763072f74d546f23",
+          "fetched_at": "2026-10-16T01:49:26.184764+00:00"
+        },
+        {
+          "url": "https://www.arca.gob.ar/economia-digital/ayuda/normativa.asp",
+          "sha256": "0de1e15ba0aecab01bf351b1e26ad927b615dee0f08212379b425310fe76da38",
+          "fetched_at": "2026-10-16T01:49:26.185367+00:00"
+        },
+        {
+          "url": "https://biblioteca.arca.gob.ar/search/query/norma.aspx?p=t%3ARAG%7Cn%3A5814%7Co%3A9%7Ca%3A2026%7Cf%3A13%2F01%2F2026",
+          "sha256": "c089b0c5d413a993625b4f8f6da5dbc03f0bb5b50108841532688ce6e37f9a63",
+          "fetched_at": "2026-10-16T01:51:33.581159+00:00"
+        },
+        {
+          "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-4614-2019-330689/actualizacion",
+          "sha256": "154fb19141f2b37402c6d913effe9a54479bfe0ede7529d645c4bfeefc4c419f",
+          "fetched_at": "2026-10-16T01:51:33.581700+00:00"
+        },
+        {
+          "url": "https://biblioteca.arca.gob.ar/search/query/norma.aspx?p=t%3ARAG%7Cn%3A5869%7Co%3A9%7Ca%3A2026%7Cf%3A26%2F06%2F2026",
+          "sha256": "a4282fc00cef84aa4d630520eff3113de6d631ef876061b9db8843a64922003c",
+          "fetched_at": "2026-10-16T01:51:33.588350+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Novedades dinámicas sin resolver y ruta alternativa no disponible; faltan búsqueda cronológica y diseños/anexos completos por régimen.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-COMARB",
+      "status": "UNAVAILABLE",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 0,
+        "annexes_expected": 0,
+        "annexes_processed": 0,
+        "outstanding_cursor": null,
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [],
+      "gaps": [
+        {
+          "cause": "HTTP500 en raíces y rutas SIRCREB/SIRCUPA; cobertura y padrones sin acreditar.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-CNV",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 1,
+        "annexes_expected": 3,
+        "annexes_processed": 3,
+        "outstanding_cursor": "Pendiente conciliar índice por emisión frente a publicación, restantes actos e historia; los tres textos son mínimo conocido.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio",
+          "sha256": "f99980f7f6b2793984c9e09c7f0b10f7f2f4709a2293578b3a84f7e4e11263a3",
+          "fetched_at": "2026-10-16T01:48:21.002977+00:00"
+        },
+        {
+          "url": "https://www.cnv.gov.ar/sitioWeb/MarcoRegulatorio?panel=2",
+          "sha256": "69ff9ae68d364e2a24638cc149b6a516289041ccd42498fe31c93fc54d840af3",
+          "fetched_at": "2026-10-16T01:50:17.064562+00:00"
+        },
+        {
+          "url": "https://www.cnv.gov.ar/sitioWeb/MarcoRegulatorio?panel=3",
+          "sha256": "b5a0fbacf289e86673dd63dc4122c4139a0c920c4e029fe037230fceac667872",
+          "fetched_at": "2026-10-16T01:50:17.065200+00:00"
+        },
+        {
+          "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431259/norma.htm",
+          "sha256": "0c9664f202cccab6d76ff542eb9e93ad2c878fa5af60d4ebf05e1a1f18c7d72c",
+          "fetched_at": "2026-10-16T01:52:08.142952+00:00"
+        },
+        {
+          "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431260/norma.htm",
+          "sha256": "2810a3fd3652121a113fe80bd1f993b1e5b0b22660d7207af9215bd0dd7f1502",
+          "fetched_at": "2026-10-16T01:52:08.144282+00:00"
+        },
+        {
+          "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/430111/norma.htm",
+          "sha256": "8c6d5e8effa2a7b3f7f32346fa7ad8420d79cc7f9c6a61b0eda8c52c7a812ed0",
+          "fetched_at": "2026-10-16T01:52:08.148444+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Pendiente conciliar índice por emisión frente a publicación, restantes actos e historia; los tres textos son mínimo conocido.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-JURIS",
+      "status": "NOT_APPLICABLE_WITH_BASIS",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 0,
+        "annexes_expected": 0,
+        "annexes_processed": 0,
+        "outstanding_cursor": null,
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [],
+      "gaps": [],
+      "not_applicable_basis": "No hay operador/producto ni jurisdicciones subnacionales seleccionadas. El alcance aprobado en esta corrida es nacional; no prueba exención del futuro operador.",
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    },
+    {
+      "source_id": "WATCH-STANDARDS",
+      "status": "PARTIAL",
+      "requested_window": {
+        "from_inclusive": "2026-10-15T00:00:00-03:00",
+        "to_exclusive": "2026-10-15T22:47:13-03:00"
+      },
+      "covered_window": null,
+      "coverage_basis": {
+        "all_pages_processed": false,
+        "all_annexes_processed": false,
+        "pages_expected": null,
+        "pages_processed": 15,
+        "annexes_expected": 0,
+        "annexes_processed": 0,
+        "outstanding_cursor": "Matrices de aplicabilidad/contratos y textos completos ISO/Swift pendientes; CISA directo403, sustituido para KEV por repositorio oficial. No cobertura universal de estándares.",
+        "counts_scope": "Inventario enumerado cuando existe; en otros canales sólo documentos conocidos/seleccionados, nunca total normativo inferido."
+      },
+      "evidence_refs": [
+        {
+          "url": "https://pages.nist.gov/800-63-4/",
+          "sha256": "ce5305a5efa419c37d9ab7138f8b2aa123156e0400bb1a1ffb5ab8533d73bd53",
+          "fetched_at": "2026-10-16T01:48:21.185363+00:00"
+        },
+        {
+          "url": "https://csrc.nist.gov/pubs/sp/800/218/final",
+          "sha256": "4a5eaf9035bb646f476e0c9de66e6276faea9f54ff8409960ef670056f9a93d7",
+          "fetched_at": "2026-10-16T01:49:29.214634+00:00"
+        },
+        {
+          "url": "https://api-security.owasp.org/editions/2023/en/0x11-t10/",
+          "sha256": "ac00589e1bb28f4977b3c82dfb61713b7aac0cbd07b15bd40d8516ef86379524",
+          "fetched_at": "2026-10-16T01:48:21.246979+00:00"
+        },
+        {
+          "url": "https://owasp.org/projects/asvs",
+          "sha256": "9fed0101afba4c61795b60779e201bbec7daadf126f0ee0a466e9e47000979c1",
+          "fetched_at": "2026-10-16T01:48:21.655143+00:00"
+        },
+        {
+          "url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+          "sha256": "26a49ad19b1f2b19ecc1cd9b825b4d5012f5e03a5dc8cb0dbd26462d39da465c",
+          "fetched_at": "2026-10-16T01:48:22.014417+00:00"
+        },
+        {
+          "url": "https://www.pcisecuritystandards.org/document_library/",
+          "sha256": "c96ae24474a7071bf1931dce023421e1338d21df98dd5f58a200df30e8df1f2b",
+          "fetched_at": "2026-10-16T01:49:29.214987+00:00"
+        },
+        {
+          "url": "https://www.postgresql.org/docs/18/release-18.html",
+          "sha256": "8fa006af01f02a8561b10d5afacccf179ba653e47ae99cbc9fbe31e2100f9c12",
+          "fetched_at": "2026-10-16T01:48:22.487235+00:00"
+        },
+        {
+          "url": "https://www.postgresql.org/docs/release/18.6/",
+          "sha256": "0ab2a6a525a85606b041a1c0404f81ef533653f8c6778a7c9214c225eed3df20",
+          "fetched_at": "2026-10-16T01:50:17.067358+00:00"
+        },
+        {
+          "url": "https://www.postgresql.org/support/security/",
+          "sha256": "cf45079043ba101c99670f73eae44fced7004c256c87a3f141dedaeaf58b6216",
+          "fetched_at": "2026-10-16T01:49:28.516248+00:00"
+        },
+        {
+          "url": "https://www.postgresql.org/support/security/CVE-2026-14666/",
+          "sha256": "7d881bae442426da6d55b36656da387d64ce057710f494ce714682818b6f1186",
+          "fetched_at": "2026-10-16T01:50:17.065853+00:00"
+        },
+        {
+          "url": "https://www.postgresql.org/support/security/CVE-2026-19385/",
+          "sha256": "4d1345484fef903e245b70c095885a740f41c14b425b298c617dc3ecddb33ce6",
+          "fetched_at": "2026-10-16T01:50:17.066476+00:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+          "sha256": "0a4807c44c302e6c3f8ba5adbcd45f8163514f52059f636ad9048728cf0c57b8",
+          "fetched_at": "2026-10-16T01:49:28.826651+00:00"
+        },
+        {
+          "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+          "sha256": "7fda701404eed3046222cd91007a04c767ceb526c47fbb24d143c088966be542",
+          "fetched_at": "2026-10-16T01:50:17.068456+00:00"
+        },
+        {
+          "url": "https://go.dev/doc/security/",
+          "sha256": "02dc95198cf89d985c7d9c167baf99c610da1b134dd08bf1e15603504fe89829",
+          "fetched_at": "2026-10-16T01:49:28.561717+00:00"
+        },
+        {
+          "url": "https://opentelemetry.io/docs/specs/semconv/",
+          "sha256": "5a02cb4529aeca510b1956bd295fe7bcd48198278f959666f09b30a5b3e96af5",
+          "fetched_at": "2026-10-16T01:48:22.493416+00:00"
+        }
+      ],
+      "gaps": [
+        {
+          "cause": "Matrices de aplicabilidad/contratos y textos completos ISO/Swift pendientes; CISA directo403, sustituido para KEV por repositorio oficial. No cobertura universal de estándares.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-15T22:47:13-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Recuperar ventana y documentos pendientes; continuar desde último checkpoint completo, con solapamiento de siete días.",
+          "first_observed_in": "RUN-20261016T014713Z"
+        }
+      ],
+      "not_applicable_basis": null,
+      "filters": {
+        "timezone": "America/Buenos_Aires",
+        "window": {
+          "from_inclusive": "2026-10-15T00:00:00-03:00",
+          "to_exclusive": "2026-10-15T22:47:13-03:00"
+        }
+      },
+      "observations": []
+    }
+  ],
+  "change_ids": [
+    "CHANGE-BCRA-B13248-2026",
+    "CHANGE-CNV-RG1172-2026",
+    "CHANGE-CNV-RG1173-2026",
+    "CHANGE-BCRA-A8492-REVALIDATED",
+    "CHANGE-SEC-PG-CVE202614666",
+    "CHANGE-SEC-PG-CVE202619385",
+    "CHANGE-SEC-ATLASSIAN-CVE202621589"
+  ],
+  "errors": [
+    {
+      "source_id": "WATCH-BO",
+      "cause": "HTTP503",
+      "retry_required": true
+    },
+    {
+      "source_id": "WATCH-COMARB",
+      "cause": "HTTP500",
+      "retry_required": true
+    },
+    {
+      "kind": "STATE_BRANCH_MISSING",
+      "resolution": "Recrear rama separada desde seed remoto verificado en main; no implica corrida/cobertura anterior.",
+      "recovered_from_commit": "6a784b1af7f3aafffc4a87d3c4315bfabf090341",
+      "state_blob_sha": "da1bf4d579e746dfc7e360993a6b19c4d4c8b802"
+    }
+  ],
+  "state_recovery": {
+    "repository_commit": "6a784b1af7f3aafffc4a87d3c4315bfabf090341",
+    "state_blob_sha": "da1bf4d579e746dfc7e360993a6b19c4d4c8b802",
+    "sources_blob_sha": "436c1647a74e791e50e383afcad1dedbf6d0c28e",
+    "previous_state": ".regulatory-watch/previous/RUN-20261016T014713Z.json",
+    "branch_absence_verified": true
+  },
+  "proposal_prs": [
+    "https://github.com/andrescastiglia/bank/pull/3"
+  ],
+  "evidence_manifest": ".regulatory-watch/evidence/RUN-20261016T014713Z.json",
+  "notification": {
+    "reason": "Novedades primarias B13248/CNV1172, agenda accionable y gaps materiales BO/COMARB/rama de estado; no se afirma ausencia global de cambios.",
+    "previous_run": null,
+    "deduplication": "Primera corrida persistida; norm_id+contenido y chequeo de PR abiertas contra GitHub. A8492 conserva hash e identidad histórica.",
+    "public_notification_scope": "Resumen al usuario; sin comunicaciones a reguladores/terceros."
+  },
+  "verification": {
+    "catalog": "PASS:1016FR/32modulos",
+    "review_links_skills": "PASS:28skills",
+    "watch_regressions": "PASS:69synthetic",
+    "banking_product_tests": "NOT_EXECUTED;proposed_in_plan",
+    "security_scan_or_exploitation": "NOT_EXECUTED"
+  }
+}

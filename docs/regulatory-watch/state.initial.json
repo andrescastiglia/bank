@@ -4,7 +4,7 @@
   "state_branch": "automation/regulatory-state",
   "reporting_timezone": "America/Buenos_Aires",
   "initial_backfill_from": "2026-10-15T00:00:00-03:00",
-  "inventory_version": "2026-10-16.1",
+  "inventory_version": "2026-10-16.2",
   "last_run_id": null,
   "source_checkpoints": [
     {
