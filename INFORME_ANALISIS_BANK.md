@@ -1,8 +1,118 @@
 # Informe de análisis y datos relevados — Bank
 
+**Actualización:** 16/10/2026, 22:43:04, `America/Buenos_Aires` (17/10 01:43:04 UTC). **Base:** `main` en `f7d9495a172bcc9b2a68371a05509a664f12748d`, recuperada mediante GitHub y contrastada con Git. **Corrida:** `RUN-20261017T014304Z`. **Resultado global: PARTIAL**.
+
+## Actualización de los cuatro ejes
+
+### Alcance y conclusiones del nuevo corte
+
+La ventana solicitada es **[15/10/2026 00:00:00 −03:00, 16/10/2026 22:43:04 −03:00)**. Se recuperaron tres corridas reales de `automation/regulatory-state`, sus checkpoints, gaps, agenda y propuestas. El seed no se contó como corrida. El solapamiento de siete días se limita por el inicio del backfill, sin eliminar trabajo perdido. Las consultas realizadas después del corte se identifican por `fetched_at`; una fecha de publicación sin hora no demuestra que todo un día estuviera publicado a medianoche.
+
+| Eje | Hallazgo o contraste de este corte | Consecuencia para Bank |
+|---|---|---|
+| Legal y normativo | El buscador BCRA ahora enumera 14 comunicaciones del 15–16/10, frente a las seis del 15 observadas antes. Se recuperaron los 14 PDF. B13249 y B13250 publican series ICL/UVI; P51237 anuncia una nueva actualización de la Central de Deudores. | Son datos y versiones de insumos, no una habilitación ni una reforma universal de productos. Configuración y cálculos necesitan fuente, fecha y versión por contrato. |
+| Mercado | Se reconsultaron siete fabricantes/proyectos: Mambu, Pismo, Bantotal, Topaz, Temenos, Thought Machine y Apache Fineract. | Se mantiene la brecha entre capacidad documentada y demostración comercial/localización efectiva. No se verificó un lanzamiento fechado nuevo ni un cambio de precio o cuota. |
+| Tecnología | El manifiesto estable de Rust mantiene la misma huella; los índices BCRA conservan 103 TO y 55 RI. El repositorio sigue sin producto Rust ejecutable. | No se justifica reemplazar arquitectura por una portada nueva. Faltan contratos ejecutables, selección de dependencias y mediciones; los requisitos existentes ya proporcionan el marco. |
+| Seguridad, crítico | CISA agregó el 16/10 dos vulnerabilidades explotadas al KEV: CVE-2026-102764 y CVE-2025-61624. Se leyeron también los avisos de BeyondTrust y Fortinet. | Revisar inventario de soporte remoto, red y administración antes de concluir exposición. Los equipos operativos y terceros están dentro de la superficie aunque la imagen propia sea scratch. |
+
+`main` ya integra [LEGAL_TAX.md](docs/LEGAL_TAX.md) y el informe anterior por decisiones del mantenedor. Esto amplía el contexto jurídico y tributario disponible; no acredita implementación ni aceptación del operador. Se conserva íntegro el informe anterior al final como antecedente fechado: **sus cifras de recuperación, estado KEV y cortes son históricos; para esta corrida prevalece la actualización presente**.
+
+### Legal y normativo: datos primarios y aplicabilidad
+
+| Identidad / texto oficial | Publicación, observación y fechas efectivas | Hecho verificado | Perfiles y brecha |
+|---|---|---|---|
+| [BCRA B13249, PDF completo de tres páginas](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf) | Emisión 16/10/2026; fecha BO vacía en el buscador, no acreditada. Observación en esta corrida. | Anexo con 31 valores ICL, **17/10–16/11/2026**, base 30/6/2020 = 1, dos decimales: 36,90 al inicio y 37,53 al final. Incluye metodología en la tercera página. | Comunicación a EF; utilizar sólo en contratos o gastos que remitan válidamente a ICL. No obliga a indexar todo alquiler nuevo ni todo crédito. FR-CFG-011, FR-INT-006 y contratos requieren identificar serie y cláusula aplicable. |
+| [BCRA B13250, PDF completo de dos páginas](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13250.pdf) | Emisión 16/10; publicación BO no acreditada. Valores efectivos **20/10–19/11/2026**, sin inventar vencimiento de presentación. | 31 valores UVI/ICC, base 31/3/2016 = ARS 14,05: ARS 1.587,72 al 20/10 y ARS 1.610,77 al 19/11. No es UVA/CER. | EF destinataria y contratos alcanzados. FR-CFG-012, FR-INT-006/007; falta paquete de insumo y oráculos ejecutados, no una nueva familia FR. |
+| [BCRA P51237, una página](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/P51237.pdf) | Emitido 16/10; sin fecha BO acreditada. | Anuncia disponibilidad de la **tercera actualización de agosto 2026** de la Central de Deudores, por el mecanismo de sección 4/anexo I de Centrales de información. | Integraciones de riesgo/crédito que consulten esa central. Actualización de agosto no equivale a cartera de octubre. No se descargó base de personas ni se procesaron datos de deudores. Requiere controlar versión, fecha del dato y acceso autorizado. |
+| BCRA C102436–C102440 | Emitidas 16/10; PDFs recuperados, sin atribuirles fecha BO no informada. | Circulación, reservas, pasivos, tipo de cambio y tasas/series. C102440 distingue las metodologías y admite reiterar el último dato de cajas de ahorro cuando no hay información contemporánea. | Son insumos condicionados al producto/contrato. La fecha de observación no reemplaza fecha de referencia ni calidad del dato. Una tasa de referencia no se convierte automáticamente en tasa contractual. |
+
+El [análisis acotado de las dos series](regulatory/BCRA-B13249-B13250-2026.md) conserva criterios de aceptación y alcance. Se revisaron texto y tablas de B13249/B13250, incluida inspección visual de la página 2 de ambos PDF; no se cargaron series en producción. Propuesta de aceptación: verificar identidad y 31 fechas únicas/continuas de cada serie, comparar contra una fuente estructurada oficial antes de importar, conservar precisión/metodología, rechazar el intercambio UVI/UVA, probar dato ausente y corrección histórica sin sobrescritura. **Esos ensayos de producto todavía no se ejecutaron.**
+
+Los hitos conocidos **A8492 (1/11), B13248 (enero 2027), CNV1172 (vigencia general 16/10 y art. 40.b desde 1/11), CNV1173 (transición particular 15/12)** continúan en agenda. Alcance por sujeto y primer período siguen condicionados. No se recrean como novedades ni se inventa fecha de entrega sin disparador. La integración de LEGAL_TAX tampoco selecciona una sociedad bancaria ni activa todos los regímenes de su inventario.
+
+**COMARB: candidato pendiente, no regla verificada.** El buscador localizó una ficha oficial titulada Disposición de Presidencia 11/2026, fechada 16/10, sobre vencimientos; su título, ruta y referencias a sistemas no coinciden plenamente. El [enlace oficial](https://www.ca.gob.ar/resoluciones-comarb/download/455-2026/8707-disposicion-de-presidencia-n-11-2026-modificacion-del-vencimiento-de-las-ddjj-y-pagos-de-sircar-sircupa-y-sifere-correspondiente-al-anticipo-10-2027-vfinal) devolvió HTTP 500 y el lector alternativo timeout. No se recuperaron texto completo, descarga ni publicación BO: no se deriva calendario, feriado o parámetro productivo del snippet. Se conserva el candidato y su URL para reintento; no se afirma cobertura de SIRCREB/SIRCUPA ni de provincias.
+
+**Brecha transversal.** LEGAL_TAX incorpora constitución/autorización, capital, impuestos nacionales y un directorio de autoridades locales con ejemplos CABA/PBA. [compliant.md](docs/compliant.md), TAX/RPT y los skills siguen siendo requisitos y procedimientos genéricos: faltan matriz por operador, parámetros tributarios versionados, acuses reales y revisión profesional pertinente. No se infiere cobertura local universal de ese directorio ni de índices nacionales.
+
+### Mercado y competencia: contraste actualizado
+
+Las siete fuentes se recuperaron nuevamente; son declaraciones de sus responsables. No se obtuvieron contratos, tarifas, benchmarks comparables, resultados de homologación argentina ni cuotas auditadas. Una huella distinta de HTML dinámico se conserva como observación, sin clasificarla como nueva funcionalidad.
+
+| Oferta / fuente | Capacidades declaradas observadas | Correspondencia y evidencia que falta en Bank |
+|---|---|---|
+| [Mambu](https://mambu.com/en) | Composición, préstamos de consumo/empresas, financiación embebida y pagos. | CFG/CRD/COR: demostrar composición y economía por producto; el anuncio comercial de pagos transfronterizos requiere fecha y alcance antes de llamarlo lanzamiento nuevo. |
+| [Pismo](https://developers.pismo.io/pismo-docs/docs/welcome) | APIs, eventos, guía de seguridad, ciclo de vida/deprecación y configuraciones de préstamos/pagos. | ASY/PAY/CARD: faltan contratos OpenAPI/eventos versionados, compatibilidad y pruebas de consumidores. |
+| [Bantotal](https://www.bantotal.com/) | Core regional, microfinanzas, pagos y comercio exterior; capacidades empaquetadas. | La oportunidad exige comparar un recorrido argentino concreto, conectores y soporte operativo; una oferta regional no prueba cumplimiento local completo. |
+| [Topaz](https://www.topazevolution.com/) | Core modular, tesorería y suite antifraude. | RSK/FRD/TRE: falta ensayo de caso, límites, conciliación y costo de operar controles. Sus cifras comerciales no se extrapolan a Argentina. |
+| [Temenos](https://www.temenos.com/products/core-banking/) | Composición y modernización progresiva, pagos y gestión financiera. | MIG/CFG/OPS: demostrar corte/retorno por cohorte y coexistencia conciliada, sin doble autoridad financiera. |
+| [Vault Core](https://www.thoughtmachine.net/vault-core) | Parametrización de productos, datos en tiempo real y operación cloud. | CFG/LED/ASY: la personalización requiere reglas reproducibles y autorización; no deriva en un motor de código arbitrario aceptado por Bank. |
+| [Apache Fineract](https://fineract.apache.org/) | Software abierto, APIs headless, clientes, préstamos, ahorro, contabilidad y reportes. | Alternativa para comparar funcionalidades y costos. No se adoptó su código ni se cambió GPL v2; cualquier integración necesita revisión de licencia/procedencia y localización. |
+
+**Interpretación comercial:** la documentación cubre muchas funciones competitivas, pero falta una demostración repetible con perfil, operación, condiciones comerciales, conectores y costo. Priorizar una oferta verificable por segmento sigue siendo más defendible que prometer cobertura universal. No se presenta una nueva hoja de ruta ni se altera el plan existente.
+
+### Tecnología: arquitectura y mantenibilidad
+
+La base examinada no contiene `Cargo.toml`, `Cargo.lock`, `.rs` ni Dockerfile de producto. Rust, Tokio, autoridad SQL, outbox/inbox, aislamiento por celda y scratch son decisiones/requisitos documentales; no son componentes cuyo rendimiento haya sido medido. El [manifiesto estable de Rust](https://static.rust-lang.org/dist/channel-rust-stable.toml) revalidó la huella anterior de 1.99.1. No se seleccionó otra release por fecha o por variación de la portada.
+
+El impacto de las series y de las actualizaciones externas refuerza ADR-05: separar `published_at`, fecha efectiva del valor y `observed_at`, fijar fuente/unidad/versión y evitar recalcular historia confirmada con el último dato. ADR-03 permite adquirir/validar insumos asíncronamente con idempotencia y cuarentena; la liquidación definitiva debe esperar el dato admisible. ADR-02 conserva la autoridad transaccional, y ADR-08 requiere que una carga inicial preserve la serie y versión de origen sin disparar efectos externos históricos.
+
+Para rendimiento y disponibilidad siguen faltando percentiles bajo carga representativa, recuperación tras pérdida de commit/ACK, backpressure, fencing y conciliación externa. No se aportan cifras sintéticas como evidencia de SLO. La comparación de proveedores no exige adoptar una arquitectura distribuida adicional.
+
+### Seguridad crítica: novedades, exposición y pruebas propuestas
+
+El [KEV oficial de CISA](https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json) consultado es una versión posterior al catálogo del antecedente: fecha `2026-10-16T17:15:48.8752Z`. Se identificaron **dos altas del 16/10** que no estaban en el estado recuperado. La inclusión acredita el criterio de explotación del catálogo, no un incidente en Bank.
+
+| Identidad y fuentes primarias | Fechas y hechos | Aplicabilidad y tratamiento propuesto |
+|---|---|---|
+| **CVE-2026-102764**, [BeyondTrust BT26-05](https://www.beyondtrust.com/trust-center/security-advisories/bt26-05), KEV | Aviso del fabricante 15/10; alta KEV 16/10. Remote Support valida insuficientemente el origen de mensajes internos, permitiendo operaciones sobre archivos. CVSS 4.0 **9,3** del fabricante. Afecta versiones hasta 26.2.3; parche **BT26-05-RS** para 24.3.1–26.2.3. Versiones anteriores requieren actualizar para aplicar el parche. El fabricante declara SaaS parchado desde 9/10. | Condicionado a Remote Support propio o de tercero con acceso al entorno. Verificar modalidad/versión/parche real; una versión sin comprobar parche no basta. No se detectó ese producto instalado ni se inspeccionó infraestructura privada. |
+| **CVE-2025-61624**, [Fortinet FG-IR-26-122](https://fortiguard.fortinet.com/psirt/FG-IR-26-122), KEV | Aviso inicial **14/4/2026**, alta KEV **16/10/2026**: novedad de explotación catalogada, no publicación nueva del defecto. Path traversal en CLI de FortiOS, FortiPAM, FortiProxy y FortiSwitchManager; requiere privilegios administrativos, permite escritura/borrado. CVSS 3.1 **6,0** del fabricante. | Sólo si alguno de esos productos/ramas está presente. Ejemplos corregidos: FortiOS 7.6.5/7.4.10; FortiProxy 7.6.5/7.4.12; FortiPAM 1.7.1 (1.8 no afectada); FortiSwitchManager 7.2.8/7.0.7. Consultar tabla y camino de actualización del fabricante; ramas antiguas indicadas requieren migración. |
+
+Ambas entradas KEV tienen `dueDate = 19/10/2026`, **plazo del programa federal estadounidense, no vencimiento legal argentino ni SLA automáticamente adoptado por Bank**. La prioridad local debe surgir de presencia, exposición, privilegios, activos y política del operador. Las escalas CVSS son distintas y no se convierten en una puntuación de riesgo del proyecto.
+
+La [propuesta acotada de exposición y criterios](regulatory/CISA-KEV-20261016.md) mapea FR-IAM-008/026, FR-OPS-024/025/026, NFR-05, NFR-09, ADR-06/07 y CTL-09/15. Incluir soporte remoto, gateways, PAM, CI y terceros en el inventario evita que el alcance se limite a los crates del core. Un atacante con control de esos planos puede alcanzar credenciales, backups y cambios de parámetros aunque el runtime de la aplicación no tenga shell.
+
+Se conservan las amenazas del antecedente: autorización por objeto/entidad, replay, doble pago, manipulación de parámetros, secuestro de identidad, filtración de secretos, importación maliciosa, ransomware y restauración inconsistente. OIDC/OAuth no sustituyen facultades de negocio; cifrado necesita custodia/rotación/restauración de claves y validación efectiva TLS; las APIs requieren límites, autorización e idempotencia por operación. FAPI/ASVS fueron reconsultados como referencias técnicas, sin alegar certificación. ISO/PCI/Swift/NIST requieren activador contractual/normativo o de red y no se convierten por defecto en leyes argentinas.
+
+RustSec 0365–0369 aparecieron en el índice consultado con fecha de emisión **17/10**, sin hora/zona suficiente para asignarlos al corte argentino del 16/10. Se conservan para verificación temporal posterior, sin notificarlos como publicaciones confirmadas dentro de la ventana ni atribuir esas crates al proyecto. El contexto anterior Wasmtime/PostgreSQL y el aviso Atlassian conocido no se vuelve a notificar como novedad.
+
+### Cobertura real, continuidad y límites
+
+| Fuente | Resultado de esta corrida y cobertura real | Continuidad |
+|---|---|---|
+| WATCH-BO | **PARTIAL**. Ediciones 15 y 16/10; 110 URLs de cuerpos únicos, 96 recuperados nuevamente y 14 revalidaciones con 429. 37 de 37 anexos antes pendientes descargados/extraídos; seis fallos 503 iniciales se resolvieron con reintento. Total acumulado recuperado: 40 de 40 identificados, incluidos tres del antecedente. | Sin corte completo. Pendientes lectura sustantiva de anexos recuperados, reintentos, suplementos/ediciones adicionales y universo de anexos no identificado. Los 110 cuerpos recuperados anteriormente no se cuentan como 110 recuperados en esta corrida. |
+| WATCH-BCRA-COM | **COMPLETE para el filtro y ventana declarados**. Consulta POST por fecha 15–16/10, todos los tipos A/B/C/P, página 1/1, 14/14 registros; 14 PDF y sus anexos integrados, 28 páginas. Un timeout inicial B13250 se resolvió con reintento. | Avance contiguo desde 16/10 00:00 hasta 16/10 22:43:04 −03:00. La foto consultada después del corte queda fechada; debe solaparse por indexaciones tardías. No es completitud del resto de fuentes BCRA. |
+| WATCH-BCRA-TO | **PARTIAL**. Índice de 103 TO y seis PDF seleccionados: depósitos, cuenta corriente, garantía, protección de usuarios, seguridad física y riesgos TI/SI. | Índice no paginado recuperado; lectura selectiva, comparación histórica y restantes textos/modificatorias pendientes. Corte conservado nulo. |
+| WATCH-BCRA-RI | **PARTIAL**. Faceta oficial de 55 RI; t-optico, efectivo mínimo, deudores, PSP y manual SISCEN recuperados. | Otros textos/anexos y secuencia de versiones pendientes. Corte nulo. |
+| WATCH-UIF | **PARTIAL**. Índices sectorial y transversal reconsultados; selección por rol, sin convertir obligaciones de abogados/registros en reglas de EF. | Falta búsqueda temporal completa y lectura de todas las modificatorias/anexos pertinentes. Corte nulo. |
+| WATCH-AAIP | **PARTIAL**. Formulario oficial accesible, sin serie de resultados cronológicos completa acreditada. | Mantiene gap y corte nulo; no se concluye ausencia de novedades. |
+| WATCH-ARCA | **PARTIAL**. Biblioteca y entrada institucional; la ruta temática ensayada devolvió 404. | Búsqueda cronológica y anexos incompletos; LEGAL_TAX es contexto de repositorio, no evidencia de cobertura externa de esta corrida. Corte nulo. |
+| WATCH-COMARB | **UNAVAILABLE para recuperación directa**. Portales, sistemas, índice anual y candidato DP11 devolvieron 500; lector alternativo timeout. | Conserva falla conocida y candidato descubierto; sin texto completo ni corte. Snippets no cierran cobertura ni se convierten en calendarios. |
+| WATCH-CNV | **PARTIAL**. Marco/panel oficial reconsultados; conserva RG1172/1173 en contexto de agenda. | Resto de actos/historia/anexos pendientes; corte nulo. |
+| WATCH-JURIS | **NOT_APPLICABLE_WITH_BASIS al relevamiento local**, fuente opcional omitida en esta corrida y checkpoint conservado íntegro. | Sin operador ni jurisdicciones activadas. No es exención ni cobertura de las 24 jurisdicciones. |
+| WATCH-STANDARDS | **PARTIAL**. KEV, avisos técnicos, PostgreSQL, Rust, FAPI y ASVS en alcance documental. | No inventario instalado, cobertura universal de avisos, edición contractual de red ni texto restringido completo de estándares; corte nulo. |
+
+Los índices TO/RI se procesaron en sus dos facetas oficiales. Recuperar un PDF no acredita revisar todas sus modificatorias: la lectura sustantiva se concentró en los actos/segmentos relevantes indicados, conservando cursores para el resto. Suplementos/ediciones adicionales del BO y búsqueda cronológica completa de cada autoridad continúan pendientes. Las respuestas 429 detuvieron la secuencia de reintento de cuerpos; no se eludieron límites ni se infirió ausencia de normas.
+
+El estado registra filtros, URLs finales, fechas y hashes de bytes, además de la huella separada de cada PDF anexo decodificado. Un documento distinto por hash queda para comparación de contenido pertinente; no se descarta ni se proclama reforma por la plantilla HTML. Los anexos recuperados pero no interpretados permanecen pendientes de lectura sustantiva. Se conservan agendas, cambios y corridas previas como prefijos exactos, sin convertir una PR en cobertura o implementación.
+
+**Evidencia durable de esta corrida:** [manifiesto RUN-20261017T014304Z](https://github.com/andrescastiglia/bank/blob/26be655b0bad9b29f84798e398e9138f25a6b89a/.regulatory-watch/evidence/RUN-20261017T014304Z.json). La bitácora, snapshots y estado permanecen en `automation/regulatory-state`; no se incorporan nuevas bitácoras operativas a `main`.
+
+### Validación y decisiones pendientes
+
+Se ejecutaron los checks documentales de catálogo funcional, enlaces/revisión/skills, inventario de vigilancia y sus fixtures de regresión. La transición de estado se verificó con `check_watch.py --state --run --previous-state`, además de conservar prefijos históricos e indexar una sola vez esta corrida. No se ejecutaron builds Rust, importación de series, cálculos financieros, escaneos de infraestructura/dependencias, pentest, parcheo ni recuperación. Se contrastaron además los 27 IDs FR explícitos del informe/propuestas con el catálogo y las huellas de bytes con las descargas. Los checks validan estructura y consistencia documental, no completitud jurídica ni eficacia de controles.
+
+Para una decisión concreta faltan perfil del operador, productos/contratos que usan ICL/UVI y presencia de BeyondTrust/Fortinet en activos propios o de proveedores. Sin esos datos se propone análisis y verificación, sin activar importes/reglas, escanear redes ajenas, presentar reportes o comunicar a autoridades. GPL v2 y los merges exclusivos de `@andrescastiglia` se mantienen.
+
+---
+
+## Antecedente conservado — corte del 16/10/2026 a las 00:04
+
+El contenido siguiente conserva los resultados y límites de la corrida anterior; no reemplaza la actualización ni representa nuevas pruebas de este corte.
+
+
 **Fecha:** 16/10/2026, zona `America/Buenos_Aires`. **Repositorio:** [andrescastiglia/bank](https://github.com/andrescastiglia/bank). **Base examinada:** `main` en `979dd2c8f48e13d17343965d2e7194ec79ca0ed2`, con Rust y runtime propio `FROM scratch` ya integrados. **Naturaleza:** investigación documental y contraste de fuentes públicas; implementación y aceptación institucional sin evaluar.
 
-## 1. Conclusiones principales
+### 1. Conclusiones principales
 
 El proyecto tiene una biblioteca extensa y coherente en sus principios: autoridad financiera SQL, aislamiento por entidad, configuración fechada, asincronía durable y migración con conciliación. Su principal brecha frente a una operación bancaria real sigue siendo la falta de contratos ejecutables, implementación y evidencia independiente. La cantidad de requisitos y la cobertura de referencias no permiten inferir cumplimiento, seguridad, rendimiento ni disponibilidad efectiva.
 
@@ -17,9 +127,9 @@ La vigilancia tiene resultado **PARTIAL**. Se recuperaron los **110 cuerpos de a
 
 Este informe conserva el [plan de implementación existente](PLAN_DE_IMPLEMENTACION_BANK.md) como antecedente. Presenta hechos, diferencias y evidencia faltante; sus recomendaciones finales son complementarias. No modifica la licencia GPL v2 ni el gobierno de merges exclusivos del mantenedor.
 
-## 2. Alcance, método y estado del repositorio
+### 2. Alcance, método y estado del repositorio
 
-### 2.1 Ventana y continuidad
+#### 2.1 Ventana y continuidad
 
 La corrida `RUN-20261016T030400Z` comenzó a las **00:04:00 del 16/10/2026 en Argentina** (`03:04:00 UTC`). Ventana objetivo: **[15/10/2026 00:00:00 −03:00, 16/10/2026 00:04:00 −03:00)**. Se recuperaron el inventario `2026-10-16.2`, dos corridas previas, sus gaps y cinco hitos de agenda; no se reinició desde el seed. El solapamiento de siete días queda limitado por el inicio solicitado del backfill, 15/10/2026. Textos anteriores necesarios para interpretar una publicación, y avisos técnicos del 14/10, se identifican como contexto.
 
@@ -27,7 +137,7 @@ Las consultas se efectuaron después del inicio. La edición del BO del 16/10 ya
 
 Se leyó `main` mediante el conector GitHub, incluidas las instrucciones de gobierno y vigilancia; se contrastó el commit con Git y se consultaron las PR abiertas: ninguna al iniciar. La rama operativa no estaba publicada; el estado más reciente recuperable estaba integrado en `main`. Se conserva ese historial y se restablece su persistencia separada, sin incorporar bitácoras de esta corrida al diff del informe.
 
-### 2.2 Qué se examinó y qué demuestra
+#### 2.2 Qué se examinó y qué demuestra
 
 | Conjunto | Evidencia y alcance de la revisión |
 |---|---|
@@ -40,15 +150,15 @@ Se leyó `main` mediante el conector GitHub, incluidas las instrucciones de gobi
 
 **Hecho** significa dato observado en la fuente citada. **Interpretación** explicita su posible consecuencia bajo un perfil. **Brecha** identifica evidencia o detalle faltante en el repositorio. Una promesa de un proveedor acredita su oferta declarada, no sus resultados, precio, cuota ni cumplimiento argentino. Una huella HTML distinta puede reflejar fecha de cabecera, token o plantilla: no se clasifica como reforma sin comparar el contenido pertinente.
 
-## 3. Aspectos legales y normativos
+### 3. Aspectos legales y normativos
 
-### 3.1 Regla de aplicabilidad
+#### 3.1 Regla de aplicabilidad
 
 El [perímetro funcional](docs/functional/01-entidades-perimetro.md) ya distingue EF, PSPCP, otros PSP, PNFC, PSCPP y proveedor tecnológico. PSAV y agentes CNV requieren su propio encuadre; una cuenta de pago no se transforma en depósito y una licencia de software no habilita actividades financieras. Las obligaciones de la empresa proveedora tampoco son idénticas a las del operador.
 
 Para cada acto se necesitan sociedad, registro, función, producto, moneda, canal, jurisdicción y fecha. Sin operador seleccionado, las conclusiones siguientes son **condicionales**. La ubicación de una norma bajo ARCA, BCRA o CNV no basta para convertirla en una regla común a todos los módulos.
 
-### 3.2 Datos regulatorios verificados y fechas
+#### 3.2 Datos regulatorios verificados y fechas
 
 | Identidad / fuente primaria | Emisión y publicación | Vigencia, exigibilidad y contenido comprobado | Alcance y contraste con Bank |
 |---|---|---|---|
@@ -62,7 +172,7 @@ Para cada acto se necesitan sociedad, registro, función, producto, moneda, cana
 
 Las fechas de consulta son del 16/10 UTC y Argentina, con hora exacta por evidencia. El cambio de fecha de la cabecera del portal BO no cambia la publicación del acto: se contrastaron identidad, URL por edición y pie de publicación. Los comunicados C de tasas, tipo de cambio, reservas y pasivos se separaron de reformas de reglas generales; un dato de referencia sólo alimenta el producto que lo tenga pactado.
 
-### 3.3 Hallazgos nuevos o con evidencia ampliada
+#### 3.3 Hallazgos nuevos o con evidencia ampliada
 
 **INF-REG-01 — Series CER/UVA: se resolvió evidencia pertinente, falta el paquete ejecutable.** Los anexos BCRA y los archivos anexos del BO de B13246/B13247 se recuperaron por sus mecanismos oficiales. Los PDF BCRA tienen dos páginas cada uno; los del BO incluyen su propia presentación y tablas como imagen, revisadas visualmente tras renderizarlos. Huellas diferentes por formato/procedencia no prueban valores incompatibles. Se contrastaron período y extremos de las tablas; la verificación automatizada fila a fila de dos formatos y de la serie con mayor precisión sigue pendiente.
 
@@ -80,7 +190,7 @@ La [resolución conjunta 61/2026](https://www.boletinoficial.gov.ar/detalleAviso
 
 **INF-REG-04 — ARCA: distinguir organización administrativa de reforma fiscal.** La [disposición 140/2026](https://www.boletinoficial.gov.ar/detalleAviso/primera/348992/20261015) trata asignación de funciones; la [66/2026 de Neuquén](https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015), reemplazos de jefaturas; la [92/2026 de Rosario](https://www.boletinoficial.gov.ar/detalleAviso/primera/349046/20261016), régimen de reemplazos. Su lectura no sostiene un cambio de alícuotas, padrón, diseño de registro o obligación informativa del core. La biblioteca ARCA y sus portadas se consultaron, pero no se completó una búsqueda cronológica con todos los textos y anexos: **no se concluye ausencia de novedades fiscales**.
 
-### 3.4 Agenda heredada, sin duplicar alertas
+#### 3.4 Agenda heredada, sin duplicar alertas
 
 | Hito | Situación al 16/10/2026 | Evidencia pendiente |
 |---|---|---|
@@ -90,7 +200,7 @@ La [resolución conjunta 61/2026](https://www.boletinoficial.gov.ar/detalleAviso
 | B13248, 1/1/2027 | Versión futura de SISCEN-0019. | Casos por umbral, moneda, período y excepción de inhábiles. |
 | CGN/TGN 2/2026, 48 h por evento | Nuevo disparador condicional, no vencimiento fechado. | Perfil SAF/CUT y hora efectiva de emisión del medio de pago; registrar agenda sólo si se activa ese alcance. |
 
-### 3.5 Brecha de cumplimiento y trazabilidad
+#### 3.5 Brecha de cumplimiento y trazabilidad
 
 El [inventario de cumplimiento](docs/compliant.md) mantiene su corte histórico. Este informe amplía evidencia y análisis, sin afirmar que sus 173 entradas incorporen cada nueva especialización. La falta de un paquete CER/UVA o CUT no significa que falten motores genéricos de índices o pagos; el problema es la descomposición verificable por perfil y edición.
 
@@ -103,9 +213,9 @@ El [inventario de cumplimiento](docs/compliant.md) mantiene su corte histórico.
 
 No se modificaron reglas monetarias, reportes, contratos ni skills por una interpretación aún no seleccionada. La revisión competente debe resolver aplicabilidad; el desarrollo con datos sintéticos puede continuar sobre contratos explícitos. Los hallazgos REV-LEG-01/08/10, REV-ACC-01/04 y REV-QA-05 siguen siendo pertinentes.
 
-## 4. Mercado y competencia
+### 4. Mercado y competencia
 
-### 4.1 Oferta observada
+#### 4.1 Oferta observada
 
 Las páginas siguientes se reconsultaron el 16/10/2026. Son documentación viva u oferta del responsable; salvo las fechas expresas, no se les asigna fecha de lanzamiento. No se obtuvieron cotizaciones, contratos, resultados de una PoC ni nuevas cifras verificadas de cuota o demanda comprable. Las referencias locales del [análisis de mercado](docs/market_analysis.md) siguen fechadas y requieren confirmar entidad, versión, país y perímetro.
 
@@ -121,7 +231,7 @@ Las páginas siguientes se reconsultaron el 16/10/2026. Son documentación viva 
 
 Fineract declara **Apache License 2.0**. La [FSF distingue su compatibilidad con GPL v3 y su incompatibilidad con GPL v2](https://www.gnu.org/licenses/license-list.html#apache2). Para este proyecto bajo GPL v2, el estudio de sus capacidades no autoriza copiar/combinar código: una eventual integración debe examinar obras, distribución, componentes y licencias concretas. Este hallazgo no modifica la licencia del repositorio ni decide por sí solo el encuadre de una integración entre procesos independientes.
 
-### 4.2 Mapa de capacidades e integraciones
+#### 4.2 Mapa de capacidades e integraciones
 
 | Necesidad observada | Ya documentado | Brecha verificable / clasificación |
 |---|---|---|
@@ -134,7 +244,7 @@ Fineract declara **Apache License 2.0**. La [FSF distingue su compatibilidad con
 | SaaS/soporte y portabilidad | OPS, MIG, NFR-08/12; exportación y recuperación | Falta oferta medible de servicio, guardia, costos y salida. REV-COM-07/08/11 y REV-SEC-07/12. |
 | IA en atención/operación | AIG, CTL-21 y NFR de seguridad/privacidad | Falta caso de uso y evaluación. Una promesa comercial de agentes no justifica capacidad autónoma para liberar fondos o cambiar reglas. |
 
-### 4.3 Lectura comercial y económica
+#### 4.3 Lectura comercial y económica
 
 **Hecho:** hay convergencia de ofertas hacia modularidad, integración y operación acompañada. **Inferencia:** para Bank, «Rust + APIs + open source» describe opciones técnicas, pero aún no demuestra una ventaja económica para un operador argentino. Una diferenciación defendible podría surgir de localización explicable, migración conciliada, reglas reproducibles y salida comprobable; su demanda y costo siguen sin medirse.
 
@@ -142,21 +252,21 @@ No se verificaron precios públicos comparables de core, margen por cliente ni u
 
 Los hallazgos REV-COM-01/02/04/07/08/11 conservan su utilidad, bajo el gobierno actualizado: seleccionar un caso para validar no convierte ventas o ARR en condición para contribuir. No se contactó a fabricantes ni clientes y no se concluye cuál proveedor gana una licitación sin su perfil y evidencia.
 
-## 5. Innovación tecnológica y arquitectura
+### 5. Innovación tecnológica y arquitectura
 
-### 5.1 Novedad de toolchain
+#### 5.1 Novedad de toolchain
 
 El [anuncio oficial de Rust 1.99.1](https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/) del **15/10/2026** identifica tres correcciones: símbolo `wcslen` faltante en ciertos targets; compilación incorrecta de retornos FFI `bool` en x86_64 por extensión del registro; y carga de `libLLVM` por `rust-lld` en macOS fuera del proxy de rustup. El [manifiesto estable](https://static.rust-lang.org/dist/channel-rust-stable.toml), consultado el 16/10, informa fecha 15/10 y Rust `1.99.1 (58cf8f9c3 2026-10-13)`.
 
 **INF-TEC-01 — Release relevante, adopción pendiente.** Las correcciones de FFI/enlace merecen evaluación por el contrato de binarios estáticos y posibles clientes nativos. No se demostró afectación del futuro binario Linux ni se clasificó el anuncio como una CVE. Sin workspace o toolchain fijado no hay upgrade aplicado. El contrato vigente ya exige `rust-toolchain.toml`, lockfile, targets/features e inspección ELF: la evidencia necesaria es build y prueba por arquitectura, no apuntar a `stable` flotante.
 
-### 5.2 Frameworks y ejecución asíncrona
+#### 5.2 Frameworks y ejecución asíncrona
 
 La [documentación de axum consultada](https://docs.rs/axum/latest/axum/) muestra **0.8.9**, fechada 22/9/2026, integración con Tokio/Tower y dependencias/feature flags. Es un candidato observado, anterior a la ventana; no una dependencia seleccionada. [Tokio, tareas](https://tokio.rs/tokio/tutorial/spawning) y [puentes entre código síncrono/asíncrono](https://tokio.rs/tokio/topics/bridging) explican mecanismos de ejecución; no garantizan durabilidad de una obligación de negocio.
 
 **Interpretación para Bank:** un framework puede acelerar contratos HTTP, middleware, límites y trazas. La elección debe contrastar soporte, licencias, cancelación, errores, TLS y dependencias nativas con NFR-03/05/09. Limitar pools y concurrencia evita que hashing, compresión, cómputo de intereses o importaciones bloqueen el executor. Una tarea en memoria aceptada sin estado durable no satisface FR-ASY-001/016, aunque use `async`.
 
-### 5.3 Contraste de patrones con el diseño vigente
+#### 5.3 Contraste de patrones con el diseño vigente
 
 | Patrón/dato técnico | Situación en la arquitectura | Consecuencia y evidencia que falta |
 |---|---|---|
@@ -170,15 +280,15 @@ La [documentación de axum consultada](https://docs.rs/axum/latest/axum/) muestr
 
 Estos patrones son establecidos y ya forman parte del diseño; no se les atribuye un lanzamiento en octubre de 2026. La innovación útil para el proyecto es convertirlos en un flujo demostrable con menor costo y riesgo medidos. No hay un benchmark que justifique cambiar SQL por otra autoridad, eliminar persistencia síncrona o prometer exactamente una vez entre SQL y un riel externo.
 
-### 5.4 Scratch: contrato y límites observables
+#### 5.4 Scratch: contrato y límites observables
 
 La [documentación de Docker sobre imágenes base](https://docs.docker.com/build/building/base-images/) describe scratch como base mínima. Bank requiere binarios Linux realmente estáticos, recursos de CA/calendarios explícitos, UID/GID no root, raíz de sólo lectura, probes sin shell y terminación SIGTERM controlada. Los [security contexts de Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) permiten declarar controles, pero su presencia en YAML debe comprobarse contra el proceso y plataforma efectivos.
 
 **INF-TEC-02 — La imagen mínima desplaza responsabilidades al artefacto.** CA vencidas, tzdata incompleta, DNS, bibliotecas nativas, carga de plugins o apagado durante commit/ACK pueden fallar sin una distribución Linux. Falta construir imagen por arquitectura y probar TLS válido/inválido, zona de negocio, filesystem, probes y recuperación de trabajo. La [regla de lockfiles de Cargo](https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html) favorece reproducibilidad; la release necesita además builder/digest, linker, features, SBOM y procedencia. No se ejecutaron builds, inspección ELF ni scans de imágenes porque no existen esos artefactos en el alcance.
 
-## 6. Seguridad informática — eje crítico
+### 6. Seguridad informática — eje crítico
 
-### 6.1 Avisos y exposición efectiva
+#### 6.1 Avisos y exposición efectiva
 
 | Fuente verificada | Dato observado y fecha | Evaluación de aplicabilidad |
 |---|---|---|
@@ -191,7 +301,7 @@ La [documentación de Docker sobre imágenes base](https://docs.docker.com/build
 
 Los dos RustSec tienen severidades de escalas CVSS diferentes. Ninguno se eleva a «incidente crítico de Bank» por el título de esta sección. El riesgo del negocio requiere exposición, capacidades del atacante, fondos/datos y controles del despliegue concreto.
 
-### 6.2 Vectores de ataque y controles existentes
+#### 6.2 Vectores de ataque y controles existentes
 
 La tabla es un modelo de amenazas documental. Los escenarios son plausibles y útiles para aceptación; **no son ataques observados ni pruebas ejecutadas**.
 
@@ -209,7 +319,7 @@ La tabla es un modelo de amenazas documental. Los escenarios son plausibles y ú
 | Datos en logs, eventos, DLQ, analítica, backup o herramientas de IA | Divulgar legajos, PAN o ROS; reintroducir datos vencidos durante restore. | AML/DAT/AIG, NFR-06/07, CTL-08/10/11/12/21. Falta mapa poblado de finalidad/residencia/retención y prueba de minimización/restore. REV-SEC-05. |
 | Ransomware, restauración incompleta o split brain | Reabrir egresos con hechos perdidos o pagar otra vez después del desastre. | ADR-04, NFR-02, FR-ASY-029 y MIG/REC. Falta recuperación medida, reconciliación con el riel y aislamiento del escritor anterior; restaurar SQL no revierte pagos externos. |
 
-### 6.3 Identidad, cifrado, APIs y estándares
+#### 6.3 Identidad, cifrado, APIs y estándares
 
 **Identidad.** OIDC/OAuth autentican e intercambian autorizaciones; no sustituyen KYC, poderes ni controles de negocio. Se necesita validar emisor, audiencia, firma, tiempo y contexto, y revalidar facultades materiales al serializar el comando. El refuerzo de autenticación debe corresponder a la acción y al perfil argentino. Una guía internacional no autoriza eliminar requisitos BCRA específicos, ni convertir una excepción de canal en regla general.
 
@@ -221,15 +331,15 @@ La tabla es un modelo de amenazas documental. Los escenarios son plausibles y ú
 
 FR-OPS-042 ya exige registrar edición/programa, contrato activador y evidencia. PCI necesita delimitar CDE y rol; Swift, arquitectura/participación y evaluación correspondiente; un certificado de gestión no homologa todos los servicios del core. Este informe no atribuye esas obligaciones a un perfil que no procese tarjetas o no participe en la red.
 
-### 6.4 Impacto trazable de seguridad
+#### 6.4 Impacto trazable de seguridad
 
 Los avisos de PostgreSQL remiten a ADR-02/06/08, NFR-05/09/10 y CTL-09/15/20; Rust/FFI/scratch, a ADR-07, FR-OPS-026 y NFR-05/09; identidad/API, a IAM/PAY/ASY, ADR-03/06, NFR-05/08 y CTL-04/09/17. Los hallazgos previos REV-SEC-01/02/03/05/06 y REV-ARC-01/02/06 siguen abiertos en su alcance documental.
 
 Los skills de stack, seguridad, integridad, asincronía y migración ya prescriben separación entre diseño y prueba. La mejora relevante es que una futura selección de crates/servicios aporte evidencia concreta consumible por esos skills. Añadir otra instrucción genérica o declarar «scan aprobado» sin artefacto no cierra esa brecha.
 
-## 7. Cobertura real, evidencia y pendientes
+### 7. Cobertura real, evidencia y pendientes
 
-### 7.1 Resultado por fuente
+#### 7.1 Resultado por fuente
 
 | Fuente del inventario | Resultado y evidencia de esta consulta | Pendiente / checkpoint |
 |---|---|---|
@@ -247,7 +357,7 @@ Los skills de stack, seguridad, integridad, asincronía y migración ya prescrib
 
 El intervalo completo de una fuente es distinto del resultado global y de su última hora de intento. Los índices de TO/RI sin cambio y el KEV estable no prueban ausencia de cambios en fuentes incompletas. Un HTTP 200 acredita recuperación de esos bytes; no necesariamente texto sustantivo, anexos ni aplicabilidad. La recuperación de cuerpos BO mejora un gap conocido; no reescribe las fallas previas ni incrementa artificialmente el corte.
 
-### 7.2 Procedencia durable y deduplicación
+#### 7.2 Procedencia durable y deduplicación
 
 La evidencia de esta corrida se guarda separadamente en [`automation/regulatory-state`, manifiesto RUN-20261016T030400Z](https://github.com/andrescastiglia/bank/blob/71c12cfc6daf997c6b36302941242508abb9919f/.regulatory-watch/evidence/RUN-20261016T030400Z.json), con bitácora y estado en esa misma rama. La referencia al commit publicado es inmutable. Las fuentes enlazadas en el informe son primarias; el manifiesto identifica el contenido realmente recuperado. Los cuerpos comerciales, datos de personas de edictos y textos restringidos no se publican en el repositorio.
 
@@ -265,13 +375,13 @@ Se conserva identidad autoridad/tipo/número/año/jurisdicción. B13247 pasa de 
 
 Las huellas son identificadores de evidencia, no firmas de autenticidad ni certificados jurídicos. Una URL viva puede cambiar después de esta consulta.
 
-### 7.3 Comprobaciones y límites
+#### 7.3 Comprobaciones y límites
 
 Se ejecutaron y aprobaron las comprobaciones del catálogo reproducible (1.016 FR), revisión documental/enlaces/28 skills, inventario de vigilancia y 69 fixtures de regresión. También aprobó `check_watch.py` con `--state`, `--run` y `--previous-state` de esta corrida: conserva como prefijos exactos `changes`, `agenda` y `run_index`, indexa una sola vez su ID y no avanza fuentes incompletas. Se contrastaron los 23 IDs FR explícitos del informe contra el catálogo y las cinco huellas seleccionadas contra las descargas. Estos controles no prueban lectura jurídica suficiente ni producto bancario. La propuesta no contiene nuevas bitácoras operativas destinadas a `main`.
 
 No se ejecutaron aplicaciones bancarias, migración con fondos, builds Rust, escaneos de dependencias/imágenes, pruebas de intrusión ni de recuperación. No hay base para declarar una vulnerabilidad explotada, un control operativo eficaz, una certificación ni un SLA cumplido. Las protecciones de `main` siguen con la limitación de verificación documentada en [GOVERNANCE.md](GOVERNANCE.md); esta investigación no cambia permisos ni las verifica por ensayo destructivo.
 
-## 8. Observaciones finales derivadas de los datos
+### 8. Observaciones finales derivadas de los datos
 
 1. Seleccionar perfil y primer recorrido para poder convertir fuentes y FR genéricos en un paquete con oráculos. Mantener PSAV, CUT y jurisdicciones como alcances condicionados hasta esa decisión.
 2. Evaluar Rust 1.99.1 al fijar el primer toolchain y exigir evidencia por target, dependencias nativas, TLS y apagado en scratch. Conservar reproducibilidad y una política de actualización; no adoptar una versión sólo por ser la última observada.
