@@ -5,42 +5,27 @@
   "reporting_timezone": "America/Buenos_Aires",
   "initial_backfill_from": "2026-10-15T00:00:00-03:00",
   "inventory_version": "2026-10-16.2",
-  "last_run_id": "RUN-20261017T014304Z",
+  "last_run_id": "RUN-20261018T010017Z",
   "source_checkpoints": [
     {
       "source_id": "WATCH-BO",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:51:40.413613+00:00",
+      "last_attempt_at": "2026-10-18T01:03:49.745332+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "110 cuerpos únicos enumerados, 96 revalidados y 14 revalidaciones HTTP429. Recuperados/extraídos 37 anexos antes pendientes, seis tras503; lectura sustantiva de ellos pendiente. Acumulado40/40 identificados incluyendo3 anteriores; suplementos/ediciones y anexos no identificados aún no acreditados.",
+          "cause": "110 URLs de avisos en ediciones15/16Oct;14 revalidaciones antes429 recuperadas y clasificadas por pertinencia. Anexos40/40 recuperados en corridas previas,37 aún pendientes de lectura sustantiva; no descargas nuevas de anexos. URL17Oct redirige a portada16Oct; no acredita ausencia de edición/suplemento extraordinario.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-BO"
           },
-          "pending_notice_urls": [
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016?anexos=1",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349069/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349070/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349071/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349072/20261016?anexos=1",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349073/20261016?anexos=1",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349074/20261016?anexos=1",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349075/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349076/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349077/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349078/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349079/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349080/20261016",
-            "https://www.boletinoficial.gov.ar/detalleAviso/primera/349081/20261016"
-          ],
+          "pending_notice_urls": [],
           "pending_annexes": [],
           "pending_substantive_annexes": [
             {
@@ -455,13 +440,18 @@
             "20261015",
             "20261016"
           ],
+          "requested_date_redirect": {
+            "requested": "20261017",
+            "final_url": "https://www.boletinoficial.gov.ar/",
+            "displayed_date": "20261016"
+          },
           "additional_editions_supplements_verified": false,
           "retrieval_accumulated": {
             "notice_bodies_prior": 110,
-            "notice_bodies_current": 96,
+            "notice_bodies_current": 14,
             "identified_annexes": 40,
-            "annexes_prior": 3,
-            "annexes_current": 37,
+            "annexes_prior": 40,
+            "annexes_current": 0,
             "annexes_accumulated": 40
           }
         }
@@ -470,26 +460,50 @@
     {
       "source_id": "WATCH-BCRA-COM",
       "covered_through": "2026-10-16T22:43:04-03:00",
-      "last_attempt_at": "2026-10-17T01:48:19.363101+00:00",
-      "status": "COMPLETE",
-      "open_gaps": []
+      "last_attempt_at": "2026-10-18T01:02:53.350825+00:00",
+      "status": "UNAVAILABLE",
+      "open_gaps": [
+        {
+          "cause": "NUEVO: cuatroPOST de descubrimiento por ventanas15–17,15–16y17Oct fallan502. Formulario200noresultados; cincoPDF seleccionados también502. Conservar corte previo16Oct22:43:04; no ausencia de comunicaciones/rectificatorias.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261017T014304Z",
+            "source_id": "WATCH-BCRA-COM"
+          },
+          "uncovered_tail": {
+            "from_inclusive": "2026-10-16T22:43:04-03:00",
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
+          },
+          "query_attempt_ids": [
+            "BCRA-QUERY",
+            "BCRA-QUERY-RETRY",
+            "BCRA-OVERLAP",
+            "BCRA-DAY17"
+          ]
+        }
+      ]
     },
     {
       "source_id": "WATCH-BCRA-TO",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:49:03.538779+00:00",
+      "last_attempt_at": "2026-10-18T01:02:19.140144+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Índice103TO y seisPDF seleccionados recuperados; comparación/lectura selectiva, otros textos, modificatorias e historia pendientes.",
+          "cause": "Índice103TO con mismahuella; PDF riesgosTI/SI timeout. Falta corpus, comparación de modificatorias y cronología; corte nulo.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-BCRA-TO"
           }
         }
@@ -498,19 +512,19 @@
     {
       "source_id": "WATCH-BCRA-RI",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:48:19.392005+00:00",
+      "last_attempt_at": "2026-10-18T01:02:41.493020+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Faceta55RI, t-optico y tresRI másSISCEN recuperados; textos/anexos restantes e historia pendientes.",
+          "cause": "Faceta55RI con mismahuella; t-optico y tresRIseleccionados502/timeouts. Falta lectura/textos/versión/anexos; corte nulo.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-BCRA-RI"
           }
         }
@@ -519,19 +533,19 @@
     {
       "source_id": "WATCH-UIF",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:44:21.789771+00:00",
+      "last_attempt_at": "2026-10-18T01:01:22.203154+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Índices sectorial y transversal recuperados; cronología completa, cuerpos/modificatorias/anexos de ventana pendientes.",
+          "cause": "Índices sectorial/transversal recuperados; búsqueda cronológica, textos/modificatorias/anexos completos pendientes.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-UIF"
           }
         }
@@ -540,19 +554,19 @@
     {
       "source_id": "WATCH-AAIP",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:44:21.892553+00:00",
+      "last_attempt_at": "2026-10-18T01:01:22.511746+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Formulario oficial sin resultados cronológicos completos acreditados; no ausencia de novedades.",
+          "cause": "Formulario oficial recuperado; no resultados cronológicos completos; no acreditar ausencia de novedades.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-AAIP"
           }
         }
@@ -561,19 +575,19 @@
     {
       "source_id": "WATCH-ARCA",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:44:26.973610+00:00",
+      "last_attempt_at": "2026-10-18T01:01:23.355419+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Biblioteca recuperada y entrada institucional sin resultados cronológicos completos; ruta temática404; textos/anexos pendientes.",
+          "cause": "Biblioteca/entrada recuperadas; falta búsqueda cronológica, textos y anexos; no considerar portadas cobertura.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-ARCA"
           }
         }
@@ -582,19 +596,19 @@
     {
       "source_id": "WATCH-COMARB",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:46:11.697286+00:00",
+      "last_attempt_at": "2026-10-18T01:02:19.139205+00:00",
       "status": "UNAVAILABLE",
       "open_gaps": [
         {
-          "cause": "HTTP500 en portales/sistemas/índice anual/candidatoDP11; lector alternativo timeout. Candidato hallado por búsqueda sin cuerpo primario recuperado; no calendario deducido.",
+          "cause": "Persiste500 en índice/sistemas/candidatoDP11, alternativa webtimeout, URLPDFcandidata404. Snippets no fijan vencimientos; texto completo/publicación/modificatorias pendientes.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-COMARB"
           },
           "candidates": [
@@ -613,19 +627,19 @@
     {
       "source_id": "WATCH-CNV",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:44:26.835150+00:00",
+      "last_attempt_at": "2026-10-18T01:01:25.485810+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Marco/panel reconsultados; RG1172/1173 en agenda, otras resoluciones/historia/anexos pendientes.",
+          "cause": "Marco/panel reconsultados, sin recorrido cronológico/corpus/anexos completos; mantener agenda condicionada.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-CNV"
           }
         }
@@ -642,19 +656,19 @@
     {
       "source_id": "WATCH-STANDARDS",
       "covered_through": null,
-      "last_attempt_at": "2026-10-17T01:46:12.760230+00:00",
+      "last_attempt_at": "2026-10-18T01:02:05.292904+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Consulta selectiva KEV, avisos fabricantes y ecosistema; sin inventario instalado ni cobertura universal/estándares restringidos. RustSec0365-0369 con fecha17Oct sin hora/zona suficiente para asignar al corte; reintentar clasificación temporal.",
+          "cause": "Revisión selectiva de cinco candidatosRustSec y registros oficiales, Tokioyfuentesprevias. No inventario instalado, cobertura universal o estándares/redes contractuales completos. GHSAzipAPI404; no se atribuye lecturaupstream.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-16T22:43:04-03:00"
+            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar checkpoint completo, todos los pendientes y solapamiento7d limitado por15Oct; no adelantar corte por recuperación parcial.",
+          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261016T030400Z",
+            "run_id": "RUN-20261017T014304Z",
             "source_id": "WATCH-STANDARDS"
           }
         }
@@ -2277,6 +2291,417 @@
       "exposure_status": "UNKNOWN_NO_DEPLOYED_INVENTORY",
       "component_selected": false,
       "classification_change": "NEW_KEV_LISTING_NOT_NECESSARILY_NEW_ADVISORY"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0365",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0365|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0365: análisis de candidato previo sobre negentropy",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-14",
+      "raw_advisory_date": "2026-10-14",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:03.948348+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0365.html",
+              "sha256": "0dff582444f62714904220f171a359acd5c220053e2cf3d4a7f99f4d0ed3b9c7",
+              "fetched_at": "2026-10-18T01:01:35.843538+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/negentropy/RUSTSEC-2026-0365.md",
+              "sha256": "d937fde7385ebc573c75a4e00589ce3ea7e5fe8cb9c2f83ef6874aaeda29b3ce",
+              "fetched_at": "2026-10-18T01:02:03.948348+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "negentropy",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=0.4.4,<0.5.0",
+        ">=0.5.2"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "8235cc19a9d7e0a78a1061aeb42ad349c6a17a1b678da5df0c3652dc66765b2e"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0366",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0366|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0366: análisis de candidato previo sobre pest_grammars",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-16",
+      "raw_advisory_date": "2026-10-16",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.267135+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0366.html",
+              "sha256": "ce9b6a88727594266b34c4842a710fe7d4ba5e5c81bfd1c142ebed36901c9aac",
+              "fetched_at": "2026-10-18T01:01:36.328488+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/pest_grammars/RUSTSEC-2026-0366.md",
+              "sha256": "9a37d20187b09b89d05815c08828e1939d151ec90b61dfebd201a7b4b026c5ff",
+              "fetched_at": "2026-10-18T01:02:04.267135+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "pest_grammars",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=2.9.3"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "1a719c3e9e18f400f856fe4dd0e5b9d07586e7f356ad6234906540727326acaf"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0367",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0367|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0367: análisis de candidato previo sobre zip",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-09",
+      "raw_advisory_date": "2026-10-09",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.553202+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0367.html",
+              "sha256": "e7e4025ad0cb2d88f53fe70a8f973093ebfe203a03b31a728ad478a94a80a096",
+              "fetched_at": "2026-10-18T01:01:36.388321+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/zip/RUSTSEC-2026-0367.md",
+              "sha256": "a3ceec31db85c2e07a2b8daf0a7a17a5a624601bb256cedab4c508750ff677df",
+              "fetched_at": "2026-10-18T01:02:04.553202+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "zip",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=9.0.0"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "50cc147574e0c4b6cfa8eb5429e64e2be797e36e48ec05c7ee2b6485c0d7901f"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0368",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0368|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0368: análisis de candidato previo sobre zip",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-09",
+      "raw_advisory_date": "2026-10-09",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.750132+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0368.html",
+              "sha256": "7b89c0a1aed678813401401f67a1b95a1a503868cda03ceb35eb01f0f5f2b29a",
+              "fetched_at": "2026-10-18T01:01:36.695059+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/zip/RUSTSEC-2026-0368.md",
+              "sha256": "c056588fb9936466517e99b8644aab34804502a01f34c6cae323bd40e4e63ba0",
+              "fetched_at": "2026-10-18T01:02:04.750132+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "zip",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=9.0.0"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "aaeef4dfb0e4cf19a7e1d72ab40a8e4d7ea7eb5b5a2cd832e5cfc19fff888e2e"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0369",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0369|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0369: análisis de candidato previo sobre zip",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-10",
+      "raw_advisory_date": "2026-10-10",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.807470+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0369.html",
+              "sha256": "c92dc902a101ea859ce9137a754b7d9ddf8eddb460983fea2233325dcb21ed7f",
+              "fetched_at": "2026-10-18T01:01:36.934956+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/zip/RUSTSEC-2026-0369.md",
+              "sha256": "4bed2ec03d7b53525422dc136075476eaeb644e2ab3483547a525437ae722dc5",
+              "fetched_at": "2026-10-18T01:02:04.807470+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "zip",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=9.0.0"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "4603d10a16228d31104847a98745e8ed93a2124ded0f03c95e4daaeebb335857"
     }
   ],
   "run_index": [
@@ -2306,6 +2731,13 @@
       "status": "PARTIAL",
       "path": ".regulatory-watch/runs/RUN-20261017T014304Z.json",
       "finished_at": "2026-10-17T01:56:43.196474+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "run_id": "RUN-20261018T010017Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261018T010017Z.json",
+      "finished_at": "2026-10-18T01:08:31.880268+00:00",
       "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
     }
   ]
