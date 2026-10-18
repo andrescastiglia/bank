@@ -1,5 +1,86 @@
 # Informe de análisis y datos relevados — Bank
 
+**Corte vigente:** 17/10/2026, **22:00:17**, `America/Buenos_Aires` (`18/10/2026 01:00:17 UTC`). **Corrida:** `RUN-20261018T010017Z`. **Base:** `main f7d9495a172bcc9b2a68371a05509a664f12748d`, comprobada mediante conector GitHub y Git. **Resultado global: PARTIAL**. Esta actualización integra la propuesta de la PR #9, que continúa abierta; su integración/implementación no se presume.
+
+## Resultado del relevamiento del 17/10
+
+Se recuperaron desde GitHub cuatro corridas reales, inventario `2026-10-16.2`, ocho hitos y todos los gaps. Ventana objetivo: **[15/10/2026 00:00:00 −03:00, 17/10/2026 22:00:17 −03:00)**. El solapamiento de siete días queda limitado por el inicio del backfill; no se recortó el trabajo perdido a ayer. `covered_through` de comunicaciones BCRA se conserva en **16/10/2026 22:43:04 −03:00**, aun cuando la nueva consulta haya fallado. Las demás fuentes no adquieren un corte completo por recuperar índices o preparar una PR.
+
+| Eje prioritario | Hecho de esta corrida | Conclusión y brecha |
+|---|---|---|
+| Legal/normativo | Se reconsultaron BO, BCRA, UIF sectorial/transversal, AAIP, ARCA, COMARB y CNV. El buscador BCRA falló con 502 en cuatro consultas; PDF seleccionados también fallaron. | Hay una **degradación nueva** respecto del acceso anterior. No se puede declarar ausencia de comunicaciones nuevas o rectificatorias. Se preserva evidencia previa y se mantiene agenda, sin activar parámetros. |
+| Mercado | Se recuperaron nuevamente siete fuentes de fabricantes/proyectos, con APIs, composición, eventos y operación especializada. | No se verificó un lanzamiento, tarifa o localización argentina nueva. Las capacidades declaradas siguen requiriendo demostración y costos comparables para la oferta de Bank. |
+| Tecnología | Se contrastó la documentación de Tokio 1.53.3: una tarea `spawn_blocking` iniciada no se cancela con `abort`; dejar de esperarla tampoco la detiene. | La asincronía necesita límites y cancelación efectiva, especialmente con parsing/importación. Se propone evaluar contención según escenario, sin adoptar un nuevo componente por este informe. |
+| Seguridad, crítico | Se completó el análisis de RustSec 0365–0369, fichas con Issued 17/10 y fechas Reported anteriores. Sus HTML conservan la huella de los candidatos ya observados. | Nueva conclusión de análisis de candidatos previos, **no cinco descubrimientos recién publicados ni revisiones del contenido**. Riesgos de aborto por recursos y extracción ZIP insegura; exposición del producto sin evaluar por falta de artefactos/dependencias. |
+
+### Legal y normativo: continuidad, agenda y acceso real
+
+Los filtros del buscador BCRA fueron POST por fecha, sin limitar tipo A/B/C/P, página 1 y tamaño 100: intervalo 15–17/10, reintento del mismo intervalo, solapamiento 15–16 y día 17 separado. Los cuatro devolvieron **HTTP 502**, sin lista ni paginación legibles. La portada recuperada es sólo el formulario; no acredita cobertura de comunicaciones. Se intentaron revalidar A8492, B13248/B13249/B13250 y P51237: sus PDF no pudieron recuperarse en esta corrida. No se presume que cambiaron o fueron derogados por el fallo, ni se reutilizan las huellas anteriores como evidencia de una descarga nueva.
+
+El JSON oficial de ordenamiento sí conserva la misma huella y enumera **103 TO / 55 RI**. No sustituye los documentos: t-optico, riesgos TI/SI y tres RI seleccionados tuvieron 502/timeouts. La interpretación sustantiva anterior continúa como antecedente fechado. En particular, no se declara revalidada toda la vigencia normativa por un índice estable.
+
+La agenda recuperada incluye A8492 y CNV1172 para noviembre, B13248 para enero, CNV1173 para diciembre, el disparador particular CGN/TGN y los primeros valores ICL/UVI. No se repiten como novedades. ICL ya tiene su primera fecha de valor del 17/10 y UVI comienza el 20/10 según el análisis anterior: su aplicación depende del contrato/producto real. Fecha de valor, entrada en vigor y vencimiento de reporte son conceptos distintos. Sin operador y hecho disparador no se fija un plazo individual.
+
+El BO enumera los mismos **55 avisos por edición del 15 y del 16** (110 URLs únicas en total). Se recuperaron nuevamente los **14 cuerpos** antes limitados con 429. Su clasificación distingue edictos/actos particulares, registros y disposiciones laborales de una obligación bancaria general; no se publican sus datos personales. Los **40 anexos identificados recuperados acumuladamente** pertenecen a la evidencia de corridas anteriores: no se contaron como descargas nuevas y los 37 pendientes de revisión sustantiva conservan sus cursores. La URL de edición del **17/10 redirigió a la portada**, que muestra el 16; no demuestra inexistencia de edición o suplemento extraordinario. La portada enlazó un suplemento del 14/8, fuera de la ventana, sin que ese enlace acredite el universo de suplementos de octubre.
+
+UIF sectorial/transversal, AAIP, biblioteca ARCA y marco/panel CNV se reconsultaron, pero falta completar sus búsquedas cronológicas, textos, modificaciones y anexos. No se infiere ausencia de cambios. **COMARB DP11 sigue pendiente de cuerpo oficial completo**: fallan las rutas e índices consultados; la URL candidata de un PDF directo devolvió 404 y el lector web de otra ruta timeout. Los extractos del buscador no se transforman en vencimientos. Se conserva el candidato y su procedencia; no se renueva la alarma idéntica de indisponibilidad.
+
+Las jurisdicciones locales siguen condicionadas a un operador/producto/territorio aprobado. LEGAL_TAX y su directorio no acreditan cobertura universal ni seleccionan una entidad autorizada. Los estándares ISO/PCI/Swift/NIST mantienen el alcance técnico/contractual o el activador normativo que corresponda, no carácter legal argentino por defecto.
+
+### Mercado: capacidades y valor verificable
+
+Se reconsultaron [Mambu](https://mambu.com/en), [Pismo](https://developers.pismo.io/pismo-docs/docs/welcome), [Bantotal](https://www.bantotal.com/), [Topaz](https://www.topazevolution.com/), [Temenos](https://www.temenos.com/products/core-banking/), [Vault Core](https://www.thoughtmachine.net/vault-core) y [Fineract](https://fineract.apache.org/). Cinco conservaron la huella anterior; Pismo y Temenos cambiaron HTML, sin diferencia funcional fechada verificada. La comparación detallada anterior permanece vigente como observación de oferta, no como benchmark ni prueba contractual.
+
+El portal Pismo muestra entrega de eventos en tiempo real, lotes/archivos, recuperación y deprecación de APIs: corresponden a ASY/RPT/MIG e interoperabilidad de Bank. La propuesta ya contempla esos comportamientos; falta un contrato versionado con reintento, recuperación, identidad del evento y compatibilidad de consumidores comprobados. Las promesas de composición de Mambu/Temenos/Vault y la especialización de Bantotal/Topaz no eliminan localización, conciliación o operación. Fineract conserva valor comparativo como alternativa libre; no se incorporó código ni se alteró GNU GPL v2.
+
+**Conclusión comercial:** sigue pendiente demostrar un recorrido argentino con producto/perfil, integración, servicio operativo y costo. Los hechos relevados no justifican declarar ventaja de latencia, cumplimiento o precio frente a competidores ni lanzar un nuevo plan comercial.
+
+### Tecnología y seguridad: procesamiento hostil y asincronía
+
+El [análisis acotado RustSec](regulatory/RUSTSEC-2026-0365-0369.md) separa fechas, alcance, versiones corregidas, condiciones de exposición y criterios propuestos. Se leyeron las cinco fichas y los cinco registros del repositorio oficial. Las referencias GHSA de `zip` no se pudieron leer por API (404); esta limitación queda registrada.
+
+| Aviso / fuente primaria | Riesgo documentado | Perfil/funcionalidad potencial y corrección declarada |
+|---|---|---|
+| [RUSTSEC-2026-0365](https://rustsec.org/advisories/RUSTSEC-2026-0365.html) | `negentropy`: reserva de memoria basada en conteo no validado; mensaje pequeño puede abortar el proceso con `std`. | Sólo integración que utilice esa crate/API/features. Corregidas `>=0.4.4,<0.5.0` o `>=0.5.2`; `<0.2.0` declaradas no afectadas. Un límite de bytes o `catch_unwind` no contiene por sí solo este caso. |
+| [RUSTSEC-2026-0366](https://rustsec.org/advisories/RUSTSEC-2026-0366.html) | `pest_grammars`: JSON profundamente anidado puede agotar pila; el umbral depende del entorno. | Parser concreto, no todo JSON de Rust. Corregida `>=2.9.3`; límites de trabajo/memoria/concurrencia siguen necesarios, con restricciones de `std`/plataforma. |
+| [RUSTSEC-2026-0367](https://rustsec.org/advisories/RUSTSEC-2026-0367.html) | Extracción ZIP conserva bits privilegiados; impacto según privilegios del extractor y entorno. | Importador, CI/builder o herramienta que realmente use esa extracción. Corrección declarada `zip >=9.0.0`. |
+| [RUSTSEC-2026-0368](https://rustsec.org/advisories/RUSTSEC-2026-0368.html) | Destinos de symlinks pueden escapar del directorio; demostración en 9.0.0-pre2/Linux/macOS. | Validar destino efectivo y acceso posterior; no extrapolar la versión demostrada a toda rama sin revisar. Corrección declarada `>=9.0.0`. |
+| [RUSTSEC-2026-0369](https://rustsec.org/advisories/RUSTSEC-2026-0369.html) | Aplicación de permisos sigue symlinks sin confinar su destino. | Extracción que use las APIs afectadas; verificar permisos/rutas, no sólo nombre del archivo. Corrección declarada `>=9.0.0`. |
+
+**Issued** es 17/10 en las cinco fichas, sin hora/zona. **Reported / campo `date`**: 14/10, 16/10, 9/10, 9/10 y 10/10, respectivamente. No se construye una hora de publicación ni un vencimiento. Se trata de fuentes observadas al consultar este corte y candidatos del relevamiento anterior analizados ahora; no se fuerza una precisión temporal que la fuente no aporta.
+
+El repositorio base continúa sin `Cargo.toml`, `Cargo.lock`, `.rs` o Dockerfile de producto. El inventario efectivo debe incluir dependencia transitiva, features, OS/API, permisos, builder y digest antes de afirmar exposición. Los problemas son relevantes incluso para una imagen final scratch si el builder extrae archivos con privilegios, o si el binario aborta al parsear. No se confunde lenguaje con aislamiento de procesos ni se atribuyen esas crates a Bank.
+
+La documentación de [Tokio `spawn_blocking`, versión observada 1.53.3](https://docs.rs/tokio/1.53.3/tokio/task/fn.spawn_blocking.html) respalda acotar trabajo CPU y distinguir cancelación de dejar de esperar. Ante un parser que puede abortar el proceso, evaluar validación/librería corregida y límites en proceso frente a contención en proceso supervisado, con sus costos. Es una alternativa para revisar ADR-03/06/07/08, no una decisión ya aceptada ni una release nueva del día. Cargar por COPY hacia staging y usar colas durables no convierte la extracción ni el parser en seguros.
+
+El impacto se mapea a **FR-MIG-004, FR-ASY-016/022/026, FR-OPS-024/026; NFR-03/04/05/09/10; CTL-09/15/17/20** y skills existentes de seguridad/carga masiva/stack. Faltan formatos admitidos, límites medibles por celda, confinamiento de rutas/permisos, cancelación efectiva y oráculos de rechazo sin efectos financieros. Los ensayos propuestos en el análisis acotado siguen sin ejecutarse; no se añaden requisitos duplicados ni se cambia la aceptación de los actuales.
+
+Se reconsultaron KEV, los avisos BeyondTrust/Fortinet, PostgreSQL, FAPI y ASVS. KEV y PostgreSQL mantienen su huella; ASVS varió HTML sin nueva edición sustantiva verificada. Las identidades de seguridad ya notificadas permanecen pendientes según inventario, sin una alarma repetida. El modelo de amenazas anterior sigue cubriendo apropiación de identidad, autorización por entidad/objeto, replay/doble pago, secretos, APIs, claves y recuperación. Los avisos analizados de parsing amplían escenarios de disponibilidad e importación, no reemplazan esos controles.
+
+### Cobertura de la corrida y evidencia
+
+| Fuente | Estado / alcance observado | Pendiente y checkpoint |
+|---|---|---|
+| BO | **PARTIAL**. Tres consultas por fecha; dos ediciones válidas, 110 URLs enumeradas, 14 cuerpos pendientes recuperados. URL 17/10 redirige a portada. | Lectura sustantiva de anexos previos, suplementos/ediciones extraordinarias y cobertura restante; corte nulo. |
+| BCRA comunicaciones | **UNAVAILABLE para resultados/documentos**. Formulario accesible; cuatro POST con 502, PDF seleccionados fallidos. | Gap nuevo de acceso; conserva corte completo anterior 16/10 22:43:04 −03:00, sin adelantarlo. |
+| BCRA TO / RI | **PARTIAL**, índice oficial 103/55 revalidado; PDF seleccionados con 502/timeouts. | Lectura/versiones/modificatorias no completadas; cortes nulos. |
+| UIF / AAIP / ARCA / CNV | **PARTIAL**, entradas oficiales consultadas; UIF incluye sector y transversal. | Faltan cronología, textos y anexos completos; cortes nulos. |
+| COMARB | **UNAVAILABLE**, fallos conocidos persistentes; candidato DP11 conserva referencia pendiente. | No se deriva calendario ni ausencia de cambios; corte nulo. |
+| Jurisdicciones locales | Opcional omitida, fundamento y checkpoint anteriores conservados íntegros. | Sin operador ni ámbito local activado; no es exención. |
+| Estándares / seguridad | **PARTIAL**, consulta selectiva y análisis de cinco candidatos técnicos completado. | Sin inventario instalado, pruebas o cobertura universal de estándares/avisos; corte nulo. |
+
+La bitácora registra cada intento, filtros/paginación no recuperada, redirección, URLs finales, fechas y SHA-256. Las fallas y los 40 anexos acumulados no se reescriben como recuperaciones nuevas. Los historiales `changes`, `agenda` y `run_index` se conservan como prefijos exactos; la corrida se indexa una sola vez. Evidencia de este corte: [RUN-20261018T010017Z](https://github.com/andrescastiglia/bank/blob/d8e7b816df484501be4707bd2d1972223b56f9b5/.regulatory-watch/evidence/RUN-20261018T010017Z.json). El estado operativo se publica exclusivamente en `automation/regulatory-state`.
+
+**Validación:** checks documentales de catálogo reproducible, revisión/enlaces/skills, inventario y fixtures de vigilancia; transición contrastada con el estado anterior mediante `check_watch.py --state --run --previous-state`. No se ejecutaron producto, `cargo audit`, extracción hostil, builds, pentest, parcheo ni ensayos de carga/DR. Se contrastaron 29 IDs FR explícitos del informe/propuestas y las huellas de todas las descargas actuales, sin payloads truncados. La estructura válida no demuestra lectura jurídica completa, control operativo eficaz o aceptación institucional.
+
+**Decisiones pendientes:** inventario/formatos que realmente se admitirán, perfil y contratos del operador, recursos por celda y evidencia de contención. No se fija un vencimiento de parcheo argentino a partir de RustSec/CISA. La propuesta continúa conforme a GPL v2 y sólo el mantenedor decide su merge.
+
+---
+
+## Antecedente íntegro de la actualización del 16/10 a las 22:43
+
+El contenido siguiente conserva sus fechas y resultados históricos; para el corte vigente prevalece la actualización anterior. La recuperación de anexos y estados de acceso indicados debajo no son consultas nuevas de esta corrida.
+
 **Actualización:** 16/10/2026, 22:43:04, `America/Buenos_Aires` (17/10 01:43:04 UTC). **Base:** `main` en `f7d9495a172bcc9b2a68371a05509a664f12748d`, recuperada mediante GitHub y contrastada con Git. **Corrida:** `RUN-20261017T014304Z`. **Resultado global: PARTIAL**.
 
 ## Actualización de los cuatro ejes
