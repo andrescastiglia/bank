@@ -1,5 +1,72 @@
 # Informe de análisis y datos relevados — Bank
 
+**Corte vigente:** **18/10/2026 22:53:15**, zona `America/Buenos_Aires` (`19/10/2026 01:53:15 UTC`). **Corrida:** `RUN-20261019T015315Z`. **Base comprobada:** `main f7d9495a172bcc9b2a68371a05509a664f12748d`, mediante conector GitHub y Git. La PR #9 continúa abierta y se amplía esa propuesta. **Resultado global: PARTIAL**.
+
+## Análisis del corte del 18/10
+
+Se recuperaron cinco corridas reales desde `automation/regulatory-state`, su inventario `2026-10-16.2`, ocho hitos y los pendientes de cada fuente. Ventana objetivo: **[15/10/2026 00:00:00 −03:00, 18/10/2026 22:53:15 −03:00)**. El solapamiento configurado de siete días se limita por el inicio del backfill, sin recortar gaps a ayer. Las consultas posteriores al corte conservan su `fetched_at`; las fechas sin hora no reciben una hora inventada.
+
+| Eje | Datos verificados en esta corrida | Conclusión / brecha |
+|---|---|---|
+| Legal y normativo | BCRA recuperó resultados y PDF: 14 registros, página 1/1 y 28 páginas de PDF, todos con las mismas huellas del conjunto recuperado anteriormente. Índices: 103 TO / 55 RI; t-optico, TI/SI y tres RI seleccionados recuperados, también con huellas previas. | Se cierra el gap de acceso de comunicaciones y avanza su corte hasta el objetivo declarado. No se declara una reforma nueva por recuperar el acceso ni completitud global de BCRA/BO/otros organismos. |
+| Mercado | Se reconsultaron siete ofertas; continúan composición, APIs/eventos, productos especializados y operación cloud. | No se verificó un lanzamiento, precio o integración argentina nueva. Persisten demostración operativa, localización y comparación de costos pendientes. |
+| Tecnología | Se verificaron avisos informativos RustSec 0370/0371/0372 sobre mantenimiento de crates del ecosistema zbus. El manifiesto estable Rust mantiene su versión/huella anterior. | Los avisos INFO de mantenimiento no son por sí solos vulnerabilidades explotables. Antes de seleccionar componentes, evaluar soporte, migración y features; no se adoptó ninguna biblioteca. |
+| Seguridad, crítico | Se verificó **RUSTSEC-2026-0373, ammonia**, antes no incorporado al historial: filtrado CSS de URLs sensible a mayúsculas. | Bypass de política de URLs/seguimiento bajo una configuración concreta. La fuente descarta XSS y limita su utilidad para exfiltración. Requiere inventario y renderer efectivo antes de afirmar exposición. |
+
+### Legal y normativo: recuperación y alcance
+
+El [buscador BCRA](https://www.bcra.gob.ar/buscador-de-comunicaciones/) se consultó por POST con `mode=fecha`, desde 15/10 hasta 18/10, sin limitar los tipos A/B/C/P, página 1 y tamaño 100. La respuesta acredita una sola página y **14 registros** emitidos el 15–16; no enumera otros para el 17–18 en esa foto. Se recuperaron **14/14 PDF completos**, anexos integrados incluidos, **28 páginas**. Sus huellas coinciden con las evidencias anteriores del conjunto, incluidas A8492, B13248/B13249/B13250 y P51237. La comparación de bytes no sustituye interpretación jurídica; en este conjunto no se detecta revisión de contenido.
+
+**WATCH-BCRA-COM pasa a COMPLETE únicamente para ese filtro, fuente y ventana**; se reconcilia el estado, se cierran sus gaps de acceso y `covered_through` avanza desde 16/10 22:43:04 hasta 18/10 22:53:15 −03:00. Las publicaciones/indexaciones tardías siguen sujetas al solapamiento. Esto no acredita cobertura de todos los TO/RI, fuentes o jurisdicciones.
+
+Se reconsultaron las dos facetas del índice oficial: **103 TO / 55 RI**, misma huella; el TO TI/SI, t-optico y RI de efectivo mínimo, deudores y PSP se recuperaron con huellas coincidentes con la evidencia anterior. La lectura pertinente y la comparación de estos documentos no completan los restantes textos, versiones y modificatorias. La última comunicación incorporada del TO TI/SI continúa siendo A8401, fechado 13/2/2026; se leyó su contexto de gestión de vulnerabilidades/desarrollo para el análisis técnico, sin presentarlo como norma nueva del día.
+
+La agenda conserva A8492/CNV1172 para noviembre, B13248 para enero, CNV1173 para diciembre, el disparador particular CGN/TGN y las series ICL/UVI. No se reconstruye un vencimiento individual sin sujeto/período/disparador. UVI tiene primer valor el 20/10 según el análisis previo; sólo importa al contrato/producto que la incorpore válidamente. El catálogo KEV mantiene los avisos y fechas ya analizados; sus plazos estadounidenses no se convierten en vencimientos argentinos.
+
+BO primera sección, UIF sectorial/transversal, AAIP, ARCA, COMARB y CNV se consultaron de nuevo. Las ediciones BO del 15 y 16 enumeran 55 avisos cada una; las URLs del 17 y del 18 redirigen a la portada, cuya fecha visible es el 16. Esa redirección **no prueba ausencia** de edición o suplemento extraordinario. Los 110 cuerpos y 40 anexos recuperados en corridas previas no se cuentan como descargas nuevas: continúan los 37 anexos pendientes de lectura sustantiva, junto con suplementos y búsquedas cronológicas no concluidas.
+
+COMARB mantiene 500 en sus entradas, SIRCREB/SIRCUPA, índice anual y candidato DP11. No se deriva un calendario de sus snippets ni se renueva la alarma sin cambio material. UIF/AAIP/ARCA/CNV mantienen cobertura parcial: recuperar sus índices/formularios no permite declarar ausencia de actos o anexos. La investigación LEGAL_TAX y el directorio local siguen siendo contexto, no activación de todas las jurisdicciones ni cobertura provincial/municipal universal.
+
+### Mercado y tecnología: contraste acotado
+
+Se recuperaron nuevamente [Mambu](https://mambu.com/en), [Pismo](https://developers.pismo.io/pismo-docs/docs/welcome), [Bantotal](https://www.bantotal.com/), [Topaz](https://www.topazevolution.com/), [Temenos](https://www.temenos.com/products/core-banking/), [Vault Core](https://www.thoughtmachine.net/vault-core) y [Fineract](https://fineract.apache.org/). La correspondencia con CFG/CRD, ASY/PAY, FXT/FRD/TRE y MIG/OPS del análisis anterior se mantiene como comparación de oferta declarada. No se obtuvo evidencia nueva de localización argentina, contrato de soporte, benchmark comparable, tarifa o cuota auditada. Las variaciones HTML no se clasifican automáticamente como nuevos productos.
+
+El [índice RustSec](https://rustsec.org/advisories/) incorpora avisos **INFO de mantenimiento** sobre [zvariant (0370)](https://rustsec.org/advisories/RUSTSEC-2026-0370.html), [zbus_names (0371)](https://rustsec.org/advisories/RUSTSEC-2026-0371.html) y [zvariant_derive (0372)](https://rustsec.org/advisories/RUSTSEC-2026-0372.html). Se leyeron sus fichas: no se deben traducir «sin versiones parchadas» o «unmaintained» en un exploit ni en un mandato de instalar un paquete alternativo. Para zvariant la ficha orienta hacia zbus 6.0.0/módulo wire, o zgvariant según formato. Antes de una elección real, ADR-07, NFR-09 y FR-OPS-026 requieren evaluar compatibilidad, soporte y costos. Es contexto de selección de dependencias, no una tecnología instalada en Bank.
+
+Se reconsultaron el manifiesto estable y feed de Rust, PostgreSQL, FAPI, ASVS y KEV. No se verificó un cambio sustantivo nuevo que justifique repetir sus alertas conocidas. Las decisiones sobre asincronía durable, cancelación efectiva, aislamiento y scratch del informe anterior siguen siendo propuestas pendientes de evidencia ejecutable. La base sigue sin Cargo.toml/Cargo.lock, archivos Rust o imagen propia de producto.
+
+### Seguridad: aviso nuevo para el registro y alcance exacto
+
+El [análisis acotado RUSTSEC-2026-0373](regulatory/RUSTSEC-2026-0373.md) conserva fuentes, configuración activadora y criterios propuestos. Se leyeron [RustSec](https://rustsec.org/advisories/RUSTSEC-2026-0373.html), su registro oficial y la PR upstream 267. **Reported/campo `date`: 16/10; Issued: 17/10**, sin hora/zona de publicación exacta. Descubrimiento/observación en esta corrida del 18/10 argentino; no se lo fecha como publicación del 18. El GHSA enlazado no pudo recuperarse por API (404), limitación que no se sustituye con una lectura ficticia.
+
+La condición involucra `ammonia` con sanitización CSS y estilos permitidos: una URL interior citada se filtra usando comparación sensible a mayúsculas de `url`, por lo que `URL(...)` puede eludir políticas de esquema/dominio. El impacto declarado es **introducir seguimiento que se pretendía impedir**; el aviso dice expresamente que **no permite XSS** y limita su utilidad para exfiltración. Rangos corregidos declarados: **`>=4.2.4`** o **`>=4.1.8,<4.2.0`**. No se atribuye a todas las configuraciones por defecto ni a todo servicio Rust.
+
+Aplica al análisis si un componente directo/transitivo usa esa biblioteca y representa contenido enriquecido con la configuración afectada. Considerar plantillas y notificaciones, reclamos de terceros, backoffice y renderer de documentos. Se relaciona con **FR-CON-001/002; FR-CST-012/015/016; FR-OPS-024/026; NFR-05/06/09; ADR-05/06/07; CTL-09/15/17**, DATA-03 y gestión de vulnerabilidades/desarrollo BCRA según sujeto real. Los skills existentes de seguridad, privacidad y stack proporcionan el marco; falta definir políticas/oráculos del renderer y vincularlas al artefacto. No se crea una familia de requisitos duplicada ni se impone admitir HTML.
+
+La aceptación propuesta contrasta mayúsculas/minúsculas, URLs citadas/no citadas, esquemas y relativos con destinos sintéticos controlados; observa las solicitudes efectivas del renderer además de la salida del sanitizer y conserva documentos históricos. No se ejecutó ese ensayo ni se enviaron solicitudes a terceros. Exposición, implementación y aceptación institucional siguen sin evaluar. El nuevo escenario de privacidad no reemplaza las amenazas ya documentadas de identidad, autorización por objeto/entidad, replay/doble pago, claves, APIs, dependencias, importación y recuperación.
+
+### Cobertura real y validación
+
+| Fuente | Resultado actual | Continuidad |
+|---|---|---|
+| BCRA comunicaciones | **COMPLETE**: 14 registros/14 PDF/28 páginas, fuente/filtro/ventana indicados. | Corte completo actualizado al 18/10 22:53:15 −03:00; gap de acceso cerrado, sin norma nueva en ese conjunto. |
+| BCRA TO / RI | **PARTIAL**: índice 103/55 y documentos seleccionados recuperados. | Restantes textos/versiones/modificatorias/anexos pendientes; cortes nulos. |
+| BO | **PARTIAL**: índices 15–16; consultas 17–18 redirigidas a portada. | Pendientes de anexos sustantivos, suplementos y ediciones extraordinarias; corte nulo. |
+| UIF / AAIP / ARCA / CNV | **PARTIAL**: entradas oficiales reconsultadas. | Cronología/textos/anexos incompletos; cortes nulos. |
+| COMARB | **UNAVAILABLE**, falla conocida persistente. | Candidato DP11 sin cuerpo completo; conserva gap/corte nulo. |
+| Jurisdicciones | Fuente opcional omitida, checkpoint y fundamento previos íntegros. | Sin operador/ámbito local activado; no constituye exención. |
+| Estándares y seguridad | **PARTIAL**: revisión selectiva, nuevo análisis ammonia y contexto de mantenimiento. | Sin inventario instalado, cobertura universal ni lectura de estándares restringidos/contratos de red. |
+
+La evidencia de esta corrida, con intentos, filtros, URLs finales, hora y SHA-256, se conserva en [RUN-20261019T015315Z](https://github.com/andrescastiglia/bank/blob/9d269d68bc1a7d397ec534ea8f5da371d25288eb/.regulatory-watch/evidence/RUN-20261019T015315Z.json). Los historiales se mantienen como prefijos exactos y la corrida se indexa una sola vez, en `automation/regulatory-state`; las bitácoras operativas no se agregan al diff de `main`.
+
+**Validación:** checks de catálogo reproducible, revisión/enlaces/skills, inventario y fixtures de vigilancia; transición con `--state --run --previous-state`, referencias FR y huellas contrastadas. Se contrastaron además 31 IDs FR explícitos del informe/propuestas y las huellas de las descargas actuales. Son verificaciones documentales. No se ejecutaron cargo audit, sanitización/rendering de producto, builds, pruebas financieras, pentest, parcheo, despliegue ni certificación. Las correcciones/rangos de un aviso no demuestran adopción, prueba o cumplimiento de Bank.
+
+---
+
+## Antecedente íntegro — corte del 17/10 a las 22:00
+
+El contenido siguiente conserva las fechas y resultados de corridas anteriores; las fallas de acceso BCRA que allí se describen no son el resultado de esta nueva consulta. Prevalece la actualización anterior para el corte vigente.
+
 **Corte vigente:** 17/10/2026, **22:00:17**, `America/Buenos_Aires` (`18/10/2026 01:00:17 UTC`). **Corrida:** `RUN-20261018T010017Z`. **Base:** `main f7d9495a172bcc9b2a68371a05509a664f12748d`, comprobada mediante conector GitHub y Git. **Resultado global: PARTIAL**. Esta actualización integra la propuesta de la PR #9, que continúa abierta; su integración/implementación no se presume.
 
 ## Resultado del relevamiento del 17/10
