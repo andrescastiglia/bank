@@ -5,24 +5,24 @@
   "reporting_timezone": "America/Buenos_Aires",
   "initial_backfill_from": "2026-10-15T00:00:00-03:00",
   "inventory_version": "2026-10-16.2",
-  "last_run_id": "RUN-20261018T010017Z",
+  "last_run_id": "RUN-20261019T015315Z",
   "source_checkpoints": [
     {
       "source_id": "WATCH-BO",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:03:49.745332+00:00",
+      "last_attempt_at": "2026-10-19T01:54:44.935689+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "110 URLs de avisos en ediciones15/16Oct;14 revalidaciones antes429 recuperadas y clasificadas por pertinencia. Anexos40/40 recuperados en corridas previas,37 aún pendientes de lectura sustantiva; no descargas nuevas de anexos. URL17Oct redirige a portada16Oct; no acredita ausencia de edición/suplemento extraordinario.",
+          "cause": "Índices15/16Oct55avisos cadauno;17/18redirigenportada16Oct, sin probar ausencia de ediciones/suplementos. No cuerpos/anexos descargados nuevos;40anexos acumulados y37pendientes de lectura sustantiva; conservar todos los cursores.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-BO"
           },
           "pending_notice_urls": [],
@@ -448,62 +448,50 @@
           "additional_editions_supplements_verified": false,
           "retrieval_accumulated": {
             "notice_bodies_prior": 110,
-            "notice_bodies_current": 14,
+            "notice_bodies_current": 0,
             "identified_annexes": 40,
             "annexes_prior": 40,
             "annexes_current": 0,
             "annexes_accumulated": 40
-          }
-        }
-      ]
-    },
-    {
-      "source_id": "WATCH-BCRA-COM",
-      "covered_through": "2026-10-16T22:43:04-03:00",
-      "last_attempt_at": "2026-10-18T01:02:53.350825+00:00",
-      "status": "UNAVAILABLE",
-      "open_gaps": [
-        {
-          "cause": "NUEVO: cuatroPOST de descubrimiento por ventanas15–17,15–16y17Oct fallan502. Formulario200noresultados; cincoPDF seleccionados también502. Conservar corte previo16Oct22:43:04; no ausencia de comunicaciones/rectificatorias.",
-          "requested_window": {
-            "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
           },
-          "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
-          "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
-            "source_id": "WATCH-BCRA-COM"
-          },
-          "uncovered_tail": {
-            "from_inclusive": "2026-10-16T22:43:04-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
-          },
-          "query_attempt_ids": [
-            "BCRA-QUERY",
-            "BCRA-QUERY-RETRY",
-            "BCRA-OVERLAP",
-            "BCRA-DAY17"
+          "requested_date_redirects": [
+            {
+              "requested": "17",
+              "final_url": "https://www.boletinoficial.gov.ar/",
+              "displayed_date": "20261016"
+            },
+            {
+              "requested": "18",
+              "final_url": "https://www.boletinoficial.gov.ar/",
+              "displayed_date": "20261016"
+            }
           ]
         }
       ]
     },
     {
+      "source_id": "WATCH-BCRA-COM",
+      "covered_through": "2026-10-18T22:53:15-03:00",
+      "last_attempt_at": "2026-10-19T01:55:27.619963+00:00",
+      "status": "COMPLETE",
+      "open_gaps": []
+    },
+    {
       "source_id": "WATCH-BCRA-TO",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:02:19.140144+00:00",
+      "last_attempt_at": "2026-10-19T01:55:27.733820+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Índice103TO con mismahuella; PDF riesgosTI/SI timeout. Falta corpus, comparación de modificatorias y cronología; corte nulo.",
+          "cause": "Índice103TO y TI/SIseleccionado recuperados, mismahuella anterior; falta resto del corpus, versiones/modificatorias y lectura pertinente completa.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-BCRA-TO"
           }
         }
@@ -512,19 +500,19 @@
     {
       "source_id": "WATCH-BCRA-RI",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:02:41.493020+00:00",
+      "last_attempt_at": "2026-10-19T01:55:30.737378+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Faceta55RI con mismahuella; t-optico y tresRIseleccionados502/timeouts. Falta lectura/textos/versión/anexos; corte nulo.",
+          "cause": "Faceta55RI, t-optico y tresRIseleccionados recuperados, mismahuella anterior; faltan otros textos/anexos, manuales y cronología.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-BCRA-RI"
           }
         }
@@ -533,19 +521,19 @@
     {
       "source_id": "WATCH-UIF",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:01:22.203154+00:00",
+      "last_attempt_at": "2026-10-19T01:54:30.148678+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Índices sectorial/transversal recuperados; búsqueda cronológica, textos/modificatorias/anexos completos pendientes.",
+          "cause": "Índices sectorial y transversal reconsultados; cronología/cuerpos/modificatorias/anexos completos pendientes.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-UIF"
           }
         }
@@ -554,19 +542,19 @@
     {
       "source_id": "WATCH-AAIP",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:01:22.511746+00:00",
+      "last_attempt_at": "2026-10-19T01:54:32.301020+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Formulario oficial recuperado; no resultados cronológicos completos; no acreditar ausencia de novedades.",
+          "cause": "Formulario oficial recuperado, sin resultados cronológicos completos acreditados.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-AAIP"
           }
         }
@@ -575,19 +563,19 @@
     {
       "source_id": "WATCH-ARCA",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:01:23.355419+00:00",
+      "last_attempt_at": "2026-10-19T01:54:32.390524+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Biblioteca/entrada recuperadas; falta búsqueda cronológica, textos y anexos; no considerar portadas cobertura.",
+          "cause": "Biblioteca/entrada reconsultadas, sin corpus cronológico/cuerpos/anexos completos.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-ARCA"
           }
         }
@@ -596,19 +584,19 @@
     {
       "source_id": "WATCH-COMARB",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:02:19.139205+00:00",
+      "last_attempt_at": "2026-10-19T01:54:37.053959+00:00",
       "status": "UNAVAILABLE",
       "open_gaps": [
         {
-          "cause": "Persiste500 en índice/sistemas/candidatoDP11, alternativa webtimeout, URLPDFcandidata404. Snippets no fijan vencimientos; texto completo/publicación/modificatorias pendientes.",
+          "cause": "Persiste500 en índice/sistemas/candidatoDP11; no cuerpo primario completo. No calendario desde snippets ni exención fiscal.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-COMARB"
           },
           "candidates": [
@@ -627,19 +615,19 @@
     {
       "source_id": "WATCH-CNV",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:01:25.485810+00:00",
+      "last_attempt_at": "2026-10-19T01:54:34.853219+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Marco/panel reconsultados, sin recorrido cronológico/corpus/anexos completos; mantener agenda condicionada.",
+          "cause": "Marco/panel reconsultados, sin corpus/historia/anexos completos; agenda condicionada conservada.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-CNV"
           }
         }
@@ -656,19 +644,19 @@
     {
       "source_id": "WATCH-STANDARDS",
       "covered_through": null,
-      "last_attempt_at": "2026-10-18T01:02:05.292904+00:00",
+      "last_attempt_at": "2026-10-19T01:56:19.263939+00:00",
       "status": "PARTIAL",
       "open_gaps": [
         {
-          "cause": "Revisión selectiva de cinco candidatosRustSec y registros oficiales, Tokioyfuentesprevias. No inventario instalado, cobertura universal o estándares/redes contractuales completos. GHSAzipAPI404; no se atribuye lecturaupstream.",
+          "cause": "Consulta selectiva de avisos/fuentes; ammonia373analizado, mantenimientoINFO370-372sinexposiciónacreditada. GHSAammoniaAPI404, ficha/registro/PRupstreamleídos; sininventarioinstalado, cobertura universal o contratos/estándares restringidos completos.",
           "requested_window": {
             "from_inclusive": "2026-10-15T00:00:00-03:00",
-            "to_exclusive": "2026-10-17T22:00:17-03:00"
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
           },
           "retry_required": true,
-          "next_action": "Retomar último checkpoint completo, todos los gaps y solapamiento7d limitado por15Oct. No adelantar corte por fallo/índice/PR.",
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
           "prior_gap_refs": {
-            "run_id": "RUN-20261017T014304Z",
+            "run_id": "RUN-20261018T010017Z",
             "source_id": "WATCH-STANDARDS"
           }
         }
@@ -2702,6 +2690,90 @@
         "CTL-20"
       ],
       "notification_fingerprint": "4603d10a16228d31104847a98745e8ed93a2124ded0f03c95e4daaeebb335857"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0373",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0373|2026|GLOBAL",
+      "title": "ammonia: filtradoCSSurl sensibleamayúsculas permite seguimiento noautorizado, noXSS",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "reported_at": "2026-10-16",
+      "raw_advisory_date": "2026-10-16",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_EXACT_TIME_OR_ZONE",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-19T01:56:18.896018+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT_WITH_AFFECTED_CSS_CONFIG"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "RUSTSEC_WEBSITE_RECORD_AND_UPSTREAM_PR_REVIEWED_GHSA_API404",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "NEWLY_RELEVATED_IN_OVERLAP_NOT_PUBLICATION_DATED18OCT",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0373.html",
+              "sha256": "76739a365f5db5b4dc62abb2db197926cf8a8d15b309618d5ad24fc6388b2936",
+              "fetched_at": "2026-10-19T01:55:32.003280+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/ammonia/RUSTSEC-2026-0373.md",
+              "sha256": "b9288220d490721082518dd56d98314791a01567aebd974913a7ffa5b0572a2a",
+              "fetched_at": "2026-10-19T01:55:32.408599+00:00"
+            },
+            {
+              "url": "https://github.com/rust-ammonia/ammonia/pull/267",
+              "sha256": "e202ee5755086a272d4abf7f6e8159abb57b8b1f68652863c04c2a076dc7d9b0",
+              "fetched_at": "2026-10-19T01:56:18.896018+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0373.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "ammonia",
+      "patched_ranges": [
+        ">=4.2.4",
+        ">=4.1.8,<4.2.0"
+      ],
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "impact_limit": "Source explicitly says no XSS and limited usefulness for exfiltration; tracking pixels bypass URL policy under stated configuration.",
+      "fr": [
+        "FR-CON-001",
+        "FR-CON-002",
+        "FR-CST-012",
+        "FR-CST-015",
+        "FR-CST-016",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-05",
+        "NFR-06",
+        "NFR-09"
+      ],
+      "adr": [
+        "ADR-05",
+        "ADR-06",
+        "ADR-07"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17"
+      ],
+      "notification_fingerprint": "efe71a521010bdb6b9bdea6d6ec5e68c32a639ccde8d5cae9947894294a3a469"
     }
   ],
   "run_index": [
@@ -2738,6 +2810,13 @@
       "status": "PARTIAL",
       "path": ".regulatory-watch/runs/RUN-20261018T010017Z.json",
       "finished_at": "2026-10-18T01:08:31.880268+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "run_id": "RUN-20261019T015315Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261019T015315Z.json",
+      "finished_at": "2026-10-19T02:01:37.215788+00:00",
       "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
     }
   ]
