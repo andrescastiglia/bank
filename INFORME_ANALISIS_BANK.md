@@ -1,5 +1,135 @@
 # Informe de análisis y datos relevados — Bank
 
+**Corte vigente:** **19/10/2026 22:08:02**, `America/Buenos_Aires` (`20/10/2026 01:08:02 UTC`). **Corrida:** `RUN-20261020T010802Z`. **Base comprobada por conector GitHub y Git:** `main f7d9495a172bcc9b2a68371a05509a664f12748d`. Inventario `2026-10-16.2`. **Resultado global: PARTIAL**. Se amplía la **PR #9**, sin merge ni cambios en `main`, licencia, permisos o despliegue.
+
+## Alcance y conclusión del nuevo corte
+
+Se recuperaron seis corridas reales, 33 entradas de cambios y ocho hitos desde `automation/regulatory-state`; el seed no se cuenta como cobertura. Ventana solicitada: **[15/10/2026 00:00:00 −03:00, 19/10/2026 22:08:02 −03:00)**, incluidos todos los pendientes y solapamiento de siete días limitado por el inicio. Las consultas posteriores al corte conservan su fecha real. No se atribuye hora a normas que sólo muestran día.
+
+Se verificó una nueva **actualización consolidada MEP A8493**, se recuperó el texto oficial del candidato **COMARB DP11**, y se incorporaron hitos de normas anteriores: **Ganancias PJ desde hoy**, **firma/trámites MEP desde noviembre** y **feriado bancario 10/11**. Además se verificó una disposición del **RPI Capital Federal**, de aplicación condicionada. Los análisis distinguen obligaciones de la sociedad operadora, del participante/profesional y del proveedor tecnológico.
+
+| Eje | Evidencia relevada | Conclusión / brecha material |
+|---|---|---|
+| Legal/normativo | BCRA: 19 registros A/B/C/P, 19 PDF y 52 páginas; A8493 y antecedentes; BO19 y actos seleccionados; RG5908/4626, COMARB DP11, RPI DTR11 y anexos. | Falta vincular calendarios, firma/canal, sociedad/rol y expedientes a implementación y responsables. No convertir consolidado en obligación nueva universal ni confundir regímenes fiscales. |
+| Mercado | Siete páginas de oferta reconsultadas y aviso BNA publicado en BO19. | Las tasas y condiciones de un banco son datos competitivos específicos. Priorizar producto configurable con historia, integración y evidencia de operación; no copiar una tarifa a todos los clientes ni anunciar homologación local no probada. |
+| Tecnología | Rust estable, feed, PostgreSQL, FAPI, ASVS y versiones TO consultados. | No se verificó un lanzamiento técnico relevante adicional frente a la corrida anterior. La configuración por vigencia y la separación entre aceptación local y liquidación externa siguen siendo decisiones centrales. |
+| Seguridad, crítico | RustSec y CISA KEV con las mismas huellas; nuevas condiciones verificadas de firma/identidad y contingencia MEP. | No hay un aviso nuevo en esos dos índices consultados. Sí debe evaluarse el circuito de firmas/mandatos y la recuperación frente a canales caídos; una imagen scratch o un PDF firmado no acreditan por sí solos autorización ni continuidad. |
+
+## 1. Aspectos legales y normativos
+
+### 1.1 MEP: consolidación, antecedentes y fechas diferentes
+
+[A8493](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8493.pdf), emitida **19/10**, distribuye hojas de reemplazo con vigencia **1/11/2026**; se leyeron sus 17 páginas y correlaciones. La publicación BO independiente no se verificó. Remite a A8474, B13105 y B13164, recuperadas con sus anexos: firma/canales y contingencia; V04/DZ5; D22/GC3/GB3. Las dos B ya indicaban producción **26/1** y **24/4**, respectivamente: no se las fecha como funcionalidades nuevas de octubre ni se difiere su efecto a noviembre.
+
+El [análisis específico](regulatory/BCRA-A8493-2026.md) delimita IDEAR, firma digital Ley25.506, alternativa GDE para sujetos habilitados y papel excepcional; registro de firmantes; pruebas de operatorias y contingencia física BCRA como último recurso sujeto a conformidad y disponibilidad. No se accedió a Extranet/manual reservado ni se enviaron notas. No se presupone participación MEP por tener una cuenta de pago o por desarrollar software.
+
+**Brecha:** PAY-11/LAW-10, los módulos TRE/PAY/RPT/OPS y NFR existentes establecen capacidades generales, pero no un expediente MEP probado con firmante, facultad, canal y recuperación. El TO oficial `t-snp-mep.pdf` todavía identifica A8343, 14/10/2025; firmas A8414 y cuentas BCRA A8131. Conservar versiones y modificaciones fechadas; un TO recuperado no garantiza consolidación de todas las comunicaciones posteriores. Se identificó y excluyó como vigente el archivo legado `t-mep.pdf` de 2014.
+
+### 1.2 Ganancias PJ: un hito vigente, sin nuevo vencimiento general
+
+[RG5908](https://www.argentina.gob.ar/normativa/nacional/norma-430864/texto) fue emitida **1/10**, publicada/vigente **5/10**; su servicio comienza **19/10**. Se contrastó el [BO](https://www.boletinoficial.gob.ar/detalleAviso/primera/348496/20261005), RG4626 actualizada y la [guía ARCA](https://www.arca.gob.ar/gananciasYBienes/ganancias/personas-juridicas/declaracion-jurada/presentacion.asp). Para sujetos RG4626 y cierres desde junio de 2026, etapa opcional **19/10–28/2/2027**, obligatoria **1/3/2027**; cierres anteriores continúan en aplicativo y rectificativas conservan el medio de la original conforme art.3. Analizar conjuntamente excepciones y transición.
+
+La norma cambia el canal de confección/presentación F.713, no una alícuota ni el vencimiento particular del impuesto. Falta sociedad, cierre, CUIT, originales y mandato para asignarlo. No confundir impuesto propio de la sociedad con retenciones a clientes. El [expediente propuesto](regulatory/ARCA-RG5908-2026.md) mapea TAX/RPT, documentos históricos, canal original y acuses; no inventa API ni delegación para presentar.
+
+### 1.3 COMARB DP11: candidato recuperado por fuente oficial alternativa
+
+El [BO19](https://www.boletinoficial.gob.ar/detalleAviso/primera/349247/20261019) permitió leer íntegramente la disposición emitida **16/10**, publicada **19/10**, sin anexo anunciado. La caída del dominio COMARB no impide verificar este acto por BO, pero tampoco queda resuelta la cobertura general COMARB/SIRCREB/SIRCUPA.
+
+- **SIRCAR:** segunda quincena de octubre, fechas 9 y 10/11 pasan a **13/11 inclusive**.
+- **SIRTAC:** misma quincena, agentes cuyo dígito verificador CUIT termina en **5–9**, fecha 11/11 pasa a **13/11**.
+- **SIFERE:** anticipo octubre, **17–20/11**, con distribución según calendario aplicable todavía por verificar para cada CUIT.
+
+No se modifica por analogía SIRCREB/SIRCUPA, alícuotas, padrones o todos los vencimientos IIBB. La norma no fija un inicio general separado; se registran sus fechas específicas, sin asignar una obligación individual desconocida. [Análisis y casos](regulatory/COMARB-DP11-2026.md): calendario versionado, designación/sistema/período/CUIT y exclusión de perfiles semejantes no alcanzados.
+
+### 1.4 Agenda bancaria y perímetro inmobiliario
+
+[A8487](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8487.pdf), emitida **1/10**, [publicada 5/10](https://www.boletinoficial.gob.ar/detalleAviso/primera/348507/20261005), establece **feriado bancario nacional 10/11/2026**. Se verificó texto primario, sin derivarlo de noticias o del considerando COMARB. El [análisis](regulatory/BCRA-A8487-2026.md) propone distinguir riel, producto, atención y calendario: no cerrar todas las APIs ni extender automáticamente todos los plazos fiscales/contractuales.
+
+La [DTR11 RPI Capital Federal](https://www.boletinoficial.gob.ar/detalleAviso/primera/349248/20261019?anexos=1), emitida **16/10**, publicada **19/10**, vigente **8/11**, fue leída con **2/2 anexos**. Delimita actividades específicas, profesionales sujetos obligados, PEP/BF, excepciones y formularios; deroga cuatro disposiciones anteriores. El [análisis de alcance](regulatory/RPI-CABA-DTR11-2026.md) conserva la dependencia UIF93 y revisión competente: no es el régimen AML universal de bancos ni cobertura de todas las provincias. Impacto potencial en documentación de inmuebles y operaciones efectivamente presentadas allí, sin activar una jurisdicción del operador aún no definida.
+
+### 1.5 Publicación adicional y datos de referencia
+
+Se verificó publicación BO **19/10** de [B13248](https://www.boletinoficial.gob.ar/detalleAviso/primera/349258/20261019) y [B13249](https://www.boletinoficial.gob.ar/detalleAviso/primera/349259/20261019?anexos=1), ya analizadas por sus PDF BCRA. Se incorporan como procedencias y fechas verificadas, sin generar una segunda norma o repetir alertas. B13249 tiene anexo BO recuperado, tabla revisada visualmente y metadatos separados del PDF BCRA; la representación y huella diferentes no se descartan como duplicado. El cotejo automatizado valor por valor sigue pendiente; se registra relación y revisión de representación, no rectificatoria sustantiva probada.
+
+C102441/442 publican reservas/pasivos al 15/10; C102443 tipo de cambio de referencia del 19/10; C102444 tasas y series con anexos, algunas fechas hasta el 20. Son datos oficiales distintos de reformas generales. No se copian valores a parámetros productivos ni se toma el tipo A3500 como precio universal de una operación. Manifestación, fecha observada y fecha de cada valor deben conservarse separadas. Continúan los hitos anteriores A8492, B13248, CNV1172/1173, ICL/UVI y el disparador particular CGN/TGN; no se inventa un vencimiento documental a partir de publicación.
+
+## 2. Mercado y competencia
+
+Se reconsultaron [Mambu](https://mambu.com/en), [Pismo](https://developers.pismo.io/pismo-docs/docs/welcome), [Bantotal](https://www.bantotal.com/), [Topaz](https://www.topazevolution.com/), [Temenos](https://www.temenos.com/products/core-banking/), [Vault Core](https://www.thoughtmachine.net/vault-core) y [Apache Fineract](https://fineract.apache.org/). Son ofertas declaradas por sus proveedores/comunidad; no se obtuvo evidencia nueva de precio comparable, cuota auditada, soporte contractual argentino o homologación. Variaciones de HTML quedan registradas; no se convierten automáticamente en lanzamiento o mejora.
+
+| Capacidad competitiva a considerar | Relación con Bank | Evidencia/criterio que falta |
+|---|---|---|
+| Composición de productos, préstamos y depósitos: Mambu, Vault, Fineract | CFG/CRD/ACC/INT, ADR-01/05 | Mostrar un cambio contractual fechado, cálculo reproducible y migración sin bifurcación por cliente; no incorporar scripting monetario arbitrario. |
+| APIs, eventos e integración de pagos/tarjetas: Pismo, Topaz y Temenos | ASY/PAY/CAR, ADR-03/06 | Contratos, límites de consumo, semántica de aceptación, orden y reconciliación por riel. Comparar latencia con mismo volumen/entorno. |
+| Amplitud regional y operación bancaria: Bantotal/Topaz/Temenos | TAX/RPT/TRE/OPS | Localización por sociedad/rol, catálogos de fecha efectiva, soporte de incidentes, homologación y evidencia concreta. La marca regional no demuestra cumplimiento argentino integral. |
+| Migración y costo total | MIG/OPS, ADR-08; licencia GPLv2 | Ensayo de carga inicial, conciliación, salida/exportación, costo de infraestructura/soporte y operación. No se verificaron tarifas que permitan afirmar una ventaja económica cuantificada. |
+
+El [aviso BNA BO19](https://www.boletinoficial.gob.ar/detalleAviso/primera/349257/20261019) publica condiciones de adelantos con caución de certificados de obra e intereses mensuales vencidos: TAMAR de cinco días hábiles anteriores al inicio del período más un spread diferenciado según condición MiPyME. Es una referencia de oferta de **ese banco/producto**, con antecedentes desde enero y tasas publicadas para octubre; no un lanzamiento del día ni un mandato para todos los bancos. Refuerza la necesidad de índice/fecha de observación, calendario, clasificación documentada y spread contractual versionado en CRD/INT/CFG. No adoptar esas condiciones sin contrato y encuadre del producto.
+
+**Conclusión comercial:** la oportunidad de Bank sigue dependiendo de demostrar localización, continuidad y trazabilidad, además de amplitud funcional. No se puede sostener todavía «100% conforme», menor costo o latencia superior a competidores. El diagnóstico y la matriz históricos posteriores amplían segmentación y modelos de atención, con sus fechas originales.
+
+## 3. Innovación tecnológica y arquitectura
+
+El manifiesto estable Rust, PostgreSQL y FAPI conservan huellas previas; el feed Rust cambió metadatos pero su entrada más reciente continúa Rust1.99.1 ya analizada. ASVS y algunas páginas comerciales cambian representación: no se verificó una nueva edición técnica relevante a partir de ello. No se eligió biblioteca nueva, se ejecutó código descargado o modificó el stack Rust/scratch.
+
+Los datos primarios nuevos concretan desafíos de diseño ya presentes:
+
+| Problema | Propuesta técnica dentro de la arquitectura existente | Aceptación pendiente |
+|---|---|---|
+| Canal fiscal/documental cambia por ejercicio/original y fecha | ADR-05: paquete local versionado por sociedad/rol/período y original; preparar y validar en trabajos asíncronos con expediente. | Casos fronterizos y rectificativas; preservar canal y acuses históricos. No consultar una página remota mientras se bloquea dinero. |
+| Instrucción MEP inmediata frente a tareas diferibles | ADR-02/03: persistencia e idempotencia para el efecto financiero; colas durables para archivo, conciliación y tareas no urgentes. | No convertir V04 en crédito eventual sin respetar la exigencia de acreditación inmediata aplicable; medir extremo a extremo y no prometer plazo arbitrario. |
+| Contingencia depende de firma, facultades, red y actuación institucional | ADR-04/06: recuperar servicio completo y expediente, con aislamiento del emisor anterior y conciliación. | Simular canal caído, resultado externo ambiguo, credencial revocada y reapertura; un cambio de pod no demuestra recuperación. |
+| Importación inicial y referencias financieras | ADR-08: staging, manifiesto, cobertura, validación y publicación controlada de cohortes. | No ejecutar pagos/avisos históricos al cargar; conservar fuente/fecha de índices y reglas, separar PREPARED de datos operativos. |
+
+La inspección de la base sigue sin aplicación propia Rust/Cargo.lock/Dockerfile de producto. La propuesta documental de Rust y runtime `FROM scratch` exige verificación posterior sobre el digest final (TLS/CA, DNS, usuario/permisos y recuperación). No se atribuye baja latencia, capacidad o resistencia a ataques a una elección de lenguaje o imagen sin ensayo.
+
+## 4. Seguridad informática — evaluación crítica
+
+Se reconsultaron [RustSec](https://rustsec.org/advisories/) y [CISA KEV](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json): huellas idénticas a las recuperadas en la corrida anterior; KEV mantiene `dateReleased=2026-10-16T17:15:48.8752Z`. No se detecta aviso nuevo en **esos índices y esa foto**, no ausencia universal de vulnerabilidades. Se mantienen abiertos los análisis ammonia, parsers/ZIP/Wasmtime/PostgreSQL y productos de borde ya registrados. Sin inventario instalado no se afirma exposición ni corrección efectiva; los plazos CISA no son plazos legales argentinos.
+
+| Vector / escenario bancario | Control y trazabilidad aplicables | Evidencia necesaria y brecha |
+|---|---|---|
+| Suplantación, recuperación de cuenta y firma fuera de facultades | IAM/CON/TRE; NFR-05, CTL-09/10/18; firma digital y registro BCRA cuando apliquen | Probar firmante/certificado revocado, otra entidad, doble control y validez al liberar. Un login/OTP o PDF válido no prueba mandato para mover fondos. |
+| BOLA/BFLA, tokens entre entidades, APIs/workers de soporte | ADR-06; NFR-05/06; FAPI/ASVS como estándares adoptables, no ley general | Pruebas negativas por objeto/acción/celda, revocación concurrente, audiencias/scopes y límites de abuso. Sin código/inventario: no evaluado. |
+| Replay, doble crédito, timeout de MEP y reenvío tras DR | TRE/PAY/REC; ADR-02/03/04; CTL-04/05/13 | Identidad económica persistente, prueba de origen autenticado, inbox y conciliación externa. No reenviar por TTL/lease vencido o asumir que un timeout significa rechazo. |
+| Ransomware y caída conjunta de red/IDEAR/IAM/KMS | NFR-02/05/12; CTL-10/13/14 | Copia limpia, recuperación de claves/facultades, dependencias y runbook institucional. Acceso físico BCRA requiere conformidad y personal; no se declara contingencia disponible por leer la norma. |
+| Documentos BF/PEP y fiscales, exportación y filtrado | CON/DAT/RPT; NFR-06/07; CTL-07/09/11/19 | Finalidad, minimización, retención/hold, destinatario y permisos; firmas/documentos reales fuera del repo público. Ammonia conocido requiere revisar renderer efectivo si existe. |
+| Dependencias, parsers y carga inicial maliciosa | OPS/MIG/ASY; NFR-03/05/09/10; ADR-07/08 | SBOM/Cargo.lock, artefacto firmado/procedencia y límites de CPU/memoria/expansión; ZIP no puede escribir fuera de staging. Scratch no corrige una dependencia vulnerable. |
+| Cifrado y APIs externas | NFR-05/06/08, gestor de claves soportado, contrato Rust/scratch | TLS/mTLS según interfaz efectiva, confianza CA, rotación/restauración y separación de secretos. No imponer algoritmo/protocolo inexistente en contrato reservado no consultado. |
+
+ISO, PCI, Swift, NIST, FAPI y OWASP requieren edición, alcance y activador contractual/regulatorio. No se copiaron textos restringidos ni se presentan como leyes argentinas por defecto. No se ejecutó pentest, explotación, consulta de ROS, acceso a clientes, credenciales fiscales ni comunicaciones a reguladores.
+
+## 5. Mapeo, cobertura y decisiones pendientes
+
+| Hallazgo | Documentos / FR afectados | NFR, ADR, controles y skills |
+|---|---|---|
+| A8493 y transición A8474 | compliant.md PAY-11/LAW-10; FR-TRE-016/018/019/020, FR-PAY-001/026/027/029/030/031, FR-OPS-003/011/012/013, FR-RPT-011/012/013/014 | NFR-02/05/07/08/09/12; ADR-03/04/05; CTL-04/05/09/10/11/13/14/18; skills cumplimiento, disponibilidad, seguridad, configuración. |
+| RG5908 | LEGAL_TAX.md y compliant.md TAX-01/03/09; FR-TAX-001/018/028/031/032 y FR-RPT-001/002/007/009/010/011/012/013/014/015/035/038 | NFR-05/06/07/09/11/12; ADR-05; CTL-02/09/11/19; skills cumplimiento, FR y configuración. |
+| COMARB DP11 / A8487 | TAX/RPT/CFG/TRE/PAY/OPS, calendarios por régimen y contratos; detalle en documentos acotados | NFR-02/04/09/11/12; ADR-05; CTL-02/13/14/19; skills cumplimiento, configuración, operación. |
+| RPI Capital Federal | Perímetro local, CLI/AML/GRN/CON/DAT/RPT, contratos profesionales y formularios | NFR-05/06/07/09/11; ADR-05; CTL-07/09/11/18/19; cumplimiento y privacidad. Aplicación condicional, no activación local universal. |
+
+No se sustituyen reglas monetarias ni se crean FR duplicados: se entrega impacto y escenarios para revisión competente. La aprobación de la PR no prueba parametrización, homologación, pruebas ni aceptación institucional.
+
+| Fuente | Cobertura real de esta corrida | Checkpoint / pendiente |
+|---|---|---|
+| BCRA comunicaciones A/B/C/P | **COMPLETE** para filtro emisión15–19/10, página1/1,19 registros/19 PDF/52 páginas; anexos integrados. Los14 documentos previos tienen las mismas huellas. | `covered_through` avanza del18/10 22:53:15 al19/10 22:08:02 −03. Publicaciones tardías sujetas a solapamiento. |
+| BCRA TO / RI | **PARTIAL**, índice103TO/55RI; MEP/firmas/cuentas y RI seleccionado recuperados. | Versiones, textos, modificaciones/anexos restantes pendientes; cortes nulos. |
+| BO primera sección | **PARTIAL**. Fallos503 iniciales; reintentos oficiales recuperaron15/16 (55 avisos cada uno),19 (100 URLs visibles),17/18 redirigen portada. Once cuerpos seleccionados del19 y dos del5;3 anexos nuevos recuperados (ICL y2RPI). | Índice19 muestra categorías por106 avisos pero sólo100 URLs visibles: paginación pendiente. Sin completar cuerpos/anexos restantes,37 anexos sustantivos anteriores, suplementos/extraordinarias; no se presume ausencia17/18. |
+| UIF sectorial/transversal / AAIP / ARCA / CNV | **PARTIAL**. Entradas reconsultadas; ARCA5908/4626 y guía leídas selectivamente. | Índices/formularios no completan cronología/anexos. Sin avances de corte. |
+| COMARB / SIRCREB / SIRCUPA | **PARTIAL**: sitio propio sigue500, pero candidato DP11 completo recuperado por BO. | Se cierra sólo el pendiente de cuerpo de ese candidato; índices, cambios y calendarios base pendientes. Corte nulo. |
+| Jurisdicciones | Checkpoint opcional omitido íntegro; RPI analizado como candidato condicionado. | No se conoce operador/jurisdicción activada ni se afirma exención/cobertura universal. |
+| Estándares / seguridad | **PARTIAL**, revisión selectiva y revalidación de índices. | Sin inventario desplegado, textos restringidos completos ni evaluación de contratos de redes. |
+
+Evidencia, intentos fallidos, filtros, URL final, fechas, páginas, anexos, relaciones y SHA-256: [manifiesto de la corrida](https://github.com/andrescastiglia/bank/blob/ffa061ece43df870aab46a3ba185154c2f411c55/.regulatory-watch/evidence/RUN-20261020T010802Z.json). El checkpoint completo de una fuente es distinto de la ejecución, descubrimiento, publicación de PR y aceptación. Los historiales anteriores se conservan como prefijos exactos y el nuevo run se indexa una sola vez en la rama de estado.
+
+**Validación ejecutada:** catálogo reproducible (1016 FR/32 módulos), revisión/enlaces/28 skills, inventario de vigilancia, 69 fixtures y transición `--state --run --previous-state`; 87 huellas de descargas/decodificaciones y 89 referencias FR del informe/propuestas contrastadas, incluidas abreviaciones. Son checks documentales y de integridad de evidencia. Las pruebas de firma, dinero, carga, vulnerabilidades, cifrado, recuperación y presentación descritas son propuestas; no se ejecutaron contra producto. No se verificaron rulesets/permisos técnicos en esta corrida ni se afirma que CODEOWNERS garantice exclusividad técnica de merges.
+
+---
+
+## Antecedente íntegro — corte del 18/10
+
+El contenido siguiente conserva resultados y fechas previos. Sus cifras de cobertura y fallas describen su propia corrida; prevalece el nuevo corte anterior.
+
 **Corte vigente:** **18/10/2026 22:53:15**, zona `America/Buenos_Aires` (`19/10/2026 01:53:15 UTC`). **Corrida:** `RUN-20261019T015315Z`. **Base comprobada:** `main f7d9495a172bcc9b2a68371a05509a664f12748d`, mediante conector GitHub y Git. La PR #9 continúa abierta y se amplía esa propuesta. **Resultado global: PARTIAL**.
 
 ## Análisis del corte del 18/10
