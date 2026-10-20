@@ -1,0 +1,1848 @@
+{
+  "schema_version": 1,
+  "run_id": "RUN-20261020T010802Z",
+  "reporting_timezone": "America/Buenos_Aires",
+  "note": "Public minimal retrieval metadata. No downloaded bodies, signed documents, personal edicts, secrets or restricted standards copied. Different HTML hashes require semantic review. See explicit scope in report and run.",
+  "summary": {
+    "attempts": 99,
+    "statuses": {
+      "200": 87,
+      "503": 7,
+      "500": 5
+    },
+    "bcra_pdf_count": 19,
+    "bcra_pdf_pages": 52,
+    "bcra_prior14_equal": true,
+    "bo_annex_current": 3,
+    "bo_annex_prior": 40,
+    "bo_prior_substantive_pending": 37,
+    "bo19_visible": 100,
+    "bo19_categories_sum": 106
+  },
+  "fetches": [
+    {
+      "id": "A8474",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8474.pdf",
+      "fetched_at": "2026-10-20T01:11:58.419080+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8474.pdf",
+      "content_type": "application/pdf",
+      "sha256": "17ccef09881d27ee66633fbd377f0224e519d45b4cab4ba0fa839b0016e88b22",
+      "bytes": 176917,
+      "truncated": false,
+      "pdf_pages": 3
+    },
+    {
+      "id": "A8487",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8487.pdf",
+      "fetched_at": "2026-10-20T01:13:20.022746+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8487.pdf",
+      "content_type": "application/pdf",
+      "sha256": "e51479de7e35cac6cda1fff1bff52ea6f27c831f3a4e3568246dffa2ed2348d2",
+      "bytes": 140977,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "A8492",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+      "fetched_at": "2026-10-20T01:11:43.871825+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+      "content_type": "application/pdf",
+      "sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+      "bytes": 216192,
+      "truncated": false,
+      "pdf_pages": 6
+    },
+    {
+      "id": "A8493",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8493.pdf",
+      "fetched_at": "2026-10-20T01:11:34.745919+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8493.pdf",
+      "content_type": "application/pdf",
+      "sha256": "be2f9823c45f5d15f5dc2ff146831b62d0aa6e86443dbb3931bfe9fa987e6329",
+      "bytes": 421530,
+      "truncated": false,
+      "pdf_pages": 17
+    },
+    {
+      "id": "ANNEX-7812881-1-PDF",
+      "requested_url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "fetched_at": "2026-10-20T01:12:58.876743+00:00",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7812881",
+        "fechaPublicacion": "20261019"
+      },
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "content_type": "application/pdf",
+      "sha256": "3e57401d87e7397cc476bbbc31bfca3569871ad59bd117f57155d96b07fee265",
+      "bytes": 124639,
+      "truncated": false,
+      "pdf_pages": 2,
+      "decoded_from": "pdfBase64"
+    },
+    {
+      "id": "ANNEX-7812881-1",
+      "requested_url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "fetched_at": "2026-10-20T01:12:58.876743+00:00",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7812881",
+        "fechaPublicacion": "20261019"
+      },
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "content_type": "application/json",
+      "sha256": "be15658c2206575964b3b304b54ff807984b265d7c9e8633ac5e38f4518a4dcc",
+      "bytes": 167280,
+      "truncated": false
+    },
+    {
+      "id": "ANNEX-7812882-1-PDF",
+      "requested_url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "fetched_at": "2026-10-20T01:12:58.878808+00:00",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7812882",
+        "fechaPublicacion": "20261019"
+      },
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "content_type": "application/pdf",
+      "sha256": "7ab2c347ab8d9ab49cc800c9b240778471e89ecfd288c8bcf493682f0abb036e",
+      "bytes": 97146,
+      "truncated": false,
+      "pdf_pages": 2,
+      "decoded_from": "pdfBase64"
+    },
+    {
+      "id": "ANNEX-7812882-1",
+      "requested_url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "fetched_at": "2026-10-20T01:12:58.878808+00:00",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "1",
+        "idAnexo": "7812882",
+        "fechaPublicacion": "20261019"
+      },
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "content_type": "application/json",
+      "sha256": "8648375a85c75afe4eb6d3d6090c31ba09de105018d3b8aca371f4a07ee48b7a",
+      "bytes": 129874,
+      "truncated": false
+    },
+    {
+      "id": "ANNEX-7812882-2-PDF",
+      "requested_url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "fetched_at": "2026-10-20T01:12:58.879324+00:00",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7812882",
+        "fechaPublicacion": "20261019"
+      },
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "content_type": "application/pdf",
+      "sha256": "92c4198f8a59c963f503a32f8a9ee2517f90c7dcbdd49fa1e5ccb52bd3755772",
+      "bytes": 127635,
+      "truncated": false,
+      "pdf_pages": 3,
+      "decoded_from": "pdfBase64"
+    },
+    {
+      "id": "ANNEX-7812882-2",
+      "requested_url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "fetched_at": "2026-10-20T01:12:58.879324+00:00",
+      "method": "POST",
+      "filters": {
+        "seccion": "primera",
+        "nroAnexo": "2",
+        "idAnexo": "7812882",
+        "fechaPublicacion": "20261019"
+      },
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+      "content_type": "application/json",
+      "sha256": "da848a872e22c5274aa9f17455b8129295c9a825e490befa7b1423d8ca015618",
+      "bytes": 171176,
+      "truncated": false
+    },
+    {
+      "id": "ARCA-GUIDE",
+      "requested_url": "https://www.arca.gob.ar/gananciasYBienes/ganancias/personas-juridicas/declaracion-jurada/presentacion.asp",
+      "fetched_at": "2026-10-20T01:11:45.573413+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.arca.gob.ar/gananciasYBienes/ganancias/personas-juridicas/declaracion-jurada/presentacion.asp",
+      "content_type": "text/html",
+      "sha256": "c75ce069fafb61f12dbff4e5a4d8f3687c2d282eae7852e7c0ecc45a3211fd12",
+      "bytes": 25980,
+      "truncated": false
+    },
+    {
+      "id": "ASVS",
+      "requested_url": "https://owasp.org/projects/asvs",
+      "fetched_at": "2026-10-20T01:09:09.359659+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://owasp.org/projects/asvs",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "3be50d43ae13a0c44129982bcfc3abe0183b2e2652265256c597944adc17cd22",
+      "bytes": 113988,
+      "truncated": false
+    },
+    {
+      "id": "B13105",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13105.pdf",
+      "fetched_at": "2026-10-20T01:11:58.420358+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13105.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5820e2d4d959d8709b5cdc926a1aa0b9fe6e97979a606ba5aa2752d6f48bb554",
+      "bytes": 255445,
+      "truncated": false,
+      "pdf_pages": 5
+    },
+    {
+      "id": "B13164",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13164.pdf",
+      "fetched_at": "2026-10-20T01:11:58.421065+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13164.pdf",
+      "content_type": "application/pdf",
+      "sha256": "95a91127aeade72f3d758ab8e862a4732e988c1f629dcc19b4645195ab4a9616",
+      "bytes": 264296,
+      "truncated": false,
+      "pdf_pages": 8
+    },
+    {
+      "id": "B13248",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+      "fetched_at": "2026-10-20T01:11:44.281145+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+      "content_type": "application/pdf",
+      "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+      "bytes": 149492,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "B13249",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf",
+      "fetched_at": "2026-10-20T01:11:41.071820+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf",
+      "content_type": "application/pdf",
+      "sha256": "437660130489488e3136a8e0263d00cefef7c66389ace9bdec33b1d4fda7b103",
+      "bytes": 214810,
+      "truncated": false,
+      "pdf_pages": 3
+    },
+    {
+      "id": "B13250",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13250.pdf",
+      "fetched_at": "2026-10-20T01:11:37.796592+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13250.pdf",
+      "content_type": "application/pdf",
+      "sha256": "d14002e29a88f8df072f660bb9a9a623fc18ccf3e10dc25fbe718b1f17328e38",
+      "bytes": 202146,
+      "truncated": false,
+      "pdf_pages": 2
+    },
+    {
+      "id": "BANTOTAL",
+      "requested_url": "https://www.bantotal.com/",
+      "fetched_at": "2026-10-20T01:09:09.775076+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bantotal.com/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "844b01b6a5802d0e2e145ad86550dab7ffeabd0b41c401f7c0b7d0bd48be6671",
+      "bytes": 46455,
+      "truncated": false
+    },
+    {
+      "id": "BCRA-ACCOUNTS",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-ccbcra.pdf",
+      "fetched_at": "2026-10-20T01:14:00.872077+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-ccbcra.pdf",
+      "content_type": "application/pdf",
+      "sha256": "47e540cf4ace6c3d5758536c4160041b91bd683cc144bb7a6fdad9fe96824de2",
+      "bytes": 1063316,
+      "truncated": false,
+      "pdf_pages": 19
+    },
+    {
+      "id": "BCRA-QUERY",
+      "requested_url": "https://www.bcra.gob.ar/api/endpoints/buscador-comunicaciones.php",
+      "fetched_at": "2026-10-20T01:09:18.136899+00:00",
+      "method": "POST",
+      "filters": {
+        "mode": "fecha",
+        "fecha_desde": "2026-10-15",
+        "fecha_hasta": "2026-10-19",
+        "paginaabsoluta": 1,
+        "tamanopagina": 100,
+        "lang": "es"
+      },
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/api/endpoints/buscador-comunicaciones.php",
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "fb69215b9199b5004b4ae34ac5961ae9b572241d6fbf726926d608077d11916f",
+      "bytes": 5460,
+      "truncated": false
+    },
+    {
+      "id": "BCRA-SIGNATURES",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-fabcra.pdf",
+      "fetched_at": "2026-10-20T01:14:00.871317+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-fabcra.pdf",
+      "content_type": "application/pdf",
+      "sha256": "b5ce5bbfa47f9465e65b1a2dc3dd88831095a3e3af59bff982e53b454d2abe8c",
+      "bytes": 778612,
+      "truncated": false,
+      "pdf_pages": 19
+    },
+    {
+      "id": "BO-349241",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349241/20261019",
+      "fetched_at": "2026-10-20T01:12:26.576705+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349241/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "75a5369327c7b2b46a097f3e7e38256133a1c49ed5427bf3e05a6d7491fbec4c",
+      "bytes": 57306,
+      "truncated": false
+    },
+    {
+      "id": "BO-349242",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349242/20261019",
+      "fetched_at": "2026-10-20T01:12:26.757273+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349242/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "c06644423aa9c4895f2206011f26e28f223bcdf90b1bb5ba4d81ed6b27887e78",
+      "bytes": 57250,
+      "truncated": false
+    },
+    {
+      "id": "BO-349243",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349243/20261019",
+      "fetched_at": "2026-10-20T01:12:27.032600+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349243/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "768a935de54d6398151ee0f77567170bf5bc1c728f3bd23bf7d760e79561b3ec",
+      "bytes": 57390,
+      "truncated": false
+    },
+    {
+      "id": "BO-349247",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349247/20261019",
+      "fetched_at": "2026-10-20T01:12:22.795206+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349247/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6589b60a9d00b9362fb82ad1855151a612f2f60b9851329bcbfdf7d2f134e44a",
+      "bytes": 56731,
+      "truncated": false
+    },
+    {
+      "id": "BO-349248",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349248/20261019",
+      "fetched_at": "2026-10-20T01:12:22.801097+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349248/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "a6fac645d730bf0484d8c1e98832a0d5bbacfa09ef15a6bfd748c1d0d13c976f",
+      "bytes": 65375,
+      "truncated": false
+    },
+    {
+      "id": "BO-349249",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349249/20261019",
+      "fetched_at": "2026-10-20T01:12:22.801796+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349249/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ab99f65ee9f7f29a727caf359fa76a68f5e75b08d733ec12cdba6ccf6fb9142e",
+      "bytes": 58405,
+      "truncated": false
+    },
+    {
+      "id": "BO-349257",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349257/20261019",
+      "fetched_at": "2026-10-20T01:12:24.865874+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349257/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6361f370f7035492ab77a09c08be3e864e7cccf2927ec2b198f2e8d313905ab0",
+      "bytes": 55681,
+      "truncated": false
+    },
+    {
+      "id": "BO-349260",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349260/20261019",
+      "fetched_at": "2026-10-20T01:12:24.991700+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349260/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "bc872e5b98b734f7ee740a37d0b635ed6afb06b286ecd672704d872d8295b6d6",
+      "bytes": 52400,
+      "truncated": false
+    },
+    {
+      "id": "BO-349261",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349261/20261019",
+      "fetched_at": "2026-10-20T01:12:25.180560+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349261/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "22d4bae97857565f17b75a1eab6c2b7319c79d75a100da47fcd36ef292859690",
+      "bytes": 52655,
+      "truncated": false
+    },
+    {
+      "id": "BO-B13248",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349258/20261019",
+      "fetched_at": "2026-10-20T01:11:46.455084+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349258/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "b9a0bfeab00044cc459acf866b03a70e0c5ed308e33ac1545a80a92ceaa590d7",
+      "bytes": 53193,
+      "truncated": false
+    },
+    {
+      "id": "BO-B13249",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349259/20261019?anexos=1",
+      "fetched_at": "2026-10-20T01:11:47.992029+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349259/20261019?anexos=1",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "85d0c8a5c26c382464f460f5912dc7bcee75dc3f8447364fb70421a640c40989",
+      "bytes": 54705,
+      "truncated": false
+    },
+    {
+      "id": "BO05-0",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348496/20261005",
+      "fetched_at": "2026-10-20T01:14:12.204326+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348496/20261005",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ed666516dd9b5a3c98b7a108460153f491cfa3c900052d0b02fbaf7f6f4d2dc5",
+      "bytes": 58350,
+      "truncated": false
+    },
+    {
+      "id": "BO05-1",
+      "requested_url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348507/20261005",
+      "fetched_at": "2026-10-20T01:14:12.206083+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348507/20261005",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "f009c2935deacb5a59f3c1d2674111c9006439e53bc559c6675aabf6e8d3cd27",
+      "bytes": 52414,
+      "truncated": false
+    },
+    {
+      "id": "BO05",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera/20261005",
+      "fetched_at": "2026-10-20T01:13:44.707363+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/seccion/primera/20261005",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ff2511a1fee7ad4b2ebe8c8f31f04fe72163860beb8706732737e8903591842a",
+      "bytes": 183066,
+      "truncated": false
+    },
+    {
+      "id": "BO15-RETRY",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera/20261015",
+      "fetched_at": "2026-10-20T01:12:49.964024+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/seccion/primera/20261015",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "3305a4de5aab4a425bcc1d8b36801f50fcf52c9b795fd5879b2670a9d77d4c92",
+      "bytes": 146889,
+      "truncated": false
+    },
+    {
+      "id": "BO15",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261015",
+      "fetched_at": "2026-10-20T01:09:16.139592+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "BO16-RETRY",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera/20261016",
+      "fetched_at": "2026-10-20T01:12:49.967962+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/seccion/primera/20261016",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "3fef457c45d75b1e5b8d74633938945bf8a236556ff81c0178a3aa645c531a8a",
+      "bytes": 143767,
+      "truncated": false
+    },
+    {
+      "id": "BO16",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261016",
+      "fetched_at": "2026-10-20T01:09:16.160098+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "BO17-RETRY",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera/20261017",
+      "fetched_at": "2026-10-20T01:12:49.970117+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "225ff9479158abae26e3ae401f5126b2560ffaa26a0bf048dd5fac4d319ad28e",
+      "bytes": 247353,
+      "truncated": false
+    },
+    {
+      "id": "BO17",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261017",
+      "fetched_at": "2026-10-20T01:09:16.811383+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "BO18-RETRY",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera/20261018",
+      "fetched_at": "2026-10-20T01:12:53.129899+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "ffb33867d1028b04b43d98883312be26b779959542512ade269fc3e4491620b8",
+      "bytes": 247353,
+      "truncated": false
+    },
+    {
+      "id": "BO18",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261018",
+      "fetched_at": "2026-10-20T01:09:17.576957+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "BO19-GOV",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261019",
+      "fetched_at": "2026-10-20T01:12:01.023941+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gov.ar/seccion/primera/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "e443265e871aa3de2397ed79eeb8efbe9e47cd122bdb49f7597efe2439656559",
+      "bytes": 227730,
+      "truncated": false
+    },
+    {
+      "id": "BO19-RETRY",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera/20261019",
+      "fetched_at": "2026-10-20T01:11:45.664361+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.boletinoficial.gob.ar/seccion/primera/20261019",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "49250d5570cb7a7b62ec9df165a3c68e1e76fca98b32c80bb325789d1305493a",
+      "bytes": 227730,
+      "truncated": false
+    },
+    {
+      "id": "BO19",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera/20261019",
+      "fetched_at": "2026-10-20T01:09:18.112033+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "C102432",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102432.pdf",
+      "fetched_at": "2026-10-20T01:11:43.511125+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102432.pdf",
+      "content_type": "application/pdf",
+      "sha256": "ba67c4b69016b4d8aaf820787b95296d88a800deb02cee6303680d2d4d126dae",
+      "bytes": 169372,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102433",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102433.pdf",
+      "fetched_at": "2026-10-20T01:11:43.060965+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102433.pdf",
+      "content_type": "application/pdf",
+      "sha256": "98f028a719c58be365df7e05a3e916ce5e050a0359548a0337d8f33106bd483e",
+      "bytes": 182039,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102434",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102434.pdf",
+      "fetched_at": "2026-10-20T01:11:42.443194+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102434.pdf",
+      "content_type": "application/pdf",
+      "sha256": "939e755c23537f5410e19a4692a713313dcdce87d67c79d602cda29e2003eca9",
+      "bytes": 124229,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102435",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102435.pdf",
+      "fetched_at": "2026-10-20T01:11:41.430227+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102435.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5ea565197b199e2a151bbe1052b9401f525d08c01563e877b9bf6af9735eea66",
+      "bytes": 228710,
+      "truncated": false,
+      "pdf_pages": 4
+    },
+    {
+      "id": "C102436",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102436.pdf",
+      "fetched_at": "2026-10-20T01:11:40.294174+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102436.pdf",
+      "content_type": "application/pdf",
+      "sha256": "2c0fef383b4e53f1f9c92599e15f3199a8d1958f2afb99d1dd57b64da43badb8",
+      "bytes": 174420,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102437",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102437.pdf",
+      "fetched_at": "2026-10-20T01:11:40.039883+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102437.pdf",
+      "content_type": "application/pdf",
+      "sha256": "76739b1aa9d5635df220a8cc13889301df4927add51d2d8da25012ad1fa059eb",
+      "bytes": 168945,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102438",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102438.pdf",
+      "fetched_at": "2026-10-20T01:11:39.757211+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102438.pdf",
+      "content_type": "application/pdf",
+      "sha256": "f0fd25da0dd979a983d9f4674e238f450c736c305404083e3fcf357e5c3e67cf",
+      "bytes": 181692,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102439",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102439.pdf",
+      "fetched_at": "2026-10-20T01:11:38.745884+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102439.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5e4701962abdff947b721fecd046f8361f770a565f577c9747fc2e3c723b28e9",
+      "bytes": 126190,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102440",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102440.pdf",
+      "fetched_at": "2026-10-20T01:11:37.607206+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102440.pdf",
+      "content_type": "application/pdf",
+      "sha256": "eaf7f4cfdb8d38654412c8bfc0b5315fc326dd8c06bd02417261a1b0c001c9f1",
+      "bytes": 228869,
+      "truncated": false,
+      "pdf_pages": 4
+    },
+    {
+      "id": "C102441",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102441.pdf",
+      "fetched_at": "2026-10-20T01:11:36.778449+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102441.pdf",
+      "content_type": "application/pdf",
+      "sha256": "ecf296c6cf3e45ea72f885a8534c0010a7267d04cb3bfa0ee0d2631a7ddba8a7",
+      "bytes": 167735,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102442",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102442.pdf",
+      "fetched_at": "2026-10-20T01:11:35.990015+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102442.pdf",
+      "content_type": "application/pdf",
+      "sha256": "4da5d6f41f4db5177a0f5c81c011f7d1a7f7f6d6038e8c65953a88ed3b94b536",
+      "bytes": 182063,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102443",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102443.pdf",
+      "fetched_at": "2026-10-20T01:11:34.746797+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102443.pdf",
+      "content_type": "application/pdf",
+      "sha256": "d31ccfa40ab856c78eeec178ba12e6c3043244d6b2f5605dd595270b777c6ad0",
+      "bytes": 122842,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "C102444",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102444.pdf",
+      "fetched_at": "2026-10-20T01:11:34.744735+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102444.pdf",
+      "content_type": "application/pdf",
+      "sha256": "1ac9de274af6bece1c01c89af2d58930215986f5627995ac1c3a4ddc05a139d1",
+      "bytes": 229250,
+      "truncated": false,
+      "pdf_pages": 4
+    },
+    {
+      "id": "CNV-PANEL",
+      "requested_url": "https://www.cnv.gov.ar/sitioWeb/MarcoRegulatorio?panel=2",
+      "fetched_at": "2026-10-20T01:09:10.060980+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.cnv.gov.ar/sitioWeb/MarcoRegulatorio?panel=2",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "69ff9ae68d364e2a24638cc149b6a516289041ccd42498fe31c93fc54d840af3",
+      "bytes": 1385311,
+      "truncated": false
+    },
+    {
+      "id": "COMARB-DP11",
+      "requested_url": "https://www.ca.gob.ar/resoluciones-comarb/download/455-2026/8707-disposicion-de-presidencia-n-11-2026-modificacion-del-vencimiento-de-las-ddjj-y-pagos-de-sircar-sircupa-y-sifere-correspondiente-al-anticipo-10-2027-vfinal",
+      "fetched_at": "2026-10-20T01:09:10.695196+00:00",
+      "method": "GET",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "COMARB-SIRCREB",
+      "requested_url": "https://www.ca.gob.ar/sircreb",
+      "fetched_at": "2026-10-20T01:09:10.743209+00:00",
+      "method": "GET",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "COMARB-SIRCUPA",
+      "requested_url": "https://www.ca.gob.ar/sircupa",
+      "fetched_at": "2026-10-20T01:09:12.205382+00:00",
+      "method": "GET",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "COMARB-YEAR",
+      "requested_url": "https://www.ca.gob.ar/resoluciones-comarb/category/455-2026",
+      "fetched_at": "2026-10-20T01:09:12.354365+00:00",
+      "method": "GET",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "FAPI",
+      "requested_url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "fetched_at": "2026-10-20T01:09:13.144674+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://openid.net/specs/fapi-security-profile-2_0-final.html",
+      "content_type": "text/html",
+      "sha256": "26a49ad19b1f2b19ecc1cd9b825b4d5012f5e03a5dc8cb0dbd26462d39da465c",
+      "bytes": 150598,
+      "truncated": false
+    },
+    {
+      "id": "FINERACT",
+      "requested_url": "https://fineract.apache.org/",
+      "fetched_at": "2026-10-20T01:09:13.371502+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://fineract.apache.org/",
+      "content_type": "text/html",
+      "sha256": "b72aff1d5fc0be32e018b3868026c98810c236ca5d4d1800692686ebad246ec3",
+      "bytes": 26245,
+      "truncated": false
+    },
+    {
+      "id": "KEV",
+      "requested_url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "fetched_at": "2026-10-20T01:09:13.483194+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "content_type": "text/plain; charset=utf-8",
+      "sha256": "b6e27975f6635ecfc546fbd4fd6e444ba63a07ab2abc8876229d77fe083d357d",
+      "bytes": 1792713,
+      "truncated": false
+    },
+    {
+      "id": "MAMBU",
+      "requested_url": "https://mambu.com/en",
+      "fetched_at": "2026-10-20T01:09:13.672315+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://mambu.com/en",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "bbf58822ad35cf622e12d87ce9dbf5ef8f66b91c86484916ddd1db473ea9dfc6",
+      "bytes": 188841,
+      "truncated": false
+    },
+    {
+      "id": "MEP-CURRENT",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-mep.pdf",
+      "fetched_at": "2026-10-20T01:14:00.869536+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-mep.pdf",
+      "content_type": "application/pdf",
+      "sha256": "f3fd39590f94ee8a5e4d5e36afe6b99c3728df9232d921e04ecc860fc56ded92",
+      "bytes": 1294447,
+      "truncated": false,
+      "pdf_pages": 50
+    },
+    {
+      "id": "MEP-TO",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-mep.pdf",
+      "fetched_at": "2026-10-20T01:12:27.175836+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-mep.pdf",
+      "content_type": "application/pdf",
+      "sha256": "876e3e9877b90a3a0b074fa239bff386c8b1c0682408bebddd0c96a0aa591d2a",
+      "bytes": 395029,
+      "truncated": false,
+      "pdf_pages": 51
+    },
+    {
+      "id": "P51237",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/P51237.pdf",
+      "fetched_at": "2026-10-20T01:11:40.725134+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/P51237.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5bad2b4939c6eb49cc3600ba597418a17087c60d848aaafb42eebb9d2e5c1ecf",
+      "bytes": 111093,
+      "truncated": false,
+      "pdf_pages": 1
+    },
+    {
+      "id": "PISMO",
+      "requested_url": "https://developers.pismo.io/pismo-docs/docs/welcome",
+      "fetched_at": "2026-10-20T01:09:14.186267+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://developers.pismo.io/pismo-docs/docs/welcome",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "27a21ff587ebce0c083ee4bcbfa7c121b42e9098a87bead123025b99a6f8a6bf",
+      "bytes": 1172091,
+      "truncated": false
+    },
+    {
+      "id": "POSTGRES",
+      "requested_url": "https://www.postgresql.org/support/security/",
+      "fetched_at": "2026-10-20T01:09:14.623618+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.postgresql.org/support/security/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "15c30c1c071fe8ffd35ca5619258c30f04a3418153af272ac361a544a5b7cd46",
+      "bytes": 68575,
+      "truncated": false
+    },
+    {
+      "id": "RG4626-UPDATED",
+      "requested_url": "https://www.argentina.gob.ar/normativa/nacional/norma-331463/actualizacion",
+      "fetched_at": "2026-10-20T01:13:20.021039+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-331463/actualizacion",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "dacc6b487435a2e2406762f79e796b5c9089ba57b613ff225940f93160fe7b54",
+      "bytes": 50237,
+      "truncated": false
+    },
+    {
+      "id": "RG4626",
+      "requested_url": "https://biblioteca.arca.gob.ar/dcp/REAG01004626_2019_11_07",
+      "fetched_at": "2026-10-20T01:12:01.163362+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://biblioteca.arca.gob.ar/search/query/nodisponible.aspx",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4ab867deb01d4dc6f03d5c6c630b9048939e61bfc8882ad11369a063757416d4",
+      "bytes": 20947,
+      "truncated": false
+    },
+    {
+      "id": "RG5908-ABOUT",
+      "requested_url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-5908-2026-430864",
+      "fetched_at": "2026-10-20T01:12:01.042326+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/normativa/nacional/resoluci%C3%B3n-5908-2026-430864",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "0d5ee4a26741e3febd4830d89c66471b3523732d89875499f98139f3bdbdc31c",
+      "bytes": 34069,
+      "truncated": false
+    },
+    {
+      "id": "RG5908-REL",
+      "requested_url": "https://www.argentina.gob.ar/normativa/nacional/norma-430864/normas-modifican",
+      "fetched_at": "2026-10-20T01:13:20.022006+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-430864/normas-modifican",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c43eabbc225c9f25270dbaf1784891337d30a396e52258aa11683bbe2e1bc656",
+      "bytes": 27919,
+      "truncated": false
+    },
+    {
+      "id": "RG5908",
+      "requested_url": "https://www.argentina.gob.ar/normativa/nacional/norma-430864/texto",
+      "fetched_at": "2026-10-20T01:11:44.964847+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/normativa/nacional/norma-430864/texto",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "dbec159512d2025613f1bdb15ea4d394633bfffe54213591a66932543fcf2075",
+      "bytes": 39172,
+      "truncated": false
+    },
+    {
+      "id": "RUST-BLOG",
+      "requested_url": "https://blog.rust-lang.org/feed.xml",
+      "fetched_at": "2026-10-20T01:09:14.681593+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://blog.rust-lang.org/feed.xml",
+      "content_type": "application/xml",
+      "sha256": "62496cfab3d5497faca85d7ae6b5f39fe87f2db3f4cb2e6896b6355f5d848acf",
+      "bytes": 108722,
+      "truncated": false
+    },
+    {
+      "id": "RUST-STABLE",
+      "requested_url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+      "fetched_at": "2026-10-20T01:09:14.967802+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml",
+      "content_type": "binary/octet-stream",
+      "sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+      "bytes": 943486,
+      "truncated": false
+    },
+    {
+      "id": "RUSTSEC",
+      "requested_url": "https://rustsec.org/advisories/",
+      "fetched_at": "2026-10-20T01:09:14.969445+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://rustsec.org/advisories/",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "a70d081dbd366924ec36f185e9a0410119f26af3f5c6126e126d1b8112086992",
+      "bytes": 475894,
+      "truncated": false
+    },
+    {
+      "id": "TEMENOS",
+      "requested_url": "https://www.temenos.com/products/core-banking/",
+      "fetched_at": "2026-10-20T01:09:15.374084+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.temenos.com/products/core-banking/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "6329282528add282cb827ccf7de981c787f4c18ba4c6801fde0c9c8041d3af88",
+      "bytes": 240471,
+      "truncated": false
+    },
+    {
+      "id": "TOPAZ",
+      "requested_url": "https://www.topazevolution.com/",
+      "fetched_at": "2026-10-20T01:09:15.727483+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.topazevolution.com/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "3714df6909c13ddffe08ba995781400bdd7319b822f2e3caaecb115b83aaf603",
+      "bytes": 254017,
+      "truncated": false
+    },
+    {
+      "id": "VAULT",
+      "requested_url": "https://www.thoughtmachine.net/vault-core",
+      "fetched_at": "2026-10-20T01:09:16.123000+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.thoughtmachine.net/vault-core",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "c555387d40f8d287650ea2ab48f00fcc37ae22196903b6fa246bba7f7491b189",
+      "bytes": 149090,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-AAIP-0",
+      "requested_url": "https://www.argentina.gob.ar/aaip/buscador-normativa",
+      "fetched_at": "2026-10-20T01:09:04.604833+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/aaip/buscador-normativa",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "3280ccce4043f727559d0cac1eb8b418fdca2e6117227876c31ee1022bd8575b",
+      "bytes": 45016,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-ARCA-0",
+      "requested_url": "https://biblioteca.arca.gob.ar/search/query/index.aspx",
+      "fetched_at": "2026-10-20T01:09:05.130690+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://biblioteca.arca.gob.ar/search/query/index.aspx",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "4a7111e04f8bec4a717b722f3e8d687ac68af7981e5aea28dc26cfc8e3d4ed36",
+      "bytes": 57839,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-ARCA-1",
+      "requested_url": "https://www.arca.gob.ar/",
+      "fetched_at": "2026-10-20T01:09:05.331125+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.arca.gob.ar/",
+      "content_type": "text/html",
+      "sha256": "150d3bdba5ffa3028f9c303c1493af247b9f153bfa7fbc5de7e62510b3dd5373",
+      "bytes": 274,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-BCRA-COM-0",
+      "requested_url": "https://www.bcra.gob.ar/buscador-de-comunicaciones/",
+      "fetched_at": "2026-10-20T01:08:58.777365+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/buscador-de-comunicaciones/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "1a9bb148c051926ee4fee13b440cb98ceef8beb152d5cc12bab9b1a5849d8b66",
+      "bytes": 77062,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-BCRA-RI-0",
+      "requested_url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "fetched_at": "2026-10-20T01:09:01.459185+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5d7cda00212e9346a039fe8727c102201d51e61c112a7d6aee36bd70af21fa42",
+      "bytes": 70475,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-BCRA-RI-1",
+      "requested_url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "fetched_at": "2026-10-20T01:09:01.890708+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "bytes": 39143,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-BCRA-RI-2",
+      "requested_url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-optico.pdf",
+      "fetched_at": "2026-10-20T01:09:02.729965+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-optico.pdf",
+      "content_type": "application/pdf",
+      "sha256": "21dbb58e668f76d8c375e58de192eccdbcea9ab252d94f1e541bf67505d98c15",
+      "bytes": 2236628,
+      "truncated": false,
+      "pdf_pages": 45
+    },
+    {
+      "id": "WATCH-BCRA-TO-0",
+      "requested_url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "fetched_at": "2026-10-20T01:09:00.771221+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/ordenamiento-y-resumenes/",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "5d7cda00212e9346a039fe8727c102201d51e61c112a7d6aee36bd70af21fa42",
+      "bytes": 70475,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-BCRA-TO-1",
+      "requested_url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "fetched_at": "2026-10-20T01:09:01.115060+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.bcra.gob.ar/api/endpoints/ordenamiento-y-resumenes.php?lang=es",
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "bytes": 39143,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-BO-0",
+      "requested_url": "https://www.boletinoficial.gov.ar/seccion/primera",
+      "fetched_at": "2026-10-20T01:08:58.775008+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "WATCH-BO-1",
+      "requested_url": "https://www.boletinoficial.gob.ar/seccion/primera",
+      "fetched_at": "2026-10-20T01:08:58.776100+00:00",
+      "method": "GET",
+      "error": "HTTP Error 503: Service Unavailable",
+      "status": 503
+    },
+    {
+      "id": "WATCH-CNV-0",
+      "requested_url": "https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio",
+      "fetched_at": "2026-10-20T01:09:09.054850+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/cnv/quienes-somos/marco-regulatorio",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "f7939c360fdf90f1ea6bd06ce688e07353f1b732640c4399b946646ff7958994",
+      "bytes": 32647,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-COMARB-0",
+      "requested_url": "https://www.ca.gov.ar/",
+      "fetched_at": "2026-10-20T01:09:08.277280+00:00",
+      "method": "GET",
+      "error": "HTTP Error 500: Internal Server Error",
+      "status": 500
+    },
+    {
+      "id": "WATCH-UIF-0",
+      "requested_url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-cada-sujeto-obligado",
+      "fetched_at": "2026-10-20T01:09:02.837989+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-cada-sujeto-obligado",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "6d7a7f8105b7ea5b12d0f5f1458cc93fef2093003225bb1611957f37854fc021",
+      "bytes": 40222,
+      "truncated": false
+    },
+    {
+      "id": "WATCH-UIF-1",
+      "requested_url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-todos-los-sujetos-obligados",
+      "fetched_at": "2026-10-20T01:09:03.411837+00:00",
+      "method": "GET",
+      "status": 200,
+      "url": "https://www.argentina.gob.ar/uif/normativa-uif/resoluciones-aplicables-todos-los-sujetos-obligados",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "1ac37390dbbf6d2665bb49138ffd2b0094fcbffa0c253154a3362016cc41c09f",
+      "bytes": 32519,
+      "truncated": false
+    }
+  ],
+  "comparisons": [
+    {
+      "id": "A8492",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+      "current_sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "ASVS",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "2a7f38315006ec8942ba0c2d22e72f6bca8e36cf6261324bc0cf8cf3dbe449f2",
+      "current_sha256": "3be50d43ae13a0c44129982bcfc3abe0183b2e2652265256c597944adc17cd22",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "B13248",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+      "current_sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "B13249",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "437660130489488e3136a8e0263d00cefef7c66389ace9bdec33b1d4fda7b103",
+      "current_sha256": "437660130489488e3136a8e0263d00cefef7c66389ace9bdec33b1d4fda7b103",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "B13250",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "d14002e29a88f8df072f660bb9a9a623fc18ccf3e10dc25fbe718b1f17328e38",
+      "current_sha256": "d14002e29a88f8df072f660bb9a9a623fc18ccf3e10dc25fbe718b1f17328e38",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "BANTOTAL",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "844b01b6a5802d0e2e145ad86550dab7ffeabd0b41c401f7c0b7d0bd48be6671",
+      "current_sha256": "844b01b6a5802d0e2e145ad86550dab7ffeabd0b41c401f7c0b7d0bd48be6671",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "BCRA-QUERY",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "6af5af55b2df9b12bbd3cb5dcbf49269fb89c515377caf5013ab40e5a9849b8d",
+      "current_sha256": "fb69215b9199b5004b4ae34ac5961ae9b572241d6fbf726926d608077d11916f",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102432",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "ba67c4b69016b4d8aaf820787b95296d88a800deb02cee6303680d2d4d126dae",
+      "current_sha256": "ba67c4b69016b4d8aaf820787b95296d88a800deb02cee6303680d2d4d126dae",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102433",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "98f028a719c58be365df7e05a3e916ce5e050a0359548a0337d8f33106bd483e",
+      "current_sha256": "98f028a719c58be365df7e05a3e916ce5e050a0359548a0337d8f33106bd483e",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102434",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "939e755c23537f5410e19a4692a713313dcdce87d67c79d602cda29e2003eca9",
+      "current_sha256": "939e755c23537f5410e19a4692a713313dcdce87d67c79d602cda29e2003eca9",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102435",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "5ea565197b199e2a151bbe1052b9401f525d08c01563e877b9bf6af9735eea66",
+      "current_sha256": "5ea565197b199e2a151bbe1052b9401f525d08c01563e877b9bf6af9735eea66",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102436",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "2c0fef383b4e53f1f9c92599e15f3199a8d1958f2afb99d1dd57b64da43badb8",
+      "current_sha256": "2c0fef383b4e53f1f9c92599e15f3199a8d1958f2afb99d1dd57b64da43badb8",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102437",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "76739b1aa9d5635df220a8cc13889301df4927add51d2d8da25012ad1fa059eb",
+      "current_sha256": "76739b1aa9d5635df220a8cc13889301df4927add51d2d8da25012ad1fa059eb",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102438",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "f0fd25da0dd979a983d9f4674e238f450c736c305404083e3fcf357e5c3e67cf",
+      "current_sha256": "f0fd25da0dd979a983d9f4674e238f450c736c305404083e3fcf357e5c3e67cf",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102439",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "5e4701962abdff947b721fecd046f8361f770a565f577c9747fc2e3c723b28e9",
+      "current_sha256": "5e4701962abdff947b721fecd046f8361f770a565f577c9747fc2e3c723b28e9",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "C102440",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "eaf7f4cfdb8d38654412c8bfc0b5315fc326dd8c06bd02417261a1b0c001c9f1",
+      "current_sha256": "eaf7f4cfdb8d38654412c8bfc0b5315fc326dd8c06bd02417261a1b0c001c9f1",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "CNV-PANEL",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "69ff9ae68d364e2a24638cc149b6a516289041ccd42498fe31c93fc54d840af3",
+      "current_sha256": "69ff9ae68d364e2a24638cc149b6a516289041ccd42498fe31c93fc54d840af3",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "FAPI",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "26a49ad19b1f2b19ecc1cd9b825b4d5012f5e03a5dc8cb0dbd26462d39da465c",
+      "current_sha256": "26a49ad19b1f2b19ecc1cd9b825b4d5012f5e03a5dc8cb0dbd26462d39da465c",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "FINERACT",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "b72aff1d5fc0be32e018b3868026c98810c236ca5d4d1800692686ebad246ec3",
+      "current_sha256": "b72aff1d5fc0be32e018b3868026c98810c236ca5d4d1800692686ebad246ec3",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "KEV",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "b6e27975f6635ecfc546fbd4fd6e444ba63a07ab2abc8876229d77fe083d357d",
+      "current_sha256": "b6e27975f6635ecfc546fbd4fd6e444ba63a07ab2abc8876229d77fe083d357d",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "MAMBU",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "d45e874a6faf80ba47dcf10aa04e6af33191f0389a3e74da972cfb55c3080ecf",
+      "current_sha256": "bbf58822ad35cf622e12d87ce9dbf5ef8f66b91c86484916ddd1db473ea9dfc6",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "P51237",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "5bad2b4939c6eb49cc3600ba597418a17087c60d848aaafb42eebb9d2e5c1ecf",
+      "current_sha256": "5bad2b4939c6eb49cc3600ba597418a17087c60d848aaafb42eebb9d2e5c1ecf",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "PISMO",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "21a9a1c9a1817137618affbc4c56e2a1a7661e87ed0f84b995751d873fe83b40",
+      "current_sha256": "27a21ff587ebce0c083ee4bcbfa7c121b42e9098a87bead123025b99a6f8a6bf",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "POSTGRES",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "15c30c1c071fe8ffd35ca5619258c30f04a3418153af272ac361a544a5b7cd46",
+      "current_sha256": "15c30c1c071fe8ffd35ca5619258c30f04a3418153af272ac361a544a5b7cd46",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "RUST-BLOG",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "b7ffe547bd45163bcf7a05223b1e0b09b70635ed428f148e4ff601dbf98d2d07",
+      "current_sha256": "62496cfab3d5497faca85d7ae6b5f39fe87f2db3f4cb2e6896b6355f5d848acf",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "RUST-STABLE",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+      "current_sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "RUSTSEC",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "a70d081dbd366924ec36f185e9a0410119f26af3f5c6126e126d1b8112086992",
+      "current_sha256": "a70d081dbd366924ec36f185e9a0410119f26af3f5c6126e126d1b8112086992",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "TEMENOS",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "c520772a847c23b2bcb91ef3c04da993d023bf95c4be91b2637d6c8682bc5272",
+      "current_sha256": "6329282528add282cb827ccf7de981c787f4c18ba4c6801fde0c9c8041d3af88",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "TOPAZ",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "408c875c5297616b28c3d32ed551c25f6175a0dc58956ef5e5b9f31c03d98243",
+      "current_sha256": "3714df6909c13ddffe08ba995781400bdd7319b822f2e3caaecb115b83aaf603",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "VAULT",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "c555387d40f8d287650ea2ab48f00fcc37ae22196903b6fa246bba7f7491b189",
+      "current_sha256": "c555387d40f8d287650ea2ab48f00fcc37ae22196903b6fa246bba7f7491b189",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-AAIP-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "36777f3495f71433263b35ac2e29944d46c78cae12103e101921ffdcbf7608ed",
+      "current_sha256": "3280ccce4043f727559d0cac1eb8b418fdca2e6117227876c31ee1022bd8575b",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-ARCA-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "4a7111e04f8bec4a717b722f3e8d687ac68af7981e5aea28dc26cfc8e3d4ed36",
+      "current_sha256": "4a7111e04f8bec4a717b722f3e8d687ac68af7981e5aea28dc26cfc8e3d4ed36",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-ARCA-1",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "150d3bdba5ffa3028f9c303c1493af247b9f153bfa7fbc5de7e62510b3dd5373",
+      "current_sha256": "150d3bdba5ffa3028f9c303c1493af247b9f153bfa7fbc5de7e62510b3dd5373",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-BCRA-COM-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "0ab6031bf4a52e60f9b3b51c02c7a2713fed4b13e9c7bbe9eae79d417b0d11de",
+      "current_sha256": "1a9bb148c051926ee4fee13b440cb98ceef8beb152d5cc12bab9b1a5849d8b66",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-BCRA-RI-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "78f1021547801c3f211a783b0bad7c925e17ce7720d868c6db13cd465137a517",
+      "current_sha256": "5d7cda00212e9346a039fe8727c102201d51e61c112a7d6aee36bd70af21fa42",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-BCRA-RI-1",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "current_sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-BCRA-RI-2",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "21dbb58e668f76d8c375e58de192eccdbcea9ab252d94f1e541bf67505d98c15",
+      "current_sha256": "21dbb58e668f76d8c375e58de192eccdbcea9ab252d94f1e541bf67505d98c15",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-BCRA-TO-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "78f1021547801c3f211a783b0bad7c925e17ce7720d868c6db13cd465137a517",
+      "current_sha256": "5d7cda00212e9346a039fe8727c102201d51e61c112a7d6aee36bd70af21fa42",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-BCRA-TO-1",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "current_sha256": "91dc9f864f0822ce363eef6159869194c0c2f51ac878979ab62ff8b47f89fec4",
+      "same_bytes": true,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-CNV-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "41ff80833d61abb5295e75abe806af9fc9536f025fc31bf2d8d745906297377a",
+      "current_sha256": "f7939c360fdf90f1ea6bd06ce688e07353f1b732640c4399b946646ff7958994",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-UIF-0",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "d420a00a0de4a73e9cddbd47d21b3b619790ace53c0b367345a7193b617be961",
+      "current_sha256": "6d7a7f8105b7ea5b12d0f5f1458cc93fef2093003225bb1611957f37854fc021",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    },
+    {
+      "id": "WATCH-UIF-1",
+      "prior_run_id": "RUN-20261019T015315Z",
+      "prior_sha256": "ea900d28269985431beb105401b577439e5de5b5495077e28f521c9dbe35303c",
+      "current_sha256": "1ac37390dbbf6d2665bb49138ffd2b0094fcbffa0c253154a3362016cc41c09f",
+      "same_bytes": false,
+      "interpretation": "Content identity only where same; different representation requires review, not automatic new law/product."
+    }
+  ],
+  "bcra_result": {
+    "filters": {
+      "mode": "fecha",
+      "fecha_desde": "2026-10-15",
+      "fecha_hasta": "2026-10-19",
+      "paginaabsoluta": 1,
+      "tamanopagina": 100,
+      "lang": "es"
+    },
+    "pagination": {
+      "page": 1,
+      "totalPages": 1,
+      "totalRecords": 19,
+      "pageSize": 100
+    },
+    "records": [
+      {
+        "fecha_emision": "2026-10-19",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102444,
+        "titulo": "Ref.: Tasas de interés por depósitos, TIM y series Com. A 1828, Ley 27.802 (art. 55a), Comunicado 14290 y Com. A 7847.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102444.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-19",
+        "fecha_boletin": " ",
+        "tipo": "A",
+        "numero_formateado": 8493,
+        "titulo": "Ref.: Circular SINAP 1-257 Sistema Nacional de Pagos – Medio Electrónico de Pagos (MEP). Actualización.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/A8493.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-19",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102443,
+        "titulo": "Ref.: Tipo de Cambio de Referencia.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102443.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-19",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102442,
+        "titulo": "Ref.: Pasivos Monetarios del B.C.R.A. al 15/10/2026",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102442.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-19",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102441,
+        "titulo": "Ref.: Reservas Internacionales del B.C.R.A. al 15/10/2026",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102441.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102440,
+        "titulo": "Ref.: Tasas de interés por depósitos, TIM y series Com. A 1828, Ley 27.802 (art. 55a), Comunicado 14290 y Com. A 7847.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102440.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "B",
+        "numero_formateado": 13250,
+        "titulo": "Ref.: Unidad de vivienda actualizable por “ICC” - LEY 27.271 (\"UVI\").",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/B13250.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102439,
+        "titulo": "Ref.: Tipo de Cambio de Referencia.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102439.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102438,
+        "titulo": "Ref.: Pasivos Monetarios del B.C.R.A. al 14/10/2026",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102438.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102437,
+        "titulo": "Ref.: Reservas Internacionales del B.C.R.A. al 14/10/2026",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102437.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102436,
+        "titulo": "Ref.: Circulación de Billetes y Monedas",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102436.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "P",
+        "numero_formateado": 51237,
+        "titulo": "Ref.: Central de Deudores del Sistema Financiero. Tercera actualización agosto 2026.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/P51237.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-16",
+        "fecha_boletin": " ",
+        "tipo": "B",
+        "numero_formateado": 13249,
+        "titulo": "Ref.: Índice para Contratos de Locación  - Ley 27.551 (\"ICL\").",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/B13249.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-15",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102435,
+        "titulo": "Ref.: Tasas de interés por depósitos, TIM y series Com. A 1828, Ley 27.802 (art. 55a), Comunicado 14290 y Com. A 7847.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102435.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-15",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102434,
+        "titulo": "Ref.: Tipo de Cambio de Referencia.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102434.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-15",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102433,
+        "titulo": "Ref.: Pasivos Monetarios del B.C.R.A. al 13/10/2026.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102433.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-15",
+        "fecha_boletin": " ",
+        "tipo": "C",
+        "numero_formateado": 102432,
+        "titulo": "Ref.: Reservas Internacionales del B.C.R.A. al 13/10/2026.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/C102432.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-15",
+        "fecha_boletin": " ",
+        "tipo": "A",
+        "numero_formateado": 8492,
+        "titulo": "Ref.: Circular CONAU 1-1743  RUNOR 1-1978 Régimen Informativo Contable Mensual. Efectivo mínimo y Aplicación de Recursos (R.I. - E.M. - A.R.). Adecuaciones.",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/A8492.pdf"
+      },
+      {
+        "fecha_emision": "2026-10-15",
+        "fecha_boletin": " ",
+        "tipo": "B",
+        "numero_formateado": 13248,
+        "titulo": "Ref.: SISCEN 19 - Tasa de Interés por Depósitos a Plazo Fijo Mayoristas. Actualización de umbral mínimo de monto",
+        "nro_boletin": 0,
+        "link_tipo": "pdf",
+        "link_url": null,
+        "pdf_path": "/archivos/Pdfs/comytexord/B13248.pdf"
+      }
+    ],
+    "triage": {
+      "A8493": "CONSOLIDATION_WITH_CLARIFICATIONS_LINKED_A8474_B13105_B13164",
+      "C102441": "STATISTICAL_RESERVES_NOT_NEW_GENERAL_RULE",
+      "C102442": "STATISTICAL_LIABILITIES_NOT_NEW_GENERAL_RULE",
+      "C102443": "REFERENCE_FX_DATA_NOT_UNIVERSAL_CUSTOMER_PRICE",
+      "C102444": "REFERENCE_SERIES_CONDITIONAL_CONTRACTUAL_USE",
+      "prior14": "EXACT_BYTE_MATCH_TO_PRIOR_MANIFEST"
+    }
+  },
+  "pending_annex_representations": [
+    {
+      "authority": "BCRA/BO",
+      "identifier": "B13249",
+      "relation": "AdditionalofficialBOrepresentation",
+      "visual_review": true,
+      "automated_value_by_value_comparison": "PENDING",
+      "references": [
+        {
+          "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf",
+          "sha256": "437660130489488e3136a8e0263d00cefef7c66389ace9bdec33b1d4fda7b103",
+          "fetched_at": "2026-10-20T01:11:41.071820+00:00"
+        },
+        {
+          "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+          "sha256": "3e57401d87e7397cc476bbbc31bfca3569871ad59bd117f57155d96b07fee265",
+          "fetched_at": "2026-10-20T01:12:58.876743+00:00"
+        }
+      ]
+    }
+  ],
+  "publication_relation_checks": {
+    "RG5908": "relationspageNoLinkedAmendmentsObservedNotUniversalAbsence",
+    "A8493": "BOdateunverified;consolidatedsheetsfutureNov1;underlyingBJan26Apr24",
+    "RPI11": "UIF93fullrelatedframeworkreviewpending"
+  },
+  "repository": {
+    "main_sha": "f7d9495a172bcc9b2a68371a05509a664f12748d",
+    "state_parent_sha": "9d269d68bc1a7d397ec534ea8f5da371d25288eb",
+    "state_blob_sha": "ff069d48ce9ca84e3889e1c22ab152b8faa8a9d2",
+    "proposal_parent_sha": "82f943e0e65c56d941abcd4a865f482fc29bffc4",
+    "pull_request": "https://github.com/andrescastiglia/bank/pull/9"
+  }
+}
