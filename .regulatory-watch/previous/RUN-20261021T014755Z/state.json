@@ -1,0 +1,3620 @@
+{
+  "schema_version": 1,
+  "repository": "andrescastiglia/bank",
+  "state_branch": "automation/regulatory-state",
+  "reporting_timezone": "America/Buenos_Aires",
+  "initial_backfill_from": "2026-10-15T00:00:00-03:00",
+  "inventory_version": "2026-10-16.2",
+  "last_run_id": "RUN-20261020T010802Z",
+  "source_checkpoints": [
+    {
+      "source_id": "WATCH-BO",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Índices15/16Oct55avisos cadauno;17/18redirigenportada16Oct, sin probar ausencia de ediciones/suplementos. No cuerpos/anexos descargados nuevos;40anexos acumulados y37pendientes de lectura sustantiva; conservar todos los cursores.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-BO"
+          },
+          "pending_notice_urls": [],
+          "pending_annexes": [],
+          "pending_substantive_annexes": [
+            {
+              "id": "ANNEX-7809895-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349071/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809895",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809909-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349074/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809909",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809896-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349072/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809896",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809900-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349073/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809900",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811201-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811201",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811201-2",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "2",
+                "idAnexo": "7811201",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811201-3",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "3",
+                "idAnexo": "7811201",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811201-4",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "4",
+                "idAnexo": "7811201",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811201-5",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349068/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "5",
+                "idAnexo": "7811201",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809897-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349047/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809897",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811405-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349048/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811405",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811403-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349049/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811403",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811483-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811483",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811483-2",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349038/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "2",
+                "idAnexo": "7811483",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811482-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811482",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811482-2",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349039/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "2",
+                "idAnexo": "7811482",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809937-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349036/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809937",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7811331-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349027/20261016",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811331",
+                "fechaPublicacion": "20261016"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809638-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349019/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809638",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809635-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349018/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809635",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7807987-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349005/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7807987",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809841-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348984/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809841",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7807985-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348993/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7807985",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7807952-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348985/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7807952",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7807967-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348988/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7807967",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809904-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348982/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809904",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809903-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348981/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809903",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809838-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348983/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809838",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809850-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348980/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809850",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809600-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809600",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809600-2",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "2",
+                "idAnexo": "7809600",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809600-3",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "3",
+                "idAnexo": "7809600",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809600-4",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348979/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "4",
+                "idAnexo": "7809600",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7807960-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348974/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7807960",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809677-1",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809677",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809677-2",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "2",
+                "idAnexo": "7809677",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            },
+            {
+              "id": "ANNEX-7809677-3",
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348976/20261015",
+              "params": {
+                "seccion": "primera",
+                "nroAnexo": "3",
+                "idAnexo": "7809677",
+                "fechaPublicacion": "20261015"
+              },
+              "endpoint": "https://www.boletinoficial.gov.ar/pdf/download_anexo"
+            }
+          ],
+          "editions_observed": [
+            "20261015",
+            "20261016"
+          ],
+          "requested_date_redirect": {
+            "requested": "20261017",
+            "final_url": "https://www.boletinoficial.gov.ar/",
+            "displayed_date": "20261016"
+          },
+          "additional_editions_supplements_verified": false,
+          "retrieval_accumulated": {
+            "notice_bodies_prior": 110,
+            "notice_bodies_current": 0,
+            "identified_annexes": 40,
+            "annexes_prior": 40,
+            "annexes_current": 0,
+            "annexes_accumulated": 40
+          },
+          "requested_date_redirects": [
+            {
+              "requested": "17",
+              "final_url": "https://www.boletinoficial.gov.ar/",
+              "displayed_date": "20261016"
+            },
+            {
+              "requested": "18",
+              "final_url": "https://www.boletinoficial.gov.ar/",
+              "displayed_date": "20261016"
+            }
+          ]
+        },
+        {
+          "cause": "Reintentos recuperados;19Oct100URLs visibles frente106avisos segúncategorías; faltapaginación6, cuerpos/anexosrestantes,37anexos sustantivosprevios y suplementos/extraordinarias;17/18redirigen portada sin probar ausencia.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-BO"
+          },
+          "edition": "2026-10-19",
+          "visible_notice_count": 100,
+          "category_expected_count": 106,
+          "pending_notice_urls": [
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349188/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349189/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349190/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349191/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349192/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349193/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349194/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349195/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349196/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349197/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349198/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349199/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349200/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349201/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349202/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349203/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349204/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349205/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349206/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349207/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349208/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349209/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349210/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349211/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349212/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349213/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349214/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349215/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349216/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349217/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349218/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349219/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349220/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349221/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349222/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349223/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349224/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349225/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349226/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349227/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349228/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349229/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349230/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349231/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349232/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349233/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349234/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349235/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349236/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349237/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349238/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349239/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349240/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349244/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349245/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349246/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349250/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349251/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349252/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349253/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349254/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349255/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349256/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349262/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349263/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349264/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349265/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349266/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349267/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349268/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349269/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349270/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349271/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349272/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349273/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349274/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349275/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349276/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349277/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349278/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349279/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349280/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349281/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349282/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349283/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349284/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349285/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349286/20261019",
+            "https://www.boletinoficial.gob.ar/detalleAviso/primera/349287/20261019"
+          ],
+          "pagination_pending": true,
+          "new_annexes_reviewed": [
+            "7812881/1",
+            "7812882/1",
+            "7812882/2"
+          ],
+          "icl_annex": "Visual table review; automatedvaluebyvaluecomparisonpending"
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-BCRA-COM",
+      "covered_through": "2026-10-19T22:08:02-03:00",
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "COMPLETE",
+      "open_gaps": []
+    },
+    {
+      "source_id": "WATCH-BCRA-TO",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Índice103TO y TI/SIseleccionado recuperados, mismahuella anterior; falta resto del corpus, versiones/modificatorias y lectura pertinente completa.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-BCRA-TO"
+          }
+        },
+        {
+          "cause": "103TO enumerados;MEP A8343,firmasA8414,cuentasA8131 recuperados;superponerA8493/A8474 porvigencia. RestantesPDF/versiones/modificatoriaspendientes. Archivo t-mep2014 excluido como vigente.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-BCRA-TO"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-BCRA-RI",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Faceta55RI, t-optico y tresRIseleccionados recuperados, mismahuella anterior; faltan otros textos/anexos, manuales y cronología.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-BCRA-RI"
+          }
+        },
+        {
+          "cause": "55RI enumerados y t-optico recuperado;restantes instrucciones/versiones/anexos y cronología pendientes.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-BCRA-RI"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-UIF",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Índices sectorial y transversal reconsultados; cronología/cuerpos/modificatorias/anexos completos pendientes.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-UIF"
+          }
+        },
+        {
+          "cause": "Sectorial y transversal reconsultados;cronología,modificatorias y anexos no completados. Dependencia UIF93 del candidatoRPI pendiente de lectura integral.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-UIF"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-AAIP",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Formulario oficial recuperado, sin resultados cronológicos completos acreditados.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-AAIP"
+          }
+        },
+        {
+          "cause": "Formulario/índice recuperado sin resultados cronológicos completos ni anexos;no prueba ausencia de cambios.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-AAIP"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-ARCA",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Biblioteca/entrada reconsultadas, sin corpus cronológico/cuerpos/anexos completos.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-ARCA"
+          }
+        },
+        {
+          "cause": "RG5908 texto/BO/guía,RG4626actualizada y relaciones leídos selectivamente;índicesinventario reconsultados;restantescronología/modificatorias/anexospendientes.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-ARCA"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-COMARB",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "DominioCOMARB/SIRCREB/SIRCUPA/índiceanual/candidato sigueHTTP500. CuerpoDP11 recuperado íntegro porBO19sinanexoanunciado; cerrar sóloese candidato. Restantesfuentes/calendariosbase y distribuciónSIFERECUITpendientes.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-COMARB"
+          },
+          "resolved_items": [
+            {
+              "prior_candidate_identity": "COMARB|DP|11|2026|AR",
+              "canonical_identity": "COMARB|DP|11|2026|AR-CM",
+              "resolution": "BO19 body reviewed; prior URL title incorrectly suggested SIRCUPA/2027. Official text is SIRCAR/SIRTAC/SIFERE October2026. Ownsite download still500."
+            }
+          ],
+          "carried_forward_pending": [
+            "COMARBchronologyandallgapsoutsidecandidatebody",
+            "SIRCREB",
+            "SIRCUPA",
+            "calendarsbaseandSIFERECUITdistribution"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-CNV",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Marco/panel reconsultados, sin corpus/historia/anexos completos; agenda condicionada conservada.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-CNV"
+          }
+        },
+        {
+          "cause": "Entradaoficial y panel recuperados;cronología/anexos/versionespendientes, no completo porportada.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-CNV"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "WATCH-JURIS",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-16T02:04:45.799798+00:00",
+      "status": "NOT_APPLICABLE_WITH_BASIS",
+      "open_gaps": [],
+      "not_applicable_basis": "No hay operador/producto ni jurisdicciones subnacionales seleccionadas. El alcance aprobado en esta corrida es nacional; no prueba exención del futuro operador."
+    },
+    {
+      "source_id": "WATCH-STANDARDS",
+      "covered_through": null,
+      "last_attempt_at": "2026-10-20T01:21:01.084940+00:00",
+      "status": "PARTIAL",
+      "open_gaps": [
+        {
+          "cause": "Consulta selectiva de avisos/fuentes; ammonia373analizado, mantenimientoINFO370-372sinexposiciónacreditada. GHSAammoniaAPI404, ficha/registro/PRupstreamleídos; sininventarioinstalado, cobertura universal o contratos/estándares restringidos completos.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-18T22:53:15-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar checkpoint completo y todos los gaps; solapar7d limitado por15Oct. No adelantar cobertura parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261018T010017Z",
+            "source_id": "WATCH-STANDARDS"
+          }
+        },
+        {
+          "cause": "RevisiónselectivaRustSec/KEV/manifiestoRust/PostgreSQL/FAPI/ASVS y mercado;sin inventarioproducto, contratosred ni accesoatextosrestringidos completos. Mismas huellas RustSec/KEV no prueban ausencia universal.",
+          "requested_window": {
+            "from_inclusive": "2026-10-15T00:00:00-03:00",
+            "to_exclusive": "2026-10-19T22:08:02-03:00"
+          },
+          "retry_required": true,
+          "next_action": "Retomar todos los gaps, cursores y solapamiento7d; no avanzar corte parcial.",
+          "prior_gap_refs": {
+            "run_id": "RUN-20261019T015315Z",
+            "source_id": "WATCH-STANDARDS"
+          }
+        }
+      ]
+    }
+  ],
+  "agenda": [
+    {
+      "agenda_id": "AGENDA-CNV1172-GENERAL",
+      "version": 1,
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "PSAV_REGISTRADO"
+      ],
+      "basis": "Art.5; publicación 15/10 según pie oficial",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-CNV1172-INFORMATIVO",
+      "version": 1,
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "PSAV_ALCANZADO_ART40B"
+      ],
+      "basis": "Art.4 y anexo; determinar primer período y presentación según inicio/actividad",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-BCRA-A8492",
+      "version": 1,
+      "normative_identity": "BCRA|A|8492|2026|AR",
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_SEGUN_GRUPO"
+      ],
+      "basis": "Texto y hojas con vigencia 1/11; conservar diseños anterior/futuro",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-BCRA-B13248",
+      "version": 1,
+      "normative_identity": "BCRA|B|13248|2026|AR",
+      "effective_at": "2027-01-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_INFORMANTE_SISCEN0019"
+      ],
+      "basis": "Período 2027 y manual versión03 desde enero; no fecha de presentación",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-CNV1173-TRANSICION",
+      "version": 1,
+      "normative_identity": "CNV|RG|1173|2026|AR",
+      "effective_at": "2026-12-15",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "IDONEIDAD_SUJETO_TRANSITORIO"
+      ],
+      "basis": "Sólo supuesto transitorio descrito; no plazo general del core",
+      "observed_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "agenda_id": "AGENDA-CGN-TGN-DC2-DOCUMENTATION",
+      "version": 1,
+      "normative_identity": "CGN-TGN|DISFC|2|2026|AR",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "trigger": "Emisión del medio de pago en caso alcanzado;48horas para documentación SIRE/VEP conforme anexo. Sin evento concreto no hay vencimiento fechado.",
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "SAF_ADMIN_NACIONAL_CUT"
+      ],
+      "basis": "Anexo punto2, sólo cuando corresponde rol tributario y circuito. No obligación universal del proveedor/EF.",
+      "observed_at": "2026-10-16T03:12:03.747908+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/7"
+    },
+    {
+      "agenda_id": "AGENDA-CHANGE-BCRA-B13249-2026",
+      "version": 1,
+      "normative_identity": "BCRA|B|13249|2026|AR",
+      "effective_at": "2026-10-17",
+      "exigible_at": null,
+      "trigger": "Sólo contrato/producto que utilice válidamente esta serie; primer valor publicado, no vencimiento de presentación.",
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_CONTRATO_ALCANZADO"
+      ],
+      "basis": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf",
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-CHANGE-BCRA-B13250-2026",
+      "version": 1,
+      "normative_identity": "BCRA|B|13250|2026|AR",
+      "effective_at": "2026-10-20",
+      "exigible_at": null,
+      "trigger": "Sólo contrato/producto que utilice válidamente esta serie; primer valor publicado, no vencimiento de presentación.",
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_CONTRATO_ALCANZADO"
+      ],
+      "basis": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13250.pdf",
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-BCRA-A8493",
+      "version": 1,
+      "normative_identity": "BCRA|A|8493|2026|AR",
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF_MEP_PARTICIPANT",
+        "CEC",
+        "IMF",
+        "OPERADOR_CAMBIO_SEGUN_ACCESO"
+      ],
+      "basis": "A8493 hojas y A8474: firma/canales/contingencia para participante real.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-ARCA5908-OPTIONAL",
+      "version": 1,
+      "normative_identity": "ARCA|RG|5908|2026|AR",
+      "effective_at": "2026-10-19",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "CONTRIBUYENTE_RG4626_CON_BALANCE_COMERCIAL"
+      ],
+      "basis": "Art2a/4: disponibilidad y etapa opcional, no vencimiento individual.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-ARCA5908-END-OPTIONAL",
+      "version": 1,
+      "normative_identity": "ARCA|RG|5908|2026|AR",
+      "effective_at": "2027-02-28",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "CONTRIBUYENTE_RG4626_CON_BALANCE_COMERCIAL"
+      ],
+      "basis": "Último día opcional; respetar cierre y canal original rectificativa.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-ARCA5908-MANDATORY",
+      "version": 1,
+      "normative_identity": "ARCA|RG|5908|2026|AR",
+      "effective_at": "2027-03-01",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "CONTRIBUYENTE_RG4626_CON_BALANCE_COMERCIAL"
+      ],
+      "basis": "Art2b, cierresdesdeJun2026, preservarart3 para rectificativas.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-COMARB11-SIRCAR-SIRTAC",
+      "version": 1,
+      "normative_identity": "COMARB|DP|11|2026|AR-CM",
+      "effective_at": "2026-11-13",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "SIRCAR_AGENTE_PERIODO_ALCANZADO",
+        "SIRTAC_AGENTE_DV5_9",
+        "SIFERE_CONTRIBUYENTE_CM"
+      ],
+      "basis": "Art1/2, período/población exactos; SIRTACsoloDV5a9, noSIRCREB/SIRCUPA.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-COMARB11-SIFERE",
+      "version": 1,
+      "normative_identity": "COMARB|DP|11|2026|AR-CM",
+      "effective_at": null,
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "SIRCAR_AGENTE_PERIODO_ALCANZADO",
+        "SIRTAC_AGENTE_DV5_9",
+        "SIFERE_CONTRIBUYENTE_CM"
+      ],
+      "basis": "Art3:17–20Nov, distribuciónCUITcalendariobasependiente; no inventar día individual.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-BCRA8487-HOLIDAY",
+      "version": 1,
+      "normative_identity": "BCRA|A|8487|2026|AR",
+      "effective_at": "2026-11-10",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "EF",
+        "CEC"
+      ],
+      "basis": "Feriado bancario nacional, no apagado universal APIs.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "agenda_id": "AGENDA-RPI-CABA11",
+      "version": 1,
+      "normative_identity": "RPI-CABA|DTR|11|2026|CABA",
+      "effective_at": "2026-11-08",
+      "exigible_at": null,
+      "status": "CONDITIONAL_PENDING_OPERATOR",
+      "subjects": [
+        "RPI_CAPITAL_FEDERAL",
+        "PROFESIONAL_SUJETO_OBLIGADO_ACTIVIDAD_ESPECIFICA",
+        "OPERADOR_SOLO_SI_TRAMITE_ALCANZADO"
+      ],
+      "basis": "Art9 y condicionesart2/4, anexosI/II; no activación jurisdiccional automática.",
+      "observed_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    }
+  ],
+  "changes": [
+    {
+      "change_id": "CHANGE-BCRA-B13248-2026",
+      "normative_identity": "BCRA|B|13248|2026|AR",
+      "title": "SISCEN-0019: umbral 2027 ARS 1.700 millones y VALOR2=1700",
+      "published_at": null,
+      "effective_at": "2027-01-01",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:53:18.133179+00:00",
+      "subjects": [
+        "EF_INFORMANTE_SISCEN0019"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+              "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+              "fetched_at": "2026-10-16T01:52:08.141297+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12996.pdf",
+              "sha256": "d94c596637e7f7d19ace718bd38d96f179bcf2d62abd5c791d2ff01451b80cbf",
+              "fetched_at": "2026-10-16T01:53:18.132090+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/siscen.pdf",
+              "sha256": "cb8775c2a50182bf083aea2e1a846b66b0283d4d782adbd732f0c7c0d120f12d",
+              "fetched_at": "2026-10-16T01:53:18.133179+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-01",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "aa4ce9b68685c5f6e8c8b992ec6b8b71aeb288b258daab62783002d819ddde1c",
+      "issued_at": "2026-10-15",
+      "publication_limit": "Fecha BO vacía en el índice; se verifica emisión, período y texto, no publicación BO independiente.",
+      "related_identities": [
+        "BCRA|B|12996|2025|AR"
+      ],
+      "fr": [
+        "FR-RPT-001",
+        "FR-RPT-002",
+        "FR-RPT-007",
+        "FR-RPT-008",
+        "FR-RPT-012",
+        "FR-RPT-038"
+      ]
+    },
+    {
+      "change_id": "CHANGE-CNV-RG1172-2026",
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "title": "Sustitución régimen PSAV e información periódica desde noviembre",
+      "published_at": "2026-10-15",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:52:08.142952+00:00",
+      "subjects": [
+        "PSAV_REGISTRADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431259/norma.htm",
+              "sha256": "0c9664f202cccab6d76ff542eb9e93ad2c878fa5af60d4ebf05e1a1f18c7d72c",
+              "fetched_at": "2026-10-16T01:52:08.142952+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-02",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "9d9346233421cdf836160fa8643f4f54c6145402ec0be3b8968fa7f286d39159",
+      "issued_at": "2026-10-14",
+      "future_milestones": [
+        {
+          "date": "2026-11-01",
+          "basis": "art.4; información periódica art.40.b; primer período/vencimiento a determinar por situación del sujeto"
+        }
+      ],
+      "publication_basis": "Pie oficial del texto InfoLEG e.15/10/2026 N76113/26; acceso directo a BO falló.",
+      "fr": [
+        "FR-RPT-033",
+        "FR-INV-032"
+      ]
+    },
+    {
+      "change_id": "CHANGE-CNV-RG1173-2026",
+      "normative_identity": "CNV|RG|1173|2026|AR",
+      "title": "Modernización idoneidad y transición específica",
+      "published_at": "2026-10-15",
+      "effective_at": "2026-10-15",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:52:08.144282+00:00",
+      "subjects": [
+        "PERSONAS_ENTIDADES_ALCANZADAS_IDONEIDAD_CNV"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431260/norma.htm",
+              "sha256": "2810a3fd3652121a113fe80bd1f993b1e5b0b22660d7207af9215bd0dd7f1502",
+              "fetched_at": "2026-10-16T01:52:08.144282+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-04",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "e99b198556a47f05e806051e460827ea0a2db8e1c7de30c6f82224a2d8da3918",
+      "issued_at": "2026-10-14",
+      "publication_basis": "Pie oficial InfoLEG e.15/10/2026 N76111/26; BO no disponible.",
+      "scope_limit": "Evaluar evidencia de idoneidad/roles; no exige motor de exámenes dentro del core."
+    },
+    {
+      "change_id": "CHANGE-BCRA-A8492-REVALIDATED",
+      "normative_identity": "BCRA|A|8492|2026|AR",
+      "title": "Revalidación de transición A8492 ya documentada",
+      "published_at": null,
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:52:08.140462+00:00",
+      "subjects": [
+        "EF_SEGUN_GRUPO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "REVALIDATED_EXISTING_BASELINE_NO_CONTENT_CHANGE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8492.pdf",
+              "sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+              "fetched_at": "2026-10-16T01:52:08.140462+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-03",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "2195653c746b93e507eaf1cb6719c667ed2c46274c0fab629a2e201e8b44a1c9",
+      "issued_at": "2026-10-15",
+      "baseline_sha256": "e85ae416dc44931c4a35da3d172ac656aa21abe887f34328ea28e6268b719d40",
+      "fr": [
+        "FR-RPT-021",
+        "FR-RSK-019"
+      ],
+      "publication_limit": "Emisión verificada; publicación directa BO no acreditada en esta corrida."
+    },
+    {
+      "change_id": "CHANGE-SEC-PG-CVE202614666",
+      "normative_identity": "POSTGRESQL|CVE-2026-14666",
+      "title": "RLS caching y revocación: evaluar versiones/parches",
+      "published_at": "2026-08-13",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:50:17.067358+00:00",
+      "subjects": [
+        "STACK_POSTGRESQL_PROPUESTO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.postgresql.org/support/security/CVE-2026-14666/",
+              "sha256": "7d881bae442426da6d55b36656da387d64ce057710f494ce714682818b6f1186",
+              "fetched_at": "2026-10-16T01:50:17.065853+00:00"
+            },
+            {
+              "url": "https://www.postgresql.org/docs/release/18.6/",
+              "sha256": "0ab2a6a525a85606b041a1c0404f81ef533653f8c6778a7c9214c225eed3df20",
+              "fetched_at": "2026-10-16T01:50:17.067358+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-SEC-01",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "9f8bd632f0808c63621763473ecda4fddab6fa2634aa024833d24da211943238",
+      "nature": "VENDOR_SECURITY_ADVISORY_NOT_ARGENTINE_LAW",
+      "exposure": "NO_DEPLOYED_VERSION_OR_VULNERABILITY_PROVEN",
+      "fr": [
+        "FR-IAM-009",
+        "FR-IAM-030"
+      ]
+    },
+    {
+      "change_id": "CHANGE-SEC-PG-CVE202619385",
+      "normative_identity": "POSTGRESQL|CVE-2026-19385",
+      "title": "pg_dump: clientes y herramientas de backup vulnerables antes de parche",
+      "published_at": "2026-08-13",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:50:17.067358+00:00",
+      "subjects": [
+        "HERRAMIENTAS_BACKUP_MIGRACION_POSTGRESQL"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.postgresql.org/support/security/CVE-2026-19385/",
+              "sha256": "4d1345484fef903e245b70c095885a740f41c14b425b298c617dc3ecddb33ce6",
+              "fetched_at": "2026-10-16T01:50:17.066476+00:00"
+            },
+            {
+              "url": "https://www.postgresql.org/docs/release/18.6/",
+              "sha256": "0ab2a6a525a85606b041a1c0404f81ef533653f8c6778a7c9214c225eed3df20",
+              "fetched_at": "2026-10-16T01:50:17.067358+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-SEC-02",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "ffa82eca90be28ca915c8155cdf792862579c6748c3332aa400e23eb03fd6426",
+      "nature": "VENDOR_SECURITY_ADVISORY_NOT_ARGENTINE_LAW",
+      "exposure": "NO_INSTALLED_CLIENT_VERSION_PROVEN"
+    },
+    {
+      "change_id": "CHANGE-SEC-ATLASSIAN-CVE202621589",
+      "normative_identity": "ATLASSIAN|CVE-2026-21589",
+      "title": "Nueva incorporación KEV y comprobación de inventario",
+      "published_at": "2026-10-05",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T01:50:17.068456+00:00",
+      "subjects": [
+        "SI_EXISTEN_PRODUCTOS_ATLASSIAN_AFECTADOS"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://confluence.atlassian.com/security/cve-2026-21589-arbitrary-file-access-vulnerability-impacts-multiple-products-1870495748.html",
+              "sha256": "7fda701404eed3046222cd91007a04c767ceb526c47fbb24d143c088966be542",
+              "fetched_at": "2026-10-16T01:50:17.068456+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "sha256": "0a4807c44c302e6c3f8ba5adbcd45f8163514f52059f636ad9048728cf0c57b8",
+              "fetched_at": "2026-10-16T01:49:28.826651+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "id": "P-SEC-03",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "d0de95a79c22022aa7ae594b35f70cbbdd6e4a23635f339e326302f508315e99",
+      "nature": "THREAT_INTELLIGENCE_NOT_ARGENTINE_LEGAL_DEADLINE",
+      "kev_added_at": "2026-10-15",
+      "cisa_due_date": "2026-10-18",
+      "cisa_due_date_scope": "No se adopta como plazo legal argentino",
+      "exposure": "USE_NOT_IDENTIFIED"
+    },
+    {
+      "change_id": "CHANGE-CNV-RG1172-2026",
+      "normative_identity": "CNV|RG|1172|2026|AR",
+      "title": "Sustitución régimen PSAV e información periódica desde noviembre",
+      "published_at": "2026-10-15",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T02:34:26.713985+00:00",
+      "subjects": [
+        "PSAV_REGISTRADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "REVALIDATED_WITH_OFFICIAL_BO_PUBLICATION",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/430000-434999/431259/norma.htm",
+              "sha256": "0c9664f202cccab6d76ff542eb9e93ad2c878fa5af60d4ebf05e1a1f18c7d72c",
+              "fetched_at": "2026-10-16T01:52:08.142952+00:00"
+            }
+          ]
+        },
+        {
+          "version": 2,
+          "evidence_refs": [
+            {
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/348986/20261015",
+              "sha256": "c107f4e487a7933dfec96cf1098f3fe87c05596be2c8f04c04a35946513bd3a3",
+              "fetched_at": "2026-10-16T02:34:26.713985+00:00"
+            }
+          ],
+          "relation": "ADDITIONAL_OFFICIAL_PUBLICATION_PROVENANCE",
+          "substantive_normative_change": false
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-02",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "9d9346233421cdf836160fa8643f4f54c6145402ec0be3b8968fa7f286d39159",
+      "issued_at": "2026-10-14",
+      "future_milestones": [
+        {
+          "date": "2026-11-01",
+          "basis": "art.4; información periódica art.40.b; primer período/vencimiento a determinar por situación del sujeto"
+        }
+      ],
+      "publication_basis": "BORA oficial, aviso348986 del15/10/2026, texto/art.4-5 y anexoI; identidad y fechas coinciden con registro previo InfoLEG.",
+      "fr": [
+        "FR-RPT-033",
+        "FR-INV-032"
+      ],
+      "revision": 2,
+      "supersedes_revision": 1
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13246-2026",
+      "normative_identity": "BCRA|B|13246|2026|AR",
+      "title": "CER: anexo de valores16/10–15/11, sin activación de parámetros",
+      "revision": 1,
+      "issued_at": "2026-10-13",
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:12:03.749027+00:00",
+      "subjects": [
+        "EF_CONTRATOS_CER"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "REQUESTED_WINDOW",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "5ef9de3ecaea789f9ed64a66c6cd8d95fa960fb9f351b407050861a770c49115",
+              "fetched_at": "2026-10-16T03:06:32.119257+00:00",
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13246.pdf",
+              "pdf_pages": 2
+            },
+            {
+              "sha256": "a1477789900761b210943db5793322c1b3de2d4e501bd7df7ab5267daa810aa4",
+              "fetched_at": "2026-10-16T03:06:40.988650+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015"
+            },
+            {
+              "sha256": "7c1a4ec891f00ee5ade116a0337045a4cdcd3511d81c2ccc0671ba682a5be8cf",
+              "fetched_at": "2026-10-16T03:12:03.749027+00:00",
+              "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+              "method": "POST",
+              "filters": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809642",
+                "fechaPublicacion": "20261015"
+              },
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+              "pdf_sha256": "46ddfdea174b54eeb3c695ad8b9d8db071f3af5adc1cf78e970ed1a6c6e49ae2",
+              "pdf_pages": 2,
+              "pdf_bytes": 121302
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-011",
+        "FR-CFG-012",
+        "FR-CFG-022"
+      ],
+      "reference_values_window": {
+        "from_inclusive": "2026-10-16",
+        "through_inclusive": "2026-11-15"
+      },
+      "semantic_review": "Tabla BCRA y extremos/período de tabla BO renderizada; comparación automatizada fila a fila y mayor precisión de XLS pendientes.",
+      "notification_fingerprint": "17224575ff5eb2c040790ba6498788ea51b77da4479e029785495c779a05fe43"
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13247-2026",
+      "normative_identity": "BCRA|B|13247|2026|AR",
+      "title": "UVA: candidato previo completado con PDF y anexo BO",
+      "revision": 1,
+      "issued_at": "2026-10-13",
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:12:03.749735+00:00",
+      "subjects": [
+        "EF_CONTRATOS_UVA"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "REQUESTED_WINDOW",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "78bef969ea3f905c721385cd77c1fab0e4aaa396577a33d2d13c4a611ec307d9",
+              "fetched_at": "2026-10-16T03:06:31.837826+00:00",
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13247.pdf",
+              "pdf_pages": 2
+            },
+            {
+              "sha256": "70cf2b5ad1005291b5ca5e76b27f80321fe32c337d0c29bbaab6ccd729afe147",
+              "fetched_at": "2026-10-16T03:05:08.571528+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015"
+            },
+            {
+              "sha256": "c529c44abda8816654c2f2fa10fabc3fb270d2c059c29d5640d567ed887ca8f1",
+              "fetched_at": "2026-10-16T03:12:03.749735+00:00",
+              "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+              "method": "POST",
+              "filters": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809670",
+                "fechaPublicacion": "20261015"
+              },
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+              "pdf_sha256": "cf3c3bc3290e38e57e4f7cbbe06d349d0ce17f85b3eff2375e23b04a7622a25c",
+              "pdf_pages": 2,
+              "pdf_bytes": 119847
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-012",
+        "FR-CFG-022"
+      ],
+      "candidate_from_run": "RUN-20261016T023356Z",
+      "reference_values_window": {
+        "from_inclusive": "2026-10-16",
+        "through_inclusive": "2026-11-15"
+      },
+      "semantic_review": "Tabla BCRA y extremos/período de tabla BO renderizada; comparación automatizada fila a fila pendiente.",
+      "notification_fingerprint": "3e46e4381ba122ab420b8025fe56de72c0cb22bccae627292bf59bc978589abc"
+    },
+    {
+      "change_id": "CHANGE-CGN-TGN-DC2-2026",
+      "normative_identity": "CGN-TGN|DISFC|2|2026|AR",
+      "title": "Pagos de SAF/CUT a beneficiarios del exterior; anexo y reloj48h condicionado",
+      "revision": 1,
+      "issued_at": "2026-10-15",
+      "published_at": "2026-10-16",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:12:03.747908+00:00",
+      "subjects": [
+        "SAF_ADMIN_NACIONAL_CUT",
+        "TGN",
+        "CGN",
+        "BNA_CIRCUITO_DEFINIDO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "DATE_ONLY_OBSERVED_AFTER_TARGET_CUTOFF",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "da3681702991686f24e68af2eb009b1ff0c1e5c20fc8ece8f7d540581105f37b",
+              "fetched_at": "2026-10-16T03:09:44.174698+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016"
+            },
+            {
+              "sha256": "06863d3f676f0d3fbaea31802040b6c8ce0c1f780c2211f917be97ec3bf94325",
+              "fetched_at": "2026-10-16T03:12:03.747908+00:00",
+              "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+              "method": "POST",
+              "filters": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811407",
+                "fechaPublicacion": "20261016"
+              },
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+              "pdf_sha256": "2cae61d6ce6d05de0094c4d29d222d9a2b596f38c2644911ef94d9df31c70a53",
+              "pdf_pages": 4,
+              "pdf_bytes": 168073
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-FXT-001",
+        "FR-FXT-002",
+        "FR-TAX-001",
+        "FR-TAX-002",
+        "FR-RPT-001"
+      ],
+      "supersedes_identity": "CGN-TGN|DISFC|2|2019|AR",
+      "exigibility_trigger": "48 horas desde emisión del medio de pago para documentación SIRE/VEP según caso del anexo; no hay evento del operador.",
+      "universal_ef_obligation": false,
+      "notification_fingerprint": "5960ca2278c11d0a7370647d0b4be315d433ea0d1a5712634c67903936a693e8"
+    },
+    {
+      "change_id": "CHANGE-MEC-RC62-2026",
+      "normative_identity": "MEC-SF-SH|RESFC|62|2026|AR",
+      "title": "Ampliación de títulos del Tesoro; contexto para catálogo/valuación condicionado",
+      "revision": 1,
+      "issued_at": "2026-10-14",
+      "published_at": "2026-10-16",
+      "effective_at": "2026-10-14",
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:09:44.171589+00:00",
+      "subjects": [
+        "OPERADOR_TENEDOR_INSTRUMENTOS_ALCANZADOS"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "DATE_ONLY_OBSERVED_AFTER_TARGET_CUTOFF",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "eef274c918564349c1bc555f53bf189b3de873293300eee4d9eb64597a844c09",
+              "fetched_at": "2026-10-16T03:09:44.171589+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349042/20261016"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [],
+      "original_issue_terms_reviewed": false,
+      "implementation_scope": "No crear productos ni parametrizar sin términos originales y selección de instrumentos.",
+      "notification_fingerprint": "4f7538f7f332ba9d1cc1b23a947f921bc198a9c5e0893c86ab757ec5da962941"
+    },
+    {
+      "change_id": "CHANGE-RUST-1.99.1",
+      "normative_identity": "RUST|RELEASE|1.99.1|2026|GLOBAL",
+      "title": "Rust1.99.1: regresiones wcslen, FFI bool x86_64 y rust-lld macOS",
+      "revision": 1,
+      "issued_at": null,
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:06:31.835527+00:00",
+      "subjects": [
+        "PROVEEDOR_TOOLCHAIN_CANDIDATO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "REQUESTED_WINDOW",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "1b4bcf8f6c0cc680ca6bafda173750d059db641f1d69d23f556b858a14461db1",
+              "fetched_at": "2026-10-16T03:06:31.835527+00:00",
+              "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/"
+            },
+            {
+              "sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+              "fetched_at": "2026-10-16T03:05:13.592261+00:00",
+              "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-OPS-026"
+      ],
+      "adopted": false,
+      "installed_version": null,
+      "notification_fingerprint": "f05302a90be662c5b3bb09038726a9b9a65005067a719785a4a79bc8e440ba86"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0352",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0352|2026|GLOBAL",
+      "title": "Aviso condicionado a dependencia wasmtime-wasi",
+      "revision": 1,
+      "issued_at": "2026-10-14",
+      "published_at": "2026-10-14",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:09:46.262268+00:00",
+      "subjects": [
+        "COMPONENT_IF_SELECTED"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "CONTEXT_BEFORE_BACKFILL_NOT_NEW_PUBLICATION_IN_WINDOW",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "eace743ec07da569fa5054e5e40c64b330abacf6055fe2200fbf01463b1a71c6",
+              "fetched_at": "2026-10-16T03:06:31.836116+00:00",
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0352.html"
+            },
+            {
+              "sha256": "72167188d3829a1e29071304db4faa09e8995f784837d7348090aae84f53f044",
+              "fetched_at": "2026-10-16T03:09:46.262268+00:00",
+              "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-OPS-026"
+      ],
+      "package": "wasmtime-wasi",
+      "affected_os_scope": [
+        "macos",
+        "freebsd"
+      ],
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NOT_IMPLEMENTED_IN_REPOSITORY",
+      "patched_ranges": [
+        ">=36.0.18,<37.0.0",
+        ">=48.0.6,<49.0.0",
+        ">=49.0.3"
+      ],
+      "notification_fingerprint": "de0ed964d9a200d1db1c699c6075b0b4be5552ed70d96e7413822b3ce35db1b2"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0363",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0363|2026|GLOBAL",
+      "title": "Aviso condicionado a dependencia wasmtime",
+      "revision": 1,
+      "issued_at": "2026-10-14",
+      "published_at": "2026-10-14",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-16T03:09:46.458305+00:00",
+      "subjects": [
+        "COMPONENT_IF_SELECTED"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "discovery_scope": "CONTEXT_BEFORE_BACKFILL_NOT_NEW_PUBLICATION_IN_WINDOW",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "4db8e79c3deaf7c4ed78831e0172b9f060534e3e1a542c7fdba8922543a52427",
+              "fetched_at": "2026-10-16T03:06:31.836812+00:00",
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0363.html"
+            },
+            {
+              "sha256": "f2c3910a8e41a4895fc046216de5a99f25579026f94e4884d12d5c5bea746d37",
+              "fetched_at": "2026-10-16T03:09:46.458305+00:00",
+              "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-OPS-026"
+      ],
+      "package": "wasmtime",
+      "affected_os_scope": null,
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NOT_IMPLEMENTED_IN_REPOSITORY",
+      "patched_ranges": [
+        ">=36.0.18,<37.0.0",
+        ">=48.0.6,<49.0.0",
+        ">=49.0.3"
+      ],
+      "notification_fingerprint": "b89a5acac28716806be2e53f35a9800724e5772f044adac600d98f6dad0093f2"
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13246-2026",
+      "normative_identity": "BCRA|B|13246|2026|AR",
+      "title": "CER: anexo de valores16/10–15/11, sin activación de parámetros",
+      "revision": 2,
+      "issued_at": "2026-10-13",
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "EF_CONTRATOS_CER"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "REQUESTED_WINDOW",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "5ef9de3ecaea789f9ed64a66c6cd8d95fa960fb9f351b407050861a770c49115",
+              "fetched_at": "2026-10-16T03:06:32.119257+00:00",
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13246.pdf",
+              "pdf_pages": 2
+            },
+            {
+              "sha256": "a1477789900761b210943db5793322c1b3de2d4e501bd7df7ab5267daa810aa4",
+              "fetched_at": "2026-10-16T03:06:40.988650+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015"
+            },
+            {
+              "sha256": "7c1a4ec891f00ee5ade116a0337045a4cdcd3511d81c2ccc0671ba682a5be8cf",
+              "fetched_at": "2026-10-16T03:12:03.749027+00:00",
+              "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+              "method": "POST",
+              "filters": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809642",
+                "fechaPublicacion": "20261015"
+              },
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349002/20261015",
+              "pdf_sha256": "46ddfdea174b54eeb3c695ad8b9d8db071f3af5adc1cf78e970ed1a6c6e49ae2",
+              "pdf_pages": 2,
+              "pdf_bytes": 121302
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-011",
+        "FR-CFG-012",
+        "FR-CFG-022"
+      ],
+      "reference_values_window": {
+        "from_inclusive": "2026-10-16",
+        "through_inclusive": "2026-11-15"
+      },
+      "semantic_review": "Tabla BCRA y extremos/período de tabla BO renderizada; comparación automatizada fila a fila y mayor precisión de XLS pendientes.",
+      "notification_fingerprint": "17224575ff5eb2c040790ba6498788ea51b77da4479e029785495c779a05fe43",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13247-2026",
+      "normative_identity": "BCRA|B|13247|2026|AR",
+      "title": "UVA: candidato previo completado con PDF y anexo BO",
+      "revision": 2,
+      "issued_at": "2026-10-13",
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "EF_CONTRATOS_UVA"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "REQUESTED_WINDOW",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "78bef969ea3f905c721385cd77c1fab0e4aaa396577a33d2d13c4a611ec307d9",
+              "fetched_at": "2026-10-16T03:06:31.837826+00:00",
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13247.pdf",
+              "pdf_pages": 2
+            },
+            {
+              "sha256": "70cf2b5ad1005291b5ca5e76b27f80321fe32c337d0c29bbaab6ccd729afe147",
+              "fetched_at": "2026-10-16T03:05:08.571528+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015"
+            },
+            {
+              "sha256": "c529c44abda8816654c2f2fa10fabc3fb270d2c059c29d5640d567ed887ca8f1",
+              "fetched_at": "2026-10-16T03:12:03.749735+00:00",
+              "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+              "method": "POST",
+              "filters": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7809670",
+                "fechaPublicacion": "20261015"
+              },
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349003/20261015",
+              "pdf_sha256": "cf3c3bc3290e38e57e4f7cbbe06d349d0ce17f85b3eff2375e23b04a7622a25c",
+              "pdf_pages": 2,
+              "pdf_bytes": 119847
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-012",
+        "FR-CFG-022"
+      ],
+      "candidate_from_run": "RUN-20261016T023356Z",
+      "reference_values_window": {
+        "from_inclusive": "2026-10-16",
+        "through_inclusive": "2026-11-15"
+      },
+      "semantic_review": "Tabla BCRA y extremos/período de tabla BO renderizada; comparación automatizada fila a fila pendiente.",
+      "notification_fingerprint": "3e46e4381ba122ab420b8025fe56de72c0cb22bccae627292bf59bc978589abc",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-CGN-TGN-DC2-2026",
+      "normative_identity": "CGN-TGN|DISFC|2|2026|AR",
+      "title": "Pagos de SAF/CUT a beneficiarios del exterior; anexo y reloj48h condicionado",
+      "revision": 2,
+      "issued_at": "2026-10-15",
+      "published_at": "2026-10-16",
+      "effective_at": "2026-10-16",
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "SAF_ADMIN_NACIONAL_CUT",
+        "TGN",
+        "CGN",
+        "BNA_CIRCUITO_DEFINIDO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "DATE_ONLY_OBSERVED_AFTER_TARGET_CUTOFF",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "da3681702991686f24e68af2eb009b1ff0c1e5c20fc8ece8f7d540581105f37b",
+              "fetched_at": "2026-10-16T03:09:44.174698+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016"
+            },
+            {
+              "sha256": "06863d3f676f0d3fbaea31802040b6c8ce0c1f780c2211f917be97ec3bf94325",
+              "fetched_at": "2026-10-16T03:12:03.747908+00:00",
+              "url": "https://www.boletinoficial.gov.ar/pdf/download_anexo",
+              "method": "POST",
+              "filters": {
+                "seccion": "primera",
+                "nroAnexo": "1",
+                "idAnexo": "7811407",
+                "fechaPublicacion": "20261016"
+              },
+              "notice_url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349055/20261016",
+              "pdf_sha256": "2cae61d6ce6d05de0094c4d29d222d9a2b596f38c2644911ef94d9df31c70a53",
+              "pdf_pages": 4,
+              "pdf_bytes": 168073
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-FXT-001",
+        "FR-FXT-002",
+        "FR-TAX-001",
+        "FR-TAX-002",
+        "FR-RPT-001"
+      ],
+      "supersedes_identity": "CGN-TGN|DISFC|2|2019|AR",
+      "exigibility_trigger": "48 horas desde emisión del medio de pago para documentación SIRE/VEP según caso del anexo; no hay evento del operador.",
+      "universal_ef_obligation": false,
+      "notification_fingerprint": "5960ca2278c11d0a7370647d0b4be315d433ea0d1a5712634c67903936a693e8",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-MEC-RC62-2026",
+      "normative_identity": "MEC-SF-SH|RESFC|62|2026|AR",
+      "title": "Ampliación de títulos del Tesoro; contexto para catálogo/valuación condicionado",
+      "revision": 2,
+      "issued_at": "2026-10-14",
+      "published_at": "2026-10-16",
+      "effective_at": "2026-10-14",
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "OPERADOR_TENEDOR_INSTRUMENTOS_ALCANZADOS"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "DATE_ONLY_OBSERVED_AFTER_TARGET_CUTOFF",
+      "classification": "REGULATORY_OR_REFERENCE_DATA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "eef274c918564349c1bc555f53bf189b3de873293300eee4d9eb64597a844c09",
+              "fetched_at": "2026-10-16T03:09:44.171589+00:00",
+              "url": "https://www.boletinoficial.gov.ar/detalleAviso/primera/349042/20261016"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [],
+      "original_issue_terms_reviewed": false,
+      "implementation_scope": "No crear productos ni parametrizar sin términos originales y selección de instrumentos.",
+      "notification_fingerprint": "4f7538f7f332ba9d1cc1b23a947f921bc198a9c5e0893c86ab757ec5da962941",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-RUST-1.99.1",
+      "normative_identity": "RUST|RELEASE|1.99.1|2026|GLOBAL",
+      "title": "Rust1.99.1: regresiones wcslen, FFI bool x86_64 y rust-lld macOS",
+      "revision": 2,
+      "issued_at": null,
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "PROVEEDOR_TOOLCHAIN_CANDIDATO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "REQUESTED_WINDOW",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "1b4bcf8f6c0cc680ca6bafda173750d059db641f1d69d23f556b858a14461db1",
+              "fetched_at": "2026-10-16T03:06:31.835527+00:00",
+              "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/"
+            },
+            {
+              "sha256": "fb152be80975c194aa5fc684b2aec3a6e14e2b855efe2faa4e5f8ae6e590f463",
+              "fetched_at": "2026-10-16T03:05:13.592261+00:00",
+              "url": "https://static.rust-lang.org/dist/channel-rust-stable.toml"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-OPS-026"
+      ],
+      "adopted": false,
+      "installed_version": null,
+      "notification_fingerprint": "f05302a90be662c5b3bb09038726a9b9a65005067a719785a4a79bc8e440ba86",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0352",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0352|2026|GLOBAL",
+      "title": "Aviso condicionado a dependencia wasmtime-wasi",
+      "revision": 2,
+      "issued_at": "2026-10-14",
+      "published_at": "2026-10-14",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "COMPONENT_IF_SELECTED"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "CONTEXT_BEFORE_BACKFILL_NOT_NEW_PUBLICATION_IN_WINDOW",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "eace743ec07da569fa5054e5e40c64b330abacf6055fe2200fbf01463b1a71c6",
+              "fetched_at": "2026-10-16T03:06:31.836116+00:00",
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0352.html"
+            },
+            {
+              "sha256": "72167188d3829a1e29071304db4faa09e8995f784837d7348090aae84f53f044",
+              "fetched_at": "2026-10-16T03:09:46.262268+00:00",
+              "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-m9f7-9w4p-gv38"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-OPS-026"
+      ],
+      "package": "wasmtime-wasi",
+      "affected_os_scope": [
+        "macos",
+        "freebsd"
+      ],
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NOT_IMPLEMENTED_IN_REPOSITORY",
+      "patched_ranges": [
+        ">=36.0.18,<37.0.0",
+        ">=48.0.6,<49.0.0",
+        ">=49.0.3"
+      ],
+      "notification_fingerprint": "de0ed964d9a200d1db1c699c6075b0b4be5552ed70d96e7413822b3ce35db1b2",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0363",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0363|2026|GLOBAL",
+      "title": "Aviso condicionado a dependencia wasmtime",
+      "revision": 2,
+      "issued_at": "2026-10-14",
+      "published_at": "2026-10-14",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:56:43.196474+00:00",
+      "subjects": [
+        "COMPONENT_IF_SELECTED"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_DOCUMENT_MERGED_NO_IMPLEMENTATION",
+      "discovery_scope": "CONTEXT_BEFORE_BACKFILL_NOT_NEW_PUBLICATION_IN_WINDOW",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "sha256": "4db8e79c3deaf7c4ed78831e0172b9f060534e3e1a542c7fdba8922543a52427",
+              "fetched_at": "2026-10-16T03:06:31.836812+00:00",
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0363.html"
+            },
+            {
+              "sha256": "f2c3910a8e41a4895fc046216de5a99f25579026f94e4884d12d5c5bea746d37",
+              "fetched_at": "2026-10-16T03:09:46.458305+00:00",
+              "url": "https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-q554-3cjc-rx7p"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-analisis-20261016",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-OPS-026"
+      ],
+      "package": "wasmtime",
+      "affected_os_scope": null,
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NOT_IMPLEMENTED_IN_REPOSITORY",
+      "patched_ranges": [
+        ">=36.0.18,<37.0.0",
+        ">=48.0.6,<49.0.0",
+        ">=49.0.3"
+      ],
+      "notification_fingerprint": "b89a5acac28716806be2e53f35a9800724e5772f044adac600d98f6dad0093f2",
+      "supersedes_revision": 1,
+      "integration_observation": {
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/7",
+        "merge_commit": "71621db3c0fe08d28c152f88c851ca97b54f4b74",
+        "merged_at": "2026-10-16T11:16:29Z",
+        "scope": "Human integration of analysis only; no implementation, tests or institutional acceptance inferred."
+      }
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13249-2026",
+      "normative_identity": "BCRA|B|13249|2026|AR",
+      "title": "ICL17Oct–16Nov",
+      "revision": 1,
+      "issued_at": "2026-10-16",
+      "published_at": null,
+      "effective_at": "2026-10-17",
+      "effective_at_basis": "First series value, not universal legal commencement",
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:47:18.532831+00:00",
+      "subjects": [
+        "EF_DESTINATARIA_CONTRATO_O_SERVICIO_ALCANZADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "OFFICIAL_REFERENCE_DATA_NOT_UNIVERSAL_PRODUCT_RULE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf",
+              "sha256": "437660130489488e3136a8e0263d00cefef7c66389ace9bdec33b1d4fda7b103",
+              "fetched_at": "2026-10-17T01:47:18.532831+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/BCRA-B13249-B13250-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-011",
+        "FR-INT-006"
+      ],
+      "notification_fingerprint": "71fd4c78a327c37cce3f6049c89965537b708c8cc0ca51c3d7a375bc30c28f40",
+      "publication_bo_status": "NOT_ACREDITED_BLANK_OFFICIAL_INDEX",
+      "series_end_inclusive": "2026-11-16"
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13250-2026",
+      "normative_identity": "BCRA|B|13250|2026|AR",
+      "title": "UVI20Oct–19Nov",
+      "revision": 1,
+      "issued_at": "2026-10-16",
+      "published_at": null,
+      "effective_at": "2026-10-20",
+      "effective_at_basis": "First series value, not universal legal commencement",
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:48:19.363101+00:00",
+      "subjects": [
+        "EF_DESTINATARIA_CONTRATO_O_SERVICIO_ALCANZADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "OFFICIAL_REFERENCE_DATA_NOT_UNIVERSAL_PRODUCT_RULE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13250.pdf",
+              "sha256": "d14002e29a88f8df072f660bb9a9a623fc18ccf3e10dc25fbe718b1f17328e38",
+              "fetched_at": "2026-10-17T01:48:19.363101+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/BCRA-B13249-B13250-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-012",
+        "FR-INT-006",
+        "FR-INT-007"
+      ],
+      "notification_fingerprint": "af807b1130e885cb61be0761345443fae4b7b4f0e539b13f9352452dcb531855",
+      "publication_bo_status": "NOT_ACREDITED_BLANK_OFFICIAL_INDEX",
+      "series_end_inclusive": "2026-11-19"
+    },
+    {
+      "change_id": "CHANGE-BCRA-P51237-2026",
+      "normative_identity": "BCRA|P|51237|2026|AR",
+      "title": "CentralDeudores3ra actualización agosto",
+      "revision": 1,
+      "issued_at": "2026-10-16",
+      "published_at": null,
+      "effective_at": null,
+      "effective_at_basis": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:47:18.261681+00:00",
+      "subjects": [
+        "EF_DESTINATARIA_CONTRATO_O_SERVICIO_ALCANZADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "OFFICIAL_REFERENCE_DATA_NOT_UNIVERSAL_PRODUCT_RULE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/P51237.pdf",
+              "sha256": "5bad2b4939c6eb49cc3600ba597418a17087c60d848aaafb42eebb9d2e5c1ecf",
+              "fetched_at": "2026-10-17T01:47:18.261681+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "INFORME_ANALISIS_BANK.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [],
+      "notification_fingerprint": "1167af0425f953eb1b7b70ede44646ab6fee54b106f7fa725c4e202657060005",
+      "publication_bo_status": "NOT_ACREDITED_BLANK_OFFICIAL_INDEX",
+      "series_end_inclusive": null
+    },
+    {
+      "change_id": "CHANGE-SEC-CVE2026102764",
+      "normative_identity": "CISA|KEV|CVE-2026-102764|2026|GLOBAL",
+      "title": "BeyondTrust Remote Support: altaKEV16Oct",
+      "revision": 1,
+      "issued_at": "2026-10-15",
+      "published_at": "2026-10-15",
+      "effective_at": null,
+      "effective_at_basis": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:46:11.698160+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "sha256": "b6e27975f6635ecfc546fbd4fd6e444ba63a07ab2abc8876229d77fe083d357d",
+              "fetched_at": "2026-10-17T01:44:28.140532+00:00"
+            },
+            {
+              "url": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05",
+              "sha256": "9e3bf1d77223debfb3954451fe0d191ced031e8954218f8852a8b85b6fd6a827",
+              "fetched_at": "2026-10-17T01:46:11.698160+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/CISA-KEV-20261016.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-IAM-008",
+        "FR-IAM-026",
+        "FR-OPS-024",
+        "FR-OPS-025",
+        "FR-OPS-026"
+      ],
+      "notification_fingerprint": "918ab42d9ce38adaf0036c14312d0c6e5a08e4fe6023f165bb3d88e9acd8909b",
+      "kev_added_at": "2026-10-16",
+      "cisa_due_date": "2026-10-19",
+      "cisa_due_date_applicability": "US_PROGRAM_ONLY_NOT_ARGENTINE_DEADLINE",
+      "exposure_status": "UNKNOWN_NO_DEPLOYED_INVENTORY",
+      "component_selected": false,
+      "classification_change": "NEW_KEV_LISTING_NOT_NECESSARILY_NEW_ADVISORY"
+    },
+    {
+      "change_id": "CHANGE-SEC-CVE202561624",
+      "normative_identity": "CISA|KEV|CVE-2025-61624|2026|GLOBAL",
+      "title": "FortinetCLI: altaKEV16Oct de aviso14Abr",
+      "revision": 1,
+      "issued_at": "2026-04-14",
+      "published_at": "2026-04-14",
+      "effective_at": null,
+      "effective_at_basis": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-17T01:46:11.699493+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "sha256": "b6e27975f6635ecfc546fbd4fd6e444ba63a07ab2abc8876229d77fe083d357d",
+              "fetched_at": "2026-10-17T01:44:28.140532+00:00"
+            },
+            {
+              "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-122",
+              "sha256": "6d17fac86be11c11a7486425fad8e46fd45dc6a7bd67b0e29b36fc3715ca4b8c",
+              "fetched_at": "2026-10-17T01:46:11.699493+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/CISA-KEV-20261016.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-IAM-008",
+        "FR-IAM-026",
+        "FR-OPS-024",
+        "FR-OPS-025",
+        "FR-OPS-026"
+      ],
+      "notification_fingerprint": "eb8f6c85026cb92a31ac9bc33fd38ce0b182ae5cc9a5cfeeaf73fbea9f658749",
+      "kev_added_at": "2026-10-16",
+      "cisa_due_date": "2026-10-19",
+      "cisa_due_date_applicability": "US_PROGRAM_ONLY_NOT_ARGENTINE_DEADLINE",
+      "exposure_status": "UNKNOWN_NO_DEPLOYED_INVENTORY",
+      "component_selected": false,
+      "classification_change": "NEW_KEV_LISTING_NOT_NECESSARILY_NEW_ADVISORY"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0365",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0365|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0365: análisis de candidato previo sobre negentropy",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-14",
+      "raw_advisory_date": "2026-10-14",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:03.948348+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0365.html",
+              "sha256": "0dff582444f62714904220f171a359acd5c220053e2cf3d4a7f99f4d0ed3b9c7",
+              "fetched_at": "2026-10-18T01:01:35.843538+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/negentropy/RUSTSEC-2026-0365.md",
+              "sha256": "d937fde7385ebc573c75a4e00589ce3ea7e5fe8cb9c2f83ef6874aaeda29b3ce",
+              "fetched_at": "2026-10-18T01:02:03.948348+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "negentropy",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=0.4.4,<0.5.0",
+        ">=0.5.2"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "8235cc19a9d7e0a78a1061aeb42ad349c6a17a1b678da5df0c3652dc66765b2e"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0366",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0366|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0366: análisis de candidato previo sobre pest_grammars",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-16",
+      "raw_advisory_date": "2026-10-16",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.267135+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0366.html",
+              "sha256": "ce9b6a88727594266b34c4842a710fe7d4ba5e5c81bfd1c142ebed36901c9aac",
+              "fetched_at": "2026-10-18T01:01:36.328488+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/pest_grammars/RUSTSEC-2026-0366.md",
+              "sha256": "9a37d20187b09b89d05815c08828e1939d151ec90b61dfebd201a7b4b026c5ff",
+              "fetched_at": "2026-10-18T01:02:04.267135+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "pest_grammars",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=2.9.3"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "1a719c3e9e18f400f856fe4dd0e5b9d07586e7f356ad6234906540727326acaf"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0367",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0367|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0367: análisis de candidato previo sobre zip",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-09",
+      "raw_advisory_date": "2026-10-09",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.553202+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0367.html",
+              "sha256": "e7e4025ad0cb2d88f53fe70a8f973093ebfe203a03b31a728ad478a94a80a096",
+              "fetched_at": "2026-10-18T01:01:36.388321+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/zip/RUSTSEC-2026-0367.md",
+              "sha256": "a3ceec31db85c2e07a2b8daf0a7a17a5a624601bb256cedab4c508750ff677df",
+              "fetched_at": "2026-10-18T01:02:04.553202+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "zip",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=9.0.0"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "50cc147574e0c4b6cfa8eb5429e64e2be797e36e48ec05c7ee2b6485c0d7901f"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0368",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0368|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0368: análisis de candidato previo sobre zip",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-09",
+      "raw_advisory_date": "2026-10-09",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.750132+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0368.html",
+              "sha256": "7b89c0a1aed678813401401f67a1b95a1a503868cda03ceb35eb01f0f5f2b29a",
+              "fetched_at": "2026-10-18T01:01:36.695059+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/zip/RUSTSEC-2026-0368.md",
+              "sha256": "c056588fb9936466517e99b8644aab34804502a01f34c6cae323bd40e4e63ba0",
+              "fetched_at": "2026-10-18T01:02:04.750132+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "zip",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=9.0.0"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "aaeef4dfb0e4cf19a7e1d72ab40a8e4d7ea7eb5b5a2cd832e5cfc19fff888e2e"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0369",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0369|2026|GLOBAL",
+      "title": "RUSTSEC-2026-0369: análisis de candidato previo sobre zip",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_PUBLICATION_TIME_OR_ZONE",
+      "reported_at": "2026-10-10",
+      "raw_advisory_date": "2026-10-10",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-18T01:02:04.807470+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_RUSTSEC_WEBSITE_AND_RECORD_REVIEWED_UPSTREAM_GHSA_UNAVAILABLE_WHERE_STATED",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "PRIOR_CANDIDATE_REVIEW_COMPLETED_NOT_NEW_CONTENT_OR_NEW_DISCOVERY",
+      "prior_candidate_run_id": "RUN-20261017T014304Z",
+      "same_html_hash_as_prior_candidate": true,
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0369.html",
+              "sha256": "c92dc902a101ea859ce9137a754b7d9ddf8eddb460983fea2233325dcb21ed7f",
+              "fetched_at": "2026-10-18T01:01:36.934956+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/zip/RUSTSEC-2026-0369.md",
+              "sha256": "4bed2ec03d7b53525422dc136075476eaeb644e2ab3483547a525437ae722dc5",
+              "fetched_at": "2026-10-18T01:02:04.807470+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0365-0369.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "zip",
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "patched_ranges": [
+        ">=9.0.0"
+      ],
+      "fr": [
+        "FR-MIG-004",
+        "FR-ASY-016",
+        "FR-ASY-022",
+        "FR-ASY-026",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-03",
+        "NFR-04",
+        "NFR-05",
+        "NFR-09",
+        "NFR-10"
+      ],
+      "adr": [
+        "ADR-03",
+        "ADR-06",
+        "ADR-07",
+        "ADR-08"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17",
+        "CTL-20"
+      ],
+      "notification_fingerprint": "4603d10a16228d31104847a98745e8ed93a2124ded0f03c95e4daaeebb335857"
+    },
+    {
+      "change_id": "CHANGE-RUSTSEC-2026-0373",
+      "normative_identity": "RUSTSEC|ADVISORY|2026-0373|2026|GLOBAL",
+      "title": "ammonia: filtradoCSSurl sensibleamayúsculas permite seguimiento noautorizado, noXSS",
+      "revision": 1,
+      "issued_at": "2026-10-17",
+      "reported_at": "2026-10-16",
+      "raw_advisory_date": "2026-10-16",
+      "published_at": null,
+      "publication_status": "WEBSITE_ISSUED_DAY_ONLY_NO_EXACT_TIME_OR_ZONE",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-19T01:56:18.896018+00:00",
+      "subjects": [
+        "COMPONENT_IF_PRESENT_WITH_AFFECTED_CSS_CONFIG"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "RUSTSEC_WEBSITE_RECORD_AND_UPSTREAM_PR_REVIEWED_GHSA_API404",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "TECHNICAL_ADVISORY_NOT_AR_LAW",
+      "discovery_scope": "NEWLY_RELEVATED_IN_OVERLAP_NOT_PUBLICATION_DATED18OCT",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://rustsec.org/advisories/RUSTSEC-2026-0373.html",
+              "sha256": "76739a365f5db5b4dc62abb2db197926cf8a8d15b309618d5ad24fc6388b2936",
+              "fetched_at": "2026-10-19T01:55:32.003280+00:00"
+            },
+            {
+              "url": "https://raw.githubusercontent.com/RustSec/advisory-db/main/crates/ammonia/RUSTSEC-2026-0373.md",
+              "sha256": "b9288220d490721082518dd56d98314791a01567aebd974913a7ffa5b0572a2a",
+              "fetched_at": "2026-10-19T01:55:32.408599+00:00"
+            },
+            {
+              "url": "https://github.com/rust-ammonia/ammonia/pull/267",
+              "sha256": "e202ee5755086a272d4abf7f6e8159abb57b8b1f68652863c04c2a076dc7d9b0",
+              "fetched_at": "2026-10-19T01:56:18.896018+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RUSTSEC-2026-0373.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "package": "ammonia",
+      "patched_ranges": [
+        ">=4.2.4",
+        ">=4.1.8,<4.2.0"
+      ],
+      "component_selected": false,
+      "exposure_status": "UNKNOWN_NO_PRODUCT_OR_DEPLOYED_INVENTORY",
+      "impact_limit": "Source explicitly says no XSS and limited usefulness for exfiltration; tracking pixels bypass URL policy under stated configuration.",
+      "fr": [
+        "FR-CON-001",
+        "FR-CON-002",
+        "FR-CST-012",
+        "FR-CST-015",
+        "FR-CST-016",
+        "FR-OPS-024",
+        "FR-OPS-026"
+      ],
+      "nfr": [
+        "NFR-05",
+        "NFR-06",
+        "NFR-09"
+      ],
+      "adr": [
+        "ADR-05",
+        "ADR-06",
+        "ADR-07"
+      ],
+      "ctl": [
+        "CTL-09",
+        "CTL-15",
+        "CTL-17"
+      ],
+      "notification_fingerprint": "efe71a521010bdb6b9bdea6d6ec5e68c32a639ccde8d5cae9947894294a3a469"
+    },
+    {
+      "change_id": "CHANGE-BCRA-A8493-2026",
+      "normative_identity": "BCRA|A|8493|2026|AR",
+      "title": "Actualización consolidada MEP; firma/canales y contingencia desde1Nov, antecedentes con fechas propias",
+      "revision": 1,
+      "issued_at": "2026-10-19",
+      "published_at": null,
+      "effective_at": "2026-11-01",
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:14:00.872077+00:00",
+      "subjects": [
+        "EF_MEP_PARTICIPANT",
+        "CEC",
+        "IMF",
+        "OPERADOR_CAMBIO_SEGUN_ACCESO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_ROLE_PRODUCT_JURISDICTION",
+      "verification": "PRIMARY_TEXT_AND_STATED_ANNEXES_REVIEWED_WITH_LIMITATIONS_IN_PROPOSAL",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "CONSOLIDATION_WITH_STATED_CLARIFICATIONS_NOT_ALL_NEW_RULES",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8493.pdf",
+              "sha256": "be2f9823c45f5d15f5dc2ff146831b62d0aa6e86443dbb3931bfe9fa987e6329",
+              "fetched_at": "2026-10-20T01:11:34.745919+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8474.pdf",
+              "sha256": "17ccef09881d27ee66633fbd377f0224e519d45b4cab4ba0fa839b0016e88b22",
+              "fetched_at": "2026-10-20T01:11:58.419080+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13105.pdf",
+              "sha256": "5820e2d4d959d8709b5cdc926a1aa0b9fe6e97979a606ba5aa2752d6f48bb554",
+              "fetched_at": "2026-10-20T01:11:58.420358+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13164.pdf",
+              "sha256": "95a91127aeade72f3d758ab8e862a4732e988c1f629dcc19b4645195ab4a9616",
+              "fetched_at": "2026-10-20T01:11:58.421065+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-snp-mep.pdf",
+              "sha256": "f3fd39590f94ee8a5e4d5e36afe6b99c3728df9232d921e04ecc860fc56ded92",
+              "fetched_at": "2026-10-20T01:14:00.869536+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-fabcra.pdf",
+              "sha256": "b5ce5bbfa47f9465e65b1a2dc3dd88831095a3e3af59bff982e53b454d2abe8c",
+              "fetched_at": "2026-10-20T01:14:00.871317+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/Texord/t-ccbcra.pdf",
+              "sha256": "47e540cf4ace6c3d5758536c4160041b91bd683cc144bb7a6fdad9fe96824de2",
+              "fetched_at": "2026-10-20T01:14:00.872077+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/BCRA-A8493-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-TRE-016",
+        "FR-TRE-018",
+        "FR-TRE-019",
+        "FR-TRE-020",
+        "FR-PAY-026",
+        "FR-PAY-031",
+        "FR-OPS-003",
+        "FR-OPS-013"
+      ],
+      "related_identities": [
+        "BCRA|A|8474|2026|AR",
+        "BCRA|B|13105|2026|AR",
+        "BCRA|B|13164|2026|AR"
+      ],
+      "notification_fingerprint": "9d716030a77aec26d82f219602ddf5454a5fcf99d5f89775b02440118ae0d7b1"
+    },
+    {
+      "change_id": "CHANGE-ARCA-RG5908-2026",
+      "normative_identity": "ARCA|RG|5908|2026|AR",
+      "title": "GananciasPJ: servicio opcional19Oct, cierresdesdeJun2026; transición y rectificativas",
+      "revision": 1,
+      "issued_at": "2026-10-01",
+      "published_at": "2026-10-05",
+      "effective_at": "2026-10-05",
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:14:12.204326+00:00",
+      "subjects": [
+        "CONTRIBUYENTE_RG4626_CON_BALANCE_COMERCIAL"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_ROLE_PRODUCT_JURISDICTION",
+      "verification": "PRIMARY_TEXT_AND_STATED_ANNEXES_REVIEWED_WITH_LIMITATIONS_IN_PROPOSAL",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "PREWINDOW_PUBLICATION_NEWLY_VERIFIED_ACTIONABLE_AGENDA",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.argentina.gob.ar/normativa/nacional/norma-430864/texto",
+              "sha256": "dbec159512d2025613f1bdb15ea4d394633bfffe54213591a66932543fcf2075",
+              "fetched_at": "2026-10-20T01:11:44.964847+00:00"
+            },
+            {
+              "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348496/20261005",
+              "sha256": "ed666516dd9b5a3c98b7a108460153f491cfa3c900052d0b02fbaf7f6f4d2dc5",
+              "fetched_at": "2026-10-20T01:14:12.204326+00:00"
+            },
+            {
+              "url": "https://www.argentina.gob.ar/normativa/nacional/norma-331463/actualizacion",
+              "sha256": "dacc6b487435a2e2406762f79e796b5c9089ba57b613ff225940f93160fe7b54",
+              "fetched_at": "2026-10-20T01:13:20.021039+00:00"
+            },
+            {
+              "url": "https://www.arca.gob.ar/gananciasYBienes/ganancias/personas-juridicas/declaracion-jurada/presentacion.asp",
+              "sha256": "c75ce069fafb61f12dbff4e5a4d8f3687c2d282eae7852e7c0ecc45a3211fd12",
+              "fetched_at": "2026-10-20T01:11:45.573413+00:00"
+            },
+            {
+              "url": "https://www.argentina.gob.ar/normativa/nacional/norma-430864/normas-modifican",
+              "sha256": "c43eabbc225c9f25270dbaf1784891337d30a396e52258aa11683bbe2e1bc656",
+              "fetched_at": "2026-10-20T01:13:20.022006+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/ARCA-RG5908-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-TAX-001",
+        "FR-TAX-018",
+        "FR-TAX-028",
+        "FR-TAX-031",
+        "FR-RPT-009",
+        "FR-RPT-015",
+        "FR-RPT-038"
+      ],
+      "related_identities": [
+        "AFIP|RG|4626|2019|AR"
+      ],
+      "notification_fingerprint": "5c6aad8dd86576a31add60968d4b4385c492f208dd5a0e6caf526e07b7bdb9f4"
+    },
+    {
+      "change_id": "CHANGE-COMARB-DP11-2026",
+      "normative_identity": "COMARB|DP|11|2026|AR-CM",
+      "title": "SIRCAR/SIRTAC segundaquincenaOct y SIFEREanticipoOct: plazos específicosNov",
+      "revision": 1,
+      "issued_at": "2026-10-16",
+      "published_at": "2026-10-19",
+      "effective_at": null,
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:12:22.795206+00:00",
+      "subjects": [
+        "SIRCAR_AGENTE_PERIODO_ALCANZADO",
+        "SIRTAC_AGENTE_DV5_9",
+        "SIFERE_CONTRIBUYENTE_CM"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_ROLE_PRODUCT_JURISDICTION",
+      "verification": "PRIMARY_TEXT_AND_STATED_ANNEXES_REVIEWED_WITH_LIMITATIONS_IN_PROPOSAL",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "PRIOR_CANDIDATE_BODY_RECOVERED_ALTERNATIVE_OFFICIAL_BO_SOURCE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349247/20261019",
+              "sha256": "6589b60a9d00b9362fb82ad1855151a612f2f60b9851329bcbfdf7d2f134e44a",
+              "fetched_at": "2026-10-20T01:12:22.795206+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/COMARB-DP11-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-TAX-001",
+        "FR-TAX-002",
+        "FR-TAX-030",
+        "FR-RPT-009",
+        "FR-RPT-038"
+      ],
+      "related_identities": [],
+      "notification_fingerprint": "cda2f22a8eedeb919cff73cbc8a85ee4bbab286f81469710f6fba05dc3c3eba6",
+      "prior_candidate_identity": "COMARB|DP|11|2026|AR",
+      "identity_alias_basis": "Same authority/type/number/year as prior candidate; AR-CM makes jurisdictional scope explicit, not a second norm."
+    },
+    {
+      "change_id": "CHANGE-BCRA-A8487-2026",
+      "normative_identity": "BCRA|A|8487|2026|AR",
+      "title": "Feriado bancario nacional10Nov2026; distinguir calendarios por riel/producto",
+      "revision": 1,
+      "issued_at": "2026-10-01",
+      "published_at": "2026-10-05",
+      "effective_at": "2026-11-10",
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:14:12.206083+00:00",
+      "subjects": [
+        "EF",
+        "CEC"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_ROLE_PRODUCT_JURISDICTION",
+      "verification": "PRIMARY_TEXT_AND_STATED_ANNEXES_REVIEWED_WITH_LIMITATIONS_IN_PROPOSAL",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "PREWINDOW_PUBLICATION_NEWLY_VERIFIED_FUTURE_BANKING_CALENDAR_EVENT",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/A8487.pdf",
+              "sha256": "e51479de7e35cac6cda1fff1bff52ea6f27c831f3a4e3568246dffa2ed2348d2",
+              "fetched_at": "2026-10-20T01:13:20.022746+00:00"
+            },
+            {
+              "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/348507/20261005",
+              "sha256": "f009c2935deacb5a59f3c1d2674111c9006439e53bc559c6675aabf6e8d3cd27",
+              "fetched_at": "2026-10-20T01:14:12.206083+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/BCRA-A8487-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-011",
+        "FR-PAY-022",
+        "FR-PAY-026",
+        "FR-TRE-011",
+        "FR-TRE-016",
+        "FR-RPT-009"
+      ],
+      "related_identities": [],
+      "notification_fingerprint": "26bd9434fc61815a17b5336d779ed33b1db38e04f710409ee512a09a625471e3"
+    },
+    {
+      "change_id": "CHANGE-RPI-CABA-DTR11-2026",
+      "normative_identity": "RPI-CABA|DTR|11|2026|CABA",
+      "title": "Documentos inmobiliarios de actividades específicas, BF/PEP y formularios, vigencia8Nov",
+      "revision": 1,
+      "issued_at": "2026-10-16",
+      "published_at": "2026-10-19",
+      "effective_at": "2026-11-08",
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:12:58.879324+00:00",
+      "subjects": [
+        "RPI_CAPITAL_FEDERAL",
+        "PROFESIONAL_SUJETO_OBLIGADO_ACTIVIDAD_ESPECIFICA",
+        "OPERADOR_SOLO_SI_TRAMITE_ALCANZADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_ROLE_PRODUCT_JURISDICTION",
+      "verification": "PRIMARY_TEXT_AND_STATED_ANNEXES_REVIEWED_WITH_LIMITATIONS_IN_PROPOSAL",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "LOCAL_CANDIDATE_NOT_JURISDICTION_ACTIVATION",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349248/20261019",
+              "sha256": "a6fac645d730bf0484d8c1e98832a0d5bbacfa09ef15a6bfd748c1d0d13c976f",
+              "fetched_at": "2026-10-20T01:12:22.801097+00:00"
+            },
+            {
+              "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+              "sha256": "7ab2c347ab8d9ab49cc800c9b240778471e89ecfd288c8bcf493682f0abb036e",
+              "fetched_at": "2026-10-20T01:12:58.878808+00:00"
+            },
+            {
+              "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+              "sha256": "92c4198f8a59c963f503a32f8a9ee2517f90c7dcbdd49fa1e5ccb52bd3755772",
+              "fetched_at": "2026-10-20T01:12:58.879324+00:00"
+            }
+          ]
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/RPI-CABA-DTR11-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-TAX-030"
+      ],
+      "related_identities": [
+        "RPI-CABA|DTR|1|2014|CABA",
+        "RPI-CABA|DTR|19|2016|CABA",
+        "RPI-CABA|DTR|7|2020|CABA",
+        "RPI-CABA|DTR|7|2024|CABA",
+        "UIF|RES|93|2026|AR"
+      ],
+      "notification_fingerprint": "ff7fc74ea4286edfbee11197e4b47c14fabfb36076529c7577fc94f78be0f07f"
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13248-2026",
+      "normative_identity": "BCRA|B|13248|2026|AR",
+      "title": "SISCEN-0019: umbral 2027 ARS 1.700 millones y VALOR2=1700",
+      "published_at": "2026-10-19",
+      "effective_at": "2027-01-01",
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:11:46.455084+00:00",
+      "subjects": [
+        "EF_INFORMANTE_SISCEN0019"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "VERIFIED_PRIMARY_PROPOSAL",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13248.pdf",
+              "sha256": "52358ac6068c9a10c5a8ae123829762e78055ec65538aef493674481a1e42efb",
+              "fetched_at": "2026-10-16T01:52:08.141297+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B12996.pdf",
+              "sha256": "d94c596637e7f7d19ace718bd38d96f179bcf2d62abd5c791d2ff01451b80cbf",
+              "fetched_at": "2026-10-16T01:53:18.132090+00:00"
+            },
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/PublicacionesEstadisticas/siscen.pdf",
+              "sha256": "cb8775c2a50182bf083aea2e1a846b66b0283d4d782adbd732f0c7c0d120f12d",
+              "fetched_at": "2026-10-16T01:53:18.133179+00:00"
+            }
+          ]
+        },
+        {
+          "version": 2,
+          "evidence_refs": [
+            {
+              "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349258/20261019",
+              "sha256": "b9a0bfeab00044cc459acf866b03a70e0c5ed308e33ac1545a80a92ceaa590d7",
+              "fetched_at": "2026-10-20T01:11:46.455084+00:00"
+            }
+          ],
+          "relation": "ADDITIONAL_OFFICIAL_PUBLICATION_REPRESENTATION_NOT_SUPERSEDING_BCRA_PDF",
+          "annex_value_by_value_comparison": "NOT_APPLICABLE"
+        }
+      ],
+      "proposal": {
+        "id": "P-REG-01",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/3",
+        "path": "PLAN_DE_IMPLEMENTACION_BANK.md"
+      },
+      "notification_fingerprint": "2bf1bc71d27e3343126c192615524a6ba3d250aff748ac72bf74a784595ce1a5",
+      "issued_at": "2026-10-15",
+      "publication_limit": "PublicaciónBO19Oct verificada; nueva procedencia, no nueva norma ni cambio monetario probado.",
+      "related_identities": [
+        "BCRA|B|12996|2025|AR"
+      ],
+      "fr": [
+        "FR-RPT-001",
+        "FR-RPT-002",
+        "FR-RPT-007",
+        "FR-RPT-008",
+        "FR-RPT-012",
+        "FR-RPT-038"
+      ],
+      "revision": 2,
+      "revision_of": {
+        "change_id": "CHANGE-BCRA-B13248-2026",
+        "prior_revision": 1
+      }
+    },
+    {
+      "change_id": "CHANGE-BCRA-B13249-2026",
+      "normative_identity": "BCRA|B|13249|2026|AR",
+      "title": "ICL17Oct–16Nov",
+      "revision": 2,
+      "issued_at": "2026-10-16",
+      "published_at": "2026-10-19",
+      "effective_at": "2026-10-17",
+      "effective_at_basis": "First series value, not universal legal commencement",
+      "exigible_at": null,
+      "observed_at": "2026-10-20T01:11:47.992029+00:00",
+      "subjects": [
+        "EF_DESTINATARIA_CONTRATO_O_SERVICIO_ALCANZADO"
+      ],
+      "applicability": "CONDITIONAL_PENDING_OPERATOR_OR_COMPONENT",
+      "verification": "PRIMARY_TEXT_REVIEWED_WITH_STATED_SCOPE",
+      "implementation": "NOT_EVALUATED",
+      "status": "ANALYSIS_PR_OPEN",
+      "classification": "OFFICIAL_REFERENCE_DATA_NOT_UNIVERSAL_PRODUCT_RULE",
+      "versions": [
+        {
+          "version": 1,
+          "evidence_refs": [
+            {
+              "url": "https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13249.pdf",
+              "sha256": "437660130489488e3136a8e0263d00cefef7c66389ace9bdec33b1d4fda7b103",
+              "fetched_at": "2026-10-17T01:47:18.532831+00:00"
+            }
+          ]
+        },
+        {
+          "version": 2,
+          "evidence_refs": [
+            {
+              "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/349259/20261019?anexos=1",
+              "sha256": "85d0c8a5c26c382464f460f5912dc7bcee75dc3f8447364fb70421a640c40989",
+              "fetched_at": "2026-10-20T01:11:47.992029+00:00"
+            },
+            {
+              "url": "https://www.boletinoficial.gob.ar/pdf/download_anexo",
+              "sha256": "3e57401d87e7397cc476bbbc31bfca3569871ad59bd117f57155d96b07fee265",
+              "fetched_at": "2026-10-20T01:12:58.876743+00:00"
+            }
+          ],
+          "relation": "ADDITIONAL_OFFICIAL_PUBLICATION_REPRESENTATION_NOT_SUPERSEDING_BCRA_PDF",
+          "annex_value_by_value_comparison": "PENDING"
+        }
+      ],
+      "proposal": {
+        "path": "regulatory/BCRA-B13249-B13250-2026.md",
+        "branch": "regulatory/informe-20261016-cierre",
+        "pull_request": "https://github.com/andrescastiglia/bank/pull/9",
+        "type": "ANALYSIS_ONLY_NO_IMPLEMENTATION"
+      },
+      "fr": [
+        "FR-CFG-011",
+        "FR-INT-006"
+      ],
+      "notification_fingerprint": "80b2ba15eb9d9617d56a2d468503c0bd1678b8d4f26a12e2fd328ae313641c6b",
+      "publication_bo_status": "NOT_ACREDITED_BLANK_OFFICIAL_INDEX",
+      "series_end_inclusive": "2026-11-16",
+      "publication_limit": "PublicaciónBO19Oct verificada; nueva procedencia, no nueva norma ni cambio monetario probado.",
+      "revision_of": {
+        "change_id": "CHANGE-BCRA-B13249-2026",
+        "prior_revision": 1
+      }
+    }
+  ],
+  "run_index": [
+    {
+      "run_id": "RUN-20261016T014713Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261016T014713Z.json",
+      "finished_at": "2026-10-16T02:04:45.799798+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/3"
+    },
+    {
+      "run_id": "RUN-20261016T023356Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261016T023356Z.json",
+      "finished_at": "2026-10-16T02:39:24.404760+00:00",
+      "review_pr": "https://github.com/andrescastiglia/bank/pull/4"
+    },
+    {
+      "run_id": "RUN-20261016T030400Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261016T030400Z.json",
+      "finished_at": "2026-10-16T03:23:08.434637+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/7"
+    },
+    {
+      "run_id": "RUN-20261017T014304Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261017T014304Z.json",
+      "finished_at": "2026-10-17T01:56:43.196474+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "run_id": "RUN-20261018T010017Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261018T010017Z.json",
+      "finished_at": "2026-10-18T01:08:31.880268+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "run_id": "RUN-20261019T015315Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261019T015315Z.json",
+      "finished_at": "2026-10-19T02:01:37.215788+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    },
+    {
+      "run_id": "RUN-20261020T010802Z",
+      "status": "PARTIAL",
+      "path": ".regulatory-watch/runs/RUN-20261020T010802Z.json",
+      "finished_at": "2026-10-20T01:21:01.084940+00:00",
+      "proposal_pr": "https://github.com/andrescastiglia/bank/pull/9"
+    }
+  ]
+}
