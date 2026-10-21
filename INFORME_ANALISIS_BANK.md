@@ -1,5 +1,131 @@
 # Informe de análisis y datos relevados — Bank
 
+**Corte vigente: 20/10/2026 22:47:55**, zona `America/Buenos_Aires` (`21/10/2026 01:47:55 UTC`). **Corrida:** `RUN-20261021T014755Z`. **Main comprobado:** `f7d9495a172bcc9b2a68371a05509a664f12748d`, con conector GitHub y Git. Inventario `2026-10-16.2`. **Resultado global: PARTIAL**. La PR #9 sigue abierta y se amplía; no se atribuye implementación o aceptación institucional a esa propuesta.
+
+## Alcance y conclusiones del corte del 20/10
+
+Se recuperaron desde GitHub siete corridas reales, 40 entradas históricas de cambios y16 de agenda. El seed no constituye cobertura. Ventana solicitada **[15/10/2026 00:00:00 −03:00, 20/10/2026 22:47:55 −03:00)**: todos los gaps y solapamiento configurado de siete días limitado por el comienzo del backfill. Se preservan fechas reales de consulta y las fechas sin hora de cada documento; la observación posterior al corte no cambia su fecha de emisión/publicación.
+
+| Eje prioritario | Hallazgo verificado | Conclusión y brecha |
+|---|---|---|
+| Legal y normativo | BCRA C102451 corrige versiones de hojas A8493; B13251 publica referencia de tarjetas para emisores no financieros; Decreto 1228 prorroga FAL y modifica carencia. | Mantener rectificatorias, ciclos y disparadores individuales. El antecedente FAL de LEGAL_TAX necesita actualización fechada; no mover automáticamente todos los procedimientos ARCA. |
+| Mercado | Siete ofertas reconsultadas; los nuevos datos delimitan financiación de tarjetas y una transición de FAL/vehículos de inversión. | Oportunidad de configuración e integración por rol, sin asumir licencia de emisor/administrador ni lanzar un producto FAL por una prórroga. No se verificaron nuevos precios, cuotas auditadas u homologaciones argentinas. |
+| Tecnología | Avisos de mantenimiento basic-toml y fallos Wasmtime/Cranelift, además de trust stores Rust. | Lenguaje, sandbox e imagen mínima requieren dependencias/targets/features y pruebas efectivas. Bank no seleccionó un runtime Wasm ni permite scripting monetario arbitrario. |
+| Seguridad, crítico | RustSec0381/0382/0383 comparten CVE de confianza TLS, con componentes distintos; seis altas KEV20/10 y seis avisos Wasmtime. | Priorizar inventario y origen efectivo de confianza, también en binarios scratch. Sin artefacto desplegado no hay exposición ni parcheo confirmado. Plazos CISA no son plazos argentinos. |
+
+## 1. Aspectos legales y normativos
+
+### 1.1 BCRA: fe de erratas y referencia por ciclo
+
+La [C102451](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/C102451.pdf), emitida **20/10**, contiene cuatro páginas y reemplaza tres hojas A8493 para corregir su versión: sección1 página3 **6a→1a**; sección5 página2 **7a→3a**; sección7 página16 **11a→2a**. Se compararon las hojas y párrafos pertinentes; **vigencia 1/11/2026 permanece**, sin reforma de fondo identificada en ese cotejo. Se [actualiza el análisis A8493](regulatory/BCRA-A8493-2026.md), conservando comunicación original y relación de rectificación; no se crea una segunda obligación monetaria ni se cambia su calendario por una corrección editorial. Publicación BO independiente no verificada.
+
+La [B13251](https://www.bcra.gob.ar/archivos/Pdfs/comytexord/B13251.pdf), emitida **20/10**, está dirigida a **empresas no financieras emisoras de tarjetas de crédito/compra**. Su anexo comunica **63,15% TNA**, promedio de préstamos personales sin garantía real, información de octubre para operaciones del **ciclo de facturación de noviembre**. Se contrastó TO `t-tasint`, sección2.1.2 y contexto: ese dato de referencia no es la tasa pactada ni el límite final aislado; la regla dice «no superar en más del25%» al promedio, no sumar25 puntos. No copiar este régimen a EF u otros préstamos/tarjetas.
+
+El [análisis B13251](regulatory/BCRA-B13251-2026.md) propone selector por sujeto/producto/ciclo, referencia exacta y evidencia de aprobación; casos de borde y recálculo sin reescritura. `published_at=null`; la operación del ciclo es el disparador y no se inventa vigencia universal a medianoche del1/11. Faltan operador, contratos/ciclos reales, verificación integral de modificaciones posteriores al TO y pruebas de cálculo.
+
+La consulta BCRA por emisión15–20/10, tipos A/B/C/P sin restricción, devuelve **27 registros, página1/1**. Se recuperaron **27/27 PDF,69 páginas**, anexos integrados. Los19 documentos del conjunto anterior mantienen sus huellas. Además de B13251/C102451, los nuevos C102445–449 publican estadísticas/referencias con fechas propias: no son cinco reformas generales ni tasas a instalar en todos los contratos. C102450 es una suspensión individual de operaciones de cambio: se registra su identidad y fuente, sin publicar datos del expediente o convertirla en prohibición general. Su eventual efecto requiere contraparte/operador efectivamente alcanzado y encuadre revisado. El texto exige autorización previa BCRA para cursar operaciones de cambio o anulaciones a nombre/por cuenta de las personas individualizadas, y abstenerse de transmitir al exterior las formalizadas pendientes de aviso. Mapear FR-FXT-003/005/006/016 y CTL-03/09/12, con identidad/alcance verificados en circuito restringido y revisión de pendientes antes de enviar; no congelar todas las cuentas o personas por analogía. Sin operador/caso concreto, queda candidato de aplicabilidad, sin activar una lista o regla productiva.
+
+B13250, ya analizada y con primer valor de serie20/10, obtuvo [procedencia BO20/10](https://www.boletinoficial.gob.ar/detalleAviso/primera/349343/20261020?anexos=1). Su anexo gráfico fue recuperado y revisado visualmente; conservar nueva huella/representación y fecha de publicación. La fecha del documento gráfico no reemplaza la emisión de la comunicación; **cotejo automatizado de todos los valores pendiente**, sin declarar una rectificatoria económica probada.
+
+### 1.2 Decreto 1228: FAL, carencia y armonización pendiente
+
+El [Decreto 1228/2026](https://www.boletinoficial.gob.ar/detalleAviso/primera/349294/20261020), emitido **19/10**, publicado/vigente **20/10**, sustituye arts.15 y27 del Decreto 408. Comienzo del régimen FAL: **1/12/2026** en reemplazo del antecedente1/11. Carencia mínima: **doce períodos mensuales completos y consecutivos de devengamiento y pago**, contados desde el mes de registro ante ARCA de la **efectiva primera contribución del empleador**. No calcularla desde publicación, solicitud, apertura de cuenta o un pago sólo ordenado.
+
+Se leyó Decreto 408 original y RG 5907, especialmente art.19; su texto recuperado aún indica noviembre para vigencia/devengado y versión48 para ciertas presentaciones de períodos anteriores. **Queda pendiente armonización fiscal/legal**: no trasladar automáticamente un mes todos los procedimientos, registros y sistemas. La [actualización de LEGAL_TAX §11](docs/LEGAL_TAX.md#11-empleador-y-transición-fal) conserva el antecedente fechado y añade el cambio, sin hacer pasar la base de16/10 por una evaluación originalmente realizada el20.
+
+El [análisis acotado](regulatory/PEN-DECRETO1228-2026.md) separa empleador privado, proveedor tecnológico y rol financiero habilitado (instrumentación/administración/custodia/inversión). La prórroga no habilita esos roles ni prueba suspensión del tratamiento prudencial A8490. Faltan sujeto, rol, evento individual y revisión integral CNV/UIF/ARCA relacionados; no activar todos los perfiles ni inventar final de carencia.
+
+### 1.3 Otros organismos y agenda
+
+Se reconsultaron UIF sectorial y transversal, AAIP, ARCA, COMARB/SIRCREB/SIRCUPA y CNV. Se leyó también [RG 5913, BO20/10](https://www.boletinoficial.gob.ar/detalleAviso/primera/349317/20261020): abroga RG3983(DGI) y4003(DGI) con vigencia de publicación, referidas al régimen de empresas de servicios eventuales. Es un candidato condicionado al encuadre laboral/contratación real; no una derogación general de retenciones de Ganancias o de todo control del core. No se configura nómina por leer ese acto.
+
+La agenda conserva RG5908, A8492/A8493, A8487, COMARB DP11, RPI, CNV1172/1173, B13248 y series ICL/UVI, junto al disparador CGN/TGN pendiente. No se repiten alertas de esas normas como nuevas. Se incorpora el comienzo FAL1/12 y se conserva pendiente su disparador individual. Los plazos concretos de declaraciones y ciclos requieren sujeto/período/documentación; ninguna PR sustituye esa decisión.
+
+## 2. Mercado y competencia
+
+Se reconsultaron [Mambu](https://mambu.com/en), [Pismo](https://developers.pismo.io/pismo-docs/docs/welcome), [Bantotal](https://www.bantotal.com/), [Topaz](https://www.topazevolution.com/), [Temenos](https://www.temenos.com/products/core-banking/), [Vault Core](https://www.thoughtmachine.net/vault-core) y [Fineract](https://fineract.apache.org/). Sus páginas permiten contrastar oferta declarada de productos/composición, APIs/eventos, pagos/tarjetas, tesorería y reportes, según proveedor. La descarga de una portada no demuestra roadmap implementado, precio, soporte local ni homologación. No se verificó un lanzamiento comercial nuevo que justifique una alerta adicional.
+
+| Capacidad / modelo de oferta | Correspondencia con Bank | Decisión que la evidencia exige |
+|---|---|---|
+| Composición de productos y configuración: Mambu/Vault/Fineract | CFG/CRD/INT/ACC, ADR-01/05 | Demostrar referencia versus precio, ciclo/contrato y reproducción histórica. La propuesta no habilita fórmulas monetarias arbitrarias de terceros. |
+| APIs, eventos y operación de pagos/tarjetas: Pismo/Topaz/Temenos | ASY/PAY/CRD/REC, ADR-03/06 | Mostrar estados y conciliación, rechazos por perfil y límites de dependencia. Comparar latencia/capacidad con el mismo escenario y costo. |
+| Localización y amplitud bancaria regional: Bantotal/Topaz/Temenos | TAX/RPT/TRE/OPS | Evidenciar normas/versiones, soporte y responsabilidades por sociedad/rol. «Regional» no acredita cobertura argentina integral. |
+| Integración de vehículos FAL y transición regulatoria | INV/TRE/TAX/RPT/CON, extensión condicionada | Validar primero administrador/vehículo/contrato, interfaces y economía del servicio. Una prórroga no prueba demanda, licencia o rentabilidad ni justifica afirmar soporte ya disponible. |
+| Migración y servicio profesional sobre GPLv2 | MIG/OPS, ADR-08 | Carga inicial con manifiesto, conciliación, recuperación y salida; TCO real de operación/soporte, sin convertir una comparación cualitativa en ventaja de precio cuantificada. |
+
+**Conclusión comercial:** trazabilidad de transiciones, soporte de integración y evidencia de calidad siguen siendo diferenciales a demostrar. La referencia B13251 y la prórroga FAL son hechos regulatorios del mercado, no precios de Bank. Mantener las condiciones BNA del corte anterior como antecedente de producto específico; no generalizarlas ni repetirlas como novedad del20.
+
+## 3. Innovación tecnológica y arquitectura
+
+Se reconsultaron Rust estable/feed, PostgreSQL, FAPI y ASVS. No se verificó una nueva versión de plataforma aplicable que sustituya el análisis previo por el simple cambio de HTML/feed. [RustSec0374](https://rustsec.org/advisories/RUSTSEC-2026-0374.html) es **INFO de mantenimiento**: basic-toml no mantenido, Reported26/9 e Issued20/10; no se lo presenta como exploit. El registro orienta a alternativas, sin adoptarlas automáticamente.
+
+Las novedades refuerzan tres decisiones de arquitectura existentes: ADR-05 necesita distinguir referencia, regla, ciclo y fecha de conocimiento; ADR-07 debe inventariar backend TLS y raíces efectivas, además del crate; ADR-06 debe tratar un runtime de plugins como frontera a probar y no garantía de aislamiento. Wasmtime no es una dependencia seleccionada de Bank ni condición necesaria para usar Rust.
+
+Para trabajos no urgentes, propuesta de preparación asíncrona durable de expedientes, ingesta de referencias, simulación y conciliación con manifiesto/cursor. La selección financiera al ejecutar usa versión aplicable local, sin consultar portales bajo lock ni tratar un `202` como operación liquidada. Carga inicial: ADR-08 conserva staging y publicación controlada; no ejecuta pagos/avisos históricos por replay ni importa automáticamente un trust store o calendario vigente sobre toda la historia.
+
+La base sigue sin Cargo.toml/Cargo.lock, fuentes Rust o Dockerfile propio de producto. El contrato `FROM scratch` requiere prueba de ELF/payload/TLS/DNS/usuario/rotación en el digest final; no hubo build, benchmark o scan de producto. Rust seguro no corrige por sí solo un trust anchor obsoleto, un compilador de sandbox vulnerable o un cálculo financiero incorrecto.
+
+## 4. Seguridad informática — eje crítico
+
+### 4.1 TLS: una familia relacionada con tres componentes
+
+Se leyeron fichas y registros oficiales [0381](https://rustsec.org/advisories/RUSTSEC-2026-0381.html), [0382](https://rustsec.org/advisories/RUSTSEC-2026-0382.html) y [0383](https://rustsec.org/advisories/RUSTSEC-2026-0383.html), y PR upstream pertinentes. Comparten **CVE-2026-111943**, conservando tres identidades: webpki-roots, rustls-webpki y webpki-root-certs. Las fuentes señalan aceptación posible de cadenas por intermediarias emSign de confianza retirada, con claves privadas conocidas, **si las raíces/configuración permiten ese camino**. Issued20/10; Reported19/10 para roots/certs y20/10 para verificador; sin hora exacta.
+
+Correcciones declaradas: roots/certs **>=1.0.10**; rustls-webpki **>=0.103.16,<0.104.0-alpha.1** o **>=0.104.0-alpha.8**. No recomendar prerelease por defecto. El [análisis TLS](regulatory/RUSTSEC-2026-0381-0383.md) propone inventariar versiones transitivas y origen de confianza. Un bundle del sistema actualizado no prueba remediación de raíces compiladas ni del artefacto restaurado; no se desactiva validación de cadena/nombre. Sin código/digest no hay exposición confirmada.
+
+### 4.2 Wasmtime: protocolos, tipos y escapes condicionales
+
+Se recuperaron seis fichas/registros RustSec y **seis GHSA HTML oficiales**. La API GHSA devolvió404 y se conserva ese intento, sin afirmar que faltó todo acceso al aviso. [Análisis0375–0380](regulatory/RUSTSEC-2026-0375-0380.md): framing HTTP inválido/smuggling condicionado al receptor, trailers que eluden hook, panic por un recorrido concreto de streams/futures con tipos borrados, y dos fallos críticos de Cranelift con posible escape del sandbox.
+
+Los críticos distinguen **aarch64/br_table** (0379) de **bit-packing SSA anterior a43, cualquier arquitectura** (0380). Los rangos corregidos no son idénticos. En0377, el embedder que personalizó `is_forbidden_header` debe revisar `forbidden_header_filter`: actualizar el número de versión puede ser insuficiente para conservar la política de trailers. Upstream indica que no conoce ataque habilitado por0377; no se transforma esa advertencia en explotación observada.
+
+### 4.3 KEV: explotación conocida, inventario todavía desconocido
+
+[CISA KEV](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json), versión**2026.10.20**, `dateReleased=2026-10-20T19:00:31.8765Z`,1754 entradas, incorpora **seis altas20/10**: SiteGuard Server Edition CVE-2026-106931, cuatro CVE de Plex Media Server y Siemens Software Center CVE-2026-110936. Se leyeron los avisos de proveedores y el [análisis específico](regulatory/CISA-KEV-20261020.md) conserva versiones, precondiciones y procedencias. La alta KEV no es la fecha de publicación inicial o primer parche.
+
+SiteGuard exige revisar variante/estadísticas y preservación del diagnóstico; no se extiende a todas sus ediciones. Plex tiene cadena de fallos con explotación declarada por proveedor, sin motivo para instalarlo en el core. Siemens requiere producto/versión y escenario local autenticado. Revisar perímetro, puestos de administración, NAS y terceros si esos activos existen: no se presume presencia ni compromiso de Bank. `Unknown` para ransomware no equivale a ausencia de explotación. **`dueDate`/BOD CISA no se convierten en plazos legales argentinos.**
+
+### 4.4 Evaluación de vectores y evidencia necesaria
+
+| Escenario bancario | Control / propuesta | Evidencia pendiente |
+|---|---|---|
+| Suplantación de API/KMS/webhook/telemetría mediante cadena TLS aceptada indebidamente | NFR-05-C04, ADR-07, CTL-10/15; origen efectivo de confianza, versiones y digest | PKI sintética válida/denegada, rutas alternativas, raíces compiladas/montadas, rotación y rollback; nunca certificados de clientes. |
+| Guest/plugin con escape, tipo borrado o framing HTTP conflictivo | ADR-06/07, NFR-03/05/08; backend/target/features, hooks y cuotas | Ensayo aislado del host/proxy con corpus revisado, oráculo de efectos fuera del guest; no sólo «no crash». |
+| BOLA/BFLA, replay y privilegios en servicios asíncronos | NFR-05, ADR-02/03/06, CTL-04/09/17; revalidación por entidad/cuenta/objeto, idempotencia | Casos negativos, revocación concurrente, referencias ajenas y worker atrasado; sin producto: no evaluado. |
+| Compromiso del perímetro/puesto y movimiento lateral a backups/identidad | FR-OPS, NFR-02/05/12, CTL-13/14/15/16 | Inventario/versiones/exposición, segmentación, triage y restauración limpia según investigación; no borrar evidencia por parchear primero. |
+| Documentación firmada, BF/PEP y reportes sensibles | NFR-06/07/11; CTL-07/09/11/19; fuente, finalidad, retención y facultad | Artefactos restringidos con destinatario autorizado; ningún secreto, ROS o dato de clientes en este repositorio. |
+
+ISO/PCI/Swift/NIST/FAPI/OWASP mantienen naturaleza y activador propios; no se leyó ni copió material comercial restringido. No se hizo pentest, explotación, escaneo de red, intervención productiva, presentación o contacto con terceros/reguladores.
+
+## 5. Trazabilidad, cobertura real y validación
+
+| Hallazgo | Documentación y perfiles/FR | NFR/ADR/CTL/skills y decisión pendiente |
+|---|---|---|
+| C102451→A8493 | compliant.md PAY-11/LAW-10; TRE/RPT/OPS y expediente MEP; participante habilitado | NFR-07/09/11, ADR-05, CTL-11/12/19; cumplimiento/configuración. Conservar hojas originales/rectificadas sin doble aplicación. |
+| B13251 | compliant.md LAW-09/BCRA-F07/PAY-10; FR-CRD-001/002/017/018/021, FR-INT-001/002/006/009/014/017 y FR-CFG-011 | NFR-01/09/11/13, ADR-05, CTL-02/06/18/19; confirmar emisor, ciclo, fórmula y pruebas. |
+| Decreto 1228 | LEGAL_TAX §11, FR-ENT-031, FR-TAX-001/002/018/030/031, FR-RPT-001/007/009/010/038; INV/TRE según rol | NFR-01/04/07/09/11/12, ADR-05, CTL-02/05/06/14/19; armonización normativa y primer aporte registrado pendientes. |
+| TLS/Wasmtime/KEV | Contrato Rust/scratch; FR-OPS-001/024/025/026 y los casos de integración/migración de cada análisis | NFR-02/03/05/07/08/09/10/12, ADR-04/05/06/07/08, CTL-09/10/13/14/15/16/17/20; skills seguridad/stack existentes. Inventario y pruebas del artefacto pendientes. |
+
+| Fuente | Cobertura actual | Checkpoint / continuidad |
+|---|---|---|
+| BCRA A/B/C/P | **COMPLETE** para emisión15–20/10 y ventana declarada:1página,27 registros/27PDF/69páginas, anexos integrados. | Avanza desde19/10 22:08:02 a20/10 22:47:55 −03; sólo esa fuente/filtro, con solapamiento para indexaciones tardías. |
+| BO primera sección | **PARTIAL**: índices15/16,19 y20;19 recupera106URLs al unir9rubros (incluidas6 faltantes y sus cuerpos);20 muestra61. Un anexo UVI adicional recuperado/revisado visualmente. | Se cierra el gap de enumeración19, **no** cuerpos/anexos/suplementos. Tres anexos de los seis cuerpos recuperados y37 lecturas sustantivas anteriores pendientes, más cuerpos/anexos de20 y extraordinarias.17/18 redirigen portada; no acredita ausencia. |
+| BCRA TO/RI | **PARTIAL**: facetas103/55 reconsultadas, t-optico y t-tasint recuperados; cotejo C102451/A8493. | Restantes textos/versiones/modificatorias y anexos pendientes; cortes nulos. |
+| UIF/AAIP/ARCA/CNV | **PARTIAL**, entradas oficiales y cuerpos seleccionados descritos. | Cronología/anexos no completados por obtener índices o un acto; sin avance de corte. |
+| COMARB/SIRCREB/SIRCUPA | **UNAVAILABLE** en sus rutas propias,500 persistente; DP11 leído en corrida anterior sigue registrado. | No vuelve a declararse desconocido el cuerpo DP11 recuperado; resto de cobertura/calendarios pendientes, corte nulo. |
+| Jurisdicciones | Opcional omitida, checkpoint y fundamento anteriores íntegros. | Sin operador/jurisdicciones activadas; candidatos locales no acreditan cobertura universal. |
+| Estándares/seguridad | **PARTIAL**, índices y avisos seleccionados revisados. | No todos los estándares/transiciones ni inventario desplegado/contratos de red; sin checkpoint completo. |
+
+La nueva evidencia y estado se conservan en [RUN-20261021T014755Z](https://github.com/andrescastiglia/bank/blob/659cbd9220d4d93960d03c5889013959f2b57657/.regulatory-watch/evidence/RUN-20261021T014755Z.json), rama `automation/regulatory-state`: filtros, intentos404/500, URL final, fecha de consulta, huellas, páginas, anexos y relaciones. Historiales de cambios/agenda/índice se preservan como prefijos exactos; la corrida se añade una sola vez. Descargar/anunciar/abrir PR no equivale a cubrir toda una fuente ni a implementar.
+
+**Validación ejecutada:** catálogo reproducible (1016 FR/32 módulos), inventario y 69 fixtures de vigilancia; transición `--state --run --previous-state`; 119 huellas de descargas/decodificaciones y109 referencias FR del informe/análisis/LEGAL_TAX contrastadas, incluidas abreviaciones. Se comprueban además enlaces y estructura documental antes de publicar. Estos checks validan documentos/integridad, no la eficacia del producto. Las pruebas materiales propuestas no se ejecutaron; no hay afirmación de cumplimiento, rendimiento, parcheo, homologación o aceptación institucional. No se verificaron rulesets/permisos técnicos en esta corrida. GNU GPLv2 y merge exclusivo del mantenedor permanecen vigentes.
+
+---
+
+## Antecedente íntegro — corte del 19/10
+
+El contenido siguiente conserva fechas y resultados anteriores. Sus cifras y fallas corresponden a sus propias corridas; prevalece el nuevo corte anterior.
+
 **Corte vigente:** **19/10/2026 22:08:02**, `America/Buenos_Aires` (`20/10/2026 01:08:02 UTC`). **Corrida:** `RUN-20261020T010802Z`. **Base comprobada por conector GitHub y Git:** `main f7d9495a172bcc9b2a68371a05509a664f12748d`. Inventario `2026-10-16.2`. **Resultado global: PARTIAL**. Se amplía la **PR #9**, sin merge ni cambios en `main`, licencia, permisos o despliegue.
 
 ## Alcance y conclusión del nuevo corte
