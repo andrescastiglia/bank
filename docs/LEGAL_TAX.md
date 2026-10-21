@@ -357,11 +357,13 @@ Preparar altas de empleador y de cada trabajador antes del comienzo, F 931/pagos
 
 **Fondo de Asistencia Laboral:** [Ley 27.802, título II](https://www.argentina.gob.ar/normativa/nacional/norma-423680/texto), [Decreto 408/2026](https://www.argentina.gob.ar/normativa/nacional/norma-426272/texto) y [RG 5907/2026](https://www.argentina.gob.ar/normativa/nacional/norma-430768/texto), publicada el 1/10/2026:
 
-- La RG prevé exigibilidad para devengado **noviembre 2026**, con vigencia desde 1/11 y efectos procedimentales de su art. 19. No se la declara ya implementada al 16/10.
+- **Antecedente de la base al 16/10:** el texto de RG5907 prevé devengado **noviembre 2026**, vigencia desde 1/11 y efectos procedimentales de su art.19. La actualización siguiente obliga a revisar la transición antes de parametrizar; no se declara implementada.
 - Distinguir declaración de empleador privado/público, cuenta y **IDFAL**, validación previa y canal de declaración/ingreso. Alta posterior requiere cumplir el plazo de su primer vencimiento.
 - Contribución FAL de referencia: 1% para grandes empresas y 2,5% MiPyME en el supuesto legal. El [anexo oficial de RG 5907](https://www.argentina.gob.ar/sites/default/files/infoleg/430768/resgral5907-1-1.jpg), revisado visualmente, **reasigna** componentes manteniendo los totales 20,40%/18% de su cuadro: no sumar el FAL otra vez sobre ese mismo total.
 - Presupuestar base y categoría correctas; el período de carencia de uso no elimina la contribución. Conciliar nómina, declaración y cuenta con la entidad habilitada.
 - Ser banco no autoriza automáticamente a administrar/instrumentar FAL como entidad habilitada. Su rol como empleador es distinto de un posible rol de proveedor financiero/FAL, y las inversiones tienen el tratamiento prudencial A 8490 ya indicado.
+
+**Actualización verificada al 20/10/2026:** el [Decreto1228/2026, BO20/10](https://www.boletinoficial.gob.ar/detalleAviso/primera/349294/20261020), vigente desde su publicación, sustituye los arts.15 y27 del Decreto408: prorroga el comienzo del régimen FAL al **1/12/2026** y establece **doce períodos mensuales completos y consecutivos de devengamiento y pago** de carencia, desde el mes de registro ante ARCA de la efectiva primera contribución del empleador. Sin ese hecho no hay fecha individual calculable. El texto recuperado de RG5907 art.19 aún menciona noviembre: no trasladar automáticamente todas sus obligaciones procedimentales o el uso de versión48; queda pendiente armonización por responsable fiscal/legal. Mantener separados empleador, vehículo/administrador y tratamiento prudencial de inversiones, sin presumir suspensión de A8490. Ver [análisis, perfiles y casos pendientes](../regulatory/PEN-DECRETO1228-2026.md).
 
 ## 12. Ingresos Brutos y Convenio Multilateral
 
